@@ -768,8 +768,15 @@ iframe {
 
 .video_text {
   position: absolute;
-  top: 10vh;
-  left: 25vw;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+}
+@media (max-width: 481px) {
+  .video_charity {
+    height: 40vh;
+  }
 }
 
 video {
