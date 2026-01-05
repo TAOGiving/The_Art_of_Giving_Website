@@ -413,7 +413,7 @@ body.fade-out {
   position: absolute;
   bottom: 0;
   left: 75%;
-  width: 60%;
+  width: 30%;
 
   transform: translateX(-50%);
   z-index: 1;
@@ -424,7 +424,7 @@ body.fade-out {
     position: absolute;
     bottom: 0;
     left: 75%;
-    width: 80vw;
+    width: 50vw;
 
     transform: translateX(-50%);
     z-index: 1;
