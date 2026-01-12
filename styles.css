@@ -35,7 +35,7 @@
 
   /* Pallet 3 Sophisticated and Artistic */
   --soft_beige: #eae8dc; /* Background */
-  --sage_green: #5a8f7b; /* Primary Accent */
+  --sage_green: #68a18b; /* Primary Accent */
   --burnt_terracotta: #9a533e; /* Secondary Accent */
   --deep_gray: #2e2e2e; /* Text */
 
@@ -251,7 +251,7 @@ body.fade-out {
 
 .primary_accent_btn {
   background-color: var(--sage_green) !important;
-  color: white;
+  color: black;
 }
 .primary_accent_btn:hover {
   background-color: var(--burnt_terracotta) !important;
