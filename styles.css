@@ -953,3 +953,7 @@ video {
   color: #0077b5;
   cursor: pointer;
 }
+
+.bg-success-subtle {
+  color: #0f5233 !important;
+}
