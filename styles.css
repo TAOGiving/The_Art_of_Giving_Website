@@ -958,3 +958,7 @@ video {
 .bg-success-subtle {
   color: #0f5233 !important;
 }
+
+.text-secondary {
+  color: #454a4f !important;
+}
