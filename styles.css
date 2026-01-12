@@ -962,3 +962,11 @@ video {
 .text-secondary {
   color: #454a4f !important;
 }
+
+.text-primary {
+  color: #0244a7 !important;
+}
+
+.text-primary:hover {
+  color: #000000 !important;
+}
