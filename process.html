@@ -257,7 +257,7 @@
           </div>
         </div>
       </nav>
-      <header class="py-3 mb-4 border-bottom hidden">
+      <!-- <header class="py-3 mb-4 border-bottom hidden">
         <div class="container d-flex flex-wrap justify-content-center">
           <a
             href="/"
@@ -277,7 +277,7 @@
             />
           </form>
         </div>
-      </header>
+      </header> -->
 
       <section>
         <div class="px-2 px-sm-4 py-2 py-sm-5 mb-5 text-center">
@@ -314,17 +314,21 @@
                       class="form-floating mb-2 col-6 col-md-5 d-inline-block"
                     >
                       <input
-                        type=""
+                        type="number"
                         class="form-control width-input"
                         id="WidthInput"
                         placeholder="Width"
                         onchange="widthUpdater(this.value),totalPrice()"
+                        aria-describedby="widthhelp"
                       />
+                      <div id="widthHelp" class="form-text hidden">
+                        Please enter a positive number for width in centimeters.
+                      </div>
                       <label for="floatingInput">Width in cm</label>
                     </div>
                     <div class="form-floating col-6 col-md-5 d-inline-block">
                       <input
-                        type="text"
+                        type="number"
                         class="form-control"
                         id="HeightInput"
                         placeholder="Height"
