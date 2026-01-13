@@ -334,7 +334,13 @@
                         id="HeightInput"
                         placeholder="Height"
                         onchange="heightUpdater(this.value),totalPrice()"
+                        aria-describedby="heightHelp"
+                        required
                       />
+                      <div id="heightHelp" class="form-text hidden">
+                        Please enter a positive number for height in
+                        centimeters.
+                      </div>
                       <label for="floatingInput">Height in cm</label>
                     </div>
                   </form>
