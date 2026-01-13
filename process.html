@@ -319,7 +319,7 @@
                         id="WidthInput"
                         placeholder="Width"
                         onchange="widthUpdater(this.value),totalPrice()"
-                        aria-describedby="widthhelp"
+                        aria-describedby="widthHelp"
                         required
                       />
                       <div id="widthHelp" class="form-text visually-hidden">
@@ -922,11 +922,20 @@
                                   placeholder="Width not entered"
                                   disabled
                                   onchange="totalPrice()"
+                                  aria-describedby="widthTotalHelp"
                                 />
+
                                 <div class="input-group-append">
                                   <span class="input-group-text rounded-start-0"
                                     >cm</span
                                   >
+                                </div>
+                                <div
+                                  id="widthTotalHelp"
+                                  class="visually-hidden"
+                                >
+                                  Please enter a positive number for width in
+                                  centimeters.
                                 </div>
                               </div>
                             </div>
@@ -943,10 +952,18 @@
                               placeholder="Value in cm"
                               value=""
                               onchange="widthUpdater(this.value),totalPrice()"
+                              aria-describedby="widthTotalHelpMobile"
                             />
                             <label for="floatingInputValue"
                               >Change Width Here (cm)</label
                             >
+                            <div
+                              id="widthTotalHelpMobile"
+                              class="visually-hidden"
+                            >
+                              Please enter a positive number for width in
+                              centimeters.
+                            </div>
                           </form>
 
                           <form
@@ -968,11 +985,19 @@
                                   placeholder="Height not entered"
                                   disabled
                                   onchange="totalPrice()"
+                                  aria-describedby="heightTotalHelp"
                                 />
                                 <div class="input-group-append">
                                   <span class="input-group-text rounded-start-0"
                                     >cm</span
                                   >
+                                </div>
+                                <div
+                                  id="heightTotalHelp"
+                                  class="visually-hidden"
+                                >
+                                  Please enter a positive number for height in
+                                  centimeters.
                                 </div>
                               </div>
                             </div>
@@ -989,10 +1014,18 @@
                               placeholder="Value in cm"
                               value=""
                               onchange="heightUpdater(this.value),totalPrice()"
+                              aria-describedby="heightTotalHelpMobile"
                             />
                             <label for="floatingInputValue"
                               >Change Height Here (cm)</label
                             >
+                            <div
+                              id="heightTotalHelpMobile"
+                              class="visually-hidden"
+                            >
+                              Please enter a positive number for height in
+                              centimeters.
+                            </div>
                           </form>
 
                           <form
@@ -1022,7 +1055,7 @@
                             onsubmit="return false;"
                             id="subjectChangeFormMobile"
                           >
-                            <label class="form-label fw-bold"
+                            <label class="form-label fw-bold" for="inlineRadio1"
                               >Change Subjects Here</label
                             >
                             <div class="mt-2">
@@ -1036,12 +1069,19 @@
                                   id="inlineRadio1"
                                   value="option1"
                                   onchange="oneSubjects(),totalPrice()"
+                                  aria-describedby="subjectTotalHelp"
                                 />
                                 <label
                                   class="form-check-label"
                                   for="inlineRadio1"
                                   >1 Subject</label
                                 >
+                                <div
+                                  id="subjectTotalHelp"
+                                  class="visually-hidden"
+                                >
+                                  Click to select one subject for your painting.
+                                </div>
                               </div>
                               <div
                                 class="form-check form-check-inline text-start ms-0 ms-md-2"
@@ -1053,12 +1093,20 @@
                                   id="inlineRadio2"
                                   value="option2"
                                   onchange="twoSubjects(),totalPrice()"
+                                  aria-describedby="subject2TotalHelp"
                                 />
                                 <label
                                   class="form-check-label"
                                   for="inlineRadio2"
                                   >2 Subjects</label
                                 >
+                                <div
+                                  id="subject2TotalHelp"
+                                  class="visually-hidden"
+                                >
+                                  Click to select two subjects for your
+                                  painting.
+                                </div>
                               </div>
                               <div
                                 class="form-check form-check-inline text-start ms-0 ms-md-2"
@@ -1070,12 +1118,20 @@
                                   id="inlineRadio3"
                                   value="option3"
                                   onchange="threeSubjects(),totalPrice()"
+                                  aria-describedby="subject3TotalHelp"
                                 />
                                 <label
                                   class="form-check-label"
                                   for="inlineRadio3"
                                   >3 Subjects</label
                                 >
+                                <div
+                                  id="subject3TotalHelp"
+                                  class="visually-hidden"
+                                >
+                                  Click to select three subjects for your
+                                  painting.
+                                </div>
                               </div>
                             </div>
                           </form>
