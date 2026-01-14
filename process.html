@@ -948,12 +948,12 @@
                             <input
                               type="text"
                               class="form-control"
-                              id="floatingInputValue"
+                              id="WidthInputMobile"
                               placeholder="Value in cm"
                               value=""
                               onchange="widthUpdater(this.value),totalPrice()"
                             />
-                            <label for="floatingInputValue"
+                            <label for="WidthInputMobile"
                               >Change Width Here (cm)</label
                             >
                             <!-- <div
@@ -1008,13 +1008,13 @@
                             <input
                               type="text"
                               class="form-control"
-                              id="floatingInputValue"
+                              id="heightInputMobile"
                               placeholder="Value in cm"
                               value=""
                               onchange="heightUpdater(this.value),totalPrice()"
                               aria-describedby="heightTotalHelpMobile"
                             />
-                            <label for="floatingInputValue"
+                            <label for="heightInputMobile"
                               >Change Height Here (cm)</label
                             >
                             <div
@@ -1053,7 +1053,9 @@
                             onsubmit="return false;"
                             id="subjectChangeFormMobile"
                           >
-                            <label class="form-label fw-bold" for="inlineRadio1"
+                            <label
+                              class="form-label fw-bold"
+                              for="subjectInlineRadio1"
                               >Change Subjects Here</label
                             >
                             <div class="mt-2">
@@ -1064,14 +1066,14 @@
                                   class="form-check-input"
                                   type="radio"
                                   name="inlineRadioOptions"
-                                  id="inlineRadio1"
+                                  id="subjectInlineRadio1"
                                   value="option1"
                                   onchange="oneSubjects(),totalPrice()"
                                   aria-describedby="subjectTotalHelp"
                                 />
                                 <label
                                   class="form-check-label"
-                                  for="inlineRadio1"
+                                  for="subjectInlineRadio1"
                                   >1 Subject</label
                                 >
                                 <div
@@ -1088,14 +1090,14 @@
                                   class="form-check-input"
                                   type="radio"
                                   name="inlineRadioOptions"
-                                  id="inlineRadio2"
+                                  id="subectInlineRadio2"
                                   value="option2"
                                   onchange="twoSubjects(),totalPrice()"
                                   aria-describedby="subject2TotalHelp"
                                 />
                                 <label
                                   class="form-check-label"
-                                  for="inlineRadio2"
+                                  for="subjectInlineRadio2"
                                   >2 Subjects</label
                                 >
                                 <div
@@ -1113,14 +1115,14 @@
                                   class="form-check-input"
                                   type="radio"
                                   name="inlineRadioOptions"
-                                  id="inlineRadio3"
+                                  id="subjectInlineRadio3"
                                   value="option3"
                                   onchange="threeSubjects(),totalPrice()"
                                   aria-describedby="subject3TotalHelp"
                                 />
                                 <label
                                   class="form-check-label"
-                                  for="inlineRadio3"
+                                  for="subjectInlineRadio3"
                                   >3 Subjects</label
                                 >
                                 <div
