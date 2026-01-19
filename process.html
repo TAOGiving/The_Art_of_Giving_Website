@@ -1146,11 +1146,7 @@
                             novalidate
                           >
                             <div class="col text-center p-0">
-                              <label
-                                for="ColourTotal"
-                                class="form-label fw-bold"
-                                >COLOUR</label
-                              >
+                              <label class="form-label fw-bold">COLOUR</label>
                               <input
                                 type="text"
                                 class="form-control disabled"
@@ -1170,6 +1166,7 @@
                           >
                             <label
                               class="form-label ms-2 ms-md-0 fw-bold mt-4 mt-md-2"
+                              for="ColourTotal"
                               >Change Colour Here</label
                             >
                             <div class="mt-2">
@@ -1180,13 +1177,11 @@
                                   class="form-check-input"
                                   type="radio"
                                   name="inlineRadioOptions"
-                                  id="inlineRadioBW"
+                                  id="RadioBW"
                                   value="Monochromatic"
                                   onchange="blackWhite(),totalPrice()"
                                 />
-                                <label
-                                  class="form-check-label"
-                                  for="inlineRadioBW"
+                                <label class="form-check-label" for="RadioBW"
                                   >Monochrome</label
                                 >
                               </div>
@@ -1197,13 +1192,13 @@
                                   class="form-check-input"
                                   type="radio"
                                   name="inlineRadioOptions"
-                                  id="inlineRadioColour"
+                                  id="RadioColour"
                                   value="Full Colour"
                                   onchange="colour(),totalPrice()"
                                 />
                                 <label
                                   class="form-check-label"
-                                  for="inlineRadioColour"
+                                  for="RadioColour"
                                   >Full Colour</label
                                 >
                               </div>
@@ -1254,13 +1249,13 @@
                                     class="form-check-input"
                                     type="radio"
                                     name="inlineRadioOptions"
-                                    id="inlineRadioMinimal"
+                                    id="RadioMinimal"
                                     value="Minimal"
                                     onchange="minimal_Background(),totalPrice()"
                                   />
                                   <label
                                     class="form-check-label"
-                                    for="inlineRadioMinimal"
+                                    for="RadioMinimal"
                                     >Minimal</label
                                   >
                                 </div>
@@ -1315,12 +1310,12 @@
                             <input
                               type="text"
                               class="form-control"
-                              id="floatingInputValue"
+                              id="WidthInputValue"
                               placeholder="Value in cm"
                               value=""
                               onchange="widthUpdater(this.value),totalPrice()"
                             />
-                            <label for="floatingInputValue"
+                            <label for="WidthInputValue"
                               >Change Width Here (cm)</label
                             >
                           </form>
@@ -1332,12 +1327,12 @@
                             <input
                               type="text"
                               class="form-control"
-                              id="floatingInputValue"
+                              id="heightInputValue"
                               placeholder="Value in cm"
                               value=""
                               onchange="heightUpdater(this.value),totalPrice()"
                             />
-                            <label for="floatingInputValue"
+                            <label for="heightInputValue"
                               >Change Height Here (cm)</label
                             >
                           </form>
@@ -1489,13 +1484,13 @@
                                   class="form-check-input"
                                   type="radio"
                                   name="inlineRadioOptions"
-                                  id="inlineRadioComplex"
+                                  id="RadioComplex"
                                   value="Complex"
                                   onchange="complex_Background(),totalPrice()"
                                 />
                                 <label
                                   class="form-check-label"
-                                  for="inlineRadioComplex"
+                                  for="RadioComplex"
                                   >Complex</label
                                 >
                               </div>
