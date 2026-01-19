@@ -38,7 +38,7 @@
   --sage_green: #68a18b; /* Primary Accent */
   --dark_sage_green: #335246; /* Accent Text*/
   --burnt_terracotta: #9a533e; /* Secondary Accent */
-  --deep_gray: rgba(46, 46, 46, 1); /* Text */
+  --deep_gray: rgb(46, 46, 46); /* Text */
 
   /* Pallet 4 Playful Yet professional */
   --white: #ffffff; /* Background */
@@ -298,7 +298,7 @@ body.fade-out {
 }
 
 .text_accent {
-  color: var(--deep_gray) !important;
+  color: rgba(var(--deep_gray), 1) !important;
 }
 
 @media (min-width: 576px) {
