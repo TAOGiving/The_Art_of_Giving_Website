@@ -38,7 +38,7 @@
   --sage_green: #68a18b; /* Primary Accent */
   --dark_sage_green: #335246; /* Accent Text*/
   --burnt_terracotta: #9a533e; /* Secondary Accent */
-  --deep_gray: #2e2e2e; /* Text */
+  --deep_gray: rgba(46, 46, 46, 1); /* Text */
 
   /* Pallet 4 Playful Yet professional */
   --white: #ffffff; /* Background */
