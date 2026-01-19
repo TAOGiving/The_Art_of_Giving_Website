@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -94,8 +94,12 @@
     <meta name="msapplication-TileColor" content="#485cc7" />
     <meta name="msapplication-TileImage" content="/icons/ms-icon-144x144.png" />
     <meta name="theme-color" content="#485cc7" />
-    <link rel="shortcut icon" href="/images/Alex.jpg" type="image/x-icon" />
-    <link rel="icon" href="/images/Alex.jpg" type="image/x-icon" />
+    <link
+      rel="shortcut icon"
+      href="/images/TAOG_Logo.png"
+      type="image/x-icon"
+    />
+    <link rel="icon" href="/images/TAOG_Logo.png" type="image/x-icon" />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@taog" />
@@ -128,7 +132,7 @@
     <!-- Loader screen -->
     <div id="loader">
       <img
-        src="images/logo-profile.png"
+        src="images/TAOG_Logo.png"
         alt="The Art of Giving logo"
         class="loader-logo"
       />
@@ -300,7 +304,15 @@
                 src="https://www.youtube.com/embed/FRy65TJod0c?si=GGPjxs7MiwuSztBB"
                 title="YouTube video player"
                 frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allow="
+                  accelerometer;
+                  autoplay;
+                  clipboard-write;
+                  encrypted-media;
+                  gyroscope;
+                  picture-in-picture;
+                  web-share;
+                "
                 referrerpolicy="strict-origin-when-cross-origin"
                 allowfullscreen
                 loading="lazy"
@@ -318,7 +330,15 @@
                   src="https://www.youtube.com/embed/FRy65TJod0c?si=GGPjxs7MiwuSztBB"
                   title="YouTube video player"
                   frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allow="
+                    accelerometer;
+                    autoplay;
+                    clipboard-write;
+                    encrypted-media;
+                    gyroscope;
+                    picture-in-picture;
+                    web-share;
+                  "
                   referrerpolicy="strict-origin-when-cross-origin"
                   allowfullscreen
                   loading="lazy"
@@ -763,10 +783,10 @@
     <script src="gallery_script.js"></script>
     <script>
       const popoverTriggerList = document.querySelectorAll(
-        '[data-bs-toggle="popover"]'
+        '[data-bs-toggle="popover"]',
       );
       const popoverList = [...popoverTriggerList].map(
-        (popoverTriggerEl) => new bootstrap.Popover(popoverTriggerEl)
+        (popoverTriggerEl) => new bootstrap.Popover(popoverTriggerEl),
       );
     </script>
   </body>

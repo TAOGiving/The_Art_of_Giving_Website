@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -94,8 +94,12 @@
     <meta name="msapplication-TileColor" content="#485cc7" />
     <meta name="msapplication-TileImage" content="/icons/ms-icon-144x144.png" />
     <meta name="theme-color" content="#485cc7" />
-    <link rel="shortcut icon" href="/images/Alex.jpg" type="image/x-icon" />
-    <link rel="icon" href="/images/Alex.jpg" type="image/x-icon" />
+    <link
+      rel="shortcut icon"
+      href="/images/TAOG_Logo.png"
+      type="image/x-icon"
+    />
+    <link rel="icon" href="/images/TAOG_Logo.png" type="image/x-icon" />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@taog" />
@@ -129,7 +133,7 @@
     <!-- Loader screen -->
     <div id="loader">
       <img
-        src="images/logo-profile.png"
+        src="images/TAOG_Logo.png"
         alt="The Art of Giving Logo"
         class="loader-logo"
       />
@@ -322,7 +326,7 @@
                         class="form-control width-input"
                         id="WidthInput"
                         placeholder="Width"
-                        onchange="widthUpdater(this.value),totalPrice()"
+                        onchange="(widthUpdater(this.value), totalPrice())"
                         aria-describedby="widthHelp"
                         required
                       />
@@ -337,7 +341,7 @@
                         class="form-control"
                         id="HeightInput"
                         placeholder="Height"
-                        onchange="heightUpdater(this.value),totalPrice()"
+                        onchange="(heightUpdater(this.value), totalPrice())"
                         aria-describedby="heightHelp"
                         required
                       />
@@ -360,7 +364,9 @@
                         data-bs-content="8.268 inches x 11.693 inches"
                         data-bs-placement="bottom"
                         data-bs-trigger="focus hover"
-                        onclick="a4papersizeUpdater(),totalPrice(), unhideSubjects()"
+                        onclick="
+                          (a4papersizeUpdater(), totalPrice(), unhideSubjects())
+                        "
                         ><strong>A4 </strong>(21.0cm x 29.7cm)</a
                       >
                       <a
@@ -370,7 +376,9 @@
                         data-bs-content="11.693 inches x 16.535 inches"
                         data-bs-placement="bottom"
                         data-bs-trigger="focus hover"
-                        onclick="a3papersizeUpdater(),totalPrice(),unhideSubjects()"
+                        onclick="
+                          (a3papersizeUpdater(), totalPrice(), unhideSubjects())
+                        "
                         ><strong>A3 </strong>(29.7cm x 42.0cm)</a
                       >
                       <a
@@ -380,7 +388,9 @@
                         data-bs-content="16.535 inches x 23.386 inches"
                         data-bs-placement="bottom"
                         data-bs-trigger="focus hover"
-                        onclick="a2papersizeUpdater(),totalPrice(),unhideSubjects()"
+                        onclick="
+                          (a2papersizeUpdater(), totalPrice(), unhideSubjects())
+                        "
                         ><strong>A2 </strong>(42.0cm x 59.4cm)</a
                       >
                       <a
@@ -390,7 +400,9 @@
                         data-bs-content="23.386 inches x 33.110 inches"
                         data-bs-placement="bottom"
                         data-bs-trigger="focus hover"
-                        onclick="a1papersizeUpdater(),totalPrice(),unhideSubjects()"
+                        onclick="
+                          (a1papersizeUpdater(), totalPrice(), unhideSubjects())
+                        "
                         ><strong>A1 </strong>(59.4cm x 84.1cm)</a
                       >
                     </div>
@@ -447,7 +459,9 @@
               <div class="card_height">
                 <div
                   class="one-subject card card-cover overflow-hidden rounded-4 shadow-lg"
-                  style="background-image: url('images/One_Dog_Cropped.jpg')"
+                  style="
+                    background-image: url(&quot;images/One_Dog_Cropped.jpg&quot;);
+                  "
                 >
                   <h2 class="title pt-5 my-5 text-light fw-bold">1 Subject</h2>
                   <p class="text mb-5 pb-5 text-light fw-bold">
@@ -466,7 +480,7 @@
               <a
                 class="btn primary_accent_btn mt-3 px-5"
                 id="oneSubject"
-                onclick="oneSubjects(),totalPrice(),unhideColour()"
+                onclick="(oneSubjects(), totalPrice(), unhideColour())"
                 >I want one subject in my painting</a
               >
             </div>
@@ -474,7 +488,9 @@
               <div class="card_height">
                 <div
                   class="two-subjects card card-cover overflow-hidden rounded-4 shadow-lg"
-                  style="background-image: url('images/Two_Dogs_Cropped_2.jpg')"
+                  style="
+                    background-image: url(&quot;images/Two_Dogs_Cropped_2.jpg&quot;);
+                  "
                 >
                   <h2 class="title pt-5 my-5 text-light fw-bold">2 Subjects</h2>
                   <p class="text mb-5 pb-5 text-light fw-bold">
@@ -493,7 +509,7 @@
               <a
                 class="btn primary_accent_btn mt-3 px-5"
                 id="twoSubjects"
-                onclick="twoSubjects(),totalPrice(),unhideColour()"
+                onclick="(twoSubjects(), totalPrice(), unhideColour())"
                 >Can I have 2 subjects please</a
               >
             </div>
@@ -502,7 +518,7 @@
                 <div
                   class="three-subjects card card-cover overflow-hidden rounded-4 shadow-lg"
                   style="
-                    background-image: url('images/Three_Dogs_Cropped_2.jpg');
+                    background-image: url(&quot;images/Three_Dogs_Cropped_2.jpg&quot;);
                   "
                 >
                   <h2 class="title pt-5 my-5 text-light fw-bold">3 Subjects</h2>
@@ -521,7 +537,7 @@
               <a
                 class="btn primary_accent_btn mt-3 px-5"
                 id="threeSubjects"
-                onclick="threeSubjects(),totalPrice(),unhideColour()"
+                onclick="(threeSubjects(), totalPrice(), unhideColour())"
                 >I have a big Family, 3+ for me!</a
               >
             </div>
@@ -565,7 +581,9 @@
               <div class="col-md-4 card_height">
                 <div
                   class="one-subject card card-cover overflow-hidden rounded-4 shadow-lg"
-                  style="background-image: url('images/Black and White.jpg')"
+                  style="
+                    background-image: url(&quot;images/Black and White.jpg&quot;);
+                  "
                 >
                   <div class="card-header trans_background">
                     <h4 class="title text-light" id="sm-card-text">
@@ -581,14 +599,16 @@
                 <a
                   class="btn primary_accent_btn mt-3 px-5"
                   id="black_white"
-                  onclick="blackWhite(),totalPrice(),unhideBackground()"
+                  onclick="(blackWhite(), totalPrice(), unhideBackground())"
                   >Monochrome please</a
                 >
               </div>
               <div class="col-md-4 card_height">
                 <div
                   class="two-subjects card card-cover overflow-hidden rounded-4 shadow-lg"
-                  style="background-image: url('images/Full_Colour.jpg')"
+                  style="
+                    background-image: url(&quot;images/Full_Colour.jpg&quot;);
+                  "
                 >
                   <div class="card-header trans_background">
                     <h4 class="title text-light" id="sm-card-text">
@@ -612,7 +632,7 @@
                 <a
                   class="btn primary_accent_btn mt-3 px-5"
                   id="colour"
-                  onclick="colour(),totalPrice(),unhideBackground()"
+                  onclick="(colour(), totalPrice(), unhideBackground())"
                   >Colour, colour, colour!</a
                 >
               </div>
@@ -659,7 +679,7 @@
                 <div
                   class="card card-cover overflow-hidden rounded-4 shadow-lg"
                   style="
-                    background-image: url('images/minimal\ background2.jpg');
+                    background-image: url(&quot;images/minimal\ background2.jpg&quot;);
                   "
                 >
                   <div class="card-header trans_background">
@@ -677,7 +697,7 @@
                 <a
                   class="btn primary_accent_btn mt-3 px-5"
                   id="minimal_background"
-                  onclick="minimal_Background(),totalPrice(),unhideFinish()"
+                  onclick="(minimal_Background(), totalPrice(), unhideFinish())"
                   >Minimal</a
                 >
               </div>
@@ -685,7 +705,7 @@
                 <div
                   class="card card-cover overflow-hidden rounded-4 shadow-lg"
                   style="
-                    background-image: url('images/complex\ Background.jpg');
+                    background-image: url(&quot;images/complex\ Background.jpg&quot;);
                   "
                 >
                   <!-- <a class="btn secondary_accent_label">Premium Choice</a> -->
@@ -711,7 +731,7 @@
                 <a
                   class="btn primary_accent_btn mt-3 px-5"
                   id="complex_background"
-                  onclick="complex_Background(),totalPrice(),unhideFinish()"
+                  onclick="(complex_Background(), totalPrice(), unhideFinish())"
                   >Full Detailed Background</a
                 >
               </div>
@@ -783,7 +803,7 @@
                         type="button"
                         class="w-100 btn btn-outline-secondary"
                         id="noFinish"
-                        onclick="noFinish(),totalPrice(),unhideQuote()"
+                        onclick="(noFinish(), totalPrice(), unhideQuote())"
                       >
                         No Finish
                       </button>
@@ -817,7 +837,7 @@
                         type="button"
                         class="w-100 btn primary_accent_btn"
                         id="glossFinish"
-                        onclick="glossFinish(),totalPrice(),unhideQuote()"
+                        onclick="(glossFinish(), totalPrice(), unhideQuote())"
                       >
                         Glass Like Finish
                       </button>
@@ -853,7 +873,7 @@
                         type="button"
                         class="w-100 btn btn-success fw-bold text-white border-3 border-light"
                         id="matteFinish"
-                        onclick="matteFinish(),totalPrice(),unhideQuote()"
+                        onclick="(matteFinish(), totalPrice(), unhideQuote())"
                       >
                         Premium Finish
                       </button>
@@ -955,7 +975,9 @@
                               id="WidthInputMobile"
                               placeholder="Value in cm"
                               value=""
-                              onchange="widthUpdater(this.value),totalPrice()"
+                              onchange="
+                                (widthUpdater(this.value), totalPrice())
+                              "
                             />
                             <label for="WidthInputMobile"
                               >Change Width Here (cm)</label
@@ -1015,7 +1037,9 @@
                               id="heightInputMobile"
                               placeholder="Value in cm"
                               value=""
-                              onchange="heightUpdater(this.value),totalPrice()"
+                              onchange="
+                                (heightUpdater(this.value), totalPrice())
+                              "
                               aria-describedby="heightTotalHelpMobile"
                             />
                             <label for="heightInputMobile"
@@ -1070,7 +1094,7 @@
                                   name="inlineRadioOptions"
                                   id="subjectInlineRadioOne"
                                   value="option1"
-                                  onchange="oneSubjects(),totalPrice()"
+                                  onchange="(oneSubjects(), totalPrice())"
                                   aria-describedby="subjectTotalHelp"
                                 />
                                 <label
@@ -1094,7 +1118,7 @@
                                   name="inlineRadioOptions"
                                   id="subjectInlineRadioTwo"
                                   value="option2"
-                                  onchange="twoSubjects(),totalPrice()"
+                                  onchange="(twoSubjects(), totalPrice())"
                                   aria-describedby="subject2TotalHelp"
                                 />
                                 <label
@@ -1119,7 +1143,7 @@
                                   name="inlineRadioOptions"
                                   id="subjectInlineRadio3"
                                   value="option3"
-                                  onchange="threeSubjects(),totalPrice()"
+                                  onchange="(threeSubjects(), totalPrice())"
                                   aria-describedby="subject3TotalHelp"
                                 />
                                 <label
@@ -1177,7 +1201,7 @@
                                   name="inlineRadioOptions"
                                   id="RadioBW"
                                   value="Monochromatic"
-                                  onchange="blackWhite(),totalPrice()"
+                                  onchange="(blackWhite(), totalPrice())"
                                 />
                                 <label class="form-check-label" for="RadioBW"
                                   >Monochrome</label
@@ -1192,7 +1216,7 @@
                                   name="inlineRadioOptions"
                                   id="RadioColour"
                                   value="Full Colour"
-                                  onchange="colour(),totalPrice()"
+                                  onchange="(colour(), totalPrice())"
                                 />
                                 <label
                                   class="form-check-label"
@@ -1249,7 +1273,9 @@
                                     name="inlineRadioOptions"
                                     id="RadioMinimal"
                                     value="Minimal"
-                                    onchange="minimal_Background(),totalPrice()"
+                                    onchange="
+                                      (minimal_Background(), totalPrice())
+                                    "
                                   />
                                   <label
                                     class="form-check-label"
@@ -1266,7 +1292,9 @@
                                     name="inlineRadioOptions"
                                     id="inlineRadioComplex"
                                     value="Complex"
-                                    onchange="complex_Background(),totalPrice()"
+                                    onchange="
+                                      (complex_Background(), totalPrice())
+                                    "
                                   />
                                   <label
                                     class="form-check-label"
@@ -1311,7 +1339,9 @@
                               id="WidthInputValue"
                               placeholder="Value in cm"
                               value=""
-                              onchange="widthUpdater(this.value),totalPrice()"
+                              onchange="
+                                (widthUpdater(this.value), totalPrice())
+                              "
                             />
                             <label for="WidthInputValue"
                               >Change Width Here (cm)</label
@@ -1328,7 +1358,9 @@
                               id="heightInputValue"
                               placeholder="Value in cm"
                               value=""
-                              onchange="heightUpdater(this.value),totalPrice()"
+                              onchange="
+                                (heightUpdater(this.value), totalPrice())
+                              "
                             />
                             <label for="heightInputValue"
                               >Change Height Here (cm)</label
@@ -1353,7 +1385,7 @@
                                   name="inlineRadioOptions"
                                   id="inlineRadio1"
                                   value="option1"
-                                  onchange="oneSubjects(),totalPrice()"
+                                  onchange="(oneSubjects(), totalPrice())"
                                 />
                                 <label
                                   class="form-check-label"
@@ -1370,7 +1402,7 @@
                                   name="inlineRadioOptions"
                                   id="inlineRadio2"
                                   value="option2"
-                                  onchange="twoSubjects(),totalPrice()"
+                                  onchange="(twoSubjects(), totalPrice())"
                                 />
                                 <label
                                   class="form-check-label"
@@ -1387,7 +1419,7 @@
                                   name="inlineRadioOptions"
                                   id="inlineRadio3"
                                   value="option3"
-                                  onchange="threeSubjects(),totalPrice()"
+                                  onchange="(threeSubjects(), totalPrice())"
                                 />
                                 <label
                                   class="form-check-label"
@@ -1418,7 +1450,7 @@
                                   name="inlineRadioOptions"
                                   id="inlineRadioBW"
                                   value="Monochromatic"
-                                  onchange="blackWhite(),totalPrice()"
+                                  onchange="(blackWhite(), totalPrice())"
                                 />
                                 <label
                                   class="form-check-label"
@@ -1435,7 +1467,7 @@
                                   name="inlineRadioOptions"
                                   id="inlineRadioColour"
                                   value="Full Colour"
-                                  onchange="colour(),totalPrice()"
+                                  onchange="(colour(), totalPrice())"
                                 />
                                 <label
                                   class="form-check-label"
@@ -1467,7 +1499,9 @@
                                   name="inlineRadioOptions"
                                   id="inlineRadioMinimal"
                                   value="Minimal"
-                                  onchange="minimal_Background(),totalPrice()"
+                                  onchange="
+                                    (minimal_Background(), totalPrice())
+                                  "
                                 />
                                 <label
                                   class="form-check-label"
@@ -1484,7 +1518,9 @@
                                   name="inlineRadioOptions"
                                   id="RadioComplex"
                                   value="Complex"
-                                  onchange="complex_Background(),totalPrice()"
+                                  onchange="
+                                    (complex_Background(), totalPrice())
+                                  "
                                 />
                                 <label
                                   class="form-check-label"
@@ -1515,7 +1551,7 @@
                                   name="inlineRadioOptions"
                                   id="inlineRadioNF"
                                   value="No Finish"
-                                  onchange="noFinish(),totalPrice()"
+                                  onchange="(noFinish(), totalPrice())"
                                 />
                                 <label
                                   class="form-check-label"
@@ -1532,7 +1568,7 @@
                                   name="inlineRadioOptions"
                                   id="inlineRadioGF"
                                   value="Gloss Finish"
-                                  onchange="glossFinish(),totalPrice()"
+                                  onchange="(glossFinish(), totalPrice())"
                                 />
                                 <label
                                   class="form-check-label"
@@ -1549,7 +1585,7 @@
                                   name="inlineRadioOptions"
                                   id="inlineRadioMF"
                                   value="Matte Finish"
-                                  onchange="matteFinish(),totalPrice()"
+                                  onchange="(matteFinish(), totalPrice())"
                                 />
                                 <label
                                   class="form-check-label"
@@ -2108,10 +2144,10 @@
     <script src="https://web3forms.com/client/script.js" async defer></script>
     <script>
       const popoverTriggerList = document.querySelectorAll(
-        '[data-bs-toggle="popover"]'
+        '[data-bs-toggle="popover"]',
       );
       const popoverList = [...popoverTriggerList].map(
-        (popoverTriggerEl) => new bootstrap.Popover(popoverTriggerEl)
+        (popoverTriggerEl) => new bootstrap.Popover(popoverTriggerEl),
       );
     </script>
   </body>
