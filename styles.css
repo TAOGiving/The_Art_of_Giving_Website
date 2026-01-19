@@ -38,7 +38,7 @@
   --sage_green: #68a18b; /* Primary Accent */
   --dark_sage_green: #335246; /* Accent Text*/
   --burnt_terracotta: #9a533e; /* Secondary Accent */
-  --deep_gray: #2e2e2efc; /* Text */
+  --deep_gray: #2e2e2e; /* Text */
 
   /* Pallet 4 Playful Yet professional */
   --white: #ffffff; /* Background */
@@ -442,7 +442,8 @@ body.fade-out {
   width: 100%;
   min-height: 80vh;
   /* background-image: url("images/Cherry\ Blossom\ Hero\ Background.jpg"); */
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0)),
+  background:
+    linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0)),
     url("images/Cherry\ Blossom\ Hero\ Background.jpg");
   background-size: cover;
   background-position: center;
