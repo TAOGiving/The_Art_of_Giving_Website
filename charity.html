@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -317,7 +317,7 @@
           <div class="container">
             <div class="row align-items-center gx-md-5 mt-sm-5">
               <div
-                class="col-sm-6 d-inline text-center align-items-center justify-content-center"
+                class="col-6 d-inline text-center align-items-center justify-content-center"
               >
                 <div class="home-header-text-holder pe-md-5">
                   <h3
@@ -335,7 +335,7 @@
                 </div>
               </div>
               <div
-                class="col-sm-6 d-inline text-center align-items-center justify-content-center img-right"
+                class="col-6 d-inline text-center align-items-center justify-content-center img-right"
               >
                 <img
                   src="images/cheetah.jpg"
@@ -351,7 +351,7 @@
           <div class="container my-5">
             <div class="row align-items-center gx-md-5">
               <div
-                class="col-sm-6 d-inline text-center align-items-center justify-content-center img-left"
+                class="col-6 d-inline text-center align-items-center justify-content-center img-left"
               >
                 <img
                   src="images/Kingfisher.jpg"
@@ -360,7 +360,7 @@
                   width="100%"
                 />
               </div>
-              <div class="col-sm-6 d-inline">
+              <div class="col-6 d-inline">
                 <h3
                   class="lead lh-base fs-5 text_accent text-start align-items-center my-5 content-right"
                 >
@@ -776,10 +776,10 @@
     ></script>
     <script>
       const popoverTriggerList = document.querySelectorAll(
-        '[data-bs-toggle="popover"]'
+        '[data-bs-toggle="popover"]',
       );
       const popoverList = [...popoverTriggerList].map(
-        (popoverTriggerEl) => new bootstrap.Popover(popoverTriggerEl)
+        (popoverTriggerEl) => new bootstrap.Popover(popoverTriggerEl),
       );
     </script>
   </body>
