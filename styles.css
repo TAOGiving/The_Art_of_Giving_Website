@@ -85,8 +85,9 @@ nav {
 }
 
 .nav-link_active {
-  color: var(--deep_gray) !important;
+  color: var(--burnt_terracotta) !important;
   border-bottom: 2px solid transparent;
+  font-weight: 550 !important;
 }
 
 @media (max-width: 405px) {
