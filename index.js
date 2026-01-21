@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
       stagger: 0.5,
       duration: 0.5,
     },
-    "-=0.2"
+    "-=0.2",
   );
 });
 
@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", () => {
       stagger: 0.2,
       duration: 0.75,
     },
-    "-=0.3"
+    "-=0.3",
   );
 
   // Hero: heading + subheading
@@ -85,7 +85,7 @@ document.addEventListener("DOMContentLoaded", () => {
         opacity: 0,
         duration: 0.5,
       },
-      "-=0.4"
+      "-=0.4",
     );
 });
 
@@ -241,13 +241,25 @@ let formBackground = document.getElementById("formBackground");
 let formQuoteTotal = document.getElementById("formQuoteTotal");
 
 function widthUpdater(newValue) {
-  widthOutput.value = newValue;
-  localStorage.setItem("width", newValue);
+  if (newValue < 0) {
+    alert("Please enter a valid positive number for width.");
+    widthInput.value = "";
+    widthOutput.value = "";
+  } else {
+    widthOutput.value = newValue;
+    localStorage.setItem("width", newValue);
+  }
 }
 
 function heightUpdater(newValue) {
-  heightOutput.value = newValue;
-  localStorage.setItem("height", newValue);
+  if (newValue < 0) {
+    alert("Please enter a valid positive number for height.");
+    heightInput.value = "";
+    heightOutput.value = "";
+  } else {
+    heightOutput.value = newValue;
+    localStorage.setItem("height", newValue);
+  }
 }
 
 function a4papersizeUpdater() {
@@ -771,127 +783,127 @@ function totalPrice() {
       quoteTotal.value = (prices[0] * subject1 * monochrome).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[0] * subject1 * monochrome).toFixed(2)
+        (prices[0] * subject1 * monochrome).toFixed(2),
       );
     } else if (calcArea > 351 && calcArea < 500) {
       quoteTotal.value = (prices[1] * subject1 * monochrome).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[1] * subject1 * monochrome).toFixed(2)
+        (prices[1] * subject1 * monochrome).toFixed(2),
       );
     } else if (calcArea > 501 && calcArea < 750) {
       quoteTotal.value = (prices[2] * subject1 * monochrome).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[2] * subject1 * monochrome).toFixed(2)
+        (prices[2] * subject1 * monochrome).toFixed(2),
       );
     } else if (calcArea > 751 && calcArea < 1050) {
       quoteTotal.value = (prices[3] * subject1 * monochrome).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[3] * subject1 * monochrome).toFixed(2)
+        (prices[3] * subject1 * monochrome).toFixed(2),
       );
     } else if (calcArea > 1051 && calcArea < 1400) {
       quoteTotal.value = (prices[4] * subject1 * monochrome).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[4] * subject1 * monochrome).toFixed(2)
+        (prices[4] * subject1 * monochrome).toFixed(2),
       );
     } else if (calcArea > 1401 && calcArea < 1800) {
       quoteTotal.value = (prices[5] * subject1 * monochrome).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[5] * subject1 * monochrome).toFixed(2)
+        (prices[5] * subject1 * monochrome).toFixed(2),
       );
     } else if (calcArea > 1801 && calcArea < 2250) {
       quoteTotal.value = (prices[6] * subject1 * monochrome).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[6] * subject1 * monochrome).toFixed(2)
+        (prices[6] * subject1 * monochrome).toFixed(2),
       );
     } else if (calcArea > 2251 && calcArea < 2750) {
       quoteTotal.value = (prices[7] * subject1 * monochrome).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[7] * subject1 * monochrome).toFixed(2)
+        (prices[7] * subject1 * monochrome).toFixed(2),
       );
     } else if (calcArea > 2751 && calcArea < 3250) {
       quoteTotal.value = (prices[8] * subject1 * monochrome).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[8] * subject1 * monochrome).toFixed(2)
+        (prices[8] * subject1 * monochrome).toFixed(2),
       );
     } else if (calcArea > 3251 && calcArea < 4150) {
       quoteTotal.value = (prices[9] * subject1 * monochrome).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[9] * subject1 * monochrome).toFixed(2)
+        (prices[9] * subject1 * monochrome).toFixed(2),
       );
     } else if (calcArea > 4151 && calcArea < 4850) {
       quoteTotal.value = (prices[10] * subject1 * monochrome).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[10] * subject1 * monochrome).toFixed(2)
+        (prices[10] * subject1 * monochrome).toFixed(2),
       );
     } else if (calcArea > 4851 && calcArea < 5650) {
       quoteTotal.value = (prices[11] * subject1 * monochrome).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[11] * subject1 * monochrome).toFixed(2)
+        (prices[11] * subject1 * monochrome).toFixed(2),
       );
     } else if (calcArea > 5651 && calcArea < 7000) {
       quoteTotal.value = (prices[12] * subject1 * monochrome).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[12] * subject1 * monochrome).toFixed(2)
+        (prices[12] * subject1 * monochrome).toFixed(2),
       );
     } else if (calcArea > 7001 && calcArea < 7550) {
       quoteTotal.value = (prices[13] * subject1 * monochrome).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[13] * subject1 * monochrome).toFixed(2)
+        (prices[13] * subject1 * monochrome).toFixed(2),
       );
     } else if (calcArea > 7551 && calcArea < 9050) {
       quoteTotal.value = (prices[14] * subject1 * monochrome).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[14] * subject1 * monochrome).toFixed(2)
+        (prices[14] * subject1 * monochrome).toFixed(2),
       );
     } else if (calcArea > 9051 && calcArea < 11000) {
       quoteTotal.value = (prices[15] * subject1 * monochrome).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[15] * subject1 * monochrome).toFixed(2)
+        (prices[15] * subject1 * monochrome).toFixed(2),
       );
     } else if (calcArea > 11001 && calcArea < 15000) {
       quoteTotal.value = (prices[16] * subject1 * monochrome).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[16] * subject1 * monochrome).toFixed(2)
+        (prices[16] * subject1 * monochrome).toFixed(2),
       );
     } else if (calcArea > 15001 && calcArea < 19800) {
       quoteTotal.value = (prices[17] * subject1 * monochrome).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[17] * subject1 * monochrome).toFixed(2)
+        (prices[17] * subject1 * monochrome).toFixed(2),
       );
     } else if (calcArea > 19801 && calcArea < 27000) {
       quoteTotal.value = (prices[18] * subject1 * monochrome).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[18] * subject1 * monochrome).toFixed(2)
+        (prices[18] * subject1 * monochrome).toFixed(2),
       );
     } else if (calcArea > 27001 && calcArea < 41200) {
       quoteTotal.value = (prices[19] * subject1 * monochrome).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[19] * subject1 * monochrome).toFixed(2)
+        (prices[19] * subject1 * monochrome).toFixed(2),
       );
     } else if (calcArea > 41201 && calcArea < 50000) {
       quoteTotal.value = (prices[20] * subject1 * monochrome).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[20] * subject1 * monochrome).toFixed(2)
+        (prices[20] * subject1 * monochrome).toFixed(2),
       );
     } else if (calcArea > 50001) {
       quoteTotal.value = "Please contact for price";
@@ -915,115 +927,115 @@ function totalPrice() {
       quoteTotal.value = (prices[2] * subjects2 * monochrome).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[2] * subjects2 * monochrome).toFixed(2)
+        (prices[2] * subjects2 * monochrome).toFixed(2),
       );
     } else if (calcArea > 751 && calcArea < 1050) {
       quoteTotal.value = (prices[3] * subjects2 * monochrome).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[3] * subjects2 * monochrome).toFixed(2)
+        (prices[3] * subjects2 * monochrome).toFixed(2),
       );
     } else if (calcArea > 1051 && calcArea < 1400) {
       quoteTotal.value = (prices[4] * subjects2 * monochrome).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[4] * subjects2 * monochrome).toFixed(2)
+        (prices[4] * subjects2 * monochrome).toFixed(2),
       );
     } else if (calcArea > 1401 && calcArea < 1800) {
       quoteTotal.value = (prices[5] * subjects2 * monochrome).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[5] * subjects2 * monochrome).toFixed(2)
+        (prices[5] * subjects2 * monochrome).toFixed(2),
       );
     } else if (calcArea > 1801 && calcArea < 2250) {
       quoteTotal.value = (prices[6] * subjects2 * monochrome).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[6] * subjects2 * monochrome).toFixed(2)
+        (prices[6] * subjects2 * monochrome).toFixed(2),
       );
     } else if (calcArea > 2251 && calcArea < 2750) {
       quoteTotal.value = (prices[7] * subjects2 * monochrome).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[7] * subjects2 * monochrome).toFixed(2)
+        (prices[7] * subjects2 * monochrome).toFixed(2),
       );
     } else if (calcArea > 2751 && calcArea < 3250) {
       quoteTotal.value = (prices[8] * subjects2 * monochrome).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[8] * subjects2 * monochrome).toFixed(2)
+        (prices[8] * subjects2 * monochrome).toFixed(2),
       );
     } else if (calcArea > 3251 && calcArea < 4150) {
       quoteTotal.value = (prices[9] * subjects2 * monochrome).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[9] * subjects2 * monochrome).toFixed(2)
+        (prices[9] * subjects2 * monochrome).toFixed(2),
       );
     } else if (calcArea > 4151 && calcArea < 4850) {
       quoteTotal.value = (prices[10] * subjects2 * monochrome).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[10] * subjects2 * monochrome).toFixed(2)
+        (prices[10] * subjects2 * monochrome).toFixed(2),
       );
     } else if (calcArea > 4851 && calcArea < 5650) {
       quoteTotal.value = (prices[11] * subjects2 * monochrome).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[11] * subjects2 * monochrome).toFixed(2)
+        (prices[11] * subjects2 * monochrome).toFixed(2),
       );
     } else if (calcArea > 5651 && calcArea < 7000) {
       quoteTotal.value = (prices[12] * subjects2 * monochrome).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[12] * subjects2 * monochrome).toFixed(2)
+        (prices[12] * subjects2 * monochrome).toFixed(2),
       );
     } else if (calcArea > 7001 && calcArea < 7550) {
       quoteTotal.value = (prices[13] * subjects2 * monochrome).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[13] * subjects2 * monochrome).toFixed(2)
+        (prices[13] * subjects2 * monochrome).toFixed(2),
       );
     } else if (calcArea > 7551 && calcArea < 9050) {
       quoteTotal.value = (prices[14] * subjects2 * monochrome).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[14] * subjects2 * monochrome).toFixed(2)
+        (prices[14] * subjects2 * monochrome).toFixed(2),
       );
     } else if (calcArea > 9051 && calcArea < 11000) {
       quoteTotal.value = (prices[15] * subjects2 * monochrome).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[15] * subjects2 * monochrome).toFixed(2)
+        (prices[15] * subjects2 * monochrome).toFixed(2),
       );
     } else if (calcArea > 11001 && calcArea < 15000) {
       quoteTotal.value = (prices[16] * subjects2 * monochrome).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[16] * subjects2 * monochrome).toFixed(2)
+        (prices[16] * subjects2 * monochrome).toFixed(2),
       );
     } else if (calcArea > 15001 && calcArea < 19800) {
       quoteTotal.value = (prices[17] * subjects2 * monochrome).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[17] * subjects2 * monochrome).toFixed(2)
+        (prices[17] * subjects2 * monochrome).toFixed(2),
       );
     } else if (calcArea > 19801 && calcArea < 27000) {
       quoteTotal.value = (prices[18] * subjects2 * monochrome).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[18] * subjects2 * monochrome).toFixed(2)
+        (prices[18] * subjects2 * monochrome).toFixed(2),
       );
     } else if (calcArea > 27001 && calcArea < 41200) {
       quoteTotal.value = (prices[19] * subjects2 * monochrome).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[19] * subjects2 * monochrome).toFixed(2)
+        (prices[19] * subjects2 * monochrome).toFixed(2),
       );
     } else if (calcArea > 41201 && calcArea < 50000) {
       quoteTotal.value = (prices[20] * subjects2 * monochrome).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[20] * subjects2 * monochrome).toFixed(2)
+        (prices[20] * subjects2 * monochrome).toFixed(2),
       );
     } else if (calcArea > 50001) {
       quoteTotal.value = "Please contact for price";
@@ -1044,103 +1056,103 @@ function totalPrice() {
       quoteTotal.value = (prices[4] * subjects3 * monochrome).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[4] * subjects3 * monochrome).toFixed(2)
+        (prices[4] * subjects3 * monochrome).toFixed(2),
       );
     } else if (calcArea > 1401 && calcArea < 1800) {
       quoteTotal.value = (prices[5] * subjects3 * monochrome).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[5] * subjects3 * monochrome).toFixed(2)
+        (prices[5] * subjects3 * monochrome).toFixed(2),
       );
     } else if (calcArea > 1801 && calcArea < 2250) {
       quoteTotal.value = (prices[6] * subjects3 * monochrome).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[6] * subjects3 * monochrome).toFixed(2)
+        (prices[6] * subjects3 * monochrome).toFixed(2),
       );
     } else if (calcArea > 2251 && calcArea < 2750) {
       quoteTotal.value = (prices[7] * subjects3 * monochrome).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[7] * subjects3 * monochrome).toFixed(2)
+        (prices[7] * subjects3 * monochrome).toFixed(2),
       );
     } else if (calcArea > 2751 && calcArea < 3250) {
       quoteTotal.value = (prices[8] * subjects3 * monochrome).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[8] * subjects3 * monochrome).toFixed(2)
+        (prices[8] * subjects3 * monochrome).toFixed(2),
       );
     } else if (calcArea > 3251 && calcArea < 4150) {
       quoteTotal.value = (prices[9] * subjects3 * monochrome).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[9] * subjects3 * monochrome).toFixed(2)
+        (prices[9] * subjects3 * monochrome).toFixed(2),
       );
     } else if (calcArea > 4151 && calcArea < 4850) {
       quoteTotal.value = (prices[10] * subjects3 * monochrome).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[10] * subjects3 * monochrome).toFixed(2)
+        (prices[10] * subjects3 * monochrome).toFixed(2),
       );
     } else if (calcArea > 4851 && calcArea < 5650) {
       quoteTotal.value = (prices[11] * subjects3 * monochrome).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[11] * subjects3 * monochrome).toFixed(2)
+        (prices[11] * subjects3 * monochrome).toFixed(2),
       );
     } else if (calcArea > 5651 && calcArea < 7000) {
       quoteTotal.value = (prices[12] * subjects3 * monochrome).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[12] * subjects3 * monochrome).toFixed(2)
+        (prices[12] * subjects3 * monochrome).toFixed(2),
       );
     } else if (calcArea > 7001 && calcArea < 7550) {
       quoteTotal.value = (prices[13] * subjects3 * monochrome).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[13] * subjects3 * monochrome).toFixed(2)
+        (prices[13] * subjects3 * monochrome).toFixed(2),
       );
     } else if (calcArea > 7551 && calcArea < 9050) {
       quoteTotal.value = (prices[14] * subjects3 * monochrome).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[14] * subjects3 * monochrome).toFixed(2)
+        (prices[14] * subjects3 * monochrome).toFixed(2),
       );
     } else if (calcArea > 9051 && calcArea < 11000) {
       quoteTotal.value = (prices[15] * subjects3 * monochrome).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[15] * subjects3 * monochrome).toFixed(2)
+        (prices[15] * subjects3 * monochrome).toFixed(2),
       );
     } else if (calcArea > 11001 && calcArea < 15000) {
       quoteTotal.value = (prices[16] * subjects3 * monochrome).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[16] * subjects3 * monochrome).toFixed(2)
+        (prices[16] * subjects3 * monochrome).toFixed(2),
       );
     } else if (calcArea > 15001 && calcArea < 19800) {
       quoteTotal.value = (prices[17] * subjects3 * monochrome).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[17] * subjects3 * monochrome).toFixed(2)
+        (prices[17] * subjects3 * monochrome).toFixed(2),
       );
     } else if (calcArea > 19801 && calcArea < 27000) {
       quoteTotal.value = (prices[18] * subjects3 * monochrome).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[18] * subjects3 * monochrome).toFixed(2)
+        (prices[18] * subjects3 * monochrome).toFixed(2),
       );
     } else if (calcArea > 27001 && calcArea < 41200) {
       quoteTotal.value = (prices[19] * subjects3 * monochrome).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[19] * subjects3 * monochrome).toFixed(2)
+        (prices[19] * subjects3 * monochrome).toFixed(2),
       );
     } else if (calcArea > 41201 && calcArea < 50000) {
       quoteTotal.value = (prices[20] * subjects3 * monochrome).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[20] * subjects3 * monochrome).toFixed(2)
+        (prices[20] * subjects3 * monochrome).toFixed(2),
       );
     } else if (calcArea > 50001) {
       quoteTotal.value = "Please contact for price";
@@ -1158,127 +1170,127 @@ function totalPrice() {
       quoteTotal.value = (prices[0] * subject1 * finishGloss).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[0] * subject1 * finishGloss).toFixed(2)
+        (prices[0] * subject1 * finishGloss).toFixed(2),
       );
     } else if (calcArea > 351 && calcArea < 500) {
       quoteTotal.value = (prices[1] * subject1 * finishGloss).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[1] * subject1 * finishGloss).toFixed(2)
+        (prices[1] * subject1 * finishGloss).toFixed(2),
       );
     } else if (calcArea > 501 && calcArea < 750) {
       quoteTotal.value = (prices[2] * subject1 * finishGloss).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[2] * subject1 * finishGloss).toFixed(2)
+        (prices[2] * subject1 * finishGloss).toFixed(2),
       );
     } else if (calcArea > 751 && calcArea < 1050) {
       quoteTotal.value = (prices[3] * subject1 * finishGloss).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[3] * subject1 * finishGloss).toFixed(2)
+        (prices[3] * subject1 * finishGloss).toFixed(2),
       );
     } else if (calcArea > 1051 && calcArea < 1400) {
       quoteTotal.value = (prices[4] * subject1 * finishGloss).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[4] * subject1 * finishGloss).toFixed(2)
+        (prices[4] * subject1 * finishGloss).toFixed(2),
       );
     } else if (calcArea > 1401 && calcArea < 1800) {
       quoteTotal.value = (prices[5] * subject1 * finishGloss).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[5] * subject1 * finishGloss).toFixed(2)
+        (prices[5] * subject1 * finishGloss).toFixed(2),
       );
     } else if (calcArea > 1801 && calcArea < 2250) {
       quoteTotal.value = (prices[6] * subject1 * finishGloss).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[6] * subject1 * finishGloss).toFixed(2)
+        (prices[6] * subject1 * finishGloss).toFixed(2),
       );
     } else if (calcArea > 2251 && calcArea < 2750) {
       quoteTotal.value = (prices[7] * subject1 * finishGloss).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[7] * subject1 * finishGloss).toFixed(2)
+        (prices[7] * subject1 * finishGloss).toFixed(2),
       );
     } else if (calcArea > 2751 && calcArea < 3250) {
       quoteTotal.value = (prices[8] * subject1 * finishGloss).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[8] * subject1 * finishGloss).toFixed(2)
+        (prices[8] * subject1 * finishGloss).toFixed(2),
       );
     } else if (calcArea > 3251 && calcArea < 4150) {
       quoteTotal.value = (prices[9] * subject1 * finishGloss).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[9] * subject1 * finishGloss).toFixed(2)
+        (prices[9] * subject1 * finishGloss).toFixed(2),
       );
     } else if (calcArea > 4151 && calcArea < 4850) {
       quoteTotal.value = (prices[10] * subject1 * finishGloss).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[10] * subject1 * finishGloss).toFixed(2)
+        (prices[10] * subject1 * finishGloss).toFixed(2),
       );
     } else if (calcArea > 4851 && calcArea < 5650) {
       quoteTotal.value = (prices[11] * subject1 * finishGloss).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[11] * subject1 * finishGloss).toFixed(2)
+        (prices[11] * subject1 * finishGloss).toFixed(2),
       );
     } else if (calcArea > 5651 && calcArea < 7000) {
       quoteTotal.value = (prices[12] * subject1 * finishGloss).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[12] * subject1 * finishGloss).toFixed(2)
+        (prices[12] * subject1 * finishGloss).toFixed(2),
       );
     } else if (calcArea > 7001 && calcArea < 7550) {
       quoteTotal.value = (prices[13] * subject1 * finishGloss).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[13] * subject1 * finishGloss).toFixed(2)
+        (prices[13] * subject1 * finishGloss).toFixed(2),
       );
     } else if (calcArea > 7551 && calcArea < 9050) {
       quoteTotal.value = (prices[14] * subject1 * finishGloss).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[14] * subject1 * finishGloss).toFixed(2)
+        (prices[14] * subject1 * finishGloss).toFixed(2),
       );
     } else if (calcArea > 9051 && calcArea < 11000) {
       quoteTotal.value = (prices[15] * subject1 * finishGloss).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[15] * subject1 * finishGloss).toFixed(2)
+        (prices[15] * subject1 * finishGloss).toFixed(2),
       );
     } else if (calcArea > 11001 && calcArea < 15000) {
       quoteTotal.value = (prices[16] * subject1 * finishGloss).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[16] * subject1 * finishGloss).toFixed(2)
+        (prices[16] * subject1 * finishGloss).toFixed(2),
       );
     } else if (calcArea > 15001 && calcArea < 19800) {
       quoteTotal.value = (prices[17] * subject1 * finishGloss).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[17] * subject1 * finishGloss).toFixed(2)
+        (prices[17] * subject1 * finishGloss).toFixed(2),
       );
     } else if (calcArea > 19801 && calcArea < 27000) {
       quoteTotal.value = (prices[18] * subject1 * finishGloss).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[18] * subject1 * finishGloss).toFixed(2)
+        (prices[18] * subject1 * finishGloss).toFixed(2),
       );
     } else if (calcArea > 27001 && calcArea < 41200) {
       quoteTotal.value = (prices[19] * subject1 * finishGloss).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[19] * subject1 * finishGloss).toFixed(2)
+        (prices[19] * subject1 * finishGloss).toFixed(2),
       );
     } else if (calcArea > 41201 && calcArea < 50000) {
       quoteTotal.value = (prices[20] * subject1 * finishGloss).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[20] * subject1 * finishGloss).toFixed(2)
+        (prices[20] * subject1 * finishGloss).toFixed(2),
       );
     } else if (calcArea > 50001) {
       quoteTotal.value = "Please contact for price";
@@ -1302,115 +1314,115 @@ function totalPrice() {
       quoteTotal.value = (prices[2] * subjects2 * finishGloss).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[2] * subjects2 * finishGloss).toFixed(2)
+        (prices[2] * subjects2 * finishGloss).toFixed(2),
       );
     } else if (calcArea > 751 && calcArea < 1050) {
       quoteTotal.value = (prices[3] * subjects2 * finishGloss).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[3] * subjects2 * finishGloss).toFixed(2)
+        (prices[3] * subjects2 * finishGloss).toFixed(2),
       );
     } else if (calcArea > 1051 && calcArea < 1400) {
       quoteTotal.value = (prices[4] * subjects2 * finishGloss).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[4] * subjects2 * finishGloss).toFixed(2)
+        (prices[4] * subjects2 * finishGloss).toFixed(2),
       );
     } else if (calcArea > 1401 && calcArea < 1800) {
       quoteTotal.value = (prices[5] * subjects2 * finishGloss).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[5] * subjects2 * finishGloss).toFixed(2)
+        (prices[5] * subjects2 * finishGloss).toFixed(2),
       );
     } else if (calcArea > 1801 && calcArea < 2250) {
       quoteTotal.value = (prices[6] * subjects2 * finishGloss).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[6] * subjects2 * finishGloss).toFixed(2)
+        (prices[6] * subjects2 * finishGloss).toFixed(2),
       );
     } else if (calcArea > 2251 && calcArea < 2750) {
       quoteTotal.value = (prices[7] * subjects2 * finishGloss).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[7] * subjects2 * finishGloss).toFixed(2)
+        (prices[7] * subjects2 * finishGloss).toFixed(2),
       );
     } else if (calcArea > 2751 && calcArea < 3250) {
       quoteTotal.value = (prices[8] * subjects2 * finishGloss).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[8] * subjects2 * finishGloss).toFixed(2)
+        (prices[8] * subjects2 * finishGloss).toFixed(2),
       );
     } else if (calcArea > 3251 && calcArea < 4150) {
       quoteTotal.value = (prices[9] * subjects2 * finishGloss).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[9] * subjects2 * finishGloss).toFixed(2)
+        (prices[9] * subjects2 * finishGloss).toFixed(2),
       );
     } else if (calcArea > 4151 && calcArea < 4850) {
       quoteTotal.value = (prices[10] * subjects2 * finishGloss).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[10] * subjects2 * finishGloss).toFixed(2)
+        (prices[10] * subjects2 * finishGloss).toFixed(2),
       );
     } else if (calcArea > 4851 && calcArea < 5650) {
       quoteTotal.value = (prices[11] * subjects2 * finishGloss).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[11] * subjects2 * finishGloss).toFixed(2)
+        (prices[11] * subjects2 * finishGloss).toFixed(2),
       );
     } else if (calcArea > 5651 && calcArea < 7000) {
       quoteTotal.value = (prices[12] * subjects2 * finishGloss).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[12] * subjects2 * finishGloss).toFixed(2)
+        (prices[12] * subjects2 * finishGloss).toFixed(2),
       );
     } else if (calcArea > 7001 && calcArea < 7550) {
       quoteTotal.value = (prices[13] * subjects2 * finishGloss).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[13] * subjects2 * finishGloss).toFixed(2)
+        (prices[13] * subjects2 * finishGloss).toFixed(2),
       );
     } else if (calcArea > 7551 && calcArea < 9050) {
       quoteTotal.value = (prices[14] * subjects2 * finishGloss).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[14] * subjects2 * finishGloss).toFixed(2)
+        (prices[14] * subjects2 * finishGloss).toFixed(2),
       );
     } else if (calcArea > 9051 && calcArea < 11000) {
       quoteTotal.value = (prices[15] * subjects2 * finishGloss).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[15] * subjects2 * finishGloss).toFixed(2)
+        (prices[15] * subjects2 * finishGloss).toFixed(2),
       );
     } else if (calcArea > 11001 && calcArea < 15000) {
       quoteTotal.value = (prices[16] * subjects2 * finishGloss).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[16] * subjects2 * finishGloss).toFixed(2)
+        (prices[16] * subjects2 * finishGloss).toFixed(2),
       );
     } else if (calcArea > 15001 && calcArea < 19800) {
       quoteTotal.value = (prices[17] * subjects2 * finishGloss).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[17] * subjects2 * finishGloss).toFixed(2)
+        (prices[17] * subjects2 * finishGloss).toFixed(2),
       );
     } else if (calcArea > 19801 && calcArea < 27000) {
       quoteTotal.value = (prices[18] * subjects2 * finishGloss).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[18] * subjects2 * finishGloss).toFixed(2)
+        (prices[18] * subjects2 * finishGloss).toFixed(2),
       );
     } else if (calcArea > 27001 && calcArea < 41200) {
       quoteTotal.value = (prices[19] * subjects2 * finishGloss).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[19] * subjects2 * finishGloss).toFixed(2)
+        (prices[19] * subjects2 * finishGloss).toFixed(2),
       );
     } else if (calcArea > 41201 && calcArea < 50000) {
       quoteTotal.value = (prices[20] * subjects2 * finishGloss).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[20] * subjects2 * finishGloss).toFixed(2)
+        (prices[20] * subjects2 * finishGloss).toFixed(2),
       );
     } else if (calcArea > 50001) {
       quoteTotal.value = "Please contact for price";
@@ -1431,103 +1443,103 @@ function totalPrice() {
       quoteTotal.value = (prices[4] * subjects3 * finishGloss).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[4] * subjects3 * finishGloss).toFixed(2)
+        (prices[4] * subjects3 * finishGloss).toFixed(2),
       );
     } else if (calcArea > 1401 && calcArea < 1800) {
       quoteTotal.value = (prices[5] * subjects3 * finishGloss).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[5] * subjects3 * finishGloss).toFixed(2)
+        (prices[5] * subjects3 * finishGloss).toFixed(2),
       );
     } else if (calcArea > 1801 && calcArea < 2250) {
       quoteTotal.value = (prices[6] * subjects3 * finishGloss).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[6] * subjects3 * finishGloss).toFixed(2)
+        (prices[6] * subjects3 * finishGloss).toFixed(2),
       );
     } else if (calcArea > 2251 && calcArea < 2750) {
       quoteTotal.value = (prices[7] * subjects3 * finishGloss).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[7] * subjects3 * finishGloss).toFixed(2)
+        (prices[7] * subjects3 * finishGloss).toFixed(2),
       );
     } else if (calcArea > 2751 && calcArea < 3250) {
       quoteTotal.value = (prices[8] * subjects3 * finishGloss).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[8] * subjects3 * finishGloss).toFixed(2)
+        (prices[8] * subjects3 * finishGloss).toFixed(2),
       );
     } else if (calcArea > 3251 && calcArea < 4150) {
       quoteTotal.value = (prices[9] * subjects3 * finishGloss).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[9] * subjects3 * finishGloss).toFixed(2)
+        (prices[9] * subjects3 * finishGloss).toFixed(2),
       );
     } else if (calcArea > 4151 && calcArea < 4850) {
       quoteTotal.value = (prices[10] * subjects3 * finishGloss).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[10] * subjects3 * finishGloss).toFixed(2)
+        (prices[10] * subjects3 * finishGloss).toFixed(2),
       );
     } else if (calcArea > 4851 && calcArea < 5650) {
       quoteTotal.value = (prices[11] * subjects3 * finishGloss).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[11] * subjects3 * finishGloss).toFixed(2)
+        (prices[11] * subjects3 * finishGloss).toFixed(2),
       );
     } else if (calcArea > 5651 && calcArea < 7000) {
       quoteTotal.value = (prices[12] * subjects3 * finishGloss).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[12] * subjects3 * finishGloss).toFixed(2)
+        (prices[12] * subjects3 * finishGloss).toFixed(2),
       );
     } else if (calcArea > 7001 && calcArea < 7550) {
       quoteTotal.value = (prices[13] * subjects3 * finishGloss).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[13] * subjects3 * finishGloss).toFixed(2)
+        (prices[13] * subjects3 * finishGloss).toFixed(2),
       );
     } else if (calcArea > 7551 && calcArea < 9050) {
       quoteTotal.value = (prices[14] * subjects3 * finishGloss).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[14] * subjects3 * finishGloss).toFixed(2)
+        (prices[14] * subjects3 * finishGloss).toFixed(2),
       );
     } else if (calcArea > 9051 && calcArea < 11000) {
       quoteTotal.value = (prices[15] * subjects3 * finishGloss).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[15] * subjects3 * finishGloss).toFixed(2)
+        (prices[15] * subjects3 * finishGloss).toFixed(2),
       );
     } else if (calcArea > 11001 && calcArea < 15000) {
       quoteTotal.value = (prices[16] * subjects3 * finishGloss).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[16] * subjects3 * finishGloss).toFixed(2)
+        (prices[16] * subjects3 * finishGloss).toFixed(2),
       );
     } else if (calcArea > 15001 && calcArea < 19800) {
       quoteTotal.value = (prices[17] * subjects3 * finishGloss).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[17] * subjects3 * finishGloss).toFixed(2)
+        (prices[17] * subjects3 * finishGloss).toFixed(2),
       );
     } else if (calcArea > 19801 && calcArea < 27000) {
       quoteTotal.value = (prices[18] * subjects3 * finishGloss).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[18] * subjects3 * finishGloss).toFixed(2)
+        (prices[18] * subjects3 * finishGloss).toFixed(2),
       );
     } else if (calcArea > 27001 && calcArea < 41200) {
       quoteTotal.value = (prices[19] * subjects3 * finishGloss).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[19] * subjects3 * finishGloss).toFixed(2)
+        (prices[19] * subjects3 * finishGloss).toFixed(2),
       );
     } else if (calcArea > 41201 && calcArea < 50000) {
       quoteTotal.value = (prices[20] * subjects3 * finishGloss).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[20] * subjects3 * finishGloss).toFixed(2)
+        (prices[20] * subjects3 * finishGloss).toFixed(2),
       );
     } else if (calcArea > 50001) {
       quoteTotal.value = "Please contact for price";
@@ -1550,7 +1562,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[0] * subject1 * monochrome * finishGloss).toFixed(2)
+        (prices[0] * subject1 * monochrome * finishGloss).toFixed(2),
       );
     } else if (calcArea > 351 && calcArea < 500) {
       quoteTotal.value = (
@@ -1561,7 +1573,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[1] * subject1 * monochrome * finishGloss).toFixed(2)
+        (prices[1] * subject1 * monochrome * finishGloss).toFixed(2),
       );
     } else if (calcArea > 501 && calcArea < 750) {
       quoteTotal.value = (
@@ -1572,7 +1584,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[2] * subject1 * monochrome * finishGloss).toFixed(2)
+        (prices[2] * subject1 * monochrome * finishGloss).toFixed(2),
       );
     } else if (calcArea > 751 && calcArea < 1050) {
       quoteTotal.value = (
@@ -1583,7 +1595,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[3] * subject1 * monochrome * finishGloss).toFixed(2)
+        (prices[3] * subject1 * monochrome * finishGloss).toFixed(2),
       );
     } else if (calcArea > 1051 && calcArea < 1400) {
       quoteTotal.value = (
@@ -1594,7 +1606,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[4] * subject1 * monochrome * finishGloss).toFixed(2)
+        (prices[4] * subject1 * monochrome * finishGloss).toFixed(2),
       );
     } else if (calcArea > 1401 && calcArea < 1800) {
       quoteTotal.value = (
@@ -1605,7 +1617,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[5] * subject1 * monochrome * finishGloss).toFixed(2)
+        (prices[5] * subject1 * monochrome * finishGloss).toFixed(2),
       );
     } else if (calcArea > 1801 && calcArea < 2250) {
       quoteTotal.value = (
@@ -1616,7 +1628,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[6] * subject1 * monochrome * finishGloss).toFixed(2)
+        (prices[6] * subject1 * monochrome * finishGloss).toFixed(2),
       );
     } else if (calcArea > 2251 && calcArea < 2750) {
       quoteTotal.value = (
@@ -1627,7 +1639,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[7] * subject1 * monochrome * finishGloss).toFixed(2)
+        (prices[7] * subject1 * monochrome * finishGloss).toFixed(2),
       );
     } else if (calcArea > 2751 && calcArea < 3250) {
       quoteTotal.value = (
@@ -1638,7 +1650,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[8] * subject1 * monochrome * finishGloss).toFixed(2)
+        (prices[8] * subject1 * monochrome * finishGloss).toFixed(2),
       );
     } else if (calcArea > 3251 && calcArea < 4150) {
       quoteTotal.value = (
@@ -1649,7 +1661,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[9] * subject1 * monochrome * finishGloss).toFixed(2)
+        (prices[9] * subject1 * monochrome * finishGloss).toFixed(2),
       );
     } else if (calcArea > 4151 && calcArea < 4850) {
       quoteTotal.value = (
@@ -1660,7 +1672,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[10] * subject1 * monochrome * finishGloss).toFixed(2)
+        (prices[10] * subject1 * monochrome * finishGloss).toFixed(2),
       );
     } else if (calcArea > 4851 && calcArea < 5650) {
       quoteTotal.value = (
@@ -1671,7 +1683,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[11] * subject1 * monochrome * finishGloss).toFixed(2)
+        (prices[11] * subject1 * monochrome * finishGloss).toFixed(2),
       );
     } else if (calcArea > 5651 && calcArea < 7000) {
       quoteTotal.value = (
@@ -1682,7 +1694,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[12] * subject1 * monochrome * finishGloss).toFixed(2)
+        (prices[12] * subject1 * monochrome * finishGloss).toFixed(2),
       );
     } else if (calcArea > 7001 && calcArea < 7550) {
       quoteTotal.value = (
@@ -1693,7 +1705,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[13] * subject1 * monochrome * finishGloss).toFixed(2)
+        (prices[13] * subject1 * monochrome * finishGloss).toFixed(2),
       );
     } else if (calcArea > 7551 && calcArea < 9050) {
       quoteTotal.value = (
@@ -1704,7 +1716,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[14] * subject1 * monochrome * finishGloss).toFixed(2)
+        (prices[14] * subject1 * monochrome * finishGloss).toFixed(2),
       );
     } else if (calcArea > 9051 && calcArea < 11000) {
       quoteTotal.value = (
@@ -1715,7 +1727,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[15] * subject1 * monochrome * finishGloss).toFixed(2)
+        (prices[15] * subject1 * monochrome * finishGloss).toFixed(2),
       );
     } else if (calcArea > 11001 && calcArea < 15000) {
       quoteTotal.value = (
@@ -1726,7 +1738,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[16] * subject1 * monochrome * finishGloss).toFixed(2)
+        (prices[16] * subject1 * monochrome * finishGloss).toFixed(2),
       );
     } else if (calcArea > 15001 && calcArea < 19800) {
       quoteTotal.value = (
@@ -1737,7 +1749,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[17] * subject1 * monochrome * finishGloss).toFixed(2)
+        (prices[17] * subject1 * monochrome * finishGloss).toFixed(2),
       );
     } else if (calcArea > 19801 && calcArea < 27000) {
       quoteTotal.value = (
@@ -1748,7 +1760,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[18] * subject1 * monochrome * finishGloss).toFixed(2)
+        (prices[18] * subject1 * monochrome * finishGloss).toFixed(2),
       );
     } else if (calcArea > 27001 && calcArea < 41200) {
       quoteTotal.value = (
@@ -1759,7 +1771,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[19] * subject1 * monochrome * finishGloss).toFixed(2)
+        (prices[19] * subject1 * monochrome * finishGloss).toFixed(2),
       );
     } else if (calcArea > 41201 && calcArea < 50000) {
       quoteTotal.value = (
@@ -1770,7 +1782,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[20] * subject1 * monochrome * finishGloss).toFixed(2)
+        (prices[20] * subject1 * monochrome * finishGloss).toFixed(2),
       );
     } else if (calcArea > 50001) {
       quoteTotal.value = "Please contact for price";
@@ -1799,7 +1811,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[2] * subjects2 * monochrome * finishGloss).toFixed(2)
+        (prices[2] * subjects2 * monochrome * finishGloss).toFixed(2),
       );
     } else if (calcArea > 751 && calcArea < 1050) {
       quoteTotal.value = (
@@ -1810,7 +1822,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[3] * subjects2 * monochrome * finishGloss).toFixed(2)
+        (prices[3] * subjects2 * monochrome * finishGloss).toFixed(2),
       );
     } else if (calcArea > 1051 && calcArea < 1400) {
       quoteTotal.value = (
@@ -1821,7 +1833,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[4] * subjects2 * monochrome * finishGloss).toFixed(2)
+        (prices[4] * subjects2 * monochrome * finishGloss).toFixed(2),
       );
     } else if (calcArea > 1401 && calcArea < 1800) {
       quoteTotal.value = (
@@ -1832,7 +1844,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[5] * subjects2 * monochrome * finishGloss).toFixed(2)
+        (prices[5] * subjects2 * monochrome * finishGloss).toFixed(2),
       );
     } else if (calcArea > 1801 && calcArea < 2250) {
       quoteTotal.value = (
@@ -1843,7 +1855,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[6] * subjects2 * monochrome * finishGloss).toFixed(2)
+        (prices[6] * subjects2 * monochrome * finishGloss).toFixed(2),
       );
     } else if (calcArea > 2251 && calcArea < 2750) {
       quoteTotal.value = (
@@ -1854,7 +1866,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[7] * subjects2 * monochrome * finishGloss).toFixed(2)
+        (prices[7] * subjects2 * monochrome * finishGloss).toFixed(2),
       );
     } else if (calcArea > 2751 && calcArea < 3250) {
       quoteTotal.value = (
@@ -1865,7 +1877,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[8] * subjects2 * monochrome * finishGloss).toFixed(2)
+        (prices[8] * subjects2 * monochrome * finishGloss).toFixed(2),
       );
     } else if (calcArea > 3251 && calcArea < 4150) {
       quoteTotal.value = (
@@ -1876,7 +1888,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[9] * subjects2 * monochrome * finishGloss).toFixed(2)
+        (prices[9] * subjects2 * monochrome * finishGloss).toFixed(2),
       );
     } else if (calcArea > 4151 && calcArea < 4850) {
       quoteTotal.value = (
@@ -1887,7 +1899,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[10] * subjects2 * monochrome * finishGloss).toFixed(2)
+        (prices[10] * subjects2 * monochrome * finishGloss).toFixed(2),
       );
     } else if (calcArea > 4851 && calcArea < 5650) {
       quoteTotal.value = (
@@ -1898,7 +1910,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[11] * subjects2 * monochrome * finishGloss).toFixed(2)
+        (prices[11] * subjects2 * monochrome * finishGloss).toFixed(2),
       );
     } else if (calcArea > 5651 && calcArea < 7000) {
       quoteTotal.value = (
@@ -1909,7 +1921,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[12] * subjects2 * monochrome * finishGloss).toFixed(2)
+        (prices[12] * subjects2 * monochrome * finishGloss).toFixed(2),
       );
     } else if (calcArea > 7001 && calcArea < 7550) {
       quoteTotal.value = (
@@ -1920,7 +1932,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[13] * subjects2 * monochrome * finishGloss).toFixed(2)
+        (prices[13] * subjects2 * monochrome * finishGloss).toFixed(2),
       );
     } else if (calcArea > 7551 && calcArea < 9050) {
       quoteTotal.value = (
@@ -1931,7 +1943,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[14] * subjects2 * monochrome * finishGloss).toFixed(2)
+        (prices[14] * subjects2 * monochrome * finishGloss).toFixed(2),
       );
     } else if (calcArea > 9051 && calcArea < 11000) {
       quoteTotal.value = (
@@ -1942,7 +1954,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[15] * subjects2 * monochrome * finishGloss).toFixed(2)
+        (prices[15] * subjects2 * monochrome * finishGloss).toFixed(2),
       );
     } else if (calcArea > 11001 && calcArea < 15000) {
       quoteTotal.value = (
@@ -1953,7 +1965,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[16] * subjects2 * monochrome * finishGloss).toFixed(2)
+        (prices[16] * subjects2 * monochrome * finishGloss).toFixed(2),
       );
     } else if (calcArea > 15001 && calcArea < 19800) {
       quoteTotal.value = (
@@ -1964,7 +1976,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[17] * subjects2 * monochrome * finishGloss).toFixed(2)
+        (prices[17] * subjects2 * monochrome * finishGloss).toFixed(2),
       );
     } else if (calcArea > 19801 && calcArea < 27000) {
       quoteTotal.value = (
@@ -1975,7 +1987,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[18] * subjects2 * monochrome * finishGloss).toFixed(2)
+        (prices[18] * subjects2 * monochrome * finishGloss).toFixed(2),
       );
     } else if (calcArea > 27001 && calcArea < 41200) {
       quoteTotal.value = (
@@ -1986,7 +1998,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[19] * subjects2 * monochrome * finishGloss).toFixed(2)
+        (prices[19] * subjects2 * monochrome * finishGloss).toFixed(2),
       );
     } else if (calcArea > 41201 && calcArea < 50000) {
       quoteTotal.value = (
@@ -1997,7 +2009,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[20] * subjects2 * monochrome * finishGloss).toFixed(2)
+        (prices[20] * subjects2 * monochrome * finishGloss).toFixed(2),
       );
     } else if (calcArea > 50001) {
       quoteTotal.value = "Please contact for price";
@@ -2023,7 +2035,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[4] * subjects3 * monochrome * finishGloss).toFixed(2)
+        (prices[4] * subjects3 * monochrome * finishGloss).toFixed(2),
       );
     } else if (calcArea > 1401 && calcArea < 1800) {
       quoteTotal.value = (
@@ -2034,7 +2046,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[5] * subjects3 * monochrome * finishGloss).toFixed(2)
+        (prices[5] * subjects3 * monochrome * finishGloss).toFixed(2),
       );
     } else if (calcArea > 1801 && calcArea < 2250) {
       quoteTotal.value = (
@@ -2045,7 +2057,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[6] * subjects3 * monochrome * finishGloss).toFixed(2)
+        (prices[6] * subjects3 * monochrome * finishGloss).toFixed(2),
       );
     } else if (calcArea > 2251 && calcArea < 2750) {
       quoteTotal.value = (
@@ -2056,7 +2068,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[7] * subjects3 * monochrome * finishGloss).toFixed(2)
+        (prices[7] * subjects3 * monochrome * finishGloss).toFixed(2),
       );
     } else if (calcArea > 2751 && calcArea < 3250) {
       quoteTotal.value = (
@@ -2067,7 +2079,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[8] * subjects3 * monochrome * finishGloss).toFixed(2)
+        (prices[8] * subjects3 * monochrome * finishGloss).toFixed(2),
       );
     } else if (calcArea > 3251 && calcArea < 4150) {
       quoteTotal.value = (
@@ -2078,7 +2090,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[9] * subjects3 * monochrome * finishGloss).toFixed(2)
+        (prices[9] * subjects3 * monochrome * finishGloss).toFixed(2),
       );
     } else if (calcArea > 4151 && calcArea < 4850) {
       quoteTotal.value = (
@@ -2089,7 +2101,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[10] * subjects3 * monochrome * finishGloss).toFixed(2)
+        (prices[10] * subjects3 * monochrome * finishGloss).toFixed(2),
       );
     } else if (calcArea > 4851 && calcArea < 5650) {
       quoteTotal.value = (
@@ -2100,7 +2112,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[11] * subjects3 * monochrome * finishGloss).toFixed(2)
+        (prices[11] * subjects3 * monochrome * finishGloss).toFixed(2),
       );
     } else if (calcArea > 5651 && calcArea < 7000) {
       quoteTotal.value = (
@@ -2111,7 +2123,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[12] * subjects3 * monochrome * finishGloss).toFixed(2)
+        (prices[12] * subjects3 * monochrome * finishGloss).toFixed(2),
       );
     } else if (calcArea > 7001 && calcArea < 7550) {
       quoteTotal.value = (
@@ -2122,7 +2134,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[13] * subjects3 * monochrome * finishGloss).toFixed(2)
+        (prices[13] * subjects3 * monochrome * finishGloss).toFixed(2),
       );
     } else if (calcArea > 7551 && calcArea < 9050) {
       quoteTotal.value = (
@@ -2133,7 +2145,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[14] * subjects3 * monochrome * finishGloss).toFixed(2)
+        (prices[14] * subjects3 * monochrome * finishGloss).toFixed(2),
       );
     } else if (calcArea > 9051 && calcArea < 11000) {
       quoteTotal.value = (
@@ -2144,7 +2156,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[15] * subjects3 * monochrome * finishGloss).toFixed(2)
+        (prices[15] * subjects3 * monochrome * finishGloss).toFixed(2),
       );
     } else if (calcArea > 11001 && calcArea < 15000) {
       quoteTotal.value = (
@@ -2155,7 +2167,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[16] * subjects3 * monochrome * finishGloss).toFixed(2)
+        (prices[16] * subjects3 * monochrome * finishGloss).toFixed(2),
       );
     } else if (calcArea > 15001 && calcArea < 19800) {
       quoteTotal.value = (
@@ -2166,7 +2178,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[17] * subjects3 * monochrome * finishGloss).toFixed(2)
+        (prices[17] * subjects3 * monochrome * finishGloss).toFixed(2),
       );
     } else if (calcArea > 19801 && calcArea < 27000) {
       quoteTotal.value = (
@@ -2177,7 +2189,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[18] * subjects3 * monochrome * finishGloss).toFixed(2)
+        (prices[18] * subjects3 * monochrome * finishGloss).toFixed(2),
       );
     } else if (calcArea > 27001 && calcArea < 41200) {
       quoteTotal.value = (
@@ -2188,7 +2200,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[19] * subjects3 * monochrome * finishGloss).toFixed(2)
+        (prices[19] * subjects3 * monochrome * finishGloss).toFixed(2),
       );
     } else if (calcArea > 41201 && calcArea < 50000) {
       quoteTotal.value = (
@@ -2199,7 +2211,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[20] * subjects3 * monochrome * finishGloss).toFixed(2)
+        (prices[20] * subjects3 * monochrome * finishGloss).toFixed(2),
       );
     } else if (calcArea > 50001) {
       quoteTotal.value = "Please contact for price";
@@ -2217,127 +2229,127 @@ function totalPrice() {
       quoteTotal.value = (prices[0] * subject1 * finishMatte).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[0] * subject1 * finishMatte).toFixed(2)
+        (prices[0] * subject1 * finishMatte).toFixed(2),
       );
     } else if (calcArea > 351 && calcArea < 500) {
       quoteTotal.value = (prices[1] * subject1 * finishMatte).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[1] * subject1 * finishMatte).toFixed(2)
+        (prices[1] * subject1 * finishMatte).toFixed(2),
       );
     } else if (calcArea > 501 && calcArea < 750) {
       quoteTotal.value = (prices[2] * subject1 * finishMatte).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[2] * subject1 * finishMatte).toFixed(2)
+        (prices[2] * subject1 * finishMatte).toFixed(2),
       );
     } else if (calcArea > 751 && calcArea < 1050) {
       quoteTotal.value = (prices[3] * subject1 * finishMatte).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[3] * subject1 * finishMatte).toFixed(2)
+        (prices[3] * subject1 * finishMatte).toFixed(2),
       );
     } else if (calcArea > 1051 && calcArea < 1400) {
       quoteTotal.value = (prices[4] * subject1 * finishMatte).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[4] * subject1 * finishMatte).toFixed(2)
+        (prices[4] * subject1 * finishMatte).toFixed(2),
       );
     } else if (calcArea > 1401 && calcArea < 1800) {
       quoteTotal.value = (prices[5] * subject1 * finishMatte).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[5] * subject1 * finishMatte).toFixed(2)
+        (prices[5] * subject1 * finishMatte).toFixed(2),
       );
     } else if (calcArea > 1801 && calcArea < 2250) {
       quoteTotal.value = (prices[6] * subject1 * finishMatte).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[6] * subject1 * finishMatte).toFixed(2)
+        (prices[6] * subject1 * finishMatte).toFixed(2),
       );
     } else if (calcArea > 2251 && calcArea < 2750) {
       quoteTotal.value = (prices[7] * subject1 * finishMatte).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[7] * subject1 * finishMatte).toFixed(2)
+        (prices[7] * subject1 * finishMatte).toFixed(2),
       );
     } else if (calcArea > 2751 && calcArea < 3250) {
       quoteTotal.value = (prices[8] * subject1 * finishMatte).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[8] * subject1 * finishMatte).toFixed(2)
+        (prices[8] * subject1 * finishMatte).toFixed(2),
       );
     } else if (calcArea > 3251 && calcArea < 4150) {
       quoteTotal.value = (prices[9] * subject1 * finishMatte).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[9] * subject1 * finishMatte).toFixed(2)
+        (prices[9] * subject1 * finishMatte).toFixed(2),
       );
     } else if (calcArea > 4151 && calcArea < 4850) {
       quoteTotal.value = (prices[10] * subject1 * finishMatte).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[10] * subject1 * finishMatte).toFixed(2)
+        (prices[10] * subject1 * finishMatte).toFixed(2),
       );
     } else if (calcArea > 4851 && calcArea < 5650) {
       quoteTotal.value = (prices[11] * subject1 * finishMatte).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[11] * subject1 * finishMatte).toFixed(2)
+        (prices[11] * subject1 * finishMatte).toFixed(2),
       );
     } else if (calcArea > 5651 && calcArea < 7000) {
       quoteTotal.value = (prices[12] * subject1 * finishMatte).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[12] * subject1 * finishMatte).toFixed(2)
+        (prices[12] * subject1 * finishMatte).toFixed(2),
       );
     } else if (calcArea > 7001 && calcArea < 7550) {
       quoteTotal.value = (prices[13] * subject1 * finishMatte).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[13] * subject1 * finishMatte).toFixed(2)
+        (prices[13] * subject1 * finishMatte).toFixed(2),
       );
     } else if (calcArea > 7551 && calcArea < 9050) {
       quoteTotal.value = (prices[14] * subject1 * finishMatte).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[14] * subject1 * finishMatte).toFixed(2)
+        (prices[14] * subject1 * finishMatte).toFixed(2),
       );
     } else if (calcArea > 9051 && calcArea < 11000) {
       quoteTotal.value = (prices[15] * subject1 * finishMatte).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[15] * subject1 * finishMatte).toFixed(2)
+        (prices[15] * subject1 * finishMatte).toFixed(2),
       );
     } else if (calcArea > 11001 && calcArea < 15000) {
       quoteTotal.value = (prices[16] * subject1 * finishMatte).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[16] * subject1 * finishMatte).toFixed(2)
+        (prices[16] * subject1 * finishMatte).toFixed(2),
       );
     } else if (calcArea > 15001 && calcArea < 19800) {
       quoteTotal.value = (prices[17] * subject1 * finishMatte).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[17] * subject1 * finishMatte).toFixed(2)
+        (prices[17] * subject1 * finishMatte).toFixed(2),
       );
     } else if (calcArea > 19801 && calcArea < 27000) {
       quoteTotal.value = (prices[18] * subject1 * finishMatte).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[18] * subject1 * finishMatte).toFixed(2)
+        (prices[18] * subject1 * finishMatte).toFixed(2),
       );
     } else if (calcArea > 27001 && calcArea < 41200) {
       quoteTotal.value = (prices[19] * subject1 * finishMatte).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[19] * subject1 * finishMatte).toFixed(2)
+        (prices[19] * subject1 * finishMatte).toFixed(2),
       );
     } else if (calcArea > 41201 && calcArea < 50000) {
       quoteTotal.value = (prices[20] * subject1 * finishMatte).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[20] * subject1 * finishMatte).toFixed(2)
+        (prices[20] * subject1 * finishMatte).toFixed(2),
       );
     } else if (calcArea > 50001) {
       quoteTotal.value = "Please contact for price";
@@ -2361,115 +2373,115 @@ function totalPrice() {
       quoteTotal.value = (prices[2] * subjects2 * finishMatte).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[2] * subjects2 * finishMatte).toFixed(2)
+        (prices[2] * subjects2 * finishMatte).toFixed(2),
       );
     } else if (calcArea > 751 && calcArea < 1050) {
       quoteTotal.value = (prices[3] * subjects2 * finishMatte).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[3] * subjects2 * finishMatte).toFixed(2)
+        (prices[3] * subjects2 * finishMatte).toFixed(2),
       );
     } else if (calcArea > 1051 && calcArea < 1400) {
       quoteTotal.value = (prices[4] * subjects2 * finishMatte).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[4] * subjects2 * finishMatte).toFixed(2)
+        (prices[4] * subjects2 * finishMatte).toFixed(2),
       );
     } else if (calcArea > 1401 && calcArea < 1800) {
       quoteTotal.value = (prices[5] * subjects2 * finishMatte).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[5] * subjects2 * finishMatte).toFixed(2)
+        (prices[5] * subjects2 * finishMatte).toFixed(2),
       );
     } else if (calcArea > 1801 && calcArea < 2250) {
       quoteTotal.value = (prices[6] * subjects2 * finishMatte).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[6] * subjects2 * finishMatte).toFixed(2)
+        (prices[6] * subjects2 * finishMatte).toFixed(2),
       );
     } else if (calcArea > 2251 && calcArea < 2750) {
       quoteTotal.value = (prices[7] * subjects2 * finishMatte).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[7] * subjects2 * finishMatte).toFixed(2)
+        (prices[7] * subjects2 * finishMatte).toFixed(2),
       );
     } else if (calcArea > 2751 && calcArea < 3250) {
       quoteTotal.value = (prices[8] * subjects2 * finishMatte).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[8] * subjects2 * finishMatte).toFixed(2)
+        (prices[8] * subjects2 * finishMatte).toFixed(2),
       );
     } else if (calcArea > 3251 && calcArea < 4150) {
       quoteTotal.value = (prices[9] * subjects2 * finishMatte).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[9] * subjects2 * finishMatte).toFixed(2)
+        (prices[9] * subjects2 * finishMatte).toFixed(2),
       );
     } else if (calcArea > 4151 && calcArea < 4850) {
       quoteTotal.value = (prices[10] * subjects2 * finishMatte).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[10] * subjects2 * finishMatte).toFixed(2)
+        (prices[10] * subjects2 * finishMatte).toFixed(2),
       );
     } else if (calcArea > 4851 && calcArea < 5650) {
       quoteTotal.value = (prices[11] * subjects2 * finishMatte).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[11] * subjects2 * finishMatte).toFixed(2)
+        (prices[11] * subjects2 * finishMatte).toFixed(2),
       );
     } else if (calcArea > 5651 && calcArea < 7000) {
       quoteTotal.value = (prices[12] * subjects2 * finishMatte).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[12] * subjects2 * finishMatte).toFixed(2)
+        (prices[12] * subjects2 * finishMatte).toFixed(2),
       );
     } else if (calcArea > 7001 && calcArea < 7550) {
       quoteTotal.value = (prices[13] * subjects2 * finishMatte).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[13] * subjects2 * finishMatte).toFixed(2)
+        (prices[13] * subjects2 * finishMatte).toFixed(2),
       );
     } else if (calcArea > 7551 && calcArea < 9050) {
       quoteTotal.value = (prices[14] * subjects2 * finishMatte).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[14] * subjects2 * finishMatte).toFixed(2)
+        (prices[14] * subjects2 * finishMatte).toFixed(2),
       );
     } else if (calcArea > 9051 && calcArea < 11000) {
       quoteTotal.value = (prices[15] * subjects2 * finishMatte).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[15] * subjects2 * finishMatte).toFixed(2)
+        (prices[15] * subjects2 * finishMatte).toFixed(2),
       );
     } else if (calcArea > 11001 && calcArea < 15000) {
       quoteTotal.value = (prices[16] * subjects2 * finishMatte).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[16] * subjects2 * finishMatte).toFixed(2)
+        (prices[16] * subjects2 * finishMatte).toFixed(2),
       );
     } else if (calcArea > 15001 && calcArea < 19800) {
       quoteTotal.value = (prices[17] * subjects2 * finishMatte).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[17] * subjects2 * finishMatte).toFixed(2)
+        (prices[17] * subjects2 * finishMatte).toFixed(2),
       );
     } else if (calcArea > 19801 && calcArea < 27000) {
       quoteTotal.value = (prices[18] * subjects2 * finishMatte).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[18] * subjects2 * finishMatte).toFixed(2)
+        (prices[18] * subjects2 * finishMatte).toFixed(2),
       );
     } else if (calcArea > 27001 && calcArea < 41200) {
       quoteTotal.value = (prices[19] * subjects2 * finishMatte).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[19] * subjects2 * finishMatte).toFixed(2)
+        (prices[19] * subjects2 * finishMatte).toFixed(2),
       );
     } else if (calcArea > 41201 && calcArea < 50000) {
       quoteTotal.value = (prices[20] * subjects2 * finishMatte).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[20] * subjects2 * finishMatte).toFixed(2)
+        (prices[20] * subjects2 * finishMatte).toFixed(2),
       );
     } else if (calcArea > 50001) {
       quoteTotal.value = "Please contact for price";
@@ -2490,103 +2502,103 @@ function totalPrice() {
       quoteTotal.value = (prices[4] * subjects3 * finishMatte).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[4] * subjects3 * finishMatte).toFixed(2)
+        (prices[4] * subjects3 * finishMatte).toFixed(2),
       );
     } else if (calcArea > 1401 && calcArea < 1800) {
       quoteTotal.value = (prices[5] * subjects3 * finishMatte).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[5] * subjects3 * finishMatte).toFixed(2)
+        (prices[5] * subjects3 * finishMatte).toFixed(2),
       );
     } else if (calcArea > 1801 && calcArea < 2250) {
       quoteTotal.value = (prices[6] * subjects3 * finishMatte).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[6] * subjects3 * finishMatte).toFixed(2)
+        (prices[6] * subjects3 * finishMatte).toFixed(2),
       );
     } else if (calcArea > 2251 && calcArea < 2750) {
       quoteTotal.value = (prices[7] * subjects3 * finishMatte).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[7] * subjects3 * finishMatte).toFixed(2)
+        (prices[7] * subjects3 * finishMatte).toFixed(2),
       );
     } else if (calcArea > 2751 && calcArea < 3250) {
       quoteTotal.value = (prices[8] * subjects3 * finishMatte).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[8] * subjects3 * finishMatte).toFixed(2)
+        (prices[8] * subjects3 * finishMatte).toFixed(2),
       );
     } else if (calcArea > 3251 && calcArea < 4150) {
       quoteTotal.value = (prices[9] * subjects3 * finishMatte).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[9] * subjects3 * finishMatte).toFixed(2)
+        (prices[9] * subjects3 * finishMatte).toFixed(2),
       );
     } else if (calcArea > 4151 && calcArea < 4850) {
       quoteTotal.value = (prices[10] * subjects3 * finishMatte).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[10] * subjects3 * finishMatte).toFixed(2)
+        (prices[10] * subjects3 * finishMatte).toFixed(2),
       );
     } else if (calcArea > 4851 && calcArea < 5650) {
       quoteTotal.value = (prices[11] * subjects3 * finishMatte).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[11] * subjects3 * finishMatte).toFixed(2)
+        (prices[11] * subjects3 * finishMatte).toFixed(2),
       );
     } else if (calcArea > 5651 && calcArea < 7000) {
       quoteTotal.value = (prices[12] * subjects3 * finishMatte).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[12] * subjects3 * finishMatte).toFixed(2)
+        (prices[12] * subjects3 * finishMatte).toFixed(2),
       );
     } else if (calcArea > 7001 && calcArea < 7550) {
       quoteTotal.value = (prices[13] * subjects3 * finishMatte).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[13] * subjects3 * finishMatte).toFixed(2)
+        (prices[13] * subjects3 * finishMatte).toFixed(2),
       );
     } else if (calcArea > 7551 && calcArea < 9050) {
       quoteTotal.value = (prices[14] * subjects3 * finishMatte).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[14] * subjects3 * finishMatte).toFixed(2)
+        (prices[14] * subjects3 * finishMatte).toFixed(2),
       );
     } else if (calcArea > 9051 && calcArea < 11000) {
       quoteTotal.value = (prices[15] * subjects3 * finishMatte).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[15] * subjects3 * finishMatte).toFixed(2)
+        (prices[15] * subjects3 * finishMatte).toFixed(2),
       );
     } else if (calcArea > 11001 && calcArea < 15000) {
       quoteTotal.value = (prices[16] * subjects3 * finishMatte).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[16] * subjects3 * finishMatte).toFixed(2)
+        (prices[16] * subjects3 * finishMatte).toFixed(2),
       );
     } else if (calcArea > 15001 && calcArea < 19800) {
       quoteTotal.value = (prices[17] * subjects3 * finishMatte).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[17] * subjects3 * finishMatte).toFixed(2)
+        (prices[17] * subjects3 * finishMatte).toFixed(2),
       );
     } else if (calcArea > 19801 && calcArea < 27000) {
       quoteTotal.value = (prices[18] * subjects3 * finishMatte).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[18] * subjects3 * finishMatte).toFixed(2)
+        (prices[18] * subjects3 * finishMatte).toFixed(2),
       );
     } else if (calcArea > 27001 && calcArea < 41200) {
       quoteTotal.value = (prices[19] * subjects3 * finishMatte).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[19] * subjects3 * finishMatte).toFixed(2)
+        (prices[19] * subjects3 * finishMatte).toFixed(2),
       );
     } else if (calcArea > 41201 && calcArea < 50000) {
       quoteTotal.value = (prices[20] * subjects3 * finishMatte).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[20] * subjects3 * finishMatte).toFixed(2)
+        (prices[20] * subjects3 * finishMatte).toFixed(2),
       );
     } else if (calcArea > 50001) {
       quoteTotal.value = "Please contact for price";
@@ -2604,7 +2616,7 @@ function totalPrice() {
       quoteTotal.value = prices[0] * subject1 * monochrome * finishMatte;
       localStorage.setItem(
         "total",
-        (prices[0] * subject1 * monochrome * finishMatte).toFixed(2)
+        (prices[0] * subject1 * monochrome * finishMatte).toFixed(2),
       );
     } else if (calcArea > 351 && calcArea < 500) {
       quoteTotal.value = (
@@ -2615,7 +2627,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[1] * subject1 * monochrome * finishMatte).toFixed(2)
+        (prices[1] * subject1 * monochrome * finishMatte).toFixed(2),
       );
     } else if (calcArea > 501 && calcArea < 750) {
       quoteTotal.value = (
@@ -2626,7 +2638,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[2] * subject1 * monochrome * finishMatte).toFixed(2)
+        (prices[2] * subject1 * monochrome * finishMatte).toFixed(2),
       );
     } else if (calcArea > 751 && calcArea < 1050) {
       quoteTotal.value = (
@@ -2637,7 +2649,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[3] * subject1 * monochrome * finishMatte).toFixed(2)
+        (prices[3] * subject1 * monochrome * finishMatte).toFixed(2),
       );
     } else if (calcArea > 1051 && calcArea < 1400) {
       quoteTotal.value = (
@@ -2648,7 +2660,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[4] * subject1 * monochrome * finishMatte).toFixed(2)
+        (prices[4] * subject1 * monochrome * finishMatte).toFixed(2),
       );
     } else if (calcArea > 1401 && calcArea < 1800) {
       quoteTotal.value = (
@@ -2659,7 +2671,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[5] * subject1 * monochrome * finishMatte).toFixed(2)
+        (prices[5] * subject1 * monochrome * finishMatte).toFixed(2),
       );
     } else if (calcArea > 1801 && calcArea < 2250) {
       quoteTotal.value = (
@@ -2670,7 +2682,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[6] * subject1 * monochrome * finishMatte).toFixed(2)
+        (prices[6] * subject1 * monochrome * finishMatte).toFixed(2),
       );
     } else if (calcArea > 2251 && calcArea < 2750) {
       quoteTotal.value = (
@@ -2681,7 +2693,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[7] * subject1 * monochrome * finishMatte).toFixed(2)
+        (prices[7] * subject1 * monochrome * finishMatte).toFixed(2),
       );
     } else if (calcArea > 2751 && calcArea < 3250) {
       quoteTotal.value = (
@@ -2692,7 +2704,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[8] * subject1 * monochrome * finishMatte).toFixed(2)
+        (prices[8] * subject1 * monochrome * finishMatte).toFixed(2),
       );
     } else if (calcArea > 3251 && calcArea < 4150) {
       quoteTotal.value = (
@@ -2703,7 +2715,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[9] * subject1 * monochrome * finishMatte).toFixed(2)
+        (prices[9] * subject1 * monochrome * finishMatte).toFixed(2),
       );
     } else if (calcArea > 4151 && calcArea < 4850) {
       quoteTotal.value = (
@@ -2714,7 +2726,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[10] * subject1 * monochrome * finishMatte).toFixed(2)
+        (prices[10] * subject1 * monochrome * finishMatte).toFixed(2),
       );
     } else if (calcArea > 4851 && calcArea < 5650) {
       quoteTotal.value = (
@@ -2725,7 +2737,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[11] * subject1 * monochrome * finishMatte).toFixed(2)
+        (prices[11] * subject1 * monochrome * finishMatte).toFixed(2),
       );
     } else if (calcArea > 5651 && calcArea < 7000) {
       quoteTotal.value = (
@@ -2736,7 +2748,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[12] * subject1 * monochrome * finishMatte).toFixed(2)
+        (prices[12] * subject1 * monochrome * finishMatte).toFixed(2),
       );
     } else if (calcArea > 7001 && calcArea < 7550) {
       quoteTotal.value = (
@@ -2747,7 +2759,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[13] * subject1 * monochrome * finishMatte).toFixed(2)
+        (prices[13] * subject1 * monochrome * finishMatte).toFixed(2),
       );
     } else if (calcArea > 7551 && calcArea < 9050) {
       quoteTotal.value = (
@@ -2758,7 +2770,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[14] * subject1 * monochrome * finishMatte).toFixed(2)
+        (prices[14] * subject1 * monochrome * finishMatte).toFixed(2),
       );
     } else if (calcArea > 9051 && calcArea < 11000) {
       quoteTotal.value = (
@@ -2769,7 +2781,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[15] * subject1 * monochrome * finishMatte).toFixed(2)
+        (prices[15] * subject1 * monochrome * finishMatte).toFixed(2),
       );
     } else if (calcArea > 11001 && calcArea < 15000) {
       quoteTotal.value = (
@@ -2780,7 +2792,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[16] * subject1 * monochrome * finishMatte).toFixed(2)
+        (prices[16] * subject1 * monochrome * finishMatte).toFixed(2),
       );
     } else if (calcArea > 15001 && calcArea < 19800) {
       quoteTotal.value = (
@@ -2791,7 +2803,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[17] * subject1 * monochrome * finishMatte).toFixed(2)
+        (prices[17] * subject1 * monochrome * finishMatte).toFixed(2),
       );
     } else if (calcArea > 19801 && calcArea < 27000) {
       quoteTotal.value = (
@@ -2802,7 +2814,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[18] * subject1 * monochrome * finishMatte).toFixed(2)
+        (prices[18] * subject1 * monochrome * finishMatte).toFixed(2),
       );
     } else if (calcArea > 27001 && calcArea < 41200) {
       quoteTotal.value = (
@@ -2813,7 +2825,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[19] * subject1 * monochrome * finishMatte).toFixed(2)
+        (prices[19] * subject1 * monochrome * finishMatte).toFixed(2),
       );
     } else if (calcArea > 41201 && calcArea < 50000) {
       quoteTotal.value = (
@@ -2824,7 +2836,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[20] * subject1 * monochrome * finishMatte).toFixed(2)
+        (prices[20] * subject1 * monochrome * finishMatte).toFixed(2),
       );
     } else if (calcArea > 50001) {
       quoteTotal.value = "Please contact for price";
@@ -2853,7 +2865,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[2] * subjects2 * monochrome * finishMatte).toFixed(2)
+        (prices[2] * subjects2 * monochrome * finishMatte).toFixed(2),
       );
     } else if (calcArea > 751 && calcArea < 1050) {
       quoteTotal.value = (
@@ -2864,7 +2876,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[3] * subjects2 * monochrome * finishMatte).toFixed(2)
+        (prices[3] * subjects2 * monochrome * finishMatte).toFixed(2),
       );
     } else if (calcArea > 1051 && calcArea < 1400) {
       quoteTotal.value = (
@@ -2875,7 +2887,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[4] * subjects2 * monochrome * finishMatte).toFixed(2)
+        (prices[4] * subjects2 * monochrome * finishMatte).toFixed(2),
       );
     } else if (calcArea > 1401 && calcArea < 1800) {
       quoteTotal.value = (
@@ -2886,7 +2898,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[5] * subjects2 * monochrome * finishMatte).toFixed(2)
+        (prices[5] * subjects2 * monochrome * finishMatte).toFixed(2),
       );
     } else if (calcArea > 1801 && calcArea < 2250) {
       quoteTotal.value = (
@@ -2897,7 +2909,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[6] * subjects2 * monochrome * finishMatte).toFixed(2)
+        (prices[6] * subjects2 * monochrome * finishMatte).toFixed(2),
       );
     } else if (calcArea > 2251 && calcArea < 2750) {
       quoteTotal.value = (
@@ -2908,7 +2920,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[7] * subjects2 * monochrome * finishMatte).toFixed(2)
+        (prices[7] * subjects2 * monochrome * finishMatte).toFixed(2),
       );
     } else if (calcArea > 2751 && calcArea < 3250) {
       quoteTotal.value = (
@@ -2919,7 +2931,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[8] * subjects2 * monochrome * finishMatte).toFixed(2)
+        (prices[8] * subjects2 * monochrome * finishMatte).toFixed(2),
       );
     } else if (calcArea > 3251 && calcArea < 4150) {
       quoteTotal.value = (
@@ -2930,7 +2942,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[9] * subjects2 * monochrome * finishMatte).toFixed(2)
+        (prices[9] * subjects2 * monochrome * finishMatte).toFixed(2),
       );
     } else if (calcArea > 4151 && calcArea < 4850) {
       quoteTotal.value = (
@@ -2941,7 +2953,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[10] * subjects2 * monochrome * finishMatte).toFixed(2)
+        (prices[10] * subjects2 * monochrome * finishMatte).toFixed(2),
       );
     } else if (calcArea > 4851 && calcArea < 5650) {
       quoteTotal.value = (
@@ -2952,7 +2964,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[11] * subjects2 * monochrome * finishMatte).toFixed(2)
+        (prices[11] * subjects2 * monochrome * finishMatte).toFixed(2),
       );
     } else if (calcArea > 5651 && calcArea < 7000) {
       quoteTotal.value = (
@@ -2963,7 +2975,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[12] * subjects2 * monochrome * finishMatte).toFixed(2)
+        (prices[12] * subjects2 * monochrome * finishMatte).toFixed(2),
       );
     } else if (calcArea > 7001 && calcArea < 7550) {
       quoteTotal.value = (
@@ -2974,7 +2986,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[13] * subjects2 * monochrome * finishMatte).toFixed(2)
+        (prices[13] * subjects2 * monochrome * finishMatte).toFixed(2),
       );
     } else if (calcArea > 7551 && calcArea < 9050) {
       quoteTotal.value = (
@@ -2985,7 +2997,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[14] * subjects2 * monochrome * finishMatte).toFixed(2)
+        (prices[14] * subjects2 * monochrome * finishMatte).toFixed(2),
       );
     } else if (calcArea > 9051 && calcArea < 11000) {
       quoteTotal.value = (
@@ -2996,7 +3008,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[15] * subjects2 * monochrome * finishMatte).toFixed(2)
+        (prices[15] * subjects2 * monochrome * finishMatte).toFixed(2),
       );
     } else if (calcArea > 11001 && calcArea < 15000) {
       quoteTotal.value = (
@@ -3007,7 +3019,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[16] * subjects2 * monochrome * finishMatte).toFixed(2)
+        (prices[16] * subjects2 * monochrome * finishMatte).toFixed(2),
       );
     } else if (calcArea > 15001 && calcArea < 19800) {
       quoteTotal.value = (
@@ -3018,7 +3030,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[17] * subjects2 * monochrome * finishMatte).toFixed(2)
+        (prices[17] * subjects2 * monochrome * finishMatte).toFixed(2),
       );
     } else if (calcArea > 19801 && calcArea < 27000) {
       quoteTotal.value = (
@@ -3029,7 +3041,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[18] * subjects2 * monochrome * finishMatte).toFixed(2)
+        (prices[18] * subjects2 * monochrome * finishMatte).toFixed(2),
       );
     } else if (calcArea > 27001 && calcArea < 41200) {
       quoteTotal.value = (
@@ -3040,7 +3052,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[19] * subjects2 * monochrome * finishMatte).toFixed(2)
+        (prices[19] * subjects2 * monochrome * finishMatte).toFixed(2),
       );
     } else if (calcArea > 41201 && calcArea < 50000) {
       quoteTotal.value = (
@@ -3051,7 +3063,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[20] * subjects2 * monochrome * finishMatte).toFixed(2)
+        (prices[20] * subjects2 * monochrome * finishMatte).toFixed(2),
       );
     } else if (calcArea > 50001) {
       quoteTotal.value = "Please contact for price";
@@ -3077,7 +3089,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[4] * subjects3 * monochrome * finishMatte).toFixed(2)
+        (prices[4] * subjects3 * monochrome * finishMatte).toFixed(2),
       );
     } else if (calcArea > 1401 && calcArea < 1800) {
       quoteTotal.value = (
@@ -3088,7 +3100,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[5] * subjects3 * monochrome * finishMatte).toFixed(2)
+        (prices[5] * subjects3 * monochrome * finishMatte).toFixed(2),
       );
     } else if (calcArea > 1801 && calcArea < 2250) {
       quoteTotal.value = (
@@ -3099,7 +3111,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[6] * subjects3 * monochrome * finishMatte).toFixed(2)
+        (prices[6] * subjects3 * monochrome * finishMatte).toFixed(2),
       );
     } else if (calcArea > 2251 && calcArea < 2750) {
       quoteTotal.value = (
@@ -3110,7 +3122,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[7] * subjects3 * monochrome * finishMatte).toFixed(2)
+        (prices[7] * subjects3 * monochrome * finishMatte).toFixed(2),
       );
     } else if (calcArea > 2751 && calcArea < 3250) {
       quoteTotal.value = (
@@ -3121,7 +3133,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[8] * subjects3 * monochrome * finishMatte).toFixed(2)
+        (prices[8] * subjects3 * monochrome * finishMatte).toFixed(2),
       );
     } else if (calcArea > 3251 && calcArea < 4150) {
       quoteTotal.value = (
@@ -3132,7 +3144,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[9] * subjects3 * monochrome * finishMatte).toFixed(2)
+        (prices[9] * subjects3 * monochrome * finishMatte).toFixed(2),
       );
     } else if (calcArea > 4151 && calcArea < 4850) {
       quoteTotal.value = (
@@ -3143,7 +3155,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[10] * subjects3 * monochrome * finishMatte).toFixed(2)
+        (prices[10] * subjects3 * monochrome * finishMatte).toFixed(2),
       );
     } else if (calcArea > 4851 && calcArea < 5650) {
       quoteTotal.value = (
@@ -3154,7 +3166,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[11] * subjects3 * monochrome * finishMatte).toFixed(2)
+        (prices[11] * subjects3 * monochrome * finishMatte).toFixed(2),
       );
     } else if (calcArea > 5651 && calcArea < 7000) {
       quoteTotal.value = (
@@ -3165,7 +3177,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[12] * subjects3 * monochrome * finishMatte).toFixed(2)
+        (prices[12] * subjects3 * monochrome * finishMatte).toFixed(2),
       );
     } else if (calcArea > 7001 && calcArea < 7550) {
       quoteTotal.value = (
@@ -3176,7 +3188,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[13] * subjects3 * monochrome * finishMatte).toFixed(2)
+        (prices[13] * subjects3 * monochrome * finishMatte).toFixed(2),
       );
     } else if (calcArea > 7551 && calcArea < 9050) {
       quoteTotal.value = (
@@ -3187,7 +3199,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[14] * subjects3 * monochrome * finishMatte).toFixed(2)
+        (prices[14] * subjects3 * monochrome * finishMatte).toFixed(2),
       );
     } else if (calcArea > 9051 && calcArea < 11000) {
       quoteTotal.value = (
@@ -3198,7 +3210,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[15] * subjects3 * monochrome * finishMatte).toFixed(2)
+        (prices[15] * subjects3 * monochrome * finishMatte).toFixed(2),
       );
     } else if (calcArea > 11001 && calcArea < 15000) {
       quoteTotal.value = (
@@ -3209,7 +3221,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[16] * subjects3 * monochrome * finishMatte).toFixed(2)
+        (prices[16] * subjects3 * monochrome * finishMatte).toFixed(2),
       );
     } else if (calcArea > 15001 && calcArea < 19800) {
       quoteTotal.value = (
@@ -3220,7 +3232,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[17] * subjects3 * monochrome * finishMatte).toFixed(2)
+        (prices[17] * subjects3 * monochrome * finishMatte).toFixed(2),
       );
     } else if (calcArea > 19801 && calcArea < 27000) {
       quoteTotal.value = (
@@ -3231,7 +3243,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[18] * subjects3 * monochrome * finishMatte).toFixed(2)
+        (prices[18] * subjects3 * monochrome * finishMatte).toFixed(2),
       );
     } else if (calcArea > 27001 && calcArea < 41200) {
       quoteTotal.value = (
@@ -3242,7 +3254,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[19] * subjects3 * monochrome * finishMatte).toFixed(2)
+        (prices[19] * subjects3 * monochrome * finishMatte).toFixed(2),
       );
     } else if (calcArea > 41201 && calcArea < 50000) {
       quoteTotal.value = (
@@ -3253,7 +3265,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[20] * subjects3 * monochrome * finishMatte).toFixed(2)
+        (prices[20] * subjects3 * monochrome * finishMatte).toFixed(2),
       );
     } else if (calcArea > 50001) {
       quoteTotal.value = "Please contact for price";
@@ -3276,127 +3288,127 @@ function totalPrice() {
       quoteTotal.value = (prices[0] * subject1 * complexBG).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[0] * subject1 * complexBG).toFixed(2)
+        (prices[0] * subject1 * complexBG).toFixed(2),
       );
     } else if (calcArea > 351 && calcArea < 500) {
       quoteTotal.value = (prices[1] * subject1 * complexBG).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[1] * subject1 * complexBG).toFixed(2)
+        (prices[1] * subject1 * complexBG).toFixed(2),
       );
     } else if (calcArea > 501 && calcArea < 750) {
       quoteTotal.value = (prices[2] * subject1 * complexBG).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[2] * subject1 * complexBG).toFixed(2)
+        (prices[2] * subject1 * complexBG).toFixed(2),
       );
     } else if (calcArea > 751 && calcArea < 1050) {
       quoteTotal.value = (prices[3] * subject1 * complexBG).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[3] * subject1 * complexBG).toFixed(2)
+        (prices[3] * subject1 * complexBG).toFixed(2),
       );
     } else if (calcArea > 1051 && calcArea < 1400) {
       quoteTotal.value = (prices[4] * subject1 * complexBG).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[4] * subject1 * complexBG).toFixed(2)
+        (prices[4] * subject1 * complexBG).toFixed(2),
       );
     } else if (calcArea > 1401 && calcArea < 1800) {
       quoteTotal.value = (prices[5] * subject1 * complexBG).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[5] * subject1 * complexBG).toFixed(2)
+        (prices[5] * subject1 * complexBG).toFixed(2),
       );
     } else if (calcArea > 1801 && calcArea < 2250) {
       quoteTotal.value = (prices[6] * subject1 * complexBG).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[6] * subject1 * complexBG).toFixed(2)
+        (prices[6] * subject1 * complexBG).toFixed(2),
       );
     } else if (calcArea > 2251 && calcArea < 2750) {
       quoteTotal.value = (prices[7] * subject1 * complexBG).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[7] * subject1 * complexBG).toFixed(2)
+        (prices[7] * subject1 * complexBG).toFixed(2),
       );
     } else if (calcArea > 2751 && calcArea < 3250) {
       quoteTotal.value = (prices[8] * subject1 * complexBG).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[8] * subject1 * complexBG).toFixed(2)
+        (prices[8] * subject1 * complexBG).toFixed(2),
       );
     } else if (calcArea > 3251 && calcArea < 4150) {
       quoteTotal.value = (prices[9] * subject1 * complexBG).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[9] * subject1 * complexBG).toFixed(2)
+        (prices[9] * subject1 * complexBG).toFixed(2),
       );
     } else if (calcArea > 4151 && calcArea < 4850) {
       quoteTotal.value = (prices[10] * subject1 * complexBG).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[10] * subject1 * complexBG).toFixed(2)
+        (prices[10] * subject1 * complexBG).toFixed(2),
       );
     } else if (calcArea > 4851 && calcArea < 5650) {
       quoteTotal.value = (prices[11] * subject1 * complexBG).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[11] * subject1 * complexBG).toFixed(2)
+        (prices[11] * subject1 * complexBG).toFixed(2),
       );
     } else if (calcArea > 5651 && calcArea < 7000) {
       quoteTotal.value = (prices[12] * subject1 * complexBG).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[12] * subject1 * complexBG).toFixed(2)
+        (prices[12] * subject1 * complexBG).toFixed(2),
       );
     } else if (calcArea > 7001 && calcArea < 7550) {
       quoteTotal.value = (prices[13] * subject1 * complexBG).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[13] * subject1 * complexBG).toFixed(2)
+        (prices[13] * subject1 * complexBG).toFixed(2),
       );
     } else if (calcArea > 7551 && calcArea < 9050) {
       quoteTotal.value = (prices[14] * subject1 * complexBG).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[14] * subject1 * complexBG).toFixed(2)
+        (prices[14] * subject1 * complexBG).toFixed(2),
       );
     } else if (calcArea > 9051 && calcArea < 11000) {
       quoteTotal.value = (prices[15] * subject1 * complexBG).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[15] * subject1 * complexBG).toFixed(2)
+        (prices[15] * subject1 * complexBG).toFixed(2),
       );
     } else if (calcArea > 11001 && calcArea < 15000) {
       quoteTotal.value = (prices[16] * subject1 * complexBG).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[16] * subject1 * complexBG).toFixed(2)
+        (prices[16] * subject1 * complexBG).toFixed(2),
       );
     } else if (calcArea > 15001 && calcArea < 19800) {
       quoteTotal.value = (prices[17] * subject1 * complexBG).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[17] * subject1 * complexBG).toFixed(2)
+        (prices[17] * subject1 * complexBG).toFixed(2),
       );
     } else if (calcArea > 19801 && calcArea < 27000) {
       quoteTotal.value = (prices[18] * subject1 * complexBG).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[18] * subject1 * complexBG).toFixed(2)
+        (prices[18] * subject1 * complexBG).toFixed(2),
       );
     } else if (calcArea > 27001 && calcArea < 41200) {
       quoteTotal.value = (prices[19] * subject1 * complexBG).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[19] * subject1 * complexBG).toFixed(2)
+        (prices[19] * subject1 * complexBG).toFixed(2),
       );
     } else if (calcArea > 41201 && calcArea < 50000) {
       quoteTotal.value = (prices[20] * subject1 * complexBG).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[20] * subject1 * complexBG).toFixed(2)
+        (prices[20] * subject1 * complexBG).toFixed(2),
       );
     } else if (calcArea > 50001) {
       quoteTotal.value = "Please contact for price";
@@ -3426,115 +3438,115 @@ function totalPrice() {
       quoteTotal.value = (prices[2] * subjects2 * complexBG).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[2] * subjects2 * complexBG).toFixed(2)
+        (prices[2] * subjects2 * complexBG).toFixed(2),
       );
     } else if (calcArea > 751 && calcArea < 1050) {
       quoteTotal.value = (prices[3] * subjects2 * complexBG).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[3] * subjects2 * complexBG).toFixed(2)
+        (prices[3] * subjects2 * complexBG).toFixed(2),
       );
     } else if (calcArea > 1051 && calcArea < 1400) {
       quoteTotal.value = (prices[4] * subjects2 * complexBG).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[4] * subjects2 * complexBG).toFixed(2)
+        (prices[4] * subjects2 * complexBG).toFixed(2),
       );
     } else if (calcArea > 1401 && calcArea < 1800) {
       quoteTotal.value = (prices[5] * subjects2 * complexBG).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[5] * subjects2 * complexBG).toFixed(2)
+        (prices[5] * subjects2 * complexBG).toFixed(2),
       );
     } else if (calcArea > 1801 && calcArea < 2250) {
       quoteTotal.value = (prices[6] * subjects2 * complexBG).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[6] * subjects2 * complexBG).toFixed(2)
+        (prices[6] * subjects2 * complexBG).toFixed(2),
       );
     } else if (calcArea > 2251 && calcArea < 2750) {
       quoteTotal.value = (prices[7] * subjects2 * complexBG).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[7] * subjects2 * complexBG).toFixed(2)
+        (prices[7] * subjects2 * complexBG).toFixed(2),
       );
     } else if (calcArea > 2751 && calcArea < 3250) {
       quoteTotal.value = (prices[8] * subjects2 * complexBG).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[8] * subjects2 * complexBG).toFixed(2)
+        (prices[8] * subjects2 * complexBG).toFixed(2),
       );
     } else if (calcArea > 3251 && calcArea < 4150) {
       quoteTotal.value = (prices[9] * subjects2 * complexBG).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[9] * subjects2 * complexBG).toFixed(2)
+        (prices[9] * subjects2 * complexBG).toFixed(2),
       );
     } else if (calcArea > 4151 && calcArea < 4850) {
       quoteTotal.value = (prices[10] * subjects2 * complexBG).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[10] * subjects2 * complexBG).toFixed(2)
+        (prices[10] * subjects2 * complexBG).toFixed(2),
       );
     } else if (calcArea > 4851 && calcArea < 5650) {
       quoteTotal.value = (prices[11] * subjects2 * complexBG).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[11] * subjects2 * complexBG).toFixed(2)
+        (prices[11] * subjects2 * complexBG).toFixed(2),
       );
     } else if (calcArea > 5651 && calcArea < 7000) {
       quoteTotal.value = (prices[12] * subjects2 * complexBG).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[12] * subjects2 * complexBG).toFixed(2)
+        (prices[12] * subjects2 * complexBG).toFixed(2),
       );
     } else if (calcArea > 7001 && calcArea < 7550) {
       quoteTotal.value = (prices[13] * subjects2 * complexBG).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[13] * subjects2 * complexBG).toFixed(2)
+        (prices[13] * subjects2 * complexBG).toFixed(2),
       );
     } else if (calcArea > 7551 && calcArea < 9050) {
       quoteTotal.value = (prices[14] * subjects2 * complexBG).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[14] * subjects2 * complexBG).toFixed(2)
+        (prices[14] * subjects2 * complexBG).toFixed(2),
       );
     } else if (calcArea > 9051 && calcArea < 11000) {
       quoteTotal.value = (prices[15] * subjects2 * complexBG).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[15] * subjects2 * complexBG).toFixed(2)
+        (prices[15] * subjects2 * complexBG).toFixed(2),
       );
     } else if (calcArea > 11001 && calcArea < 15000) {
       quoteTotal.value = (prices[16] * subjects2 * complexBG).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[16] * subjects2 * complexBG).toFixed(2)
+        (prices[16] * subjects2 * complexBG).toFixed(2),
       );
     } else if (calcArea > 15001 && calcArea < 19800) {
       quoteTotal.value = (prices[17] * subjects2 * complexBG).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[17] * subjects2 * complexBG).toFixed(2)
+        (prices[17] * subjects2 * complexBG).toFixed(2),
       );
     } else if (calcArea > 19801 && calcArea < 27000) {
       quoteTotal.value = (prices[18] * subjects2 * complexBG).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[18] * subjects2 * complexBG).toFixed(2)
+        (prices[18] * subjects2 * complexBG).toFixed(2),
       );
     } else if (calcArea > 27001 && calcArea < 41200) {
       quoteTotal.value = (prices[19] * subjects2 * complexBG).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[19] * subjects2 * complexBG).toFixed(2)
+        (prices[19] * subjects2 * complexBG).toFixed(2),
       );
     } else if (calcArea > 41201 && calcArea < 50000) {
       quoteTotal.value = (prices[20] * subjects2 * complexBG).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[20] * subjects2 * complexBG).toFixed(2)
+        (prices[20] * subjects2 * complexBG).toFixed(2),
       );
     } else if (calcArea > 50001) {
       quoteTotal.value = "Please contact for price";
@@ -3555,103 +3567,103 @@ function totalPrice() {
       quoteTotal.value = (prices[4] * subjects3 * complexBG).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[4] * subjects3 * complexBG).toFixed(2)
+        (prices[4] * subjects3 * complexBG).toFixed(2),
       );
     } else if (calcArea > 1401 && calcArea < 1800) {
       quoteTotal.value = (prices[5] * subjects3 * complexBG).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[5] * subjects3 * complexBG).toFixed(2)
+        (prices[5] * subjects3 * complexBG).toFixed(2),
       );
     } else if (calcArea > 1801 && calcArea < 2250) {
       quoteTotal.value = (prices[6] * subjects3 * complexBG).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[6] * subjects3 * complexBG).toFixed(2)
+        (prices[6] * subjects3 * complexBG).toFixed(2),
       );
     } else if (calcArea > 2251 && calcArea < 2750) {
       quoteTotal.value = (prices[7] * subjects3 * complexBG).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[7] * subjects3 * complexBG).toFixed(2)
+        (prices[7] * subjects3 * complexBG).toFixed(2),
       );
     } else if (calcArea > 2751 && calcArea < 3250) {
       quoteTotal.value = (prices[8] * subjects3 * complexBG).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[8] * subjects3 * complexBG).toFixed(2)
+        (prices[8] * subjects3 * complexBG).toFixed(2),
       );
     } else if (calcArea > 3251 && calcArea < 4150) {
       quoteTotal.value = (prices[9] * subjects3 * complexBG).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[9] * subjects3 * complexBG).toFixed(2)
+        (prices[9] * subjects3 * complexBG).toFixed(2),
       );
     } else if (calcArea > 4151 && calcArea < 4850) {
       quoteTotal.value = (prices[10] * subjects3 * complexBG).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[10] * subjects3 * complexBG).toFixed(2)
+        (prices[10] * subjects3 * complexBG).toFixed(2),
       );
     } else if (calcArea > 4851 && calcArea < 5650) {
       quoteTotal.value = (prices[11] * subjects3 * complexBG).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[11] * subjects3 * complexBG).toFixed(2)
+        (prices[11] * subjects3 * complexBG).toFixed(2),
       );
     } else if (calcArea > 5651 && calcArea < 7000) {
       quoteTotal.value = (prices[12] * subjects3 * complexBG).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[12] * subjects3 * complexBG).toFixed(2)
+        (prices[12] * subjects3 * complexBG).toFixed(2),
       );
     } else if (calcArea > 7001 && calcArea < 7550) {
       quoteTotal.value = (prices[13] * subjects3 * complexBG).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[13] * subjects3 * complexBG).toFixed(2)
+        (prices[13] * subjects3 * complexBG).toFixed(2),
       );
     } else if (calcArea > 7551 && calcArea < 9050) {
       quoteTotal.value = (prices[14] * subjects3 * complexBG).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[14] * subjects3 * complexBG).toFixed(2)
+        (prices[14] * subjects3 * complexBG).toFixed(2),
       );
     } else if (calcArea > 9051 && calcArea < 11000) {
       quoteTotal.value = (prices[15] * subjects3 * complexBG).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[15] * subjects3 * complexBG).toFixed(2)
+        (prices[15] * subjects3 * complexBG).toFixed(2),
       );
     } else if (calcArea > 11001 && calcArea < 15000) {
       quoteTotal.value = (prices[16] * subjects3 * complexBG).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[16] * subjects3 * complexBG).toFixed(2)
+        (prices[16] * subjects3 * complexBG).toFixed(2),
       );
     } else if (calcArea > 15001 && calcArea < 19800) {
       quoteTotal.value = (prices[17] * subjects3 * complexBG).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[17] * subjects3 * complexBG).toFixed(2)
+        (prices[17] * subjects3 * complexBG).toFixed(2),
       );
     } else if (calcArea > 19801 && calcArea < 27000) {
       quoteTotal.value = (prices[18] * subjects3 * complexBG).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[18] * subjects3 * complexBG).toFixed(2)
+        (prices[18] * subjects3 * complexBG).toFixed(2),
       );
     } else if (calcArea > 27001 && calcArea < 41200) {
       quoteTotal.value = (prices[19] * subjects3 * complexBG).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[19] * subjects3 * complexBG).toFixed(2)
+        (prices[19] * subjects3 * complexBG).toFixed(2),
       );
     } else if (calcArea > 41201 && calcArea < 50000) {
       quoteTotal.value = (prices[20] * subjects3 * complexBG).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[20] * subjects3 * complexBG).toFixed(2)
+        (prices[20] * subjects3 * complexBG).toFixed(2),
       );
     } else if (calcArea > 50001) {
       quoteTotal.value = "Please contact for price";
@@ -3674,7 +3686,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[0] * subject1 * monochrome * complexBG).toFixed(2)
+        (prices[0] * subject1 * monochrome * complexBG).toFixed(2),
       );
     } else if (calcArea > 351 && calcArea < 500) {
       quoteTotal.value = (
@@ -3685,7 +3697,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[1] * subject1 * monochrome * complexBG).toFixed(2)
+        (prices[1] * subject1 * monochrome * complexBG).toFixed(2),
       );
     } else if (calcArea > 501 && calcArea < 750) {
       quoteTotal.value = (
@@ -3696,7 +3708,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[2] * subject1 * monochrome * complexBG).toFixed(2)
+        (prices[2] * subject1 * monochrome * complexBG).toFixed(2),
       );
     } else if (calcArea > 751 && calcArea < 1050) {
       quoteTotal.value = (
@@ -3707,7 +3719,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[3] * subject1 * monochrome * complexBG).toFixed(2)
+        (prices[3] * subject1 * monochrome * complexBG).toFixed(2),
       );
     } else if (calcArea > 1051 && calcArea < 1400) {
       quoteTotal.value = (
@@ -3718,7 +3730,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[4] * subject1 * monochrome * complexBG).toFixed(2)
+        (prices[4] * subject1 * monochrome * complexBG).toFixed(2),
       );
     } else if (calcArea > 1401 && calcArea < 1800) {
       quoteTotal.value = (
@@ -3729,7 +3741,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[5] * subject1 * monochrome * complexBG).toFixed(2)
+        (prices[5] * subject1 * monochrome * complexBG).toFixed(2),
       );
     } else if (calcArea > 1801 && calcArea < 2250) {
       quoteTotal.value = (
@@ -3740,7 +3752,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[6] * subject1 * monochrome * complexBG).toFixed(2)
+        (prices[6] * subject1 * monochrome * complexBG).toFixed(2),
       );
     } else if (calcArea > 2251 && calcArea < 2750) {
       quoteTotal.value = (
@@ -3751,7 +3763,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[7] * subject1 * monochrome * complexBG).toFixed(2)
+        (prices[7] * subject1 * monochrome * complexBG).toFixed(2),
       );
     } else if (calcArea > 2751 && calcArea < 3250) {
       quoteTotal.value = (
@@ -3762,7 +3774,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[8] * subject1 * monochrome * complexBG).toFixed(2)
+        (prices[8] * subject1 * monochrome * complexBG).toFixed(2),
       );
     } else if (calcArea > 3251 && calcArea < 4150) {
       quoteTotal.value = (
@@ -3773,7 +3785,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[9] * subject1 * monochrome * complexBG).toFixed(2)
+        (prices[9] * subject1 * monochrome * complexBG).toFixed(2),
       );
     } else if (calcArea > 4151 && calcArea < 4850) {
       quoteTotal.value = (
@@ -3784,7 +3796,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[10] * subject1 * monochrome * complexBG).toFixed(2)
+        (prices[10] * subject1 * monochrome * complexBG).toFixed(2),
       );
     } else if (calcArea > 4851 && calcArea < 5650) {
       quoteTotal.value = (
@@ -3795,7 +3807,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[11] * subject1 * monochrome * complexBG).toFixed(2)
+        (prices[11] * subject1 * monochrome * complexBG).toFixed(2),
       );
     } else if (calcArea > 5651 && calcArea < 7000) {
       quoteTotal.value = (
@@ -3806,7 +3818,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[12] * subject1 * monochrome * complexBG).toFixed(2)
+        (prices[12] * subject1 * monochrome * complexBG).toFixed(2),
       );
     } else if (calcArea > 7001 && calcArea < 7550) {
       quoteTotal.value = (
@@ -3817,7 +3829,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[13] * subject1 * monochrome * complexBG).toFixed(2)
+        (prices[13] * subject1 * monochrome * complexBG).toFixed(2),
       );
     } else if (calcArea > 7551 && calcArea < 9050) {
       quoteTotal.value = (
@@ -3828,7 +3840,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[14] * subject1 * monochrome * complexBG).toFixed(2)
+        (prices[14] * subject1 * monochrome * complexBG).toFixed(2),
       );
     } else if (calcArea > 9051 && calcArea < 11000) {
       quoteTotal.value = (
@@ -3839,7 +3851,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[15] * subject1 * monochrome * complexBG).toFixed(2)
+        (prices[15] * subject1 * monochrome * complexBG).toFixed(2),
       );
     } else if (calcArea > 11001 && calcArea < 15000) {
       quoteTotal.value = (
@@ -3850,7 +3862,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[16] * subject1 * monochrome * complexBG).toFixed(2)
+        (prices[16] * subject1 * monochrome * complexBG).toFixed(2),
       );
     } else if (calcArea > 15001 && calcArea < 19800) {
       quoteTotal.value = (
@@ -3861,7 +3873,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[17] * subject1 * monochrome * complexBG).toFixed(2)
+        (prices[17] * subject1 * monochrome * complexBG).toFixed(2),
       );
     } else if (calcArea > 19801 && calcArea < 27000) {
       quoteTotal.value = (
@@ -3872,7 +3884,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[18] * subject1 * monochrome * complexBG).toFixed(2)
+        (prices[18] * subject1 * monochrome * complexBG).toFixed(2),
       );
     } else if (calcArea > 27001 && calcArea < 41200) {
       quoteTotal.value = (
@@ -3883,7 +3895,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[19] * subject1 * monochrome * complexBG).toFixed(2)
+        (prices[19] * subject1 * monochrome * complexBG).toFixed(2),
       );
     } else if (calcArea > 41201 && calcArea < 50000) {
       quoteTotal.value = (
@@ -3894,7 +3906,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[20] * subject1 * monochrome * complexBG).toFixed(2)
+        (prices[20] * subject1 * monochrome * complexBG).toFixed(2),
       );
     } else if (calcArea > 50001) {
       quoteTotal.value = "Please contact for price";
@@ -3923,7 +3935,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[2] * subjects2 * monochrome * complexBG).toFixed(2)
+        (prices[2] * subjects2 * monochrome * complexBG).toFixed(2),
       );
     } else if (calcArea > 751 && calcArea < 1050) {
       quoteTotal.value = (
@@ -3934,7 +3946,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[3] * subjects2 * monochrome * complexBG).toFixed(2)
+        (prices[3] * subjects2 * monochrome * complexBG).toFixed(2),
       );
     } else if (calcArea > 1051 && calcArea < 1400) {
       quoteTotal.value = (
@@ -3945,7 +3957,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[4] * subjects2 * monochrome * complexBG).toFixed(2)
+        (prices[4] * subjects2 * monochrome * complexBG).toFixed(2),
       );
     } else if (calcArea > 1401 && calcArea < 1800) {
       quoteTotal.value = (
@@ -3956,7 +3968,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[5] * subjects2 * monochrome * complexBG).toFixed(2)
+        (prices[5] * subjects2 * monochrome * complexBG).toFixed(2),
       );
     } else if (calcArea > 1801 && calcArea < 2250) {
       quoteTotal.value = (
@@ -3967,7 +3979,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[6] * subjects2 * monochrome * complexBG).toFixed(2)
+        (prices[6] * subjects2 * monochrome * complexBG).toFixed(2),
       );
     } else if (calcArea > 2251 && calcArea < 2750) {
       quoteTotal.value = (
@@ -3978,7 +3990,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[7] * subjects2 * monochrome * complexBG).toFixed(2)
+        (prices[7] * subjects2 * monochrome * complexBG).toFixed(2),
       );
     } else if (calcArea > 2751 && calcArea < 3250) {
       quoteTotal.value = (
@@ -3989,7 +4001,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[8] * subjects2 * monochrome * complexBG).toFixed(2)
+        (prices[8] * subjects2 * monochrome * complexBG).toFixed(2),
       );
     } else if (calcArea > 3251 && calcArea < 4150) {
       quoteTotal.value = (
@@ -4000,7 +4012,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[9] * subjects2 * monochrome * complexBG).toFixed(2)
+        (prices[9] * subjects2 * monochrome * complexBG).toFixed(2),
       );
     } else if (calcArea > 4151 && calcArea < 4850) {
       quoteTotal.value = (
@@ -4011,7 +4023,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[10] * subjects2 * monochrome * complexBG).toFixed(2)
+        (prices[10] * subjects2 * monochrome * complexBG).toFixed(2),
       );
     } else if (calcArea > 4851 && calcArea < 5650) {
       quoteTotal.value = (
@@ -4022,7 +4034,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[11] * subjects2 * monochrome * complexBG).toFixed(2)
+        (prices[11] * subjects2 * monochrome * complexBG).toFixed(2),
       );
     } else if (calcArea > 5651 && calcArea < 7000) {
       quoteTotal.value = (
@@ -4033,7 +4045,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[12] * subjects2 * monochrome * complexBG).toFixed(2)
+        (prices[12] * subjects2 * monochrome * complexBG).toFixed(2),
       );
     } else if (calcArea > 7001 && calcArea < 7550) {
       quoteTotal.value = (
@@ -4044,7 +4056,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[13] * subjects2 * monochrome * complexBG).toFixed(2)
+        (prices[13] * subjects2 * monochrome * complexBG).toFixed(2),
       );
     } else if (calcArea > 7551 && calcArea < 9050) {
       quoteTotal.value = (
@@ -4055,7 +4067,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[14] * subjects2 * monochrome * complexBG).toFixed(2)
+        (prices[14] * subjects2 * monochrome * complexBG).toFixed(2),
       );
     } else if (calcArea > 9051 && calcArea < 11000) {
       quoteTotal.value = (
@@ -4066,7 +4078,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[15] * subjects2 * monochrome * complexBG).toFixed(2)
+        (prices[15] * subjects2 * monochrome * complexBG).toFixed(2),
       );
     } else if (calcArea > 11001 && calcArea < 15000) {
       quoteTotal.value = (
@@ -4077,7 +4089,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[16] * subjects2 * monochrome * complexBG).toFixed(2)
+        (prices[16] * subjects2 * monochrome * complexBG).toFixed(2),
       );
     } else if (calcArea > 15001 && calcArea < 19800) {
       quoteTotal.value = (
@@ -4088,7 +4100,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[17] * subjects2 * monochrome * complexBG).toFixed(2)
+        (prices[17] * subjects2 * monochrome * complexBG).toFixed(2),
       );
     } else if (calcArea > 19801 && calcArea < 27000) {
       quoteTotal.value = (
@@ -4099,7 +4111,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[18] * subjects2 * monochrome * complexBG).toFixed(2)
+        (prices[18] * subjects2 * monochrome * complexBG).toFixed(2),
       );
     } else if (calcArea > 27001 && calcArea < 41200) {
       quoteTotal.value = (
@@ -4110,7 +4122,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[19] * subjects2 * monochrome * complexBG).toFixed(2)
+        (prices[19] * subjects2 * monochrome * complexBG).toFixed(2),
       );
     } else if (calcArea > 41201 && calcArea < 50000) {
       quoteTotal.value = (
@@ -4121,7 +4133,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[20] * subjects2 * monochrome * complexBG).toFixed(2)
+        (prices[20] * subjects2 * monochrome * complexBG).toFixed(2),
       );
     } else if (calcArea > 50001) {
       quoteTotal.value = "Please contact for price";
@@ -4147,7 +4159,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[4] * subjects3 * monochrome * complexBG).toFixed(2)
+        (prices[4] * subjects3 * monochrome * complexBG).toFixed(2),
       );
     } else if (calcArea > 1401 && calcArea < 1800) {
       quoteTotal.value = (
@@ -4158,7 +4170,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[5] * subjects3 * monochrome * complexBG).toFixed(2)
+        (prices[5] * subjects3 * monochrome * complexBG).toFixed(2),
       );
     } else if (calcArea > 1801 && calcArea < 2250) {
       quoteTotal.value = (
@@ -4169,7 +4181,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[6] * subjects3 * monochrome * complexBG).toFixed(2)
+        (prices[6] * subjects3 * monochrome * complexBG).toFixed(2),
       );
     } else if (calcArea > 2251 && calcArea < 2750) {
       quoteTotal.value = (
@@ -4180,7 +4192,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[7] * subjects3 * monochrome * complexBG).toFixed(2)
+        (prices[7] * subjects3 * monochrome * complexBG).toFixed(2),
       );
     } else if (calcArea > 2751 && calcArea < 3250) {
       quoteTotal.value = (
@@ -4191,7 +4203,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[8] * subjects3 * monochrome * complexBG).toFixed(2)
+        (prices[8] * subjects3 * monochrome * complexBG).toFixed(2),
       );
     } else if (calcArea > 3251 && calcArea < 4150) {
       quoteTotal.value = (
@@ -4202,7 +4214,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[9] * subjects3 * monochrome * complexBG).toFixed(2)
+        (prices[9] * subjects3 * monochrome * complexBG).toFixed(2),
       );
     } else if (calcArea > 4151 && calcArea < 4850) {
       quoteTotal.value = (
@@ -4213,7 +4225,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[10] * subjects3 * monochrome * complexBG).toFixed(2)
+        (prices[10] * subjects3 * monochrome * complexBG).toFixed(2),
       );
     } else if (calcArea > 4851 && calcArea < 5650) {
       quoteTotal.value = (
@@ -4224,7 +4236,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[11] * subjects3 * monochrome * complexBG).toFixed(2)
+        (prices[11] * subjects3 * monochrome * complexBG).toFixed(2),
       );
     } else if (calcArea > 5651 && calcArea < 7000) {
       quoteTotal.value = (
@@ -4235,7 +4247,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[12] * subjects3 * monochrome * complexBG).toFixed(2)
+        (prices[12] * subjects3 * monochrome * complexBG).toFixed(2),
       );
     } else if (calcArea > 7001 && calcArea < 7550) {
       quoteTotal.value = (
@@ -4246,7 +4258,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[13] * subjects3 * monochrome * complexBG).toFixed(2)
+        (prices[13] * subjects3 * monochrome * complexBG).toFixed(2),
       );
     } else if (calcArea > 7551 && calcArea < 9050) {
       quoteTotal.value = (
@@ -4257,7 +4269,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[14] * subjects3 * monochrome * complexBG).toFixed(2)
+        (prices[14] * subjects3 * monochrome * complexBG).toFixed(2),
       );
     } else if (calcArea > 9051 && calcArea < 11000) {
       quoteTotal.value = (
@@ -4268,7 +4280,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[15] * subjects3 * monochrome * complexBG).toFixed(2)
+        (prices[15] * subjects3 * monochrome * complexBG).toFixed(2),
       );
     } else if (calcArea > 11001 && calcArea < 15000) {
       quoteTotal.value = (
@@ -4279,7 +4291,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[16] * subjects3 * monochrome * complexBG).toFixed(2)
+        (prices[16] * subjects3 * monochrome * complexBG).toFixed(2),
       );
     } else if (calcArea > 15001 && calcArea < 19800) {
       quoteTotal.value = (
@@ -4290,7 +4302,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[17] * subjects3 * monochrome * complexBG).toFixed(2)
+        (prices[17] * subjects3 * monochrome * complexBG).toFixed(2),
       );
     } else if (calcArea > 19801 && calcArea < 27000) {
       quoteTotal.value = (
@@ -4301,7 +4313,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[18] * subjects3 * monochrome * complexBG).toFixed(2)
+        (prices[18] * subjects3 * monochrome * complexBG).toFixed(2),
       );
     } else if (calcArea > 27001 && calcArea < 41200) {
       quoteTotal.value = (
@@ -4312,7 +4324,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[19] * subjects3 * monochrome * complexBG).toFixed(2)
+        (prices[19] * subjects3 * monochrome * complexBG).toFixed(2),
       );
     } else if (calcArea > 41201 && calcArea < 50000) {
       quoteTotal.value = (
@@ -4323,7 +4335,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[20] * subjects3 * monochrome * complexBG).toFixed(2)
+        (prices[20] * subjects3 * monochrome * complexBG).toFixed(2),
       );
     } else if (calcArea > 50001) {
       quoteTotal.value = "Please contact for price";
@@ -4346,7 +4358,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[0] * subject1 * finishGloss * complexBG).toFixed(2)
+        (prices[0] * subject1 * finishGloss * complexBG).toFixed(2),
       );
     } else if (calcArea > 351 && calcArea < 500) {
       quoteTotal.value = (
@@ -4357,7 +4369,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[1] * subject1 * finishGloss * complexBG).toFixed(2)
+        (prices[1] * subject1 * finishGloss * complexBG).toFixed(2),
       );
     } else if (calcArea > 501 && calcArea < 750) {
       quoteTotal.value = (
@@ -4368,7 +4380,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[2] * subject1 * finishGloss * complexBG).toFixed(2)
+        (prices[2] * subject1 * finishGloss * complexBG).toFixed(2),
       );
     } else if (calcArea > 751 && calcArea < 1050) {
       quoteTotal.value = (
@@ -4379,7 +4391,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[3] * subject1 * finishGloss * complexBG).toFixed(2)
+        (prices[3] * subject1 * finishGloss * complexBG).toFixed(2),
       );
     } else if (calcArea > 1051 && calcArea < 1400) {
       quoteTotal.value = (
@@ -4390,7 +4402,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[4] * subject1 * finishGloss * complexBG).toFixed(2)
+        (prices[4] * subject1 * finishGloss * complexBG).toFixed(2),
       );
     } else if (calcArea > 1401 && calcArea < 1800) {
       quoteTotal.value = (
@@ -4401,7 +4413,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[5] * subject1 * finishGloss * complexBG).toFixed(2)
+        (prices[5] * subject1 * finishGloss * complexBG).toFixed(2),
       );
     } else if (calcArea > 1801 && calcArea < 2250) {
       quoteTotal.value = (
@@ -4412,7 +4424,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[6] * subject1 * finishGloss * complexBG).toFixed(2)
+        (prices[6] * subject1 * finishGloss * complexBG).toFixed(2),
       );
     } else if (calcArea > 2251 && calcArea < 2750) {
       quoteTotal.value = (
@@ -4423,7 +4435,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[7] * subject1 * finishGloss * complexBG).toFixed(2)
+        (prices[7] * subject1 * finishGloss * complexBG).toFixed(2),
       );
     } else if (calcArea > 2751 && calcArea < 3250) {
       quoteTotal.value = (
@@ -4434,7 +4446,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[8] * subject1 * finishGloss * complexBG).toFixed(2)
+        (prices[8] * subject1 * finishGloss * complexBG).toFixed(2),
       );
     } else if (calcArea > 3251 && calcArea < 4150) {
       quoteTotal.value = (
@@ -4445,7 +4457,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[9] * subject1 * finishGloss * complexBG).toFixed(2)
+        (prices[9] * subject1 * finishGloss * complexBG).toFixed(2),
       );
     } else if (calcArea > 4151 && calcArea < 4850) {
       quoteTotal.value = (
@@ -4456,7 +4468,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[10] * subject1 * finishGloss * complexBG).toFixed(2)
+        (prices[10] * subject1 * finishGloss * complexBG).toFixed(2),
       );
     } else if (calcArea > 4851 && calcArea < 5650) {
       quoteTotal.value = (
@@ -4467,7 +4479,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[11] * subject1 * finishGloss * complexBG).toFixed(2)
+        (prices[11] * subject1 * finishGloss * complexBG).toFixed(2),
       );
     } else if (calcArea > 5651 && calcArea < 7000) {
       quoteTotal.value = (
@@ -4478,7 +4490,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[12] * subject1 * finishGloss * complexBG).toFixed(2)
+        (prices[12] * subject1 * finishGloss * complexBG).toFixed(2),
       );
     } else if (calcArea > 7001 && calcArea < 7550) {
       quoteTotal.value = (
@@ -4489,7 +4501,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[13] * subject1 * finishGloss * complexBG).toFixed(2)
+        (prices[13] * subject1 * finishGloss * complexBG).toFixed(2),
       );
     } else if (calcArea > 7551 && calcArea < 9050) {
       quoteTotal.value = (
@@ -4500,7 +4512,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[14] * subject1 * finishGloss * complexBG).toFixed(2)
+        (prices[14] * subject1 * finishGloss * complexBG).toFixed(2),
       );
     } else if (calcArea > 9051 && calcArea < 11000) {
       quoteTotal.value = (
@@ -4511,7 +4523,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[15] * subject1 * finishGloss * complexBG).toFixed(2)
+        (prices[15] * subject1 * finishGloss * complexBG).toFixed(2),
       );
     } else if (calcArea > 11001 && calcArea < 15000) {
       quoteTotal.value = (
@@ -4522,7 +4534,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[16] * subject1 * finishGloss * complexBG).toFixed(2)
+        (prices[16] * subject1 * finishGloss * complexBG).toFixed(2),
       );
     } else if (calcArea > 15001 && calcArea < 19800) {
       quoteTotal.value = (
@@ -4533,7 +4545,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[17] * subject1 * finishGloss * complexBG).toFixed(2)
+        (prices[17] * subject1 * finishGloss * complexBG).toFixed(2),
       );
     } else if (calcArea > 19801 && calcArea < 27000) {
       quoteTotal.value = (
@@ -4544,7 +4556,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[18] * subject1 * finishGloss * complexBG).toFixed(2)
+        (prices[18] * subject1 * finishGloss * complexBG).toFixed(2),
       );
     } else if (calcArea > 27001 && calcArea < 41200) {
       quoteTotal.value = (
@@ -4555,7 +4567,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[19] * subject1 * finishGloss * complexBG).toFixed(2)
+        (prices[19] * subject1 * finishGloss * complexBG).toFixed(2),
       );
     } else if (calcArea > 41201 && calcArea < 50000) {
       quoteTotal.value = (
@@ -4566,7 +4578,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[20] * subject1 * finishGloss * complexBG).toFixed(2)
+        (prices[20] * subject1 * finishGloss * complexBG).toFixed(2),
       );
     } else if (calcArea > 50001) {
       quoteTotal.value = "Please contact for price";
@@ -4595,7 +4607,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[2] * subjects2 * finishGloss * complexBG).toFixed(2)
+        (prices[2] * subjects2 * finishGloss * complexBG).toFixed(2),
       );
     } else if (calcArea > 751 && calcArea < 1050) {
       quoteTotal.value = (
@@ -4606,7 +4618,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[3] * subjects2 * finishGloss * complexBG).toFixed(2)
+        (prices[3] * subjects2 * finishGloss * complexBG).toFixed(2),
       );
     } else if (calcArea > 1051 && calcArea < 1400) {
       quoteTotal.value = (
@@ -4617,7 +4629,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[4] * subjects2 * finishGloss * complexBG).toFixed(2)
+        (prices[4] * subjects2 * finishGloss * complexBG).toFixed(2),
       );
     } else if (calcArea > 1401 && calcArea < 1800) {
       quoteTotal.value = (
@@ -4628,7 +4640,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[5] * subjects2 * finishGloss * complexBG).toFixed(2)
+        (prices[5] * subjects2 * finishGloss * complexBG).toFixed(2),
       );
     } else if (calcArea > 1801 && calcArea < 2250) {
       quoteTotal.value = (
@@ -4639,7 +4651,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[6] * subjects2 * finishGloss * complexBG).toFixed(2)
+        (prices[6] * subjects2 * finishGloss * complexBG).toFixed(2),
       );
     } else if (calcArea > 2251 && calcArea < 2750) {
       quoteTotal.value = (
@@ -4650,7 +4662,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[7] * subjects2 * finishGloss * complexBG).toFixed(2)
+        (prices[7] * subjects2 * finishGloss * complexBG).toFixed(2),
       );
     } else if (calcArea > 2751 && calcArea < 3250) {
       quoteTotal.value = (
@@ -4661,7 +4673,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[8] * subjects2 * finishGloss * complexBG).toFixed(2)
+        (prices[8] * subjects2 * finishGloss * complexBG).toFixed(2),
       );
     } else if (calcArea > 3251 && calcArea < 4150) {
       quoteTotal.value = (
@@ -4672,7 +4684,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[9] * subjects2 * finishGloss * complexBG).toFixed(2)
+        (prices[9] * subjects2 * finishGloss * complexBG).toFixed(2),
       );
     } else if (calcArea > 4151 && calcArea < 4850) {
       quoteTotal.value = (
@@ -4683,7 +4695,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[10] * subjects2 * finishGloss * complexBG).toFixed(2)
+        (prices[10] * subjects2 * finishGloss * complexBG).toFixed(2),
       );
     } else if (calcArea > 4851 && calcArea < 5650) {
       quoteTotal.value = (
@@ -4694,7 +4706,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[11] * subjects2 * finishGloss * complexBG).toFixed(2)
+        (prices[11] * subjects2 * finishGloss * complexBG).toFixed(2),
       );
     } else if (calcArea > 5651 && calcArea < 7000) {
       quoteTotal.value = (
@@ -4705,7 +4717,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[12] * subjects2 * finishGloss * complexBG).toFixed(2)
+        (prices[12] * subjects2 * finishGloss * complexBG).toFixed(2),
       );
     } else if (calcArea > 7001 && calcArea < 7550) {
       quoteTotal.value = (
@@ -4716,7 +4728,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[13] * subjects2 * finishGloss * complexBG).toFixed(2)
+        (prices[13] * subjects2 * finishGloss * complexBG).toFixed(2),
       );
     } else if (calcArea > 7551 && calcArea < 9050) {
       quoteTotal.value = (
@@ -4727,7 +4739,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[14] * subjects2 * finishGloss * complexBG).toFixed(2)
+        (prices[14] * subjects2 * finishGloss * complexBG).toFixed(2),
       );
     } else if (calcArea > 9051 && calcArea < 11000) {
       quoteTotal.value = (
@@ -4738,7 +4750,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[15] * subjects2 * finishGloss * complexBG).toFixed(2)
+        (prices[15] * subjects2 * finishGloss * complexBG).toFixed(2),
       );
     } else if (calcArea > 11001 && calcArea < 15000) {
       quoteTotal.value = (
@@ -4749,7 +4761,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[16] * subjects2 * finishGloss * complexBG).toFixed(2)
+        (prices[16] * subjects2 * finishGloss * complexBG).toFixed(2),
       );
     } else if (calcArea > 15001 && calcArea < 19800) {
       quoteTotal.value = (
@@ -4760,7 +4772,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[17] * subjects2 * finishGloss * complexBG).toFixed(2)
+        (prices[17] * subjects2 * finishGloss * complexBG).toFixed(2),
       );
     } else if (calcArea > 19801 && calcArea < 27000) {
       quoteTotal.value = (
@@ -4771,7 +4783,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[18] * subjects2 * finishGloss * complexBG).toFixed(2)
+        (prices[18] * subjects2 * finishGloss * complexBG).toFixed(2),
       );
     } else if (calcArea > 27001 && calcArea < 41200) {
       quoteTotal.value = (
@@ -4782,7 +4794,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[19] * subjects2 * finishGloss * complexBG).toFixed(2)
+        (prices[19] * subjects2 * finishGloss * complexBG).toFixed(2),
       );
     } else if (calcArea > 41201 && calcArea < 50000) {
       quoteTotal.value = (
@@ -4793,7 +4805,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[20] * subjects2 * finishGloss * complexBG).toFixed(2)
+        (prices[20] * subjects2 * finishGloss * complexBG).toFixed(2),
       );
     } else if (calcArea > 50001) {
       quoteTotal.value = "Please contact for price";
@@ -4819,7 +4831,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[4] * subjects3 * finishGloss * complexBG).toFixed(2)
+        (prices[4] * subjects3 * finishGloss * complexBG).toFixed(2),
       );
     } else if (calcArea > 1401 && calcArea < 1800) {
       quoteTotal.value = (
@@ -4830,7 +4842,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[5] * subjects3 * finishGloss * complexBG).toFixed(2)
+        (prices[5] * subjects3 * finishGloss * complexBG).toFixed(2),
       );
     } else if (calcArea > 1801 && calcArea < 2250) {
       quoteTotal.value = (
@@ -4841,7 +4853,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[6] * subjects3 * finishGloss * complexBG).toFixed(2)
+        (prices[6] * subjects3 * finishGloss * complexBG).toFixed(2),
       );
     } else if (calcArea > 2251 && calcArea < 2750) {
       quoteTotal.value = (
@@ -4852,7 +4864,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[7] * subjects3 * finishGloss * complexBG).toFixed(2)
+        (prices[7] * subjects3 * finishGloss * complexBG).toFixed(2),
       );
     } else if (calcArea > 2751 && calcArea < 3250) {
       quoteTotal.value = (
@@ -4863,7 +4875,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[8] * subjects3 * finishGloss * complexBG).toFixed(2)
+        (prices[8] * subjects3 * finishGloss * complexBG).toFixed(2),
       );
     } else if (calcArea > 3251 && calcArea < 4150) {
       quoteTotal.value = (
@@ -4874,7 +4886,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[9] * subjects3 * finishGloss * complexBG).toFixed(2)
+        (prices[9] * subjects3 * finishGloss * complexBG).toFixed(2),
       );
     } else if (calcArea > 4151 && calcArea < 4850) {
       quoteTotal.value = (
@@ -4885,7 +4897,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[10] * subjects3 * finishGloss * complexBG).toFixed(2)
+        (prices[10] * subjects3 * finishGloss * complexBG).toFixed(2),
       );
     } else if (calcArea > 4851 && calcArea < 5650) {
       quoteTotal.value = (
@@ -4896,7 +4908,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[11] * subjects3 * finishGloss * complexBG).toFixed(2)
+        (prices[11] * subjects3 * finishGloss * complexBG).toFixed(2),
       );
     } else if (calcArea > 5651 && calcArea < 7000) {
       quoteTotal.value = (
@@ -4907,7 +4919,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[12] * subjects3 * finishGloss * complexBG).toFixed(2)
+        (prices[12] * subjects3 * finishGloss * complexBG).toFixed(2),
       );
     } else if (calcArea > 7001 && calcArea < 7550) {
       quoteTotal.value = (
@@ -4918,7 +4930,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[13] * subjects3 * finishGloss * complexBG).toFixed(2)
+        (prices[13] * subjects3 * finishGloss * complexBG).toFixed(2),
       );
     } else if (calcArea > 7551 && calcArea < 9050) {
       quoteTotal.value = (
@@ -4929,7 +4941,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[14] * subjects3 * finishGloss * complexBG).toFixed(2)
+        (prices[14] * subjects3 * finishGloss * complexBG).toFixed(2),
       );
     } else if (calcArea > 9051 && calcArea < 11000) {
       quoteTotal.value = (
@@ -4940,7 +4952,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[15] * subjects3 * finishGloss * complexBG).toFixed(2)
+        (prices[15] * subjects3 * finishGloss * complexBG).toFixed(2),
       );
     } else if (calcArea > 11001 && calcArea < 15000) {
       quoteTotal.value = (
@@ -4951,7 +4963,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[16] * subjects3 * finishGloss * complexBG).toFixed(2)
+        (prices[16] * subjects3 * finishGloss * complexBG).toFixed(2),
       );
     } else if (calcArea > 15001 && calcArea < 19800) {
       quoteTotal.value = (
@@ -4962,7 +4974,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[17] * subjects3 * finishGloss * complexBG).toFixed(2)
+        (prices[17] * subjects3 * finishGloss * complexBG).toFixed(2),
       );
     } else if (calcArea > 19801 && calcArea < 27000) {
       quoteTotal.value = (
@@ -4973,7 +4985,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[18] * subjects3 * finishGloss * complexBG).toFixed(2)
+        (prices[18] * subjects3 * finishGloss * complexBG).toFixed(2),
       );
     } else if (calcArea > 27001 && calcArea < 41200) {
       quoteTotal.value = (
@@ -4984,7 +4996,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[19] * subjects3 * finishGloss * complexBG).toFixed(2)
+        (prices[19] * subjects3 * finishGloss * complexBG).toFixed(2),
       );
     } else if (calcArea > 41201 && calcArea < 50000) {
       quoteTotal.value = (
@@ -4995,7 +5007,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[20] * subjects3 * finishGloss * complexBG).toFixed(2)
+        (prices[20] * subjects3 * finishGloss * complexBG).toFixed(2),
       );
     } else if (calcArea > 50001) {
       quoteTotal.value = "Please contact for price";
@@ -5019,7 +5031,9 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[0] * subject1 * monochrome * finishGloss * complexBG).toFixed(2)
+        (prices[0] * subject1 * monochrome * finishGloss * complexBG).toFixed(
+          2,
+        ),
       );
     } else if (calcArea > 351 && calcArea < 500) {
       quoteTotal.value = (
@@ -5031,7 +5045,9 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[1] * subject1 * monochrome * finishGloss * complexBG).toFixed(2)
+        (prices[1] * subject1 * monochrome * finishGloss * complexBG).toFixed(
+          2,
+        ),
       );
     } else if (calcArea > 501 && calcArea < 750) {
       quoteTotal.value = (
@@ -5043,7 +5059,9 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[2] * subject1 * monochrome * finishGloss * complexBG).toFixed(2)
+        (prices[2] * subject1 * monochrome * finishGloss * complexBG).toFixed(
+          2,
+        ),
       );
     } else if (calcArea > 751 && calcArea < 1050) {
       quoteTotal.value = (
@@ -5055,7 +5073,9 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[3] * subject1 * monochrome * finishGloss * complexBG).toFixed(2)
+        (prices[3] * subject1 * monochrome * finishGloss * complexBG).toFixed(
+          2,
+        ),
       );
     } else if (calcArea > 1051 && calcArea < 1400) {
       quoteTotal.value = (
@@ -5067,7 +5087,9 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[4] * subject1 * monochrome * finishGloss * complexBG).toFixed(2)
+        (prices[4] * subject1 * monochrome * finishGloss * complexBG).toFixed(
+          2,
+        ),
       );
     } else if (calcArea > 1401 && calcArea < 1800) {
       quoteTotal.value = (
@@ -5079,7 +5101,9 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[5] * subject1 * monochrome * finishGloss * complexBG).toFixed(2)
+        (prices[5] * subject1 * monochrome * finishGloss * complexBG).toFixed(
+          2,
+        ),
       );
     } else if (calcArea > 1801 && calcArea < 2250) {
       quoteTotal.value = (
@@ -5091,7 +5115,9 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[6] * subject1 * monochrome * finishGloss * complexBG).toFixed(2)
+        (prices[6] * subject1 * monochrome * finishGloss * complexBG).toFixed(
+          2,
+        ),
       );
     } else if (calcArea > 2251 && calcArea < 2750) {
       quoteTotal.value = (
@@ -5103,7 +5129,9 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[7] * subject1 * monochrome * finishGloss * complexBG).toFixed(2)
+        (prices[7] * subject1 * monochrome * finishGloss * complexBG).toFixed(
+          2,
+        ),
       );
     } else if (calcArea > 2751 && calcArea < 3250) {
       quoteTotal.value = (
@@ -5115,7 +5143,9 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[8] * subject1 * monochrome * finishGloss * complexBG).toFixed(2)
+        (prices[8] * subject1 * monochrome * finishGloss * complexBG).toFixed(
+          2,
+        ),
       );
     } else if (calcArea > 3251 && calcArea < 4150) {
       quoteTotal.value = (
@@ -5127,7 +5157,9 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[9] * subject1 * monochrome * finishGloss * complexBG).toFixed(2)
+        (prices[9] * subject1 * monochrome * finishGloss * complexBG).toFixed(
+          2,
+        ),
       );
     } else if (calcArea > 4151 && calcArea < 4850) {
       quoteTotal.value = (
@@ -5140,8 +5172,8 @@ function totalPrice() {
       localStorage.setItem(
         "total",
         (prices[10] * subject1 * monochrome * finishGloss * complexBG).toFixed(
-          2
-        )
+          2,
+        ),
       );
     } else if (calcArea > 4851 && calcArea < 5650) {
       quoteTotal.value = (
@@ -5154,8 +5186,8 @@ function totalPrice() {
       localStorage.setItem(
         "total",
         (prices[11] * subject1 * monochrome * finishGloss * complexBG).toFixed(
-          2
-        )
+          2,
+        ),
       );
     } else if (calcArea > 5651 && calcArea < 7000) {
       quoteTotal.value = (
@@ -5168,8 +5200,8 @@ function totalPrice() {
       localStorage.setItem(
         "total",
         (prices[12] * subject1 * monochrome * finishGloss * complexBG).toFixed(
-          2
-        )
+          2,
+        ),
       );
     } else if (calcArea > 7001 && calcArea < 7550) {
       quoteTotal.value = (
@@ -5182,8 +5214,8 @@ function totalPrice() {
       localStorage.setItem(
         "total",
         (prices[13] * subject1 * monochrome * finishGloss * complexBG).toFixed(
-          2
-        )
+          2,
+        ),
       );
     } else if (calcArea > 7551 && calcArea < 9050) {
       quoteTotal.value = (
@@ -5196,8 +5228,8 @@ function totalPrice() {
       localStorage.setItem(
         "total",
         (prices[14] * subject1 * monochrome * finishGloss * complexBG).toFixed(
-          2
-        )
+          2,
+        ),
       );
     } else if (calcArea > 9051 && calcArea < 11000) {
       quoteTotal.value = (
@@ -5210,8 +5242,8 @@ function totalPrice() {
       localStorage.setItem(
         "total",
         (prices[15] * subject1 * monochrome * finishGloss * complexBG).toFixed(
-          2
-        )
+          2,
+        ),
       );
     } else if (calcArea > 11001 && calcArea < 15000) {
       quoteTotal.value = (
@@ -5224,8 +5256,8 @@ function totalPrice() {
       localStorage.setItem(
         "total",
         (prices[16] * subject1 * monochrome * finishGloss * complexBG).toFixed(
-          2
-        )
+          2,
+        ),
       );
     } else if (calcArea > 15001 && calcArea < 19800) {
       quoteTotal.value = (
@@ -5238,8 +5270,8 @@ function totalPrice() {
       localStorage.setItem(
         "total",
         (prices[17] * subject1 * monochrome * finishGloss * complexBG).toFixed(
-          2
-        )
+          2,
+        ),
       );
     } else if (calcArea > 19801 && calcArea < 27000) {
       quoteTotal.value = (
@@ -5252,8 +5284,8 @@ function totalPrice() {
       localStorage.setItem(
         "total",
         (prices[18] * subject1 * monochrome * finishGloss * complexBG).toFixed(
-          2
-        )
+          2,
+        ),
       );
     } else if (calcArea > 27001 && calcArea < 41200) {
       quoteTotal.value = (
@@ -5266,8 +5298,8 @@ function totalPrice() {
       localStorage.setItem(
         "total",
         (prices[19] * subject1 * monochrome * finishGloss * complexBG).toFixed(
-          2
-        )
+          2,
+        ),
       );
     } else if (calcArea > 41201 && calcArea < 50000) {
       quoteTotal.value = (
@@ -5280,8 +5312,8 @@ function totalPrice() {
       localStorage.setItem(
         "total",
         (prices[20] * subject1 * monochrome * finishGloss * complexBG).toFixed(
-          2
-        )
+          2,
+        ),
       );
     } else if (calcArea > 50001) {
       quoteTotal.value = "Please contact for price";
@@ -5312,8 +5344,8 @@ function totalPrice() {
       localStorage.setItem(
         "total",
         (prices[2] * subjects2 * monochrome * finishGloss * complexBG).toFixed(
-          2
-        )
+          2,
+        ),
       );
     } else if (calcArea > 751 && calcArea < 1050) {
       quoteTotal.value = (
@@ -5326,8 +5358,8 @@ function totalPrice() {
       localStorage.setItem(
         "total",
         (prices[3] * subjects2 * monochrome * finishGloss * complexBG).toFixed(
-          2
-        )
+          2,
+        ),
       );
     } else if (calcArea > 1051 && calcArea < 1400) {
       quoteTotal.value = (
@@ -5340,8 +5372,8 @@ function totalPrice() {
       localStorage.setItem(
         "total",
         (prices[4] * subjects2 * monochrome * finishGloss * complexBG).toFixed(
-          2
-        )
+          2,
+        ),
       );
     } else if (calcArea > 1401 && calcArea < 1800) {
       quoteTotal.value = (
@@ -5354,8 +5386,8 @@ function totalPrice() {
       localStorage.setItem(
         "total",
         (prices[5] * subjects2 * monochrome * finishGloss * complexBG).toFixed(
-          2
-        )
+          2,
+        ),
       );
     } else if (calcArea > 1801 && calcArea < 2250) {
       quoteTotal.value = (
@@ -5368,8 +5400,8 @@ function totalPrice() {
       localStorage.setItem(
         "total",
         (prices[6] * subjects2 * monochrome * finishGloss * complexBG).toFixed(
-          2
-        )
+          2,
+        ),
       );
     } else if (calcArea > 2251 && calcArea < 2750) {
       quoteTotal.value = (
@@ -5382,8 +5414,8 @@ function totalPrice() {
       localStorage.setItem(
         "total",
         (prices[7] * subjects2 * monochrome * finishGloss * complexBG).toFixed(
-          2
-        )
+          2,
+        ),
       );
     } else if (calcArea > 2751 && calcArea < 3250) {
       quoteTotal.value = (
@@ -5396,8 +5428,8 @@ function totalPrice() {
       localStorage.setItem(
         "total",
         (prices[8] * subjects2 * monochrome * finishGloss * complexBG).toFixed(
-          2
-        )
+          2,
+        ),
       );
     } else if (calcArea > 3251 && calcArea < 4150) {
       quoteTotal.value = (
@@ -5410,8 +5442,8 @@ function totalPrice() {
       localStorage.setItem(
         "total",
         (prices[9] * subjects2 * monochrome * finishGloss * complexBG).toFixed(
-          2
-        )
+          2,
+        ),
       );
     } else if (calcArea > 4151 && calcArea < 4850) {
       quoteTotal.value = (
@@ -5424,8 +5456,8 @@ function totalPrice() {
       localStorage.setItem(
         "total",
         (prices[10] * subjects2 * monochrome * finishGloss * complexBG).toFixed(
-          2
-        )
+          2,
+        ),
       );
     } else if (calcArea > 4851 && calcArea < 5650) {
       quoteTotal.value = (
@@ -5438,8 +5470,8 @@ function totalPrice() {
       localStorage.setItem(
         "total",
         (prices[11] * subjects2 * monochrome * finishGloss * complexBG).toFixed(
-          2
-        )
+          2,
+        ),
       );
     } else if (calcArea > 5651 && calcArea < 7000) {
       quoteTotal.value = (
@@ -5452,8 +5484,8 @@ function totalPrice() {
       localStorage.setItem(
         "total",
         (prices[12] * subjects2 * monochrome * finishGloss * complexBG).toFixed(
-          2
-        )
+          2,
+        ),
       );
     } else if (calcArea > 7001 && calcArea < 7550) {
       quoteTotal.value = (
@@ -5466,8 +5498,8 @@ function totalPrice() {
       localStorage.setItem(
         "total",
         (prices[13] * subjects2 * monochrome * finishGloss * complexBG).toFixed(
-          2
-        )
+          2,
+        ),
       );
     } else if (calcArea > 7551 && calcArea < 9050) {
       quoteTotal.value = (
@@ -5480,8 +5512,8 @@ function totalPrice() {
       localStorage.setItem(
         "total",
         (prices[14] * subjects2 * monochrome * finishGloss * complexBG).toFixed(
-          2
-        )
+          2,
+        ),
       );
     } else if (calcArea > 9051 && calcArea < 11000) {
       quoteTotal.value = (
@@ -5494,8 +5526,8 @@ function totalPrice() {
       localStorage.setItem(
         "total",
         (prices[15] * subjects2 * monochrome * finishGloss * complexBG).toFixed(
-          2
-        )
+          2,
+        ),
       );
     } else if (calcArea > 11001 && calcArea < 15000) {
       quoteTotal.value = (
@@ -5508,8 +5540,8 @@ function totalPrice() {
       localStorage.setItem(
         "total",
         (prices[16] * subjects2 * monochrome * finishGloss * complexBG).toFixed(
-          2
-        )
+          2,
+        ),
       );
     } else if (calcArea > 15001 && calcArea < 19800) {
       quoteTotal.value = (
@@ -5522,8 +5554,8 @@ function totalPrice() {
       localStorage.setItem(
         "total",
         (prices[17] * subjects2 * monochrome * finishGloss * complexBG).toFixed(
-          2
-        )
+          2,
+        ),
       );
     } else if (calcArea > 19801 && calcArea < 27000) {
       quoteTotal.value = (
@@ -5536,8 +5568,8 @@ function totalPrice() {
       localStorage.setItem(
         "total",
         (prices[18] * subjects2 * monochrome * finishGloss * complexBG).toFixed(
-          2
-        )
+          2,
+        ),
       );
     } else if (calcArea > 27001 && calcArea < 41200) {
       quoteTotal.value = (
@@ -5550,8 +5582,8 @@ function totalPrice() {
       localStorage.setItem(
         "total",
         (prices[19] * subjects2 * monochrome * finishGloss * complexBG).toFixed(
-          2
-        )
+          2,
+        ),
       );
     } else if (calcArea > 41201 && calcArea < 50000) {
       quoteTotal.value = (
@@ -5564,8 +5596,8 @@ function totalPrice() {
       localStorage.setItem(
         "total",
         (prices[20] * subjects2 * monochrome * finishGloss * complexBG).toFixed(
-          2
-        )
+          2,
+        ),
       );
     } else if (calcArea > 50001) {
       quoteTotal.value = "Please contact for price";
@@ -5593,8 +5625,8 @@ function totalPrice() {
       localStorage.setItem(
         "total",
         (prices[4] * subjects3 * monochrome * finishGloss * complexBG).toFixed(
-          2
-        )
+          2,
+        ),
       );
     } else if (calcArea > 1401 && calcArea < 1800) {
       quoteTotal.value = (
@@ -5607,8 +5639,8 @@ function totalPrice() {
       localStorage.setItem(
         "total",
         (prices[5] * subjects3 * monochrome * finishGloss * complexBG).toFixed(
-          2
-        )
+          2,
+        ),
       );
     } else if (calcArea > 1801 && calcArea < 2250) {
       quoteTotal.value = (
@@ -5621,8 +5653,8 @@ function totalPrice() {
       localStorage.setItem(
         "total",
         (prices[6] * subjects3 * monochrome * finishGloss * complexBG).toFixed(
-          2
-        )
+          2,
+        ),
       );
     } else if (calcArea > 2251 && calcArea < 2750) {
       quoteTotal.value = (
@@ -5635,8 +5667,8 @@ function totalPrice() {
       localStorage.setItem(
         "total",
         (prices[7] * subjects3 * monochrome * finishGloss * complexBG).toFixed(
-          2
-        )
+          2,
+        ),
       );
     } else if (calcArea > 2751 && calcArea < 3250) {
       quoteTotal.value = (
@@ -5649,8 +5681,8 @@ function totalPrice() {
       localStorage.setItem(
         "total",
         (prices[8] * subjects3 * monochrome * finishGloss * complexBG).toFixed(
-          2
-        )
+          2,
+        ),
       );
     } else if (calcArea > 3251 && calcArea < 4150) {
       quoteTotal.value = (
@@ -5663,8 +5695,8 @@ function totalPrice() {
       localStorage.setItem(
         "total",
         (prices[9] * subjects3 * monochrome * finishGloss * complexBG).toFixed(
-          2
-        )
+          2,
+        ),
       );
     } else if (calcArea > 4151 && calcArea < 4850) {
       quoteTotal.value = (
@@ -5677,8 +5709,8 @@ function totalPrice() {
       localStorage.setItem(
         "total",
         (prices[10] * subjects3 * monochrome * finishGloss * complexBG).toFixed(
-          2
-        )
+          2,
+        ),
       );
     } else if (calcArea > 4851 && calcArea < 5650) {
       quoteTotal.value = (
@@ -5691,8 +5723,8 @@ function totalPrice() {
       localStorage.setItem(
         "total",
         (prices[11] * subjects3 * monochrome * finishGloss * complexBG).toFixed(
-          2
-        )
+          2,
+        ),
       );
     } else if (calcArea > 5651 && calcArea < 7000) {
       quoteTotal.value = (
@@ -5705,8 +5737,8 @@ function totalPrice() {
       localStorage.setItem(
         "total",
         (prices[12] * subjects3 * monochrome * finishGloss * complexBG).toFixed(
-          2
-        )
+          2,
+        ),
       );
     } else if (calcArea > 7001 && calcArea < 7550) {
       quoteTotal.value = (
@@ -5719,8 +5751,8 @@ function totalPrice() {
       localStorage.setItem(
         "total",
         (prices[13] * subjects3 * monochrome * finishGloss * complexBG).toFixed(
-          2
-        )
+          2,
+        ),
       );
     } else if (calcArea > 7551 && calcArea < 9050) {
       quoteTotal.value = (
@@ -5733,8 +5765,8 @@ function totalPrice() {
       localStorage.setItem(
         "total",
         (prices[14] * subjects3 * monochrome * finishGloss * complexBG).toFixed(
-          2
-        )
+          2,
+        ),
       );
     } else if (calcArea > 9051 && calcArea < 11000) {
       quoteTotal.value = (
@@ -5747,8 +5779,8 @@ function totalPrice() {
       localStorage.setItem(
         "total",
         (prices[15] * subjects3 * monochrome * finishGloss * complexBG).toFixed(
-          2
-        )
+          2,
+        ),
       );
     } else if (calcArea > 11001 && calcArea < 15000) {
       quoteTotal.value = (
@@ -5761,8 +5793,8 @@ function totalPrice() {
       localStorage.setItem(
         "total",
         (prices[16] * subjects3 * monochrome * finishGloss * complexBG).toFixed(
-          2
-        )
+          2,
+        ),
       );
     } else if (calcArea > 15001 && calcArea < 19800) {
       quoteTotal.value = (
@@ -5775,8 +5807,8 @@ function totalPrice() {
       localStorage.setItem(
         "total",
         (prices[17] * subjects3 * monochrome * finishGloss * complexBG).toFixed(
-          2
-        )
+          2,
+        ),
       );
     } else if (calcArea > 19801 && calcArea < 27000) {
       quoteTotal.value = (
@@ -5789,8 +5821,8 @@ function totalPrice() {
       localStorage.setItem(
         "total",
         (prices[18] * subjects3 * monochrome * finishGloss * complexBG).toFixed(
-          2
-        )
+          2,
+        ),
       );
     } else if (calcArea > 27001 && calcArea < 41200) {
       quoteTotal.value = (
@@ -5803,8 +5835,8 @@ function totalPrice() {
       localStorage.setItem(
         "total",
         (prices[19] * subjects3 * monochrome * finishGloss * complexBG).toFixed(
-          2
-        )
+          2,
+        ),
       );
     } else if (calcArea > 41201 && calcArea < 50000) {
       quoteTotal.value = (
@@ -5817,8 +5849,8 @@ function totalPrice() {
       localStorage.setItem(
         "total",
         (prices[20] * subjects3 * monochrome * finishGloss * complexBG).toFixed(
-          2
-        )
+          2,
+        ),
       );
     } else if (calcArea > 50001) {
       quoteTotal.value = "Please contact for price";
@@ -5841,7 +5873,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[0] * subject1 * finishMatte * complexBG).toFixed(2)
+        (prices[0] * subject1 * finishMatte * complexBG).toFixed(2),
       );
     } else if (calcArea > 351 && calcArea < 500) {
       quoteTotal.value = (
@@ -5852,7 +5884,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[1] * subject1 * finishMatte * complexBG).toFixed(2)
+        (prices[1] * subject1 * finishMatte * complexBG).toFixed(2),
       );
     } else if (calcArea > 501 && calcArea < 750) {
       quoteTotal.value = (
@@ -5863,7 +5895,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[2] * subject1 * finishMatte * complexBG).toFixed(2)
+        (prices[2] * subject1 * finishMatte * complexBG).toFixed(2),
       );
     } else if (calcArea > 751 && calcArea < 1050) {
       quoteTotal.value = (
@@ -5874,7 +5906,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[3] * subject1 * finishMatte * complexBG).toFixed(2)
+        (prices[3] * subject1 * finishMatte * complexBG).toFixed(2),
       );
     } else if (calcArea > 1051 && calcArea < 1400) {
       quoteTotal.value = (
@@ -5885,7 +5917,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[4] * subject1 * finishMatte * complexBG).toFixed(2)
+        (prices[4] * subject1 * finishMatte * complexBG).toFixed(2),
       );
     } else if (calcArea > 1401 && calcArea < 1800) {
       quoteTotal.value = (
@@ -5896,7 +5928,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[5] * subject1 * finishMatte * complexBG).toFixed(2)
+        (prices[5] * subject1 * finishMatte * complexBG).toFixed(2),
       );
     } else if (calcArea > 1801 && calcArea < 2250) {
       quoteTotal.value = (
@@ -5907,7 +5939,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[6] * subject1 * finishMatte * complexBG).toFixed(2)
+        (prices[6] * subject1 * finishMatte * complexBG).toFixed(2),
       );
     } else if (calcArea > 2251 && calcArea < 2750) {
       quoteTotal.value = (
@@ -5918,7 +5950,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[7] * subject1 * finishMatte * complexBG).toFixed(2)
+        (prices[7] * subject1 * finishMatte * complexBG).toFixed(2),
       );
     } else if (calcArea > 2751 && calcArea < 3250) {
       quoteTotal.value = (
@@ -5929,7 +5961,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[8] * subject1 * finishMatte * complexBG).toFixed(2)
+        (prices[8] * subject1 * finishMatte * complexBG).toFixed(2),
       );
     } else if (calcArea > 3251 && calcArea < 4150) {
       quoteTotal.value = (
@@ -5940,7 +5972,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[9] * subject1 * finishMatte * complexBG).toFixed(2)
+        (prices[9] * subject1 * finishMatte * complexBG).toFixed(2),
       );
     } else if (calcArea > 4151 && calcArea < 4850) {
       quoteTotal.value = (
@@ -5951,7 +5983,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[10] * subject1 * finishMatte * complexBG).toFixed(2)
+        (prices[10] * subject1 * finishMatte * complexBG).toFixed(2),
       );
     } else if (calcArea > 4851 && calcArea < 5650) {
       quoteTotal.value = (
@@ -5962,7 +5994,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[11] * subject1 * finishMatte * complexBG).toFixed(2)
+        (prices[11] * subject1 * finishMatte * complexBG).toFixed(2),
       );
     } else if (calcArea > 5651 && calcArea < 7000) {
       quoteTotal.value = (
@@ -5973,7 +6005,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[12] * subject1 * finishMatte * complexBG).toFixed(2)
+        (prices[12] * subject1 * finishMatte * complexBG).toFixed(2),
       );
     } else if (calcArea > 7001 && calcArea < 7550) {
       quoteTotal.value = (
@@ -5984,7 +6016,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[13] * subject1 * finishMatte * complexBG).toFixed(2)
+        (prices[13] * subject1 * finishMatte * complexBG).toFixed(2),
       );
     } else if (calcArea > 7551 && calcArea < 9050) {
       quoteTotal.value = (
@@ -5995,7 +6027,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[14] * subject1 * finishMatte * complexBG).toFixed(2)
+        (prices[14] * subject1 * finishMatte * complexBG).toFixed(2),
       );
     } else if (calcArea > 9051 && calcArea < 11000) {
       quoteTotal.value = (
@@ -6006,7 +6038,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[15] * subject1 * finishMatte * complexBG).toFixed(2)
+        (prices[15] * subject1 * finishMatte * complexBG).toFixed(2),
       );
     } else if (calcArea > 11001 && calcArea < 15000) {
       quoteTotal.value = (
@@ -6017,7 +6049,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[16] * subject1 * finishMatte * complexBG).toFixed(2)
+        (prices[16] * subject1 * finishMatte * complexBG).toFixed(2),
       );
     } else if (calcArea > 15001 && calcArea < 19800) {
       quoteTotal.value = (
@@ -6028,7 +6060,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[17] * subject1 * finishMatte * complexBG).toFixed(2)
+        (prices[17] * subject1 * finishMatte * complexBG).toFixed(2),
       );
     } else if (calcArea > 19801 && calcArea < 27000) {
       quoteTotal.value = (
@@ -6039,7 +6071,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[18] * subject1 * finishMatte * complexBG).toFixed(2)
+        (prices[18] * subject1 * finishMatte * complexBG).toFixed(2),
       );
     } else if (calcArea > 27001 && calcArea < 41200) {
       quoteTotal.value = (
@@ -6050,7 +6082,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[19] * subject1 * finishMatte * complexBG).toFixed(2)
+        (prices[19] * subject1 * finishMatte * complexBG).toFixed(2),
       );
     } else if (calcArea > 41201 && calcArea < 50000) {
       quoteTotal.value = (
@@ -6061,7 +6093,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[20] * subject1 * finishMatte * complexBG).toFixed(2)
+        (prices[20] * subject1 * finishMatte * complexBG).toFixed(2),
       );
     } else if (calcArea > 50001) {
       quoteTotal.value = "Please contact for price";
@@ -6090,7 +6122,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[2] * subjects2 * finishMatte * complexBG).toFixed(2)
+        (prices[2] * subjects2 * finishMatte * complexBG).toFixed(2),
       );
     } else if (calcArea > 751 && calcArea < 1050) {
       quoteTotal.value = (
@@ -6101,7 +6133,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[3] * subjects2 * finishMatte * complexBG).toFixed(2)
+        (prices[3] * subjects2 * finishMatte * complexBG).toFixed(2),
       );
     } else if (calcArea > 1051 && calcArea < 1400) {
       quoteTotal.value = (
@@ -6112,7 +6144,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[4] * subjects2 * finishMatte * complexBG).toFixed(2)
+        (prices[4] * subjects2 * finishMatte * complexBG).toFixed(2),
       );
     } else if (calcArea > 1401 && calcArea < 1800) {
       quoteTotal.value = (
@@ -6123,7 +6155,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[5] * subjects2 * finishMatte * complexBG).toFixed(2)
+        (prices[5] * subjects2 * finishMatte * complexBG).toFixed(2),
       );
     } else if (calcArea > 1801 && calcArea < 2250) {
       quoteTotal.value = (
@@ -6134,7 +6166,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[6] * subjects2 * finishMatte * complexBG).toFixed(2)
+        (prices[6] * subjects2 * finishMatte * complexBG).toFixed(2),
       );
     } else if (calcArea > 2251 && calcArea < 2750) {
       quoteTotal.value = (
@@ -6145,7 +6177,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[7] * subjects2 * finishMatte * complexBG).toFixed(2)
+        (prices[7] * subjects2 * finishMatte * complexBG).toFixed(2),
       );
     } else if (calcArea > 2751 && calcArea < 3250) {
       quoteTotal.value = (
@@ -6156,7 +6188,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[8] * subjects2 * finishMatte * complexBG).toFixed(2)
+        (prices[8] * subjects2 * finishMatte * complexBG).toFixed(2),
       );
     } else if (calcArea > 3251 && calcArea < 4150) {
       quoteTotal.value = (
@@ -6167,7 +6199,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[9] * subjects2 * finishMatte * complexBG).toFixed(2)
+        (prices[9] * subjects2 * finishMatte * complexBG).toFixed(2),
       );
     } else if (calcArea > 4151 && calcArea < 4850) {
       quoteTotal.value = (
@@ -6178,7 +6210,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[10] * subjects2 * finishMatte * complexBG).toFixed(2)
+        (prices[10] * subjects2 * finishMatte * complexBG).toFixed(2),
       );
     } else if (calcArea > 4851 && calcArea < 5650) {
       quoteTotal.value = (
@@ -6189,7 +6221,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[11] * subjects2 * finishMatte * complexBG).toFixed(2)
+        (prices[11] * subjects2 * finishMatte * complexBG).toFixed(2),
       );
     } else if (calcArea > 5651 && calcArea < 7000) {
       quoteTotal.value = (
@@ -6200,7 +6232,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[12] * subjects2 * finishMatte * complexBG).toFixed(2)
+        (prices[12] * subjects2 * finishMatte * complexBG).toFixed(2),
       );
     } else if (calcArea > 7001 && calcArea < 7550) {
       quoteTotal.value = (
@@ -6211,7 +6243,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[13] * subjects2 * finishMatte * complexBG).toFixed(2)
+        (prices[13] * subjects2 * finishMatte * complexBG).toFixed(2),
       );
     } else if (calcArea > 7551 && calcArea < 9050) {
       quoteTotal.value = (
@@ -6222,7 +6254,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[14] * subjects2 * finishMatte * complexBG).toFixed(2)
+        (prices[14] * subjects2 * finishMatte * complexBG).toFixed(2),
       );
     } else if (calcArea > 9051 && calcArea < 11000) {
       quoteTotal.value = (
@@ -6233,7 +6265,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[15] * subjects2 * finishMatte * complexBG).toFixed(2)
+        (prices[15] * subjects2 * finishMatte * complexBG).toFixed(2),
       );
     } else if (calcArea > 11001 && calcArea < 15000) {
       quoteTotal.value = (
@@ -6244,7 +6276,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[16] * subjects2 * finishMatte * complexBG).toFixed(2)
+        (prices[16] * subjects2 * finishMatte * complexBG).toFixed(2),
       );
     } else if (calcArea > 15001 && calcArea < 19800) {
       quoteTotal.value = (
@@ -6255,7 +6287,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[17] * subjects2 * finishMatte * complexBG).toFixed(2)
+        (prices[17] * subjects2 * finishMatte * complexBG).toFixed(2),
       );
     } else if (calcArea > 19801 && calcArea < 27000) {
       quoteTotal.value = (
@@ -6266,7 +6298,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[18] * subjects2 * finishMatte * complexBG).toFixed(2)
+        (prices[18] * subjects2 * finishMatte * complexBG).toFixed(2),
       );
     } else if (calcArea > 27001 && calcArea < 41200) {
       quoteTotal.value = (
@@ -6277,7 +6309,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[19] * subjects2 * finishMatte * complexBG).toFixed(2)
+        (prices[19] * subjects2 * finishMatte * complexBG).toFixed(2),
       );
     } else if (calcArea > 41201 && calcArea < 50000) {
       quoteTotal.value = (
@@ -6288,7 +6320,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[20] * subjects2 * finishMatte * complexBG).toFixed(2)
+        (prices[20] * subjects2 * finishMatte * complexBG).toFixed(2),
       );
     } else if (calcArea > 50001) {
       quoteTotal.value = "Please contact for price";
@@ -6314,7 +6346,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[4] * subjects3 * finishMatte * complexBG).toFixed(2)
+        (prices[4] * subjects3 * finishMatte * complexBG).toFixed(2),
       );
     } else if (calcArea > 1401 && calcArea < 1800) {
       quoteTotal.value = (
@@ -6325,7 +6357,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[5] * subjects3 * finishMatte * complexBG).toFixed(2)
+        (prices[5] * subjects3 * finishMatte * complexBG).toFixed(2),
       );
     } else if (calcArea > 1801 && calcArea < 2250) {
       quoteTotal.value = (
@@ -6336,7 +6368,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[6] * subjects3 * finishMatte * complexBG).toFixed(2)
+        (prices[6] * subjects3 * finishMatte * complexBG).toFixed(2),
       );
     } else if (calcArea > 2251 && calcArea < 2750) {
       quoteTotal.value = (
@@ -6347,7 +6379,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[7] * subjects3 * finishMatte * complexBG).toFixed(2)
+        (prices[7] * subjects3 * finishMatte * complexBG).toFixed(2),
       );
     } else if (calcArea > 2751 && calcArea < 3250) {
       quoteTotal.value = (
@@ -6358,7 +6390,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[8] * subjects3 * finishMatte * complexBG).toFixed(2)
+        (prices[8] * subjects3 * finishMatte * complexBG).toFixed(2),
       );
     } else if (calcArea > 3251 && calcArea < 4150) {
       quoteTotal.value = (
@@ -6369,7 +6401,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[9] * subjects3 * finishMatte * complexBG).toFixed(2)
+        (prices[9] * subjects3 * finishMatte * complexBG).toFixed(2),
       );
     } else if (calcArea > 4151 && calcArea < 4850) {
       quoteTotal.value = (
@@ -6380,7 +6412,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[10] * subjects3 * finishMatte * complexBG).toFixed(2)
+        (prices[10] * subjects3 * finishMatte * complexBG).toFixed(2),
       );
     } else if (calcArea > 4851 && calcArea < 5650) {
       quoteTotal.value = (
@@ -6391,7 +6423,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[11] * subjects3 * finishMatte * complexBG).toFixed(2)
+        (prices[11] * subjects3 * finishMatte * complexBG).toFixed(2),
       );
     } else if (calcArea > 5651 && calcArea < 7000) {
       quoteTotal.value = (
@@ -6402,7 +6434,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[12] * subjects3 * finishMatte * complexBG).toFixed(2)
+        (prices[12] * subjects3 * finishMatte * complexBG).toFixed(2),
       );
     } else if (calcArea > 7001 && calcArea < 7550) {
       quoteTotal.value = (
@@ -6413,7 +6445,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[13] * subjects3 * finishMatte * complexBG).toFixed(2)
+        (prices[13] * subjects3 * finishMatte * complexBG).toFixed(2),
       );
     } else if (calcArea > 7551 && calcArea < 9050) {
       quoteTotal.value = (
@@ -6424,7 +6456,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[14] * subjects3 * finishMatte * complexBG).toFixed(2)
+        (prices[14] * subjects3 * finishMatte * complexBG).toFixed(2),
       );
     } else if (calcArea > 9051 && calcArea < 11000) {
       quoteTotal.value = (
@@ -6435,7 +6467,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[15] * subjects3 * finishMatte * complexBG).toFixed(2)
+        (prices[15] * subjects3 * finishMatte * complexBG).toFixed(2),
       );
     } else if (calcArea > 11001 && calcArea < 15000) {
       quoteTotal.value = (
@@ -6446,7 +6478,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[16] * subjects3 * finishMatte * complexBG).toFixed(2)
+        (prices[16] * subjects3 * finishMatte * complexBG).toFixed(2),
       );
     } else if (calcArea > 15001 && calcArea < 19800) {
       quoteTotal.value = (
@@ -6457,7 +6489,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[17] * subjects3 * finishMatte * complexBG).toFixed(2)
+        (prices[17] * subjects3 * finishMatte * complexBG).toFixed(2),
       );
     } else if (calcArea > 19801 && calcArea < 27000) {
       quoteTotal.value = (
@@ -6468,7 +6500,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[18] * subjects3 * finishMatte * complexBG).toFixed(2)
+        (prices[18] * subjects3 * finishMatte * complexBG).toFixed(2),
       );
     } else if (calcArea > 27001 && calcArea < 41200) {
       quoteTotal.value = (
@@ -6479,7 +6511,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[19] * subjects3 * finishMatte * complexBG).toFixed(2)
+        (prices[19] * subjects3 * finishMatte * complexBG).toFixed(2),
       );
     } else if (calcArea > 41201 && calcArea < 50000) {
       quoteTotal.value = (
@@ -6490,7 +6522,7 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[20] * subjects3 * finishMatte * complexBG).toFixed(2)
+        (prices[20] * subjects3 * finishMatte * complexBG).toFixed(2),
       );
     } else if (calcArea > 50001) {
       quoteTotal.value = "Please contact for price";
@@ -6509,7 +6541,9 @@ function totalPrice() {
         prices[0] * subject1 * monochrome * finishMatte * complexBG;
       localStorage.setItem(
         "total",
-        (prices[0] * subject1 * monochrome * finishMatte * complexBG).toFixed(2)
+        (prices[0] * subject1 * monochrome * finishMatte * complexBG).toFixed(
+          2,
+        ),
       );
     } else if (calcArea > 351 && calcArea < 500) {
       quoteTotal.value = (
@@ -6521,7 +6555,9 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[1] * subject1 * monochrome * finishMatte * complexBG).toFixed(2)
+        (prices[1] * subject1 * monochrome * finishMatte * complexBG).toFixed(
+          2,
+        ),
       );
     } else if (calcArea > 501 && calcArea < 750) {
       quoteTotal.value = (
@@ -6533,7 +6569,9 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[2] * subject1 * monochrome * finishMatte * complexBG).toFixed(2)
+        (prices[2] * subject1 * monochrome * finishMatte * complexBG).toFixed(
+          2,
+        ),
       );
     } else if (calcArea > 751 && calcArea < 1050) {
       quoteTotal.value = (
@@ -6545,7 +6583,9 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[3] * subject1 * monochrome * finishMatte * complexBG).toFixed(2)
+        (prices[3] * subject1 * monochrome * finishMatte * complexBG).toFixed(
+          2,
+        ),
       );
     } else if (calcArea > 1051 && calcArea < 1400) {
       quoteTotal.value = (
@@ -6557,7 +6597,9 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[4] * subject1 * monochrome * finishMatte * complexBG).toFixed(2)
+        (prices[4] * subject1 * monochrome * finishMatte * complexBG).toFixed(
+          2,
+        ),
       );
     } else if (calcArea > 1401 && calcArea < 1800) {
       quoteTotal.value = (
@@ -6569,7 +6611,9 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[5] * subject1 * monochrome * finishMatte * complexBG).toFixed(2)
+        (prices[5] * subject1 * monochrome * finishMatte * complexBG).toFixed(
+          2,
+        ),
       );
     } else if (calcArea > 1801 && calcArea < 2250) {
       quoteTotal.value = (
@@ -6581,7 +6625,9 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[6] * subject1 * monochrome * finishMatte * complexBG).toFixed(2)
+        (prices[6] * subject1 * monochrome * finishMatte * complexBG).toFixed(
+          2,
+        ),
       );
     } else if (calcArea > 2251 && calcArea < 2750) {
       quoteTotal.value = (
@@ -6593,7 +6639,9 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[7] * subject1 * monochrome * finishMatte * complexBG).toFixed(2)
+        (prices[7] * subject1 * monochrome * finishMatte * complexBG).toFixed(
+          2,
+        ),
       );
     } else if (calcArea > 2751 && calcArea < 3250) {
       quoteTotal.value = (
@@ -6605,7 +6653,9 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[8] * subject1 * monochrome * finishMatte * complexBG).toFixed(2)
+        (prices[8] * subject1 * monochrome * finishMatte * complexBG).toFixed(
+          2,
+        ),
       );
     } else if (calcArea > 3251 && calcArea < 4150) {
       quoteTotal.value = (
@@ -6617,7 +6667,9 @@ function totalPrice() {
       ).toFixed(2);
       localStorage.setItem(
         "total",
-        (prices[9] * subject1 * monochrome * finishMatte * complexBG).toFixed(2)
+        (prices[9] * subject1 * monochrome * finishMatte * complexBG).toFixed(
+          2,
+        ),
       );
     } else if (calcArea > 4151 && calcArea < 4850) {
       quoteTotal.value = (
@@ -6630,8 +6682,8 @@ function totalPrice() {
       localStorage.setItem(
         "total",
         (prices[10] * subject1 * monochrome * finishMatte * complexBG).toFixed(
-          2
-        )
+          2,
+        ),
       );
     } else if (calcArea > 4851 && calcArea < 5650) {
       quoteTotal.value = (
@@ -6644,8 +6696,8 @@ function totalPrice() {
       localStorage.setItem(
         "total",
         (prices[11] * subject1 * monochrome * finishMatte * complexBG).toFixed(
-          2
-        )
+          2,
+        ),
       );
     } else if (calcArea > 5651 && calcArea < 7000) {
       quoteTotal.value = (
@@ -6658,8 +6710,8 @@ function totalPrice() {
       localStorage.setItem(
         "total",
         (prices[12] * subject1 * monochrome * finishMatte * complexBG).toFixed(
-          2
-        )
+          2,
+        ),
       );
     } else if (calcArea > 7001 && calcArea < 7550) {
       quoteTotal.value = (
@@ -6672,8 +6724,8 @@ function totalPrice() {
       localStorage.setItem(
         "total",
         (prices[13] * subject1 * monochrome * finishMatte * complexBG).toFixed(
-          2
-        )
+          2,
+        ),
       );
     } else if (calcArea > 7551 && calcArea < 9050) {
       quoteTotal.value = (
@@ -6686,8 +6738,8 @@ function totalPrice() {
       localStorage.setItem(
         "total",
         (prices[14] * subject1 * monochrome * finishMatte * complexBG).toFixed(
-          2
-        )
+          2,
+        ),
       );
     } else if (calcArea > 9051 && calcArea < 11000) {
       quoteTotal.value = (
@@ -6700,8 +6752,8 @@ function totalPrice() {
       localStorage.setItem(
         "total",
         (prices[15] * subject1 * monochrome * finishMatte * complexBG).toFixed(
-          2
-        )
+          2,
+        ),
       );
     } else if (calcArea > 11001 && calcArea < 15000) {
       quoteTotal.value = (
@@ -6714,8 +6766,8 @@ function totalPrice() {
       localStorage.setItem(
         "total",
         (prices[16] * subject1 * monochrome * finishMatte * complexBG).toFixed(
-          2
-        )
+          2,
+        ),
       );
     } else if (calcArea > 15001 && calcArea < 19800) {
       quoteTotal.value = (
@@ -6728,8 +6780,8 @@ function totalPrice() {
       localStorage.setItem(
         "total",
         (prices[17] * subject1 * monochrome * finishMatte * complexBG).toFixed(
-          2
-        )
+          2,
+        ),
       );
     } else if (calcArea > 19801 && calcArea < 27000) {
       quoteTotal.value = (
@@ -6742,8 +6794,8 @@ function totalPrice() {
       localStorage.setItem(
         "total",
         (prices[18] * subject1 * monochrome * finishMatte * complexBG).toFixed(
-          2
-        )
+          2,
+        ),
       );
     } else if (calcArea > 27001 && calcArea < 41200) {
       quoteTotal.value = (
@@ -6756,8 +6808,8 @@ function totalPrice() {
       localStorage.setItem(
         "total",
         (prices[19] * subject1 * monochrome * finishMatte * complexBG).toFixed(
-          2
-        )
+          2,
+        ),
       );
     } else if (calcArea > 41201 && calcArea < 50000) {
       quoteTotal.value = (
@@ -6770,8 +6822,8 @@ function totalPrice() {
       localStorage.setItem(
         "total",
         (prices[20] * subject1 * monochrome * finishMatte * complexBG).toFixed(
-          2
-        )
+          2,
+        ),
       );
     } else if (calcArea > 50001) {
       quoteTotal.value = "Please contact for price";
@@ -6802,8 +6854,8 @@ function totalPrice() {
       localStorage.setItem(
         "total",
         (prices[2] * subjects2 * monochrome * finishMatte * complexBG).toFixed(
-          2
-        )
+          2,
+        ),
       );
     } else if (calcArea > 751 && calcArea < 1050) {
       quoteTotal.value = (
@@ -6816,8 +6868,8 @@ function totalPrice() {
       localStorage.setItem(
         "total",
         (prices[3] * subjects2 * monochrome * finishMatte * complexBG).toFixed(
-          2
-        )
+          2,
+        ),
       );
     } else if (calcArea > 1051 && calcArea < 1400) {
       quoteTotal.value = (
@@ -6830,8 +6882,8 @@ function totalPrice() {
       localStorage.setItem(
         "total",
         (prices[4] * subjects2 * monochrome * finishMatte * complexBG).toFixed(
-          2
-        )
+          2,
+        ),
       );
     } else if (calcArea > 1401 && calcArea < 1800) {
       quoteTotal.value = (
@@ -6844,8 +6896,8 @@ function totalPrice() {
       localStorage.setItem(
         "total",
         (prices[5] * subjects2 * monochrome * finishMatte * complexBG).toFixed(
-          2
-        )
+          2,
+        ),
       );
     } else if (calcArea > 1801 && calcArea < 2250) {
       quoteTotal.value = (
@@ -6858,8 +6910,8 @@ function totalPrice() {
       localStorage.setItem(
         "total",
         (prices[6] * subjects2 * monochrome * finishMatte * complexBG).toFixed(
-          2
-        )
+          2,
+        ),
       );
     } else if (calcArea > 2251 && calcArea < 2750) {
       quoteTotal.value = (
@@ -6872,8 +6924,8 @@ function totalPrice() {
       localStorage.setItem(
         "total",
         (prices[7] * subjects2 * monochrome * finishMatte * complexBG).toFixed(
-          2
-        )
+          2,
+        ),
       );
     } else if (calcArea > 2751 && calcArea < 3250) {
       quoteTotal.value = (
@@ -6886,8 +6938,8 @@ function totalPrice() {
       localStorage.setItem(
         "total",
         (prices[8] * subjects2 * monochrome * finishMatte * complexBG).toFixed(
-          2
-        )
+          2,
+        ),
       );
     } else if (calcArea > 3251 && calcArea < 4150) {
       quoteTotal.value = (
@@ -6900,8 +6952,8 @@ function totalPrice() {
       localStorage.setItem(
         "total",
         (prices[9] * subjects2 * monochrome * finishMatte * complexBG).toFixed(
-          2
-        )
+          2,
+        ),
       );
     } else if (calcArea > 4151 && calcArea < 4850) {
       quoteTotal.value = (
@@ -6914,8 +6966,8 @@ function totalPrice() {
       localStorage.setItem(
         "total",
         (prices[10] * subjects2 * monochrome * finishMatte * complexBG).toFixed(
-          2
-        )
+          2,
+        ),
       );
     } else if (calcArea > 4851 && calcArea < 5650) {
       quoteTotal.value = (
@@ -6928,8 +6980,8 @@ function totalPrice() {
       localStorage.setItem(
         "total",
         (prices[11] * subjects2 * monochrome * finishMatte * complexBG).toFixed(
-          2
-        )
+          2,
+        ),
       );
     } else if (calcArea > 5651 && calcArea < 7000) {
       quoteTotal.value = (
@@ -6942,8 +6994,8 @@ function totalPrice() {
       localStorage.setItem(
         "total",
         (prices[12] * subjects2 * monochrome * finishMatte * complexBG).toFixed(
-          2
-        )
+          2,
+        ),
       );
     } else if (calcArea > 7001 && calcArea < 7550) {
       quoteTotal.value = (
@@ -6956,8 +7008,8 @@ function totalPrice() {
       localStorage.setItem(
         "total",
         (prices[13] * subjects2 * monochrome * finishMatte * complexBG).toFixed(
-          2
-        )
+          2,
+        ),
       );
     } else if (calcArea > 7551 && calcArea < 9050) {
       quoteTotal.value = (
@@ -6970,8 +7022,8 @@ function totalPrice() {
       localStorage.setItem(
         "total",
         (prices[14] * subjects2 * monochrome * finishMatte * complexBG).toFixed(
-          2
-        )
+          2,
+        ),
       );
     } else if (calcArea > 9051 && calcArea < 11000) {
       quoteTotal.value = (
@@ -6984,8 +7036,8 @@ function totalPrice() {
       localStorage.setItem(
         "total",
         (prices[15] * subjects2 * monochrome * finishMatte * complexBG).toFixed(
-          2
-        )
+          2,
+        ),
       );
     } else if (calcArea > 11001 && calcArea < 15000) {
       quoteTotal.value = (
@@ -6998,8 +7050,8 @@ function totalPrice() {
       localStorage.setItem(
         "total",
         (prices[16] * subjects2 * monochrome * finishMatte * complexBG).toFixed(
-          2
-        )
+          2,
+        ),
       );
     } else if (calcArea > 15001 && calcArea < 19800) {
       quoteTotal.value = (
@@ -7012,8 +7064,8 @@ function totalPrice() {
       localStorage.setItem(
         "total",
         (prices[17] * subjects2 * monochrome * finishMatte * complexBG).toFixed(
-          2
-        )
+          2,
+        ),
       );
     } else if (calcArea > 19801 && calcArea < 27000) {
       quoteTotal.value = (
@@ -7026,8 +7078,8 @@ function totalPrice() {
       localStorage.setItem(
         "total",
         (prices[18] * subjects2 * monochrome * finishMatte * complexBG).toFixed(
-          2
-        )
+          2,
+        ),
       );
     } else if (calcArea > 27001 && calcArea < 41200) {
       quoteTotal.value = (
@@ -7040,8 +7092,8 @@ function totalPrice() {
       localStorage.setItem(
         "total",
         (prices[19] * subjects2 * monochrome * finishMatte * complexBG).toFixed(
-          2
-        )
+          2,
+        ),
       );
     } else if (calcArea > 41201 && calcArea < 50000) {
       quoteTotal.value = (
@@ -7054,8 +7106,8 @@ function totalPrice() {
       localStorage.setItem(
         "total",
         (prices[20] * subjects2 * monochrome * finishMatte * complexBG).toFixed(
-          2
-        )
+          2,
+        ),
       );
     } else if (calcArea > 50001) {
       quoteTotal.value = "Please contact for price";
@@ -7083,8 +7135,8 @@ function totalPrice() {
       localStorage.setItem(
         "total",
         (prices[4] * subjects3 * monochrome * finishMatte * complexBG).toFixed(
-          2
-        )
+          2,
+        ),
       );
     } else if (calcArea > 1401 && calcArea < 1800) {
       quoteTotal.value = (
@@ -7097,8 +7149,8 @@ function totalPrice() {
       localStorage.setItem(
         "total",
         (prices[5] * subjects3 * monochrome * finishMatte * complexBG).toFixed(
-          2
-        )
+          2,
+        ),
       );
     } else if (calcArea > 1801 && calcArea < 2250) {
       quoteTotal.value = (
@@ -7111,8 +7163,8 @@ function totalPrice() {
       localStorage.setItem(
         "total",
         (prices[6] * subjects3 * monochrome * finishMatte * complexBG).toFixed(
-          2
-        )
+          2,
+        ),
       );
     } else if (calcArea > 2251 && calcArea < 2750) {
       quoteTotal.value = (
@@ -7125,8 +7177,8 @@ function totalPrice() {
       localStorage.setItem(
         "total",
         (prices[7] * subjects3 * monochrome * finishMatte * complexBG).toFixed(
-          2
-        )
+          2,
+        ),
       );
     } else if (calcArea > 2751 && calcArea < 3250) {
       quoteTotal.value = (
@@ -7139,8 +7191,8 @@ function totalPrice() {
       localStorage.setItem(
         "total",
         (prices[8] * subjects3 * monochrome * finishMatte * complexBG).toFixed(
-          2
-        )
+          2,
+        ),
       );
     } else if (calcArea > 3251 && calcArea < 4150) {
       quoteTotal.value = (
@@ -7153,8 +7205,8 @@ function totalPrice() {
       localStorage.setItem(
         "total",
         (prices[9] * subjects3 * monochrome * finishMatte * complexBG).toFixed(
-          2
-        )
+          2,
+        ),
       );
     } else if (calcArea > 4151 && calcArea < 4850) {
       quoteTotal.value = (
@@ -7167,8 +7219,8 @@ function totalPrice() {
       localStorage.setItem(
         "total",
         (prices[10] * subjects3 * monochrome * finishMatte * complexBG).toFixed(
-          2
-        )
+          2,
+        ),
       );
     } else if (calcArea > 4851 && calcArea < 5650) {
       quoteTotal.value = (
@@ -7181,8 +7233,8 @@ function totalPrice() {
       localStorage.setItem(
         "total",
         (prices[11] * subjects3 * monochrome * finishMatte * complexBG).toFixed(
-          2
-        )
+          2,
+        ),
       );
     } else if (calcArea > 5651 && calcArea < 7000) {
       quoteTotal.value = (
@@ -7195,8 +7247,8 @@ function totalPrice() {
       localStorage.setItem(
         "total",
         (prices[12] * subjects3 * monochrome * finishMatte * complexBG).toFixed(
-          2
-        )
+          2,
+        ),
       );
     } else if (calcArea > 7001 && calcArea < 7550) {
       quoteTotal.value = (
@@ -7209,8 +7261,8 @@ function totalPrice() {
       localStorage.setItem(
         "total",
         (prices[13] * subjects3 * monochrome * finishMatte * complexBG).toFixed(
-          2
-        )
+          2,
+        ),
       );
     } else if (calcArea > 7551 && calcArea < 9050) {
       quoteTotal.value = (
@@ -7223,8 +7275,8 @@ function totalPrice() {
       localStorage.setItem(
         "total",
         (prices[14] * subjects3 * monochrome * finishMatte * complexBG).toFixed(
-          2
-        )
+          2,
+        ),
       );
     } else if (calcArea > 9051 && calcArea < 11000) {
       quoteTotal.value = (
@@ -7237,8 +7289,8 @@ function totalPrice() {
       localStorage.setItem(
         "total",
         (prices[15] * subjects3 * monochrome * finishMatte * complexBG).toFixed(
-          2
-        )
+          2,
+        ),
       );
     } else if (calcArea > 11001 && calcArea < 15000) {
       quoteTotal.value = (
@@ -7251,8 +7303,8 @@ function totalPrice() {
       localStorage.setItem(
         "total",
         (prices[16] * subjects3 * monochrome * finishMatte * complexBG).toFixed(
-          2
-        )
+          2,
+        ),
       );
     } else if (calcArea > 15001 && calcArea < 19800) {
       quoteTotal.value = (
@@ -7265,8 +7317,8 @@ function totalPrice() {
       localStorage.setItem(
         "total",
         (prices[17] * subjects3 * monochrome * finishMatte * complexBG).toFixed(
-          2
-        )
+          2,
+        ),
       );
     } else if (calcArea > 19801 && calcArea < 27000) {
       quoteTotal.value = (
@@ -7279,8 +7331,8 @@ function totalPrice() {
       localStorage.setItem(
         "total",
         (prices[18] * subjects3 * monochrome * finishMatte * complexBG).toFixed(
-          2
-        )
+          2,
+        ),
       );
     } else if (calcArea > 27001 && calcArea < 41200) {
       quoteTotal.value = (
@@ -7293,8 +7345,8 @@ function totalPrice() {
       localStorage.setItem(
         "total",
         (prices[19] * subjects3 * monochrome * finishMatte * complexBG).toFixed(
-          2
-        )
+          2,
+        ),
       );
     } else if (calcArea > 41201 && calcArea < 50000) {
       quoteTotal.value = (
@@ -7307,8 +7359,8 @@ function totalPrice() {
       localStorage.setItem(
         "total",
         (prices[20] * subjects3 * monochrome * finishMatte * complexBG).toFixed(
-          2
-        )
+          2,
+        ),
       );
     } else if (calcArea > 50001) {
       quoteTotal.value = "Please contact for price";
