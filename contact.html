@@ -266,7 +266,7 @@
           </div>
         </div>
       </nav>
-      <header class="py-3 mb-4 border-bottom hidden">
+      <!-- <header class="py-3 mb-4 border-bottom hidden">
         <div class="container d-flex flex-wrap justify-content-center">
           <a
             href="/"
@@ -286,7 +286,7 @@
             />
           </form>
         </div>
-      </header>
+      </header> -->
 
       <!-- 
     <div class="container px-4 py-5" id="custom-cards">
@@ -493,7 +493,7 @@
                     type="text"
                     name="name"
                     class="form-control"
-                    id="name"
+                    id="firstName"
                     placeholder="Joe Bloggs"
                     value=""
                     required
@@ -510,6 +510,25 @@
                     required
                   />
                 </div>
+                <div class="primary_accent">
+                  <label for="message" class="form-label">Message</label>
+
+                  <textarea
+                    class="form-control"
+                    aria-label="text area"
+                    style="height: 100px"
+                    placeholder="Type your message here..."
+                    id="comment"
+                    name="message"
+                    required
+                  ></textarea>
+                  <input
+                    type="checkbox"
+                    name="botcheck"
+                    class="hidden"
+                    style="display: none"
+                  />
+                </div>
               </div>
               <input type="hidden" name="Width" id="formWidth" />
               <input type="hidden" name="Height" id="formHeight" />
@@ -523,22 +542,6 @@
               name="redirect"
               value="http://127.0.0.1:5502/index.html"
             /> -->
-
-              <textarea
-                class="form-control mt-3"
-                aria-label="text area"
-                style="height: 100px"
-                placeholder="Your comments here..."
-                id="comment"
-                name="message"
-                required
-              ></textarea>
-              <input
-                type="checkbox"
-                name="botcheck"
-                class="hidden"
-                style="display: none"
-              />
 
               <div class="h-captcha mt-3" data-captcha="true"></div>
 
