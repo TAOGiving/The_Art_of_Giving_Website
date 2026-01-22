@@ -188,6 +188,12 @@ body.fade-out {
   animation: pulse 1.5s infinite ease-in-out;
 }
 
+.logo {
+  width: 40px;
+  height: auto;
+  /* display: inline-block; */
+}
+
 /* spinner circle */
 
 /* .spinner {
