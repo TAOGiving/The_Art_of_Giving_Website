@@ -330,6 +330,21 @@ function a1papersizeUpdater() {
   a1Element.textContent = "A1 Selected";
 }
 
+function sizeChecker() {
+  let calcArea = widthOutput.value * heightOutput.value;
+  if (calcArea < 1050) {
+    threeSubject.textContent = "Paper too small for 3 subjects";
+    threeSubject.style.backgroundColor = "var(--burnt_terracotta) !important";
+    threeSubject.style.color = "white";
+    threeSubject.style.cursor = "not-allowed";
+  } else {
+    threeSubject.textContent = "I have a big Family, 3 for me!";
+    threeSubject.style.backgroundColor = "";
+    threeSubject.style.color = "";
+    threeSubject.style.cursor = "pointer";
+  }
+}
+
 function unhideSubjects() {
   if (!widthInput.value || !heightInput.value) {
     alert("Please enter both Width and Height to proceed.");
@@ -353,6 +368,7 @@ function oneSubjects() {
   threeSubject.style.backgroundColor = "";
   threeSubject.textContent = "I have a big Family, 3 for me!";
 }
+
 function twoSubjects() {
   subjectOutput.value = "Two Subjects";
   localStorage.setItem("subjects", "Two Subjects");
@@ -365,14 +381,20 @@ function twoSubjects() {
 }
 
 function threeSubjects() {
-  subjectOutput.value = "Three Subjects";
-  localStorage.setItem("subjects", "Three Subjects");
-  threeSubject.style.backgroundColor = "var(--burnt_terracotta) !important";
-  threeSubject.textContent = "Selected";
-  oneSubject.style.backgroundColor = "";
-  oneSubject.textContent = "I want one subject in my painting";
-  twoSubject.style.backgroundColor = "";
-  twoSubject.textContent = "Can I have 2 subjects please";
+  if (widthOutput.value * heightOutput.value < 1050) {
+    alert(
+      "The selected dimensions are too small for three subjects. Please choose larger dimensions.",
+    );
+  } else {
+    subjectOutput.value = "Three Subjects";
+    localStorage.setItem("subjects", "Three Subjects");
+    threeSubject.style.backgroundColor = "var(--burnt_terracotta) !important";
+    threeSubject.textContent = "Selected";
+    oneSubject.style.backgroundColor = "";
+    oneSubject.textContent = "I want one subject in my painting";
+    twoSubject.style.backgroundColor = "";
+    twoSubject.textContent = "Can I have 2 subjects please";
+  }
 }
 
 function unhideColour() {

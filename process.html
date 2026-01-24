@@ -372,7 +372,10 @@
                         data-bs-placement="bottom"
                         data-bs-trigger="focus hover"
                         onclick="
-                          (a4papersizeUpdater(), totalPrice(), unhideSubjects())
+                          (a4papersizeUpdater(),
+                            totalPrice(),
+                            unhideSubjects(),
+                            sizeChecker())
                         "
                         ><strong>A4 </strong>(21.0cm x 29.7cm)</a
                       >
@@ -384,7 +387,10 @@
                         data-bs-placement="bottom"
                         data-bs-trigger="focus hover"
                         onclick="
-                          (a3papersizeUpdater(), totalPrice(), unhideSubjects())
+                          (a3papersizeUpdater(),
+                            totalPrice(),
+                            unhideSubjects(),
+                            sizeChecker())
                         "
                         ><strong>A3 </strong>(29.7cm x 42.0cm)</a
                       >
@@ -396,7 +402,10 @@
                         data-bs-placement="bottom"
                         data-bs-trigger="focus hover"
                         onclick="
-                          (a2papersizeUpdater(), totalPrice(), unhideSubjects())
+                          (a2papersizeUpdater(),
+                            totalPrice(),
+                            unhideSubjects(),
+                            sizeChecker())
                         "
                         ><strong>A2 </strong>(42.0cm x 59.4cm)</a
                       >
@@ -408,7 +417,10 @@
                         data-bs-placement="bottom"
                         data-bs-trigger="focus hover"
                         onclick="
-                          (a1papersizeUpdater(), totalPrice(), unhideSubjects())
+                          (a1papersizeUpdater(),
+                            totalPrice(),
+                            unhideSubjects(),
+                            sizeChecker())
                         "
                         ><strong>A1 </strong>(59.4cm x 84.1cm)</a
                       >
@@ -425,7 +437,7 @@
             data-bs-toggle="popover"
             data-bs-placement="bottom"
             data-bs-trigger="focus hover"
-            onclick="unhideSubjects()"
+            onclick="(unhideSubjects(), sizeChecker())"
             >Next</a
           >
         </div>
