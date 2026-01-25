@@ -245,6 +245,136 @@ body.fade-out {
   }
 }
 
+.pulse_animation {
+  animation: pulse_animation 6.5s ease-in-out infinite; /* Apply the pulse animation */
+  animation-delay: 6.5s;
+}
+
+@keyframes pulse_animation {
+  0% {
+    transform: scale(1); /* Initial scale */
+    /* box-shadow: 0 0 0 rgba(0, 0, 0, 0.7); Initial shadow */
+  }
+  10% {
+    transform: scale(1.04); /* Grow bigger */
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.9); Shadow effect */
+  }
+  20% {
+    transform: scale(1); /* Initial scale */
+    /* box-shadow: 0 0 0 rgba(0, 0, 0, 0.7); Initial shadow */
+  }
+  30% {
+    transform: scale(1.04); /* Grow bigger */
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.9); Shadow effect */
+  }
+  40% {
+    transform: scale(1); /* Scale back to normal */
+    /* box-shadow: 0 0 0 rgba(0, 0, 0, 0.7); Reset shadow */
+  }
+  100% {
+    transform: scale(1); /* Scale back to normal */
+    /* box-shadow: 0 0 0 rgba(0, 0, 0, 0.7); Reset shadow */
+  }
+}
+
+.pulse_animation2 {
+  animation: pulse_animation 6.5s ease-in-out infinite; /* Apply the pulse animation */
+  animation-delay: 9s;
+}
+
+@keyframes pulse_animation {
+  0% {
+    transform: scale(1); /* Initial scale */
+    /* box-shadow: 0 0 0 rgba(0, 0, 0, 0.7); Initial shadow */
+  }
+  10% {
+    transform: scale(1.04); /* Grow bigger */
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.9); Shadow effect */
+  }
+  20% {
+    transform: scale(1); /* Initial scale */
+    /* box-shadow: 0 0 0 rgba(0, 0, 0, 0.7); Initial shadow */
+  }
+  30% {
+    transform: scale(1.04); /* Grow bigger */
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.9); Shadow effect */
+  }
+  40% {
+    transform: scale(1); /* Scale back to normal */
+    /* box-shadow: 0 0 0 rgba(0, 0, 0, 0.7); Reset shadow */
+  }
+  100% {
+    transform: scale(1); /* Scale back to normal */
+    /* box-shadow: 0 0 0 rgba(0, 0, 0, 0.7); Reset shadow */
+  }
+}
+
+.pulse_animation:hover,
+.pulse_animation2:hover,
+.shake_animation:hover,
+.shake_animation2:hover {
+  animation: none; /* Stop the animation on hover */
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pulse_animation,
+  .pulse_animation2,
+  .shake_animation,
+  .shake_animation2 {
+    animation: none; /* Disable animation for users who prefer reduced motion */
+  }
+}
+
+.shake_animation {
+  animation: tilt-n-move-shaking 5s ease-in-out infinite; /* Apply the shake animation */
+
+  animation-delay: 3s;
+}
+
+.shake_animation2 {
+  animation: tilt-n-move-shaking 5s ease-in-out infinite; /* Apply the shake animation */
+  animation-delay: 5s;
+}
+
+@keyframes tilt-n-move-shaking {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  33% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  36% {
+    transform: translate(2px, 2px) rotate(2deg);
+  }
+  39% {
+    transform: translate(0, 0) rotate(0eg);
+  }
+  42% {
+    transform: translate(-2px, -2px) rotate(-2deg);
+  }
+  45% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  48% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  51% {
+    transform: translate(2px, 2px) rotate(2deg);
+  }
+  54% {
+    transform: translate(0, 0) rotate(0eg);
+  }
+  57% {
+    transform: translate(-2px, -2px) rotate(-2deg);
+  }
+  60% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+}
+
 .font_family {
   font-family: "Montserrat", serif;
 }
@@ -467,82 +597,6 @@ body.fade-out {
   width: 50%;
   height: 90%;
   z-index: 0;
-}
-
-.pulse_animation {
-  animation: pulse_animation 6.5s ease-in-out infinite; /* Apply the pulse animation */
-  animation-delay: 6.5s;
-}
-
-@keyframes pulse_animation {
-  0% {
-    transform: scale(1); /* Initial scale */
-    /* box-shadow: 0 0 0 rgba(0, 0, 0, 0.7); Initial shadow */
-  }
-  10% {
-    transform: scale(1.04); /* Grow bigger */
-    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.9); Shadow effect */
-  }
-  20% {
-    transform: scale(1); /* Initial scale */
-    /* box-shadow: 0 0 0 rgba(0, 0, 0, 0.7); Initial shadow */
-  }
-  30% {
-    transform: scale(1.04); /* Grow bigger */
-    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.9); Shadow effect */
-  }
-  40% {
-    transform: scale(1); /* Scale back to normal */
-    /* box-shadow: 0 0 0 rgba(0, 0, 0, 0.7); Reset shadow */
-  }
-  100% {
-    transform: scale(1); /* Scale back to normal */
-    /* box-shadow: 0 0 0 rgba(0, 0, 0, 0.7); Reset shadow */
-  }
-}
-
-.pulse_animation2 {
-  animation: pulse_animation 6.5s ease-in-out infinite; /* Apply the pulse animation */
-  animation-delay: 9s;
-}
-
-@keyframes pulse_animation {
-  0% {
-    transform: scale(1); /* Initial scale */
-    /* box-shadow: 0 0 0 rgba(0, 0, 0, 0.7); Initial shadow */
-  }
-  10% {
-    transform: scale(1.04); /* Grow bigger */
-    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.9); Shadow effect */
-  }
-  20% {
-    transform: scale(1); /* Initial scale */
-    /* box-shadow: 0 0 0 rgba(0, 0, 0, 0.7); Initial shadow */
-  }
-  30% {
-    transform: scale(1.04); /* Grow bigger */
-    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.9); Shadow effect */
-  }
-  40% {
-    transform: scale(1); /* Scale back to normal */
-    /* box-shadow: 0 0 0 rgba(0, 0, 0, 0.7); Reset shadow */
-  }
-  100% {
-    transform: scale(1); /* Scale back to normal */
-    /* box-shadow: 0 0 0 rgba(0, 0, 0, 0.7); Reset shadow */
-  }
-}
-
-.pulse_animation:hover,
-.pulse_animation2:hover {
-  animation: none; /* Stop the animation on hover */
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .pulse_animation,
-  .pulse_animation2 {
-    animation: none; /* Disable animation for users who prefer reduced motion */
-  }
 }
 
 /**********************************/
