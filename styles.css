@@ -410,6 +410,10 @@ body.fade-out {
   color: white;
 }
 
+.secondary_accent_btn_border {
+  border: 1px solid var(--burnt_terracotta) !important;
+}
+
 .secondary_accent_label {
   color: black;
   background-color: var(--burnt_terracotta) !important;
