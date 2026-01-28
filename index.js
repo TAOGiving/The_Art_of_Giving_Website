@@ -7414,3 +7414,9 @@ function totalPrice() {
 }
 
 totalPrice();
+
+function scrollToFree() {
+  const scrollToFree = document.getElementById("scrollToFree");
+
+  scrollToFree.scrollIntoView();
+}
