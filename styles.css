@@ -1032,6 +1032,12 @@ video {
   );
 }
 
+.about-icon:hover {
+  transform: scale(1.2);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
 .instagram-badge svg {
   width: 28px;
   height: 28px;
