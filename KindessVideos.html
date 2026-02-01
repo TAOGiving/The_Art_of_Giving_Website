@@ -140,8 +140,21 @@
         <div id="progress-bar"></div>
       </div>
     </div>
+
+    <video
+      id="background-video"
+      autoplay
+      muted
+      loop
+      class="position-fixed w-100 h-100 top-0 start-0 object-fit-cover"
+    >
+      <source src="Videos/Donations Page Hero Video.mp4" />
+      Your browser does not support the video tag.
+    </video>
     <div id="page">
-      <nav class="navbar navbar-expand-lg py-2">
+      <nav
+        class="navbar navbar-expand-lg py-2 position-fixed bg-transparent w-100"
+      >
         <div class="container-fluid">
           <img
             src="images/TAOG_Logo.png"
@@ -149,9 +162,7 @@
             class="logo ms-3"
             href="index.html"
           />
-          <a
-            class="navbar-brand secondary_accent mb-1 ms-sm-4"
-            href="index.html"
+          <a class="navbar-brand text-white mb-1 ms-sm-4" href="index.html"
             >The Art of Giving</a
           >
           <button
@@ -171,7 +182,7 @@
               <li class="nav-item">
                 <a
                   href="index.html"
-                  class="nav-link link-body-emphasis px-2 nav_link_forward"
+                  class="nav-link-Kindness px-2 nav_link_forward"
                   aria-current="page"
                   data-full="Love makes a house a home"
                   >Home</a
@@ -180,7 +191,7 @@
               <li class="nav-item">
                 <a
                   href="about.html"
-                  class="nav-link link-body-emphasis px-2 short_text nav_link_forward"
+                  class="nav-link-Kindness px-2 short_text nav_link_forward"
                   data-full="Who ah just a little bit, Who ah a little bit More!"
                   >Who</a
                 >
@@ -188,7 +199,7 @@
               <li class="nav-item">
                 <a
                   href="gallery.html"
-                  class="nav-link link-body-emphasis px-2 nav-link_active nav_link_forward active"
+                  class="nav-link-Kindness px-2 nav_link_forward"
                   data-full="Welcome à la galerie d'Alex Williams"
                   >What</a
                 >
@@ -196,7 +207,7 @@
               <li class="nav-item">
                 <a
                   href="contact.html"
-                  class="nav-link link-body-emphasis px-2 nav_link_forward"
+                  class="nav-link-Kindness px-2 nav_link_forward"
                   data-full="If only there was a way to get in touch with me... There is!"
                   >Where</a
                 >
@@ -204,7 +215,7 @@
               <li class="nav-item">
                 <a
                   href="charity.html"
-                  class="nav-link link-body-emphasis px-2 nav_link_forward"
+                  class="nav-link-Kindness px-2 nav_link_forward nav-link-Kindness_active active"
                   data-full="Just trying to make the world a better place"
                   >Why</a
                 >
@@ -212,7 +223,7 @@
               <li class="nav-item">
                 <a
                   href="process.html"
-                  class="nav-link link-body-emphasis px-2 nav_link_forward"
+                  class="nav-link-Kindness px-2 nav_link_forward"
                   data-full="Want your own custom pet portrait?"
                   >How</a
                 >
@@ -220,7 +231,7 @@
               <li class="nav-item">
                 <a
                   href="DonationsPage.html"
-                  class="nav-link link-body-emphasis px-2 nav_link_forward"
+                  class="nav-link-Kindness px-2 nav_link_forward"
                   data-full="How you can help support our cause"
                   >Support</a
                 >
@@ -254,7 +265,7 @@
             </ul>
 
             <span
-              class="badge d-flex align-items-center p-1 pe-2 text-success bg-success-subtle border border-success-subtle rounded-pill font_family mx-5"
+              class="badge d-flex align-items-end p-1 pe-2 text-success bg-success-subtle border border-success-subtle rounded-pill font_family mx-5"
             >
               <a
                 href="donationspage.html"
@@ -314,9 +325,9 @@
         </h1>
       </div>
 
-      <div class="container py-2">
+      <!-- <div class="container py-2">
         <div class="row g-4" id="gallery">
-          <!-- example images -->
+      
           <div class="col-6">
             <div class="video_container d-flex">
               <iframe
@@ -369,7 +380,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
 
       <div class="px-4 py-5 text-center">
         <h3 class="fw-bold text-body-emphasis primary_accent mt-3">

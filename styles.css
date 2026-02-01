@@ -96,6 +96,26 @@ nav {
   }
 }
 
+.nav-link-Kindness {
+  list-style: none;
+  font-family: "Montserrat", serif;
+  color: white !important;
+  border-bottom: 2px solid transparent;
+  position: relative;
+  text-decoration: none !important;
+}
+
+.nav-link-Kindness:hover {
+  color: rgb(196, 196, 196) !important;
+  border-bottom: 2px solid rgb(196, 196, 196) !important;
+}
+
+.nav-link-Kindness_active {
+  color: rgb(196, 196, 196) !important;
+  border-bottom: 2px solid transparent;
+  font-weight: 600 !important;
+}
+
 /******************************/
 /* Navigation Links Animation */
 /******************************/
