@@ -1107,9 +1107,11 @@ video {
 /****************************************/
 
 .rakheader {
-  background: linear-gradient(135deg, #4f46e5, #6366f1);
+  height: 50vh;
+  background: url(images/Black\ and\ White.jpg);
+  background-size: cover;
+  background-position: center;
   color: white;
-  padding: 4rem 1.5rem;
   text-align: center;
 }
 .rakheader h1 {
