@@ -1101,3 +1101,87 @@ video {
   border: 0;
   white-space: nowrap; /* added for compatibility with flexbox */
 }
+
+/****************************************/
+/******** Kindness Css Styles ***********/
+/****************************************/
+
+.rakheader {
+  background: linear-gradient(135deg, #4f46e5, #6366f1);
+  color: white;
+  padding: 4rem 1.5rem;
+  text-align: center;
+}
+.rakheader h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+.rakheader p {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1.125rem;
+}
+/* .rakmain {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+} */
+.raksection {
+  margin-bottom: 3.5rem;
+}
+.rakh2 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+  color: #111827;
+}
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  background: #000;
+}
+.video-wrapper iframe,
+.video-wrapper video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+.story-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+.rakcard {
+  background: white;
+  border-radius: 16px;
+  padding: 1.75rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+.rakcard h3 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  font-size: 1.25rem;
+}
+.cta {
+  background: #eef2ff;
+  border-radius: 20px;
+  padding: 2.5rem;
+  text-align: center;
+}
+.cta a {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background: #4f46e5;
+  color: white;
+  text-decoration: none;
+  border-radius: 999px;
+  font-weight: 600;
+}
