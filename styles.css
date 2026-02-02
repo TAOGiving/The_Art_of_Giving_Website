@@ -99,21 +99,27 @@ nav {
 .nav-link-Kindness {
   list-style: none;
   font-family: "Montserrat", serif;
-  color: white !important;
+  color: rgb(39, 39, 39) !important;
   border-bottom: 2px solid transparent;
 
   text-decoration: none !important;
 }
 
 .nav-link-Kindness:hover {
-  color: rgb(196, 196, 196) !important;
+  color: white !important;
   border-bottom: 2px solid rgb(196, 196, 196) !important;
 }
 
 .nav-link-Kindness_active {
-  color: rgb(196, 196, 196) !important;
+  color: rgb(39, 39, 39) !important;
   border-bottom: 2px solid transparent;
   font-weight: 600 !important;
+}
+
+#background-video {
+  height: 100vh;
+  width: 100vw;
+  object-fit: cover;
 }
 
 /******************************/
