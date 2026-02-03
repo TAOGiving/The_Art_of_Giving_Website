@@ -122,6 +122,13 @@ nav {
   object-fit: cover;
 }
 
+@media (min-width: 320px) {
+  #background-video {
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+  }
+}
 /******************************/
 /* Navigation Links Animation */
 /******************************/
