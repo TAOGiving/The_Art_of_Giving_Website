@@ -225,6 +225,7 @@
                   >Support</a
                 >
               </li>
+
               <!-- <li class="nav-item">
               <a
                 href="calendar.html"
@@ -251,8 +252,44 @@
               <a href="#" class="nav-link link-body-emphasis px-2">Contact</a>
             </li> -->
             </ul>
+            <form class="d-flex" role="search">
+              <input
+                class="form-control me-1"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+                data-search
+                id="search-item"
+                onkeyup="search()"
+              />
+              <button
+                class="btn btn-success d-inline-flex justify-content-center align-items-center"
+                type="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasRight"
+                aria-controls="offcanvasRight"
+                id="cartBtn"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-cart3 me-2"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l.84 4.479 9.144-.459L13.89 4zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"
+                  />
+                </svg>
+                Cart
+              </button>
+              <!-- <button class="btn btn-outline-success" type="submit">
+                Search
+              </button> -->
+            </form>
 
-            <span
+            <!-- <span
               class="badge d-flex align-items-center p-1 pe-2 text-success bg-success-subtle border border-success-subtle rounded-pill font_family mx-5"
             >
               <a
@@ -267,7 +304,7 @@
                   alt="Alex Williams artist"
                 />£150.00 Raised so far!</a
               >
-            </span>
+            </span> -->
 
             <!-- <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -306,6 +343,1163 @@
           </form>
         </div>
       </header> -->
+
+      <!-- Home Banner -->
+      <header class="main-header my-5">
+        <div class="container col-8">
+          <div class="row align-items-center text-center gx-md-5">
+            <div class="col-md-12">
+              <div class="home-header-text-holder pe-md-5">
+                <h1
+                  class="main-header-text fs-1 mb-4 fw-normal mt-4 fw-bold text-light"
+                >
+                  Paint products
+                </h1>
+                <h3 class="main-header-text fs-5 text-light">
+                  Take a look down the list to see what you need, what your
+                  missing or just search for what you need in the top right.
+                </h3>
+              </div>
+            </div>
+            <div class="row align-items-center text-center gx-md-5">
+              <div class="col-md-12">
+                <div
+                  class="home-header-text-holder pe-md-5 text-center ms-4"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- Home Banner -->
+
+      <div class="container col-12">
+        <div
+          class="row gap-4 d-flex justify-content-evenly align-content-center"
+          id="product-list"
+        >
+          <!-- Product 1 Card -->
+          <div class="card p-2 product" style="width: 18rem">
+            <img
+              src="images/Wicked Colours/Transparent/W001-02-Wicked-White-2oz.jpg"
+              class="card-img-top img-thumbnail gallery-item wicked-product-hover"
+              style="height: 13rem"
+              alt=""
+              data-bs-toggle="modal"
+              data-bs-target="#wickedWhiteModal"
+              id="myModal"
+            />
+            <div class="card-body">
+              <h5 class="card-title">
+                Transparent Wicked <br />White 2oz (60ml)
+              </h5>
+              <div class="d-flex flex-row align-items-baseline">
+                <h4><strong>£9.16 &nbsp;</strong></h4>
+                <h6>inc VAT</h6>
+              </div>
+
+              <div class="d-flex justify-content-center gap-2">
+                <a
+                  class="btn btn-success btn-sm mt-4"
+                  data-modal-target="#myModal"
+                  id="myInput"
+                  >Buy Now</a
+                >
+
+                <a
+                  class="btn btn-primary btn-sm mt-4"
+                  data-modal-target="#myModal"
+                  id="myInput"
+                  onclick="addToCart('Transparent Wicked White 60ml', 9.16)"
+                  >Add to Basket</a
+                >
+
+                <button
+                  type="button"
+                  class="btn btn-secondary btn-sm mt-4"
+                  data-bs-toggle="modal"
+                  data-bs-target="#wickedWhiteModal"
+                >
+                  Full Description
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- /Product 1 Card -->
+
+          <!-- Product 2 Card -->
+          <div class="card p-2 product" style="width: 18rem">
+            <img
+              src="images/Wicked Colours/Transparent/W002-02-Wicked-Black-2oz.jpg"
+              class="card-img-top img-thumbnail gallery-item wicked-product-hover"
+              style="height: 13rem"
+              alt=""
+              data-bs-toggle="modal"
+              data-bs-target="#wickedBlackModal"
+              id="myModal"
+            />
+            <div class="card-body">
+              <h5 class="card-title">
+                Transparent Wicked <br />Black 2oz (60ml)
+              </h5>
+              <div class="d-flex flex-row align-items-baseline">
+                <h4><strong>£9.16 &nbsp;</strong></h4>
+                <h6>inc VAT</h6>
+              </div>
+
+              <div class="d-flex justify-content-center gap-2">
+                <a
+                  href="#"
+                  class="btn btn-success btn-sm gallery-item mt-4"
+                  data-modal-target="#"
+                  >Buy Now</a
+                >
+
+                <a
+                  href="#"
+                  class="btn btn-primary btn-sm gallery-item mt-4"
+                  data-modal-target="#"
+                  onclick="addToCart('Transparent Wicked Black 60ml', 9.16)"
+                  >Add to Basket</a
+                >
+                <a
+                  href="#"
+                  class="btn btn-secondary btn-sm gallery-item mt-4"
+                  data-bs-toggle="modal"
+                  data-bs-target="#wickedBlackModal"
+                  >Full Description
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- /Product 2 Card -->
+
+          <!-- Product 3 Card -->
+          <div class="card p-2 product" style="width: 18rem">
+            <img
+              src="images/Wicked Colours/Transparent/W003-02-Wicked-Yellow-2oz.jpg"
+              class="card-img-top img-thumbnail gallery-item wicked-product-hover"
+              style="height: 13rem"
+              alt=""
+              data-bs-toggle="modal"
+              data-bs-target="#wickedYellowModal"
+              id="myModal"
+            />
+            <div class="card-body">
+              <h5 class="card-title">
+                Transparent Wicked <br />Yellow 2oz (60ml)
+              </h5>
+              <div class="d-flex flex-row align-items-baseline">
+                <h4><strong>£9.16 &nbsp;</strong></h4>
+                <h6>inc VAT</h6>
+              </div>
+
+              <div class="d-flex justify-content-center gap-2">
+                <a
+                  href="#"
+                  class="btn btn-success btn-sm gallery-item mt-4"
+                  data-modal-target="#"
+                  >Buy Now</a
+                >
+
+                <a
+                  href="#"
+                  class="btn btn-primary btn-sm gallery-item mt-4"
+                  data-modal-target="#"
+                  onclick="addToCart('Transparent Wicked Yellow 60ml', 9.16)"
+                  >Add to Basket</a
+                >
+                <a
+                  href="#"
+                  class="btn btn-secondary btn-sm gallery-item mt-4"
+                  data-bs-toggle="modal"
+                  data-bs-target="#wickedYellowModal"
+                  >Full Description
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- /Product 3 Card -->
+
+          <!-- Product 4 Card -->
+          <div class="card p-2 product" style="width: 18rem">
+            <img
+              src="images/Wicked Colours/Transparent/W004-02-Wicked-Orange-2oz.jpg"
+              class="card-img-top img-thumbnail gallery-item wicked-product-hover"
+              style="height: 13rem"
+              alt=""
+              data-bs-toggle="modal"
+              data-bs-target="#wickedOrangeModal"
+              id="myModal"
+            />
+            <div class="card-body">
+              <h5 class="card-title">
+                Transparent Wicked <br />Orange 2oz (60ml)
+              </h5>
+              <div class="d-flex flex-row align-items-baseline">
+                <h4><strong>£9.16 &nbsp;</strong></h4>
+                <h6>inc VAT</h6>
+              </div>
+
+              <div class="d-flex justify-content-center gap-2">
+                <a
+                  href="#"
+                  class="btn btn-success btn-sm gallery-item mt-4"
+                  data-modal-target="#"
+                  >Buy Now</a
+                >
+
+                <a
+                  href="#"
+                  class="btn btn-primary btn-sm gallery-item mt-4"
+                  data-modal-target="#"
+                  onclick="addToCart('Transparent Wicked Orange 60ml', 9.16)"
+                  >Add to Basket</a
+                >
+                <a
+                  href="#"
+                  class="btn btn-secondary btn-sm gallery-item mt-4"
+                  data-bs-toggle="modal"
+                  data-bs-target="#wickedOrangeModal"
+                  >Full Description
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- Product 4 Card -->
+
+          <!-- Product 5 Card -->
+          <div class="card p-2 product" style="width: 18rem">
+            <img
+              src="images/Wicked Colours/Transparent/W005-02-Wicked-Red-2oz.jpg"
+              class="card-img-top img-thumbnail gallery-item wicked-product-hover"
+              style="height: 13rem"
+              alt=""
+            />
+            <div class="card-body">
+              <h5 class="card-title">
+                Transparent Wicked <br />Red 2oz (60ml)
+              </h5>
+              <div class="d-flex flex-row align-items-baseline">
+                <h4><strong>£9.16 &nbsp;</strong></h4>
+                <h6>inc VAT</h6>
+              </div>
+
+              <div class="d-flex justify-content-center gap-2">
+                <a
+                  href="#"
+                  class="btn btn-success btn-sm gallery-item mt-4"
+                  data-modal-target="#"
+                  >Buy Now</a
+                >
+
+                <a
+                  href="#"
+                  class="btn btn-primary btn-sm gallery-item mt-4"
+                  data-modal-target="#"
+                  onclick="addToCart('Transparent Wicked Red 60ml', 9.16)"
+                  >Add to Basket</a
+                >
+                <a
+                  href="#"
+                  class="btn btn-secondary btn-sm gallery-item mt-4"
+                  data-modal-target="#"
+                  >Full Description
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- /Product 5 Card -->
+
+          <!-- Product 6 Card -->
+          <div class="card p-2 product" style="width: 18rem">
+            <img
+              src="images/Wicked Colours/Transparent/W006-02-Wicked-Violet-2oz.jpg"
+              class="card-img-top img-thumbnail gallery-item wicked-product-hover"
+              style="height: 13rem"
+              alt=""
+            />
+            <div class="card-body">
+              <h5 class="card-title">
+                Transparent Wicked <br />Violet 2oz (60ml)
+              </h5>
+              <div class="d-flex flex-row align-items-baseline">
+                <h4><strong>£9.16 &nbsp;</strong></h4>
+                <h6>inc VAT</h6>
+              </div>
+
+              <div class="d-flex justify-content-center gap-2">
+                <a
+                  href="#"
+                  class="btn btn-success btn-sm gallery-item mt-4"
+                  data-modal-target="#"
+                  >Buy Now</a
+                >
+
+                <a
+                  href="#"
+                  class="btn btn-primary btn-sm gallery-item mt-4"
+                  data-modal-target="#"
+                  onclick="addToCart('Transparent Wicked Violet 60ml', 9.16)"
+                  >Add to Basket</a
+                >
+                <a
+                  href="#"
+                  class="btn btn-secondary btn-sm gallery-item mt-4"
+                  data-modal-target="#"
+                  >Full Description
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- /Product 6 Card -->
+
+          <!-- Product 7 Card -->
+          <div class="card p-2 product" style="width: 18rem">
+            <img
+              src="images/Wicked Colours/Transparent/W007-02-Wicked-Blue-2oz.jpg"
+              class="card-img-top img-thumbnail gallery-item wicked-product-hover"
+              style="height: 13rem"
+              alt=""
+            />
+            <div class="card-body">
+              <h5 class="card-title">
+                Transparent Wicked <br />Blue 2oz (60ml)
+              </h5>
+              <div class="d-flex flex-row align-items-baseline">
+                <h4><strong>£9.16 &nbsp;</strong></h4>
+                <h6>inc VAT</h6>
+              </div>
+
+              <div class="d-flex justify-content-center gap-2">
+                <a
+                  href="#"
+                  class="btn btn-success btn-sm gallery-item mt-4"
+                  data-modal-target="#"
+                  >Buy Now</a
+                >
+
+                <a
+                  href="#"
+                  class="btn btn-primary btn-sm gallery-item mt-4"
+                  data-modal-target="#"
+                  onclick="addToCart('Transparent Wicked Blue 60ml', 9.16)"
+                  >Add to Basket</a
+                >
+                <a
+                  href="#"
+                  class="btn btn-secondary btn-sm gallery-item mt-4"
+                  data-modal-target="#"
+                  >Full Description
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- /Product 7 Card -->
+
+          <!-- Product 8 Card -->
+          <div class="card p-2 product" style="width: 18rem">
+            <img
+              src="images/Wicked Colours/Transparent/W008-02-Wicked-Deep-Blue-2oz.jpg"
+              class="card-img-top img-thumbnail gallery-item wicked-product-hover"
+              style="height: 13rem"
+              alt=""
+            />
+            <div class="card-body">
+              <h5 class="card-title">
+                Transparent Wicked <br />Deep Blue 2oz (60ml)
+              </h5>
+              <div class="d-flex flex-row align-items-baseline">
+                <h4><strong>£9.16 &nbsp;</strong></h4>
+                <h6>inc VAT</h6>
+              </div>
+
+              <div class="d-flex justify-content-center gap-2">
+                <a
+                  href="#"
+                  class="btn btn-success btn-sm gallery-item mt-4"
+                  data-modal-target="#"
+                  >Buy Now</a
+                >
+
+                <a
+                  href="#"
+                  class="btn btn-primary btn-sm gallery-item mt-4"
+                  data-modal-target="#"
+                  onclick="addToCart('Transparent Wicked Deep Blue 60ml', 9.16)"
+                  >Add to Basket</a
+                >
+                <a
+                  href="#"
+                  class="btn btn-secondary btn-sm gallery-item mt-4"
+                  data-modal-target="#"
+                  >Full Description
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- Product 8 Card -->
+        </div>
+      </div>
+      <!-- Products Modal  -->
+
+      <!-- Product 1 Modal -->
+      <div
+        class="modal fade"
+        id="wickedWhiteModal"
+        tabindex="-1"
+        aria-labelledby="wickedWhiteLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <div class="modal-body">
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <!-- <span class="badge rounded-pill text-bg-secondary"
+                      >Hover to zoom</span
+                    > -->
+                      <img
+                        src="images/Wicked Colours/Transparent/W001-02-Wicked-White-2oz.jpg"
+                        class="card-img-top img-thumbnail gallery-item mt-2"
+                        alt=""
+                      />
+                      <div class="mt-5">
+                        <input
+                          type="radio"
+                          class="btn-check"
+                          name="productSizeButton"
+                          id="product60ml"
+                          autocomplete="off"
+                          checked
+                        />
+                        <label
+                          class="btn btn-outline-success"
+                          for="product60ml"
+                          onclick="product60mlUpdate()"
+                          >60ml</label
+                        >
+
+                        <input
+                          type="radio"
+                          class="btn-check"
+                          name="productSizeButton"
+                          id="product120ml"
+                          autocomplete="off"
+                        />
+                        <label
+                          class="btn btn-outline-success"
+                          for="product120ml"
+                          onclick="product120mlUpdate()"
+                          >120ml</label
+                        >
+
+                        <input
+                          type="radio"
+                          class="btn-check"
+                          name="productSizeButton"
+                          id="product240ml"
+                          autocomplete="off"
+                        />
+                        <label
+                          class="btn btn-outline-success"
+                          for="product240ml"
+                          onclick="product240mlUpdate()"
+                          >240ml</label
+                        >
+
+                        <input
+                          type="radio"
+                          class="btn-check"
+                          name="productSizeButton"
+                          id="product480ml"
+                          autocomplete="off"
+                        />
+                        <label
+                          class="btn btn-outline-success"
+                          for="product480ml"
+                          onclick="product480mlUpdate()"
+                          >480ml</label
+                        >
+
+                        <input
+                          type="radio"
+                          class="btn-check"
+                          name="productSizeButton"
+                          id="product960ml"
+                          autocomplete="off"
+                        />
+                        <label
+                          class="btn btn-outline-success"
+                          for="product960ml"
+                          onclick="product960mlUpdate()"
+                          >960ml</label
+                        >
+                      </div>
+                    </div>
+                    <div class="col-md-5">
+                      <div class="modal-header product">
+                        <!-- <h1 class="modal-title fs-5" id="wickedWhiteModalLabel">
+                        Wicked White
+                      </h1> -->
+                        <h1
+                          class="modal-title d-inline-flex product-name"
+                          id="wickedWhiteModalLabel"
+                          data-productid="1"
+                        >
+                          Transparent Wicked White
+                        </h1>
+                      </div>
+
+                      <div class="modal-body">
+                        <h4 class="d-inline-flex">
+                          <strong id="productPrice">£9.16</strong>
+                        </h4>
+                        <h6 class="d-inline-flex me-1">inc VAT</h6>
+                        <div
+                          class="justify-content-center gap-3 product"
+                          id="product"
+                        >
+                          <div class="product-name" id="productName" hidden>
+                            Transparent White
+                          </div>
+                          <div class="product-description" hidden>
+                            Transparent White 60ml bottle
+                          </div>
+                          <button
+                            class="btn btn-success btn-sm"
+                            data-modal-target="#myModal"
+                            id="buyNowBtn"
+                          >
+                            Buy Now
+                          </button>
+
+                          <button
+                            class="btn btn-primary btn-sm"
+                            data-modal-target="#myModal"
+                            id="addToBasketBtn"
+                          >
+                            Add to Basket
+                          </button>
+                        </div>
+                        <p class="mt-4">
+                          <strong
+                            >Wicked white used for highlights and white
+                            spotlights on subjects. Can also be used to lighten
+                            other colour mixes. Use with 10% 4011 Reducer and
+                            can be used with airbrushes 0.2ml or larger.</strong
+                          >
+
+                          <br />
+                          <br />
+                          Standard Wicked Colors are transparent graphic colors
+                          that cover semi-opaque of the bottle due to a high
+                          pigment volume and may be extended to make a more
+                          translucent color. Wicked Transparent Colors are
+                          extremely versatile and may be used with most any
+                          airbrush tip-size and spray-gun with a 1.2mm or 1.3mm
+                          tip-size.
+                          <br />
+                          <br />
+                          Generally, Transparent Colors are thinned 10% per
+                          volume with 4011 Reducer for use with a 0.5mm tip-size
+                          airbrush sprayed ~ 25 to 30 psi. Thin in greater
+                          amounts for use with smaller airbrush tip-sizes and
+                          reduced air pressures. Mixed with 4030 Balancing Clear
+                          10% per volume for application direct to scuffed OEM
+                          finishes, cured urethane base paint or primer,
+                          plastic, 3D print composite, fiberglass, carbon,
+                          aluminum, and any other hard-surface or rigid
+                          substrate.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="col-md-1">
+                      <div>
+                        <button
+                          type="button"
+                          class="btn-close ms-5"
+                          data-bs-dismiss="modal"
+                          aria-label="Close"
+                        ></button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 1 Modal -->
+      <!-- Product 2 Modal -->
+
+      <div
+        class="modal fade"
+        id="wickedBlackModal"
+        tabindex="-1"
+        aria-labelledby="wickedBlackLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <div class="modal-body">
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <img
+                        src="images/Wicked Colours/Transparent/W002-02-Wicked-Black-2oz.jpg"
+                        class="card-img-top img-thumbnail gallery-item mt-2"
+                        alt=""
+                      />
+                      <div class="mt-5">
+                        <input
+                          type="radio"
+                          class="btn-check"
+                          name="productSizeButton2"
+                          id="product60ml2"
+                          autocomplete="off"
+                          checked
+                        />
+                        <label
+                          class="btn btn-outline-success"
+                          for="product60ml2"
+                          >60ml</label
+                        >
+
+                        <input
+                          type="radio"
+                          class="btn-check"
+                          name="productSizeButton2"
+                          id="product120ml2"
+                          autocomplete="off"
+                        />
+                        <label
+                          class="btn btn-outline-success"
+                          for="product120ml2"
+                          >120ml</label
+                        >
+
+                        <input
+                          type="radio"
+                          class="btn-check"
+                          name="productSizeButton2"
+                          id="product240ml2"
+                          autocomplete="off"
+                        />
+                        <label
+                          class="btn btn-outline-success"
+                          for="product240ml2"
+                          >240ml</label
+                        >
+
+                        <input
+                          type="radio"
+                          class="btn-check"
+                          name="productSizeButton2"
+                          id="product480ml2"
+                          autocomplete="off"
+                        />
+                        <label
+                          class="btn btn-outline-success"
+                          for="product480ml2"
+                          >480ml</label
+                        >
+
+                        <input
+                          type="radio"
+                          class="btn-check"
+                          name="productSizeButton2"
+                          id="product960ml2"
+                          autocomplete="off"
+                        />
+                        <label
+                          class="btn btn-outline-success"
+                          for="product960ml2"
+                          >960ml</label
+                        >
+                      </div>
+                    </div>
+                    <div class="col-md-5">
+                      <div class="modal-header">
+                        <!-- <h1 class="modal-title fs-5" id="wickedWhiteModalLabel">
+                      Wicked White
+                    </h1> -->
+                        <h1 class="modal-title" id="wickedBlackModalLabel">
+                          Transparent Wicked Black
+                        </h1>
+                      </div>
+
+                      <div class="modal-body">
+                        <h4 class="d-inline-flex">
+                          <strong>£9.16</strong>
+                        </h4>
+                        <h6 class="d-inline-flex">inc VAT</h6>
+                        <div
+                          class="d-inline-flex justify-content-center gap-3 ms-5"
+                        >
+                          <a
+                            class="btn btn-success btn-sm d-inline-flex"
+                            data-modal-target="#myModal"
+                            id="buyNowBtn"
+                            >Buy Now</a
+                          >
+
+                          <a
+                            class="btn btn-primary btn-sm d-inline-flex add-to-basket"
+                            data-modal-target="#myModal"
+                            id="myInput"
+                            >Add to Basket</a
+                          >
+                        </div>
+                        <p class="mt-4">
+                          <strong
+                            >Wicked black used for fine lines and shadowing on
+                            subjects. Can also be used to darken other colour
+                            mixes. Use with 10% 4011 Reducer and can be used
+                            with airbrushes 0.2ml or larger.</strong
+                          >
+
+                          <br />
+                          <br />
+                          Standard Wicked Colors are transparent graphic colors
+                          that cover semi-opaque of the bottle due to a high
+                          pigment volume and may be extended to make a more
+                          translucent color. Wicked Transparent Colors are
+                          extremely versatile and may be used with most any
+                          airbrush tip-size and spray-gun with a 1.2mm or 1.3mm
+                          tip-size.
+                          <br />
+                          <br />
+                          Generally, Transparent Colors are thinned 10% per
+                          volume with 4011 Reducer for use with a 0.5mm tip-size
+                          airbrush sprayed ~ 25 to 30 psi. Thin in greater
+                          amounts for use with smaller airbrush tip-sizes and
+                          reduced air pressures. Mixed with 4030 Balancing Clear
+                          10% per volume for application direct to scuffed OEM
+                          finishes, cured urethane base paint or primer,
+                          plastic, 3D print composite, fiberglass, carbon,
+                          aluminum, and any other hard-surface or rigid
+                          substrate.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="col-md-1">
+                      <div>
+                        <button
+                          type="button"
+                          class="btn-close ms-5"
+                          data-bs-dismiss="modal"
+                          aria-label="Close"
+                        ></button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 2 Modal -->
+      <!-- Product 3 Modal -->
+
+      <div
+        class="modal fade"
+        id="wickedYellowModal"
+        tabindex="-1"
+        aria-labelledby="wickedYellowLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <div class="modal-body">
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <img
+                        src="images/Wicked Colours/Transparent/W003-02-Wicked-Yellow-2oz.jpg"
+                        class="card-img-top img-thumbnail gallery-item mt-2"
+                        alt=""
+                      />
+                      <div class="mt-5">
+                        <input
+                          type="radio"
+                          class="btn-check"
+                          name="productSizeButton3"
+                          id="product60ml3"
+                          autocomplete="off"
+                          checked
+                        />
+                        <label
+                          class="btn btn-outline-success"
+                          for="product60ml3"
+                          >60ml</label
+                        >
+
+                        <input
+                          type="radio"
+                          class="btn-check"
+                          name="productSizeButton3"
+                          id="product120ml3"
+                          autocomplete="off"
+                        />
+                        <label
+                          class="btn btn-outline-success"
+                          for="product120ml3"
+                          >120ml</label
+                        >
+
+                        <input
+                          type="radio"
+                          class="btn-check"
+                          name="productSizeButton3"
+                          id="product240ml3"
+                          autocomplete="off"
+                        />
+                        <label
+                          class="btn btn-outline-success"
+                          for="product240ml3"
+                          >240ml</label
+                        >
+
+                        <input
+                          type="radio"
+                          class="btn-check"
+                          name="productSizeButton3"
+                          id="product480ml3"
+                          autocomplete="off"
+                        />
+                        <label
+                          class="btn btn-outline-success"
+                          for="product480ml3"
+                          >480ml</label
+                        >
+
+                        <input
+                          type="radio"
+                          class="btn-check"
+                          name="productSizeButton3"
+                          id="product960ml3"
+                          autocomplete="off"
+                        />
+                        <label
+                          class="btn btn-outline-success"
+                          for="product960ml3"
+                          >960ml</label
+                        >
+                      </div>
+                    </div>
+                    <div class="col-md-5">
+                      <div class="modal-header">
+                        <!-- <h1 class="modal-title fs-5" id="wickedWhiteModalLabel">
+                    Wicked White
+                  </h1> -->
+                        <h1 class="modal-title" id="wickedYellowModalLabel">
+                          Transparent Wicked Yellow
+                        </h1>
+                      </div>
+
+                      <div class="modal-body">
+                        <h4 class="d-inline-flex">
+                          <strong>£9.16</strong>
+                        </h4>
+                        <h6 class="d-inline-flex">inc VAT</h6>
+                        <div
+                          class="d-inline-flex justify-content-center gap-3 ms-5"
+                        >
+                          <a
+                            class="btn btn-success btn-sm d-inline-flex"
+                            data-modal-target="#myModal"
+                            id="myInput"
+                            >Buy Now</a
+                          >
+
+                          <a
+                            class="btn btn-primary btn-sm d-inline-flex"
+                            data-modal-target="#myModal"
+                            id="myInput"
+                            >Add to Basket</a
+                          >
+                        </div>
+                        <p class="mt-4">
+                          <strong>
+                            Wicked Yellow used for colour mixing and Yellow
+                            highlights. Use with 10% 4011 Reducer can can be
+                            used with airbrushes 0.2ml or larger.</strong
+                          >
+
+                          <br />
+                          <br />
+                          Standard Wicked Colors are transparent graphic colors
+                          that cover semi-opaque of the bottle due to a high
+                          pigment volume and may be extended to make a more
+                          translucent color. Wicked Transparent Colors are
+                          extremely versatile and may be used with most any
+                          airbrush tip-size and spray-gun with a 1.2mm or 1.3mm
+                          tip-size.
+                          <br />
+                          <br />
+                          Generally, Transparent Colors are thinned 10% per
+                          volume with 4011 Reducer for use with a 0.5mm tip-size
+                          airbrush sprayed ~ 25 to 30 psi. Thin in greater
+                          amounts for use with smaller airbrush tip-sizes and
+                          reduced air pressures. Mixed with 4030 Balancing Clear
+                          10% per volume for application direct to scuffed OEM
+                          finishes, cured urethane base paint or primer,
+                          plastic, 3D print composite, fiberglass, carbon,
+                          aluminum, and any other hard-surface or rigid
+                          substrate.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="col-md-1">
+                      <div>
+                        <button
+                          type="button"
+                          class="btn-close ms-5"
+                          data-bs-dismiss="modal"
+                          aria-label="Close"
+                        ></button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 3 Modal -->
+      <!-- Product 4 Modal -->
+
+      <div
+        class="modal fade"
+        id="wickedOrangeModal"
+        tabindex="-1"
+        aria-labelledby="wickedOrangeLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <div class="modal-body">
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <img
+                        src="images/Wicked Colours/Transparent/W004-02-Wicked-Orange-2oz.jpg"
+                        class="card-img-top img-thumbnail gallery-item mt-2"
+                        alt=""
+                      />
+                      <div class="mt-5">
+                        <input
+                          type="radio"
+                          class="btn-check"
+                          name="productSizeButton4"
+                          id="product60ml4"
+                          autocomplete="off"
+                          checked
+                        />
+                        <label
+                          class="btn btn-outline-success"
+                          for="product60ml4"
+                          >60ml</label
+                        >
+
+                        <input
+                          type="radio"
+                          class="btn-check"
+                          name="productSizeButton4"
+                          id="product120ml4"
+                          autocomplete="off"
+                        />
+                        <label
+                          class="btn btn-outline-success"
+                          for="product120ml4"
+                          >120ml</label
+                        >
+
+                        <input
+                          type="radio"
+                          class="btn-check"
+                          name="productSizeButton4"
+                          id="product240ml4"
+                          autocomplete="off"
+                        />
+                        <label
+                          class="btn btn-outline-success"
+                          for="product240ml4"
+                          >240ml</label
+                        >
+
+                        <input
+                          type="radio"
+                          class="btn-check"
+                          name="productSizeButton4"
+                          id="product480ml4"
+                          autocomplete="off"
+                        />
+                        <label
+                          class="btn btn-outline-success"
+                          for="product480ml4"
+                          >480ml</label
+                        >
+
+                        <input
+                          type="radio"
+                          class="btn-check"
+                          name="productSizeButton4"
+                          id="product960ml4"
+                          autocomplete="off"
+                        />
+                        <label
+                          class="btn btn-outline-success"
+                          for="product960ml4"
+                          >960ml</label
+                        >
+                      </div>
+                    </div>
+                    <div class="col-md-5">
+                      <div class="modal-header">
+                        <h1 class="modal-title" id="wickedOrangeModalLabel">
+                          Transparent Wicked Orange
+                        </h1>
+                      </div>
+
+                      <div class="modal-body">
+                        <h4 class="d-inline-flex">
+                          <strong>£9.16</strong>
+                        </h4>
+                        <h6 class="d-inline-flex">inc VAT</h6>
+                        <div
+                          class="d-inline-flex justify-content-center gap-3 ms-5"
+                        >
+                          <a
+                            class="btn btn-success btn-sm d-inline-flex"
+                            data-modal-target="#myModal"
+                            id="myInput"
+                            >Buy Now</a
+                          >
+
+                          <a
+                            class="btn btn-primary btn-sm d-inline-flex"
+                            data-modal-target="#myModal"
+                            id="myInput"
+                            >Add to Basket</a
+                          >
+                        </div>
+                        <p class="mt-4">
+                          <strong>
+                            Wicked Orange used for colour mixing and Orange
+                            highlights. Use with 10% 4011 Reducer can can be
+                            used with airbrushes 0.2ml or larger.</strong
+                          >
+
+                          <br />
+                          <br />
+                          Standard Wicked Colors are transparent graphic colors
+                          that cover semi-opaque of the bottle due to a high
+                          pigment volume and may be extended to make a more
+                          translucent color. Wicked Transparent Colors are
+                          extremely versatile and may be used with most any
+                          airbrush tip-size and spray-gun with a 1.2mm or 1.3mm
+                          tip-size.
+                          <br />
+                          <br />
+                          Generally, Transparent Colors are thinned 10% per
+                          volume with 4011 Reducer for use with a 0.5mm tip-size
+                          airbrush sprayed ~ 25 to 30 psi. Thin in greater
+                          amounts for use with smaller airbrush tip-sizes and
+                          reduced air pressures. Mixed with 4030 Balancing Clear
+                          10% per volume for application direct to scuffed OEM
+                          finishes, cured urethane base paint or primer,
+                          plastic, 3D print composite, fiberglass, carbon,
+                          aluminum, and any other hard-surface or rigid
+                          substrate.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="col-md-1">
+                      <div>
+                        <button
+                          type="button"
+                          class="btn-close ms-5"
+                          data-bs-dismiss="modal"
+                          aria-label="Close"
+                        ></button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 4 Modal -->
+
+      <!-- Right Cart Toggle -->
+
+      <div
+        class="offcanvas offcanvas-end"
+        tabindex="-1"
+        id="offcanvasRight"
+        aria-labelledby="offcanvasRightLabel"
+      >
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasRightLabel">
+            Shopping Cart
+          </h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="offcanvas-body">
+          Please check below item quantities before purchasing
+          <div class="order-md-last mt-3">
+            <h4 class="d-flex justify-content-between align-items-center mb-3">
+              <span class="text-primary">Your cart</span>
+              <span class="badge bg-primary rounded-pill" id="totalQuantity"
+                >0</span
+              >
+            </h4>
+            <ul class="list-group mb-3" id="shopping-cart">
+              <li class="list-group-item d-flex justify-content-between lh-sm">
+                <div>
+                  <h6 class="my-0">You have no products in your basket</h6>
+                </div>
+              </li>
+            </ul>
+
+            <!-- <form class="card p-2">
+            <div class="input-group">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Promo code"
+              />
+              <button type="submit" class="btn btn-secondary">Redeem</button>
+            </div>
+          </form> -->
+          </div>
+        </div>
+        <button class="btn btn-warning btn-sm mx-5 mb-4" onclick="clearCart()">
+          Clear Basket
+        </button>
+      </div>
+      <!-- Right Cart Toggle -->
 
       <div class="row" id="rowSpacer">
         <div class="row normal_shadow" id="rowSpacer3"></div>
@@ -556,6 +1750,7 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
     <script src="header.js"></script>
     <script src="index.js"></script>
+    <script src="shop.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
