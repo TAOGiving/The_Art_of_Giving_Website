@@ -109,37 +109,37 @@ const addToBasketBtn = document.getElementById("addToBasketBtn");
 const price = document.getElementById("productPrice");
 
 let basketDescription = "";
-function product60mlUpdate() {
-  buyNowBtn.textContent = "Buy 60ml Now";
-  addToBasketBtn.textContent = "Add 60ml To Basket";
-  basketDescription = "60ml bottle";
-  price.textContent = "£9.16";
+function productA4Update() {
+  buyNowBtn.textContent = "Buy A4 Now";
+  addToBasketBtn.textContent = "Add A4 To Basket";
+  basketDescription = "A4 Giclee Printed";
+  price.textContent = "£54.95";
 }
-function product120mlUpdate() {
-  buyNowBtn.textContent = "Buy 120ml Now";
-  addToBasketBtn.textContent = "Add 120ml To Basket";
-  basketDescription = "120ml bottle";
-  price.textContent = "£14.64";
+function productA3Update() {
+  buyNowBtn.textContent = "Buy A3 Now";
+  addToBasketBtn.textContent = "Add A3 To Basket";
+  basketDescription = "A3 Giclee Printed";
+  price.textContent = "£64.95";
 }
-function product240mlUpdate() {
-  buyNowBtn.textContent = "Buy 240ml Now";
-  addToBasketBtn.textContent = "Add 240ml To Basket";
-  basketDescription = "240ml bottle";
-  price.textContent = "£29.28";
+function productA2Update() {
+  buyNowBtn.textContent = "Buy A2 Now";
+  addToBasketBtn.textContent = "Add A2 To Basket";
+  basketDescription = "A2 Giclee Printed";
+  price.textContent = "£74.95";
 }
-function product480mlUpdate() {
-  buyNowBtn.textContent = "Buy 480ml Now";
-  addToBasketBtn.textContent = "Add 480ml To Basket";
-  basketDescription = "480ml bottle";
-  price.textContent = "£58.56";
+function productA1Update() {
+  buyNowBtn.textContent = "Buy A1 Now";
+  addToBasketBtn.textContent = "Add A1 To Basket";
+  basketDescription = "A1 Giclee Printed";
+  price.textContent = "£94.95";
 }
 
-function product960mlUpdate() {
-  buyNowBtn.textContent = "Buy 960ml Now";
-  addToBasketBtn.textContent = "Add 960ml To Basket";
-  basketDescription = "960ml bottle";
-  price.textContent = "£99.84";
-}
+// function product960mlUpdate() {
+//   buyNowBtn.textContent = "Buy 960ml Now";
+//   addToBasketBtn.textContent = "Add 960ml To Basket";
+//   basketDescription = "960ml bottle";
+//   price.textContent = "£99.84";
+// }
 
 //******************************************************************/
 
