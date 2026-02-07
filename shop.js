@@ -192,7 +192,7 @@ class Product {
     this.longDescription = longDescription;
     this.imageUrls = imageUrls; //Array of image URLS
     // this.baseImage = "Images/Heart logo.png";
-    this.charLimits = charLimits;
+    // this.charLimits = charLimits;
   }
 
   renderCard() {
@@ -353,77 +353,74 @@ class Product {
     modal.style.overflow = "hidden";
 
     // Clear previous input values and errors
-    const personalisationInputQTY = document.getElementsByClassName(
-      "personalisation-input",
-    ).length;
-    for (let i = 1; i <= personalisationInputQTY; i++) {
-      document.getElementById(`personalisation-input-${i}`).value = "";
-      // document.getElementById(`personalisation-error-${i}`).textContent = "";
-    }
+    // const personalisationInputQTY = document.getElementsByClassName(
+    //   "personalisation-input",
+    // ).length;
+    // for (let i = 1; i <= personalisationInputQTY; i++) {
+    //   document.getElementById(`personalisation-input-${i}`).value = "";
+    // document.getElementById(`personalisation-error-${i}`).textContent = "";
+    // }
 
     //Set the character limits dynamically for each line
-    this.charLimits.forEach((limit, index) => {
-      const LineNum = index + 1;
-      const charLimitLineNum = document.getElementById(`char-limit-${LineNum}`);
-      charLimitLineNum.textContent = limit;
-      // document
-      //   .getElementById(`personalisation-input-${LineNum}`)
-      //   .setAttribute("maxlength", limit);
+    // this.charLimits.forEach((limit, index) => {
+    //   const LineNum = index + 1;
+    //   const charLimitLineNum = document.getElementById(`char-limit-${LineNum}`);
+    //   charLimitLineNum.textContent = limit;
+    // document
+    //   .getElementById(`personalisation-input-${LineNum}`)
+    //   .setAttribute("maxlength", limit);
 
-      // Validation and adding product to cart
-      modalAddToCart.onclick = () => {
-        const personalisationText = [];
-        let isValid = true;
+    // Validation and adding product to cart
+    modalAddToCart.onclick = () => {
+      // const personalisationText = [];
+      // let isValid = true;
+      // Validate each line of personalisation
+      // for (let i = 1; i <= personalisationInputQTY; i++) {
+      //   const input = document.getElementById(`personalisation-input-${i}`);
+      //   const error = document.getElementById(`personalisation-error-${i}`);
+      //   const text = input.value.trim();
+      //If input is required (you can make it optional by adjusting this condition)
+      // if (text.length < 1) {
+      //   error.textContent = `Line ${i} must have at least 1 character.`;
+      //   error.classList.remove("d-none");
+      //   isValid = false;
+      // } else
+      // if (text.length > this.charLimits[i - 1]) {
+      //   error.textContent = `Line ${i} cannot exceed ${
+      //     this.charLimits[i - 1]
+      //   } characters.`;
+      //   isValid = false;
+      // } else {
+      //   // error.textContent = ""; // Clear error message
+      //   personalisationText.push(text);
+      //   // error.classList.add("d-none");
+      // }
+    };
+    if (isValid) {
+      addToCart(
+        this.name,
+        this.ProductCode,
+        this.price,
+        this.imageUrls[0],
+        // personalisationText,
+      );
 
-        // Validate each line of personalisation
-        for (let i = 1; i <= personalisationInputQTY; i++) {
-          const input = document.getElementById(`personalisation-input-${i}`);
-          const error = document.getElementById(`personalisation-error-${i}`);
-          const text = input.value.trim();
+      // const toastTrigger = document.getElementById("modal-add-to-cart");
+      const toastLiveExample = document.getElementById("liveToast");
 
-          //If input is required (you can make it optional by adjusting this condition)
-          // if (text.length < 1) {
-          //   error.textContent = `Line ${i} must have at least 1 character.`;
-          //   error.classList.remove("d-none");
-          //   isValid = false;
-          // } else
+      // if (toastTrigger) {
+      const toastBootstrap =
+        bootstrap.Toast.getOrCreateInstance(toastLiveExample);
+      // toastTrigger.addEventListener("click", () => {
+      toastBootstrap.show();
+      // });
+    }
 
-          if (text.length > this.charLimits[i - 1]) {
-            error.textContent = `Line ${i} cannot exceed ${
-              this.charLimits[i - 1]
-            } characters.`;
-            isValid = false;
-          } else {
-            // error.textContent = ""; // Clear error message
-            personalisationText.push(text);
-            // error.classList.add("d-none");
-          }
-        }
-        if (isValid) {
-          addToCart(
-            this.name,
-            this.ProductCode,
-            this.price,
-            this.imageUrls[0],
-            personalisationText,
-          );
-
-          // const toastTrigger = document.getElementById("modal-add-to-cart");
-          const toastLiveExample = document.getElementById("liveToast");
-
-          // if (toastTrigger) {
-          const toastBootstrap =
-            bootstrap.Toast.getOrCreateInstance(toastLiveExample);
-          // toastTrigger.addEventListener("click", () => {
-          toastBootstrap.show();
-          // });
-        }
-
-        // modal.style.display = "none"; // Close modal
-      };
-    });
+    // modal.style.display = "none"; // Close modal
   }
 }
+//   }
+// }
 
 //Get references to the input field and countdown display
 // function characterCount() {
@@ -487,54 +484,27 @@ window.onclick = function (event) {
 
 const products = [
   new Product(
-    `<strong>Personalised Golden Christmas Bell Decoration<span class="d-none">Christmas Decorations Baby</span></strong>`,
+    `<strong>Beautiful Giclee Print of Maximus<span class="d-none">Search Option</span></strong>`,
     "P1004A24",
     9.99,
-    "Our Personalised Golden Christmas Bell Decoration is a fantastic way of adding a personalised touch to your festive celebrations.",
-    `Personalise this metal decoration with four lines of text as below<BR><BR>Line 1 - 4 characters<BR>Line 2 - 13 characters<BR>Line 3 - 13 characters<BR>Line 4 - 12 characters<BR><BR>Please note, all personalisation is case sensitive and will appear as entered.<BR><BR>This decoration comes supplied with a ribbon ready to hang - colour of ribbon may vary.<BR><BR>Ideal for Christmas.<BR><BR><div id="personalisation-inputs" class="row align-items-center justfy-content-between mt-4"><div class="row align-items-center mb-2">
-  <div class="row">
-  <div class="col-md-6"><label for="personalisation-input-1" class="col-form-label">Line 1 (up to <span>4</span> characters):</label></div>
-  <div class="col-md-6 d-inline-flex"><input type="text" id="personalisation-input-1" class="form-control personalisation-input" aria-describedby="Line 1 input" data-mdb-show-counter="true" maxlength="4" placeholder="Enter text" required>
-  <span id="char-limit-1" class="input-group-text text-counter justify-content-center px-3 col-md-1"></span></div>
-  </div>
-  </div><div class="row align-items-center mb-2">
-  <div class="row">
-  <div class="col-md-6"><label for="personalisation-input-2" class="col-form-label">Line 2 (up to <span>13</span> characters):</label></div>
-  <div class="col-md-6 d-inline-flex"><input type="text" id="personalisation-input-2" class="form-control personalisation-input" aria-describedby="Line 2 input" data-mdb-show-counter="true" maxlength="13" placeholder="Enter text" required>
-  <span id="char-limit-2" class="input-group-text text-counter justify-content-center px-3 col-md-1"></span></div>
-  </div>
-  </div><div class="row align-items-center mb-2">
-  <div class="row">
-  <div class="col-md-6"><label for="personalisation-input-3" class="col-form-label">Line 3 (up to <span>13</span> characters):</label></div>
-  <div class="col-md-6 d-inline-flex"><input type="text" id="personalisation-input-3" class="form-control personalisation-input" aria-describedby="Line 3 input" data-mdb-show-counter="true" maxlength="13" placeholder="Enter text" required>
-  <span id="char-limit-3" class="input-group-text text-counter justify-content-center px-3 col-md-1"></span></div>
-  </div>
-  </div><div class="row align-items-center mb-2">
-  <div class="row">
-  <div class="col-md-6"><label for="personalisation-input-4" class="col-form-label">Line 4 (up to <span>12</span> characters):</label></div>
-  <div class="col-md-6 d-inline-flex"><input type="text" id="personalisation-input-4" class="form-control personalisation-input" aria-describedby="Line 4 input" data-mdb-show-counter="true" maxlength="12" placeholder="Enter text" required>
-  <span id="char-limit-4" class="input-group-text text-counter justify-content-center px-3 col-md-1"></span></div>
-  </div>
-  </div>`,
+    "This is the short description",
+    `This is the long description<BR><BR><div id="personalisation-inputs" class="row align-items-center justfy-content-between mt-4"><div class="row align-items-center mb-2">`,
     [
-      "Product Images/P1004A24.jpg",
-      "Product Images/P1004A24_1.jpg",
-      "Product Images/P1004A24_1.jpg",
-      "Product Images/P1004A24_2.jpg",
-      "Product Images/P1004A24_3.jpg",
-      "Product Images/P1004A24_4.jpg",
+      "Product images/Black and White.jpg",
+      "Product images/Black and White.jpg",
+      "Product images/Black and White.jpg",
+      "Product images/Black and White.jpg",
+      "Product images/Black and White.jpg",
+      "Product images/Black and White.jpg",
     ],
-    [4, 13, 13, 12],
   ),
 ];
 
-if (document.getElementById("shop-page")) {
-  // Render product cards
-  const productContainer = document.getElementById("product-list");
-  products.forEach((product) => {
-    productContainer.appendChild(product.renderCard());
-  });
-}
+// Render product cards
+const productContainer = document.getElementById("product-list");
+products.forEach((product) => {
+  productContainer.appendChild(product.renderCard());
+});
 
 //LAZY LOADING
 
