@@ -849,60 +849,58 @@
                           id="product1label"
                           data-productid="1"
                         >
-                          Product 1 Name
+                          Giclee Printed Maximus Portrait
                         </h1>
                       </div>
 
                       <div class="modal-body">
                         <h4 class="d-inline-flex">
-                          <strong id="productPrice">£9.16</strong>
+                          <strong id="productPrice">£54.95</strong>
                         </h4>
-                        <h6 class="d-inline-flex me-1">inc VAT</h6>
+                        <h6 class="d-inline-flex me-1">inc VAT/ Postage</h6>
                         <div
                           class="justify-content-center gap-3 product"
                           id="product"
                         >
                           <div class="product-name" id="productName" hidden>
-                            Transparent White
+                            Giclee Printed Maximus Portrait
                           </div>
                           <div class="product-description" hidden>
-                            Transparent White 60ml bottle
+                            Giclee Printed Maximus Portrait in 4 sizes: A4, A3,
+                            A2, and A1. Printed on high-quality 200 gsm matte
+                            paper.
                           </div>
-                          <button
-                            class="btn btn-success btn-sm"
-                            data-modal-target="#myModal"
-                            id="buyNowBtn"
-                          >
-                            Buy Now
-                          </button>
 
                           <button
                             class="btn btn-primary btn-sm"
                             data-modal-target="#myModal"
                             id="addToBasketBtn"
+                            onclick="
+                              addToCart(
+                                'Giclee Printed Maximus Portrait A4',
+                                54.95,
+                              )
+                            "
                           >
-                            Add to Basket
+                            Add A4 Print to Basket
                           </button>
                         </div>
                         <p class="mt-4">
-                          <strong
-                            >Wicked white used for highlights and white
-                            spotlights on subjects. Can also be used to lighten
-                            other colour mixes. Use with 10% 4011 Reducer and
-                            can be used with airbrushes 0.2ml or larger.</strong
-                          >
+                          <strong>Beautiful Giclee Printed Portraits</strong>
 
                           <br />
                           <br />
-                          Standard Wicked Colors are transparent graphic colors
-                          that cover semi-opaque of the bottle due to a high
-                          pigment volume and may be extended to make a more
-                          translucent color. Wicked Transparent Colors are
-                          extremely versatile and may be used with most any
-                          airbrush tip-size and spray-gun with a 1.2mm or 1.3mm
-                          tip-size.
+                          Color Vibrancy: Our 12-color fine art printing
+                          technology delivers vivid, accurate colors with
+                          stunning depth, far beyond standard 4-color inkjet
+                          printing technology. Paper Finishing: Smooth matte
+                          finish for a clean, glare-free display. Paper Weight:
+                          200 gsm (80 lb), thickness: 0.26 mm (10.3 mils).
+                          Available Sizes: Offered in a variety of sizes to fit
+                          any space or frame. Eco-Friendly Materials: Printed on
+                          environmentally conscious, FSC-certified paper.
                           <br />
-                          <br />
+                          <!-- <br />
                           Generally, Transparent Colors are thinned 10% per
                           volume with 4011 Reducer for use with a 0.5mm tip-size
                           airbrush sprayed ~ 25 to 30 psi. Thin in greater
@@ -912,7 +910,7 @@
                           finishes, cured urethane base paint or primer,
                           plastic, 3D print composite, fiberglass, carbon,
                           aluminum, and any other hard-surface or rigid
-                          substrate.
+                          substrate. -->
                         </p>
                       </div>
                     </div>
@@ -1500,6 +1498,113 @@
         </button>
       </div>
       <!-- Right Cart Toggle -->
+
+      <div class="row" id="rowSpacer">
+        <div class="row normal_shadow" id="rowSpacer3"></div>
+        <div class="row card_shadow align-self-end" id="rowSpacer2"></div>
+      </div>
+
+      <!-- Dynamic shop with Class function -->
+      <div id="product-list" class="ms-4"></div>
+
+      <div id="product-card" style="display: none">
+        <div class="product-card product col-md-2 col-5">
+          <a href="/" class="product-link">
+            <img
+              src="/img/logo/png"
+              alt=""
+              class="product-card-image"
+              data-src=""
+              loading="lazy"
+            />
+          </a>
+          <a href="/" class="product-link">
+            <h2 class="handlee-regular">
+              <strong class="product-card-title"
+                >Personalised Golden Christmas Bell Decoration</strong
+              >
+            </h2>
+          </a>
+          <span
+            class="price handlee-regular product-card-price-includingvat incvat"
+            >£9.99</span
+          >
+          <span
+            class="price handlee-regular product-card-price-excludingvat excvat"
+            style="display: none"
+            >£9.99</span
+          >
+          <a
+            href="/"
+            class="btn btn-warning btn-sm mb-2 mx-2 handlee-regular btn-personalise"
+            >Personalise Me</a
+          >
+          <a
+            href="/"
+            class="btn btn-outline-success btn-sm mb-2 mx-2 handlee-regular btn-moreinfo"
+            >More Info</a
+          >
+        </div>
+      </div>
+
+      <div id="product-modal" class="modal ps-3" style="display: none">
+        <div class="modal-content modal-dialog modal-xl">
+          <span class="close text-black text-bg-light rounded-pill pb-1"
+            >&times;</span
+          >
+          <div class="row">
+            <!-- Slideshow container -->
+            <a class="prev col-md-1 large-screen">&#10094;</a>
+
+            <div class="modal-left">
+              <img
+                id="modal-image"
+                class="slide-image"
+                src=""
+                alt="Product Image"
+              />
+            </div>
+
+            <!-- Next and previous buttons for Mobile -->
+            <div class="justify-content-between mobile-screen">
+              <a class="prev-mobile col-md-1">&#10094;</a>
+
+              <a class="next-mobile col-md-1">&#10095;</a>
+            </div>
+            <a class="next col-md-1 large-screen">&#10095;</a>
+
+            <!-- Product info -->
+            <div class="modal-right mt-4 handlee-regular">
+              <h2 id="modal-title"></h2>
+              <h6 id="modal-product-code" class="text-primary"></h6>
+              <p id="modal-description"></p>
+              <p id="modal-longDescription"></p>
+              <span id="modal-price" class="price"></span>
+              <h5 id="termsCond" class="text-danger fw-bold">Warning:</h5>
+              <span class="text-danger">
+                Please double check your personalisation as how it appears here
+                will be how it appears on the product, including spacing and
+                punctuation. Please do not include accents and special symbols
+                as some of our processes will not allow this.</span
+              >
+              <div class="row">
+                <button
+                  id="modal-add-to-cart"
+                  class="btn btn-warning btn-sm m-2 align-self-center addToCartBtn col-5 handlee-regular"
+                >
+                  Personalise Me Now!
+                </button>
+                <button
+                  class="btn btn-outline-danger btn-sm m-2 cancelBtn align-self-center col-5 handlee-regular"
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Dynamic shop with Class function -->
 
       <div class="row" id="rowSpacer">
         <div class="row normal_shadow" id="rowSpacer3"></div>
