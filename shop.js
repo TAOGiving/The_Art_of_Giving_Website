@@ -199,8 +199,8 @@ class Product {
     const card = document.createElement("div");
     card.classList.add("product-card");
     card.classList.add("product");
-    card.classList.add("col-md-2");
-    card.classList.add("col-5");
+    // card.classList.add("col-md-2");
+    card.classList.add("col-3");
     // card.classList.add("m-3");
 
     const img = document.createElement("img");
@@ -253,171 +253,171 @@ class Product {
     card.appendChild(bnButton);
 
     // Event listener for opening the modal
-    img.addEventListener("click", () => {
-      this.openModal();
-    });
+    // img.addEventListener("click", () => {
+    //   this.openModal();
+    // });
 
-    title.addEventListener("click", () => {
-      this.openModal();
-    });
+    // title.addEventListener("click", () => {
+    //   this.openModal();
+    // });
 
-    desc.addEventListener("click", () => {
-      this.openModal();
-    });
-    price.addEventListener("click", () => {
-      this.openModal();
-    });
-    bnButton.addEventListener("click", () => {
-      this.openModal();
-    });
+    // desc.addEventListener("click", () => {
+    //   this.openModal();
+    // });
+    // price.addEventListener("click", () => {
+    //   this.openModal();
+    // });
+    // bnButton.addEventListener("click", () => {
+    //   this.openModal();
+    // });
 
     return card;
   }
 
-  openModal() {
-    // Get modal elements
-    const modal = document.getElementById("product-modal");
-    const modalTitle = document.getElementById("modal-title");
-    const modalProductCode = document.getElementById("modal-product-code");
-    const modalImage = document.getElementById("modal-image");
-    // const personalisationInputs = document.getElementById(
-    //   "personalisation-inputs"
-    // );
-    const modalDescription = document.getElementById("modal-description");
-    const modalLongDescription = document.getElementById(
-      "modal-longDescription",
-    );
-    const modalAddToCart = document.getElementById("modal-add-to-cart");
-    // const addToCartBtn = document.querySelector(".addToCartBtn");
-    const modalPrice = document.getElementById("modal-price");
-    const prevButton = document.querySelector(".prev");
-    const nextButton = document.querySelector(".next");
-    const prevButtonMobile = document.querySelector(".prev-mobile");
-    const nextButtonMobile = document.querySelector(".next-mobile");
+  // openModal() {
+  //   // Get modal elements
+  //   const modal = document.getElementById("product-modal");
+  //   const modalTitle = document.getElementById("modal-title");
+  //   const modalProductCode = document.getElementById("modal-product-code");
+  //   const modalImage = document.getElementById("modal-image");
+  //   // const personalisationInputs = document.getElementById(
+  //   //   "personalisation-inputs"
+  //   // );
+  //   const modalDescription = document.getElementById("modal-description");
+  //   const modalLongDescription = document.getElementById(
+  //     "modal-longDescription",
+  //   );
+  //   const modalAddToCart = document.getElementById("modal-add-to-cart");
+  //   // const addToCartBtn = document.querySelector(".addToCartBtn");
+  //   const modalPrice = document.getElementById("modal-price");
+  //   const prevButton = document.querySelector(".prev");
+  //   const nextButton = document.querySelector(".next");
+  //   const prevButtonMobile = document.querySelector(".prev-mobile");
+  //   const nextButtonMobile = document.querySelector(".next-mobile");
 
-    let currentSlideIndex = 0;
+  //   let currentSlideIndex = 0;
 
-    // Set modal content based on product details
-    modalTitle.innerHTML = this.name;
-    modalProductCode.textContent = this.ProductCode;
-    modalImage.src = this.imageUrls[currentSlideIndex];
-    modalDescription.textContent = this.description;
-    modalLongDescription.innerHTML = this.longDescription;
-    modalPrice.textContent = `£${this.price}`;
+  //   // Set modal content based on product details
+  //   modalTitle.innerHTML = this.name;
+  //   modalProductCode.textContent = this.ProductCode;
+  //   modalImage.src = this.imageUrls[currentSlideIndex];
+  //   modalDescription.textContent = this.description;
+  //   modalLongDescription.innerHTML = this.longDescription;
+  //   modalPrice.textContent = `£${this.price}`;
 
-    // Function to show the current slide
-    const showSlide = (index) => {
-      currentSlideIndex =
-        (index + this.imageUrls.length) % this.imageUrls.length;
-      modalImage.src = this.imageUrls[currentSlideIndex];
-      console.log("show current slide function");
-    };
+  //   // Function to show the current slide
+  //   const showSlide = (index) => {
+  //     currentSlideIndex =
+  //       (index + this.imageUrls.length) % this.imageUrls.length;
+  //     modalImage.src = this.imageUrls[currentSlideIndex];
+  //     console.log("show current slide function");
+  //   };
 
-    function updateCharCount(input) {
-      const maxlength = input.maxLength;
-      console.log("maxLength", maxlength);
-      const charCount = input.nextElementSibling;
-      console.log("charCount", charCount);
-      //The corresponding Span is the next sibling of the input
-      const remaining = maxlength - input.value.length;
-      charCount.textContent = `${remaining}`;
-    }
+  //   function updateCharCount(input) {
+  //     const maxlength = input.maxLength;
+  //     console.log("maxLength", maxlength);
+  //     const charCount = input.nextElementSibling;
+  //     console.log("charCount", charCount);
+  //     //The corresponding Span is the next sibling of the input
+  //     const remaining = maxlength - input.value.length;
+  //     charCount.textContent = `${remaining}`;
+  //   }
 
-    //Set up character countdown for all inputs in the model
-    function setUpModalInputs() {
-      document.querySelectorAll(".personalisation-input").forEach((input) => {
-        //Initial character count update
-        updateCharCount(input);
+  //   //Set up character countdown for all inputs in the model
+  //   function setUpModalInputs() {
+  //     document.querySelectorAll(".personalisation-input").forEach((input) => {
+  //       //Initial character count update
+  //       updateCharCount(input);
 
-        //Listen for input event and update character count
-        input.addEventListener("input", () => updateCharCount(input));
-      });
-    }
+  //       //Listen for input event and update character count
+  //       input.addEventListener("input", () => updateCharCount(input));
+  //     });
+  //   }
 
-    // Event listener for add to cart button
-    // addToCartBtn.onclick = () => {
-    //   addToCart(this.name, this.price, this.imageUrls[0]);
-    // };
+  //   // Event listener for add to cart button
+  //   // addToCartBtn.onclick = () => {
+  //   //   addToCart(this.name, this.price, this.imageUrls[0]);
+  //   // };
 
-    // Event listeners for prev/next buttons
-    prevButton.onclick = () => showSlide(currentSlideIndex - 1);
-    nextButton.onclick = () => showSlide(currentSlideIndex + 1);
-    prevButtonMobile.onclick = () => showSlide(currentSlideIndex - 1);
-    nextButtonMobile.onclick = () => showSlide(currentSlideIndex + 1);
+  //   // Event listeners for prev/next buttons
+  //   prevButton.onclick = () => showSlide(currentSlideIndex - 1);
+  //   nextButton.onclick = () => showSlide(currentSlideIndex + 1);
+  //   prevButtonMobile.onclick = () => showSlide(currentSlideIndex - 1);
+  //   nextButtonMobile.onclick = () => showSlide(currentSlideIndex + 1);
 
-    // Display the modal
-    modal.style.display = "block";
-    setUpModalInputs();
+  //   // Display the modal
+  //   modal.style.display = "block";
+  //   setUpModalInputs();
 
-    // Disable Body Scroll
-    modal.style.overflow = "hidden";
+  //   // Disable Body Scroll
+  //   modal.style.overflow = "hidden";
 
-    // Clear previous input values and errors
-    // const personalisationInputQTY = document.getElementsByClassName(
-    //   "personalisation-input",
-    // ).length;
-    // for (let i = 1; i <= personalisationInputQTY; i++) {
-    //   document.getElementById(`personalisation-input-${i}`).value = "";
-    // document.getElementById(`personalisation-error-${i}`).textContent = "";
-    // }
+  //   // Clear previous input values and errors
+  //   // const personalisationInputQTY = document.getElementsByClassName(
+  //   //   "personalisation-input",
+  //   // ).length;
+  //   // for (let i = 1; i <= personalisationInputQTY; i++) {
+  //   //   document.getElementById(`personalisation-input-${i}`).value = "";
+  //   // document.getElementById(`personalisation-error-${i}`).textContent = "";
+  //   // }
 
-    //Set the character limits dynamically for each line
-    // this.charLimits.forEach((limit, index) => {
-    //   const LineNum = index + 1;
-    //   const charLimitLineNum = document.getElementById(`char-limit-${LineNum}`);
-    //   charLimitLineNum.textContent = limit;
-    // document
-    //   .getElementById(`personalisation-input-${LineNum}`)
-    //   .setAttribute("maxlength", limit);
+  //   //Set the character limits dynamically for each line
+  //   // this.charLimits.forEach((limit, index) => {
+  //   //   const LineNum = index + 1;
+  //   //   const charLimitLineNum = document.getElementById(`char-limit-${LineNum}`);
+  //   //   charLimitLineNum.textContent = limit;
+  //   // document
+  //   //   .getElementById(`personalisation-input-${LineNum}`)
+  //   //   .setAttribute("maxlength", limit);
 
-    // Validation and adding product to cart
-    modalAddToCart.onclick = () => {
-      // const personalisationText = [];
-      // let isValid = true;
-      // Validate each line of personalisation
-      // for (let i = 1; i <= personalisationInputQTY; i++) {
-      //   const input = document.getElementById(`personalisation-input-${i}`);
-      //   const error = document.getElementById(`personalisation-error-${i}`);
-      //   const text = input.value.trim();
-      //If input is required (you can make it optional by adjusting this condition)
-      // if (text.length < 1) {
-      //   error.textContent = `Line ${i} must have at least 1 character.`;
-      //   error.classList.remove("d-none");
-      //   isValid = false;
-      // } else
-      // if (text.length > this.charLimits[i - 1]) {
-      //   error.textContent = `Line ${i} cannot exceed ${
-      //     this.charLimits[i - 1]
-      //   } characters.`;
-      //   isValid = false;
-      // } else {
-      //   // error.textContent = ""; // Clear error message
-      //   personalisationText.push(text);
-      //   // error.classList.add("d-none");
-      // }
-    };
-    if (isValid) {
-      addToCart(
-        this.name,
-        this.ProductCode,
-        this.price,
-        this.imageUrls[0],
-        // personalisationText,
-      );
+  //   // Validation and adding product to cart
+  //   modalAddToCart.onclick = () => {
+  //     // const personalisationText = [];
+  //     // let isValid = true;
+  //     // Validate each line of personalisation
+  //     // for (let i = 1; i <= personalisationInputQTY; i++) {
+  //     //   const input = document.getElementById(`personalisation-input-${i}`);
+  //     //   const error = document.getElementById(`personalisation-error-${i}`);
+  //     //   const text = input.value.trim();
+  //     //If input is required (you can make it optional by adjusting this condition)
+  //     // if (text.length < 1) {
+  //     //   error.textContent = `Line ${i} must have at least 1 character.`;
+  //     //   error.classList.remove("d-none");
+  //     //   isValid = false;
+  //     // } else
+  //     // if (text.length > this.charLimits[i - 1]) {
+  //     //   error.textContent = `Line ${i} cannot exceed ${
+  //     //     this.charLimits[i - 1]
+  //     //   } characters.`;
+  //     //   isValid = false;
+  //     // } else {
+  //     //   // error.textContent = ""; // Clear error message
+  //     //   personalisationText.push(text);
+  //     //   // error.classList.add("d-none");
+  //     // }
+  //   };
+  //   if (isValid) {
+  //     addToCart(
+  //       this.name,
+  //       this.ProductCode,
+  //       this.price,
+  //       this.imageUrls[0],
+  //       // personalisationText,
+  //     );
 
-      // const toastTrigger = document.getElementById("modal-add-to-cart");
-      const toastLiveExample = document.getElementById("liveToast");
+  //     // const toastTrigger = document.getElementById("modal-add-to-cart");
+  //     const toastLiveExample = document.getElementById("liveToast");
 
-      // if (toastTrigger) {
-      const toastBootstrap =
-        bootstrap.Toast.getOrCreateInstance(toastLiveExample);
-      // toastTrigger.addEventListener("click", () => {
-      toastBootstrap.show();
-      // });
-    }
+  //     // if (toastTrigger) {
+  //     const toastBootstrap =
+  //       bootstrap.Toast.getOrCreateInstance(toastLiveExample);
+  //     // toastTrigger.addEventListener("click", () => {
+  //     toastBootstrap.show();
+  //     // });
+  //   }
 
-    // modal.style.display = "none"; // Close modal
-  }
+  //   // modal.style.display = "none"; // Close modal
+  // }
 }
 //   }
 // }
@@ -439,24 +439,24 @@ class Product {
 
 // }
 // Modal close functionality
-const modal = document.getElementById("product-modal");
-const closeBtn = document.getElementsByClassName("close")[0];
+// const modal = document.getElementById("product-modal");
+// const closeBtn = document.getElementsByClassName("close")[0];
 
-closeBtn.onclick = function () {
-  modal.style.display = "none";
-};
+// closeBtn.onclick = function () {
+//   modal.style.display = "none";
+// };
 
-const cancelBtn = document.getElementsByClassName("cancelBtn")[0];
+// const cancelBtn = document.getElementsByClassName("cancelBtn")[0];
 
-cancelBtn.onclick = function () {
-  modal.style.display = "none";
-};
-// Close modal if the user clicks outside the modal
-window.onclick = function (event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-};
+// cancelBtn.onclick = function () {
+//   modal.style.display = "none";
+// };
+// // Close modal if the user clicks outside the modal
+// window.onclick = function (event) {
+//   if (event.target == modal) {
+//     modal.style.display = "none";
+//   }
+// };
 
 // Example starter JavaScript for disabling form submissions if there are invalid fields
 // (() => {
@@ -486,7 +486,7 @@ const products = [
   new Product(
     `<strong>Beautiful Giclee Print of Maximus<span class="d-none">Search Option</span></strong>`,
     "P1004A24",
-    9.99,
+    54.95,
     "This is the short description",
     `This is the long description<BR><BR><div id="personalisation-inputs" class="row align-items-center justfy-content-between mt-4"><div class="row align-items-center mb-2">`,
     [
