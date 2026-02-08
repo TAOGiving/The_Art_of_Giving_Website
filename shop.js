@@ -177,17 +177,18 @@ const search = () => {
 // JavaScript code to generate a product card and modal
 class Product {
   constructor(
+    slug,
     name,
     productCode,
     price,
     description,
     longDescription,
     imageUrls,
-    charLimits,
   ) {
     this.name = name;
     this.ProductCode = productCode;
     this.price = price;
+    this.slug = slug;
     this.description = description;
     this.longDescription = longDescription;
     this.imageUrls = imageUrls; //Array of image URLS
@@ -238,9 +239,9 @@ class Product {
     atbButton.classList.add("mx-2");
     atbButton.classList.add("handlee-regular");
     atbButton.textContent = "Add to Basket";
-    // atbButton.onclick = () => {
-    //   addToCart(this.name, this.price, this.imageUrls[0]);
-    // };
+    atbButton.onclick = () => {
+      addToCart(this.name, this.price, this.imageUrls[0]);
+    };
     card.appendChild(atbButton);
 
     const bnButton = document.createElement("button");
@@ -485,6 +486,7 @@ class Product {
 
 const products = [
   new Product(
+    "MaximusGicleePrints",
     `Beautiful<strong> A4 </strong>Giclee Print of Maximus<span class="d-none">Search Option</span>`,
     "P1004A24",
     54.95,
