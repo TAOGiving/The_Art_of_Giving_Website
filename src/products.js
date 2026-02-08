@@ -8,10 +8,10 @@ class Product {
     longDescription,
     imageUrls,
   ) {
+    this.slug = slug;
     this.name = name;
     this.ProductCode = productCode;
     this.price = price;
-    this.slug = slug;
     this.description = description;
     this.longDescription = longDescription;
     this.imageUrls = imageUrls; //Array of image URLS
