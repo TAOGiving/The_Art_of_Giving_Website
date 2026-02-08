@@ -20,7 +20,8 @@ products.forEach((product) => {
     .replace(/{{NAME}}/g, product.name)
     .replace(/{{PRICE}}/g, product.price)
     .replace(/{{DESCRIPTION}}/g, product.description)
-    .replace(/{{LONG_DESCRIPTION}}/g, product.longDescription);
+    .replace(/{{LONG_DESCRIPTION}}/g, product.longDescription)
+    .replace(/{{IMAGE_URL}}/g, product.imageUrls[0]);
 
   fs.writeFileSync(path.join(outputDir, `${product.slug}.html`), html);
 });
