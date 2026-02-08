@@ -19,7 +19,8 @@ products.forEach((product) => {
     .replace(/{{TITLE}}/g, product.name)
     .replace(/{{NAME}}/g, product.name)
     .replace(/{{PRICE}}/g, product.price)
-    .replace(/{{DESCRIPTION}}/g, product.description);
+    .replace(/{{DESCRIPTION}}/g, product.description)
+    .replace(/{{LONG_DESCRIPTION}}/g, product.longDescription);
 
   fs.writeFileSync(path.join(outputDir, `${product.slug}.html`), html);
 });
