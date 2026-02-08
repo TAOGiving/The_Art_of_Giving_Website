@@ -199,8 +199,8 @@ class Product {
     const card = document.createElement("div");
     card.classList.add("product-card");
     card.classList.add("product");
-    // card.classList.add("col-md-2");
-    card.classList.add("col-3");
+    card.classList.add("col-sm-3");
+    card.classList.add("col-6");
     // card.classList.add("m-3");
 
     const img = document.createElement("img");
@@ -215,7 +215,8 @@ class Product {
 
     const title = document.createElement("h2");
     title.innerHTML = this.name;
-    title.classList.add("handlee-regular");
+    title.classList.add("primary_accent");
+    title.classList.add("font_family");
     card.appendChild(title);
 
     const desc = document.createElement("p");
@@ -231,12 +232,12 @@ class Product {
 
     const atbButton = document.createElement("button");
     atbButton.classList.add("btn");
-    atbButton.classList.add("btn-warning");
+    atbButton.classList.add("primary_accent_btn");
     atbButton.classList.add("btn-sm");
     atbButton.classList.add("mb-2");
     atbButton.classList.add("mx-2");
     atbButton.classList.add("handlee-regular");
-    atbButton.textContent = "Personalise Me";
+    atbButton.textContent = "Add to Basket";
     // atbButton.onclick = () => {
     //   addToCart(this.name, this.price, this.imageUrls[0]);
     // };
@@ -244,7 +245,7 @@ class Product {
 
     const bnButton = document.createElement("button");
     bnButton.classList.add("btn");
-    bnButton.classList.add("btn-outline-success");
+    bnButton.classList.add("btn-outline-secondary");
     bnButton.classList.add("btn-sm");
     bnButton.classList.add("mb-2");
     bnButton.classList.add("mx-2");
@@ -484,18 +485,18 @@ class Product {
 
 const products = [
   new Product(
-    `<strong>Beautiful Giclee Print of Maximus<span class="d-none">Search Option</span></strong>`,
+    `Beautiful<strong> A4 </strong>Giclee Print of Maximus<span class="d-none">Search Option</span>`,
     "P1004A24",
     54.95,
     "This is the short description",
     `This is the long description<BR><BR><div id="personalisation-inputs" class="row align-items-center justfy-content-between mt-4"><div class="row align-items-center mb-2">`,
     [
-      "Product images/Black and White.jpg",
-      "Product images/Black and White.jpg",
-      "Product images/Black and White.jpg",
-      "Product images/Black and White.jpg",
-      "Product images/Black and White.jpg",
-      "Product images/Black and White.jpg",
+      "images/Black and White.jpg",
+      "images/Black and White.jpg",
+      "images/Black and White.jpg",
+      "images/Black and White.jpg",
+      "images/Black and White.jpg",
+      "images/Black and White.jpg",
     ],
   ),
 ];
