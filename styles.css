@@ -1194,3 +1194,389 @@ video {
   border-radius: 999px;
   font-weight: 600;
 }
+
+/*..............*/
+/* Product card */
+/*..............*/
+
+/* Style for the product card container */
+.product-card {
+  max-height: 70vh;
+  /* height: 50vh !important; */
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin: 20px;
+  text-align: center;
+  background-color: #fff;
+  cursor: pointer;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  display: inline-block;
+  position: relative;
+}
+
+@media (max-width: 504px) {
+  /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+  .product-card {
+    margin: 5px;
+    font-size: small;
+  }
+}
+
+@media (max-width: 961px) {
+  /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+  .product-card {
+    font-size: small;
+  }
+}
+
+/* @media (min-width: 641px) {
+  .product-card {
+    width: 15vw !important;
+    height: 30vh !important;
+  }
+}
+
+.product-card .price {
+  position: absolute;
+  bottom: 00px;
+  left: 50px;
+  margin-bottom: 100px !important;
+}
+
+.product-card .btn-warning {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  margin: 20px !important;
+} */
+
+@media (max-width: 320px) {
+  .product-card {
+    height: 364px;
+    font-size: small;
+    position: relative;
+  }
+  /* .product-card .btn-warning {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 16px;
+  } */
+}
+
+/* Hover effect */
+.product-card:hover {
+  transform: scale(105%);
+  box-shadow:
+    rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px,
+    rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px,
+    rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+/* Image styling */
+.product-card img {
+  width: 100%;
+  display: block;
+  cursor: pointer;
+}
+
+/* Product name */
+.product-card h2 {
+  font-size: 1.2em;
+  margin: 16px 0;
+  color: #333;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Product description */
+.product-card p {
+  font-size: 1em;
+  color: #666;
+  padding: 0 15px;
+  margin-bottom: 16px;
+  cursor: pointer;
+}
+
+/* Price styling */
+.product-card .price {
+  font-size: 1.2em;
+  color: #27ae60;
+  font-weight: bold;
+  margin-bottom: 20px;
+  display: block;
+  cursor: pointer;
+}
+
+/*****************/
+/* Modal styling */
+/*****************/
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* Black background with opacity */
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 5% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  /* max-width: fit-content;
+  max-height: fit-content; */
+  height: 80%;
+  border-radius: 10px;
+  text-align: start;
+  overflow-y: auto;
+  position: relative;
+
+  /* display: flex;
+  flex-direction: row;
+  gap: 20px; */
+}
+
+/* #modal-title {
+  font-size: 1em;
+  max-width: 50%;
+} */
+
+/* #modal-description {
+  font-size: 0.9em;
+  max-width: 50%;
+} */
+/* 
+#modal-longDescription {
+  font-size: 0.8em;
+  max-width: 50%;
+} */
+
+/* .price {
+  font-size: 1.2em;
+  color: #27ae60;
+  font-weight: bold;
+  margin-bottom: 20px;
+  display: block;
+} */
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Slideshow (carousel) styles */
+.modal-left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (min-width: 993px) {
+  .modal-left {
+    flex: 1;
+  }
+}
+
+.slide-image {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 10px;
+  translate: -30px -100px;
+  transition: transform 0.3s ease-in-out;
+}
+
+@media (max-width: 993px) {
+  .slide-image {
+    translate: 0 0;
+  }
+}
+
+.modal-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+@media (max-width: 320px) {
+  .modal-right {
+    font-size: x-small;
+  }
+}
+
+@media (min-width: 993px) {
+  .modal-right {
+    flex: 1;
+  }
+}
+/* .modal-title h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+} */
+
+/* .modal-description {
+  font-size: 16px;
+  margin-bottom: 10px;
+} */
+/* 
+.modal-right p {
+  font-size: 16px;
+  margin-bottom: 10px;
+} */
+
+.modal-right .price {
+  font-size: 1.2em;
+  color: #27ae60;
+  font-weight: bold;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: relative;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: var(--Charcoal);
+  font-weight: bold;
+  font-size: 18px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  align-self: center;
+}
+
+.next {
+  /* right: 0; */
+  border-radius: 3px 0 0 3px;
+}
+
+.prev {
+  /* left: 0; */
+  border-radius: 3px 3px 0 0;
+}
+
+/* Zoom effect on hover */
+/* .slide-image:hover {
+  transform: scale(1.25); /* Zoom on hover */
+/* cursor: zoom-in;
+  z-index: 999;
+}  */
+
+/* Modal close button */
+.close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+  z-index: 999;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#modalAddToCart {
+  width: 25%;
+}
+
+/*******************/
+/*For Lazy Loading */
+/*******************/
+
+/* img {
+  transition: filter 0.5s;
+} */
+
+.lazy-img {
+  filter: blur(20px);
+}
+
+/*******************/
+/*Image for cart   */
+/*******************/
+
+.cart-img {
+  width: 50px;
+  height: 50px;
+}
+
+/**********************/
+/*Image for accordian */
+/**********************/
+.accordion-img {
+  width: 50vw;
+  height: auto;
+}
+
+/**********************************/
+/*Previous and next modal buttons */
+/**********************************/
+@media (max-width: 993px) {
+  .mobile-screen {
+    display: flex;
+  }
+  .large-screen {
+    display: none;
+  }
+}
+
+@media (min-width: 993px) {
+  .mobile-screen {
+    display: none;
+  }
+  .large-screen {
+    display: block;
+  }
+}
+
+.img-cover {
+  object-fit: cover;
+  object-position: center;
+}
+
+.profile-img {
+  height: 150px !important;
+  width: 150px !important;
+}
+
+div.dropdown-multicol2 {
+  width: 30em;
+}
+
+div.dropdown-multicol2 > div.dropdown-col {
+  display: inline-block;
+  width: 32%;
+}
+
+div.dropdown-shop {
+  width: 60em;
+}
+
+div.dropdown-shop > div.dropdown-col {
+  display: inline-block;
+  width: 32%;
+}
