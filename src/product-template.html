@@ -303,28 +303,35 @@
         </div>
       </header> -->
 
-      <main class="justify-content-center align-content-center text-center">
-        <h1
-          class="primary_accent font_family justify-content-center align-content-center text-center my-5"
-        >
-          {{NAME}}
-        </h1>
-        <p class="text_accent">{{DESCRIPTION}}</p>
-        <h2 class="text-success">£{{PRICE}}</h2>
-        <p>{{LONG_DESCRIPTION}}</p>
-        <img src="{{IMAGE_URL}}" alt="{{NAME}}" class="my-5" />
-        <button
-          class="btn btn-primary btn-sm"
-          id="addToBasketBtn"
-          onclick="
+      <main
+        class="justify-content-center align-content-center text-center row col-12"
+      >
+        <div class="col-6">
+          <img src="{{IMAGE_URL}}" alt="{{NAME}}" class="my-5" />
+        </div>
+        <div class="col-6">
+          <h1
+            class="primary_accent font_family justify-content-center align-content-center text-center my-5"
+          >
+            {{NAME}}
+          </h1>
+          <p class="text_accent">{{DESCRIPTION}}</p>
+          <h2 class="text-success">£{{PRICE}}</h2>
+          <p>{{LONG_DESCRIPTION}}</p>
+
+          <button
+            class="btn btn-primary btn-sm"
+            id="addToBasketBtn"
+            onclick="
                               addToCart(
                                 '{{NAME}}',
                                 `{{PRICE}}`,
                               )
                             "
-        >
-          Add A4 Print to Basket
-        </button>
+          >
+            Add A4 Print to Basket
+          </button>
+        </div>
       </main>
 
       <div class="row" id="rowSpacer">
