@@ -1580,3 +1580,7 @@ div.dropdown-shop > div.dropdown-col {
   display: inline-block;
   width: 32%;
 }
+
+#main_product_image {
+  border-radius: 20px !important;
+}

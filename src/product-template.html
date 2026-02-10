@@ -307,7 +307,12 @@
         class="justify-content-center align-content-center text-center row col-12"
       >
         <div class="col-6">
-          <img src="{{IMAGE_URL}}" alt="{{NAME}}" class="my-5" />
+          <img
+            src="{{IMAGE_URL}}"
+            alt="{{NAME}}"
+            class="my-5 mx-4 img-fluid"
+            id="main_product_image"
+          />
         </div>
         <div class="col-6">
           <h1
@@ -316,11 +321,11 @@
             {{NAME}}
           </h1>
           <p class="text_accent">{{DESCRIPTION}}</p>
-          <h2 class="text-success">£{{PRICE}}</h2>
           <p>{{LONG_DESCRIPTION}}</p>
+          <h2 class="text-success">£{{PRICE}}</h2>
 
           <button
-            class="btn btn-primary btn-sm"
+            class="btn primary_accent_btn btn-sm justify-content-end align-content-end text-end mt-4"
             id="addToBasketBtn"
             onclick="
                               addToCart(
