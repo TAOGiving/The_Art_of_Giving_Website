@@ -185,10 +185,10 @@ class Product {
     longDescription,
     imageUrls,
   ) {
+    this.slug = slug;
     this.name = name;
     this.ProductCode = productCode;
     this.price = price;
-    this.slug = slug;
     this.description = description;
     this.longDescription = longDescription;
     this.imageUrls = imageUrls; //Array of image URLS
@@ -252,6 +252,12 @@ class Product {
     bnButton.classList.add("mx-2");
     bnButton.classList.add("handlee-regular");
     bnButton.textContent = "More Info";
+    bnButton.onclick = () => {
+      openProductPage(`dist/products/${this.slug}`);
+    };
+    function openProductPage(slug) {
+      window.location.href = `${slug}.html`;
+    }
     card.appendChild(bnButton);
 
     // Event listener for opening the modal
