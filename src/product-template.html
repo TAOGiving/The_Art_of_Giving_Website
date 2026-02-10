@@ -306,36 +306,64 @@
       <main
         class="justify-content-center align-content-center text-center row col-12"
       >
-        <div class="col-6">
-          <img
-            src="{{IMAGE_URL}}"
-            alt="{{NAME}}"
-            class="my-5 mx-4 img-fluid"
-            id="main_product_image"
-          />
-        </div>
-        <div class="col-6">
-          <h1
-            class="primary_accent font_family justify-content-center align-content-center text-center my-5"
-          >
-            {{NAME}}
-          </h1>
-          <p class="text_accent">{{DESCRIPTION}}</p>
-          <p>{{LONG_DESCRIPTION}}</p>
-          <h2 class="text-success">£{{PRICE}}</h2>
+        <div class="row">
+          <div class="col-6">
+            <img
+              src="{{IMAGE_URL}}"
+              alt="{{NAME}}"
+              class="mt-5 pt-2 mx-3 img-fluid"
+              id="main_product_image"
+            />
+          </div>
+          <div class="col-6">
+            <h1
+              class="primary_accent font_family justify-content-center align-content-center text-center mt-5 mb-3"
+            >
+              {{NAME}}
+            </h1>
+            <p class="text_accent">{{DESCRIPTION}}</p>
+            <p>{{LONG_DESCRIPTION}}</p>
+            <h2 class="text-success">£{{PRICE}}</h2>
 
-          <button
-            class="btn primary_accent_btn btn-sm justify-content-end align-content-end text-end mt-4"
-            id="addToBasketBtn"
-            onclick="
+            <button
+              class="btn primary_accent_btn btn-sm justify-content-end align-content-end text-end mt-4"
+              id="addToBasketBtn"
+              onclick="
                               addToCart(
                                 '{{NAME}}',
                                 {{PRICE}}
                               )
                             "
-          >
-            Add A4 Print to Basket
-          </button>
+            >
+              Add A4 Print to Basket
+            </button>
+            <div class="row gap-1 my-4 ms-2">
+              <img
+                src="/images/1. Leopard.jpg"
+                alt=""
+                class=""
+                id="img-thumbnail"
+              />
+              <img
+                src="/images/1. Leopard.jpg"
+                alt=""
+                class=""
+                id="img-thumbnail"
+              />
+              <img
+                src="/images/1. Leopard.jpg"
+                alt=""
+                class=""
+                id="img-thumbnail"
+              />
+              <img
+                src="/images/1. Leopard.jpg"
+                alt=""
+                class=""
+                id="img-thumbnail"
+              />
+            </div>
+          </div>
         </div>
       </main>
 

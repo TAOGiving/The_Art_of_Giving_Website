@@ -1584,3 +1584,8 @@ div.dropdown-shop > div.dropdown-col {
 #main_product_image {
   border-radius: 20px !important;
 }
+
+#img-thumbnail {
+  height: 19vh !important;
+  width: auto !important;
+}
