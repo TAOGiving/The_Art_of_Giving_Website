@@ -311,7 +311,7 @@
             <img
               src="{{IMAGE_URL}}"
               alt="{{NAME}}"
-              class="mt-5 pt-2 mx-3 img-fluid"
+              class="my-5 pt-2 mx-3 img-fluid"
               id="main_product_image"
             />
           </div>
@@ -337,32 +337,36 @@
             >
               Add A4 Print to Basket
             </button>
-            <div class="row gap-1 my-4 ms-2">
-              <img
-                src="/images/1. Leopard.jpg"
-                alt=""
+            <section class="alternatives">
+              <h2>You may also like</h2>
+              <div class="row alternatives-grid">
+                {{ALTERNATIVE_PRODUCTS}}
+                <!-- <img
+                src="{{ALT_PRODUCT_URL_1}}"
+                alt="{{NAME}}"
                 class=""
                 id="img-thumbnail"
               />
               <img
-                src="/images/1. Leopard.jpg"
-                alt=""
+                src="{{ALT_PRODUCT_URL_2}}"
+                alt="{{NAME}}"
                 class=""
                 id="img-thumbnail"
               />
               <img
-                src="/images/1. Leopard.jpg"
-                alt=""
+                src="{{ALT_PRODUCT_URL_3}}"
+                alt="{{NAME}}"
                 class=""
                 id="img-thumbnail"
               />
               <img
-                src="/images/1. Leopard.jpg"
-                alt=""
+                src="{{ALT_PRODUCT_URL_4}}"
+                alt="{{NAME}}"
                 class=""
                 id="img-thumbnail"
-              />
-            </div>
+              /> -->
+              </div>
+            </section>
           </div>
         </div>
       </main>

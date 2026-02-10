@@ -23,6 +23,30 @@ products.forEach((product) => {
     .replace(/{{LONG_DESCRIPTION}}/g, product.longDescription)
     .replace(/{{IMAGE_URL}}/g, product.imageUrls[0]);
 
+  const alternatives = products
+    .filter((p) => p.slug !== product.slug)
+    .slice(0, 4);
+
+  let alternativesHtml = "";
+
+  alternatives.forEach((alt) => {
+    alternativesHtml += `
+      <div
+        class="alternative-card"
+        onclick="window.location.href='/products/${alt.slug}.html'"
+      >
+        <img
+          src="/images/${alt.image}"
+          alt="${alt.name}"
+          class="alternative-image"
+        />
+        <h3>${alt.name}</h3>
+        <p class="alternative-description">${alt.description}</p>
+      </div>`;
+  });
+
+  html = html.replace("{{ALTERNATIVE_PRODUCTS}}", alternativesHtml);
+
   fs.writeFileSync(path.join(outputDir, `${product.slug}.html`), html);
 });
 

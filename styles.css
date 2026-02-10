@@ -1586,6 +1586,34 @@ div.dropdown-shop > div.dropdown-col {
 }
 
 #img-thumbnail {
-  height: 19vh !important;
-  width: auto !important;
+  height: 100px !important;
+  width: 125px !important;
+  cursor: pointer;
+}
+
+.alternatives {
+  margin-top: 4rem;
+}
+
+.alternative-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.alternative-card {
+  cursor: pointer;
+  border: 1px solid #ddd;
+  padding: 1rem;
+  transition: transform 0.2s ease;
+}
+
+.alternative-card:hover {
+  transform: translateY(-4px);
+}
+
+.alternative-image {
+  width: 100%;
+  height: auto;
+  margin-bottom: 0.5rem;
 }
