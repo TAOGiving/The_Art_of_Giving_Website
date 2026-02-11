@@ -26,7 +26,7 @@ const products = [
     `Beautiful A4 Giclee Print of Maximus`,
     "P1004A24",
     54.95,
-    "This is the short description",
+    "A4 Giclee Print of Maximus, printed on high-quality paper with vibrant colors. Perfect for framing and displaying in your home or office.",
     `This is the long description`,
     [
       "/images/Black and White.jpg",
