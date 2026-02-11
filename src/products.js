@@ -41,7 +41,7 @@ const products = [
     `Beautiful A3 Giclee Print of Maximus`,
     "P1004A23",
     64.95,
-    "This is the short description",
+    "A3 Giclee Print of Maximus, printed on high-quality paper with vibrant colors. Perfect for framing and displaying in your home or office.",
     `This is the long description`,
     [
       "/images/Black and White.jpg",
@@ -56,7 +56,7 @@ const products = [
     `Beautiful A2 Giclee Print of Maximus`,
     "P1004A22",
     74.95,
-    "This is the short description",
+    "A2 Giclee Print of Maximus, printed on high-quality paper with vibrant colors. Perfect for framing and displaying in your home or office.",
     `This is the long description`,
     [
       "/images/Black and White.jpg",
@@ -71,7 +71,7 @@ const products = [
     `Beautiful A1 Giclee Print of Maximus`,
     "P1004A21",
     84.95,
-    "This is the short description",
+    "A1 Giclee Print of Maximus, printed on high-quality paper with vibrant colors. Perfect for framing and displaying in your home or office.",
     `This is the long description`,
     [
       "/images/Black and White.jpg",
