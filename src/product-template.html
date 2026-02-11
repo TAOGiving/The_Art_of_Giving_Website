@@ -338,7 +338,7 @@
               Add A4 Print to Basket
             </button>
             <section class="alternatives">
-              <h2>You may also like</h2>
+              <h4>You may also like</h4>
               <div class="row alternatives-grid">
                 {{ALTERNATIVE_PRODUCTS}}
                 <!-- <img
@@ -682,6 +682,11 @@
     <script src="index.js"></script>
     <script src="build.js"></script>
     <script src="shop.js"></script>
+    <script>
+      function goToProduct(slug) {
+        window.location.href = `${window.location.origin}/dist/products/${slug}.html`;
+      }
+    </script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"

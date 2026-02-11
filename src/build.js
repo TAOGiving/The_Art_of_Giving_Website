@@ -33,7 +33,7 @@ products.forEach((product) => {
     alternativesHtml += `
       <div
         class="alternative-card"
-        onclick="window.location.href='/products/${alt.slug}.html'"
+        onclick="goToProduct('${alt.slug}')"
       >
         <img
           src="/images/${alt.imageUrls[0].split("/").pop()}"

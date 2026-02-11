@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Beautiful Giclee Print of Maximus</title>
+    <title>Beautiful A4 Giclee Print of Maximus</title>
     <meta property="og:url" content="https://www.alexwilliamsartist.co.uk" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Alex Williams - The Art of Giving" />
@@ -310,7 +310,7 @@
           <div class="col-6">
             <img
               src="/images/Black and White.jpg"
-              alt="Beautiful Giclee Print of Maximus"
+              alt="Beautiful A4 Giclee Print of Maximus"
               class="my-5 pt-2 mx-3 img-fluid"
               id="main_product_image"
             />
@@ -319,7 +319,7 @@
             <h1
               class="primary_accent font_family justify-content-center align-content-center text-center mt-5 mb-3"
             >
-              Beautiful Giclee Print of Maximus
+              Beautiful A4 Giclee Print of Maximus
             </h1>
             <p class="text_accent">This is the short description</p>
             <p>This is the long description</p>
@@ -330,7 +330,7 @@
               id="addToBasketBtn"
               onclick="
                               addToCart(
-                                'Beautiful Giclee Print of Maximus',
+                                'Beautiful A4 Giclee Print of Maximus',
                                 54.95
                               )
                             "
@@ -338,12 +338,12 @@
               Add A4 Print to Basket
             </button>
             <section class="alternatives">
-              <h2>You may also like</h2>
+              <h4>You may also like</h4>
               <div class="row alternatives-grid">
                 
       <div
         class="alternative-card"
-        onclick="window.location.href='/products/MaximusA3GicleePrints.html'"
+        onclick="goToProduct('MaximusA3GicleePrints')"
       >
         <img
           src="/images/Black and White.jpg"
@@ -355,7 +355,7 @@
       </div>
       <div
         class="alternative-card"
-        onclick="window.location.href='/products/MaximusA2GicleePrints.html'"
+        onclick="goToProduct('MaximusA2GicleePrints')"
       >
         <img
           src="/images/Black and White.jpg"
@@ -367,7 +367,7 @@
       </div>
       <div
         class="alternative-card"
-        onclick="window.location.href='/products/MaximusA1GicleePrints.html'"
+        onclick="goToProduct('MaximusA1GicleePrints')"
       >
         <img
           src="/images/Black and White.jpg"
@@ -379,25 +379,25 @@
       </div>
                 <!-- <img
                 src="{{ALT_PRODUCT_URL_1}}"
-                alt="Beautiful Giclee Print of Maximus"
+                alt="Beautiful A4 Giclee Print of Maximus"
                 class=""
                 id="img-thumbnail"
               />
               <img
                 src="{{ALT_PRODUCT_URL_2}}"
-                alt="Beautiful Giclee Print of Maximus"
+                alt="Beautiful A4 Giclee Print of Maximus"
                 class=""
                 id="img-thumbnail"
               />
               <img
                 src="{{ALT_PRODUCT_URL_3}}"
-                alt="Beautiful Giclee Print of Maximus"
+                alt="Beautiful A4 Giclee Print of Maximus"
                 class=""
                 id="img-thumbnail"
               />
               <img
                 src="{{ALT_PRODUCT_URL_4}}"
-                alt="Beautiful Giclee Print of Maximus"
+                alt="Beautiful A4 Giclee Print of Maximus"
                 class=""
                 id="img-thumbnail"
               /> -->
@@ -718,6 +718,11 @@
     <script src="index.js"></script>
     <script src="build.js"></script>
     <script src="shop.js"></script>
+    <script>
+      function goToProduct(slug) {
+        window.location.href = `${window.location.origin}/dist/products/${slug}.html`;
+      }
+    </script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
