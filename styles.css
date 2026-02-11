@@ -1593,18 +1593,23 @@ div.dropdown-shop > div.dropdown-col {
 
 .alternatives {
   margin-top: 4rem;
+  margin-left: 20px;
 }
 
 .alternative-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(20%, 1fr));
+  gap: 1rem;
 }
 
 .alternative-card {
   cursor: pointer;
-  border: 1px solid #ddd;
+  /* border: 1px solid #ddd; */
+  /* background-color: rgba(255, 255, 255, 0.397); */
   padding: 1rem;
+  width: 25%;
+  border-radius: 8px;
+  height: auto;
   transition: transform 0.2s ease;
 }
 
@@ -1614,6 +1619,9 @@ div.dropdown-shop > div.dropdown-col {
 
 .alternative-image {
   width: 100%;
-  height: auto;
+  aspect-ratio: 1 / 1;
   margin-bottom: 0.5rem;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
 }

@@ -36,13 +36,14 @@ products.forEach((product) => {
         onclick="window.location.href='/products/${alt.slug}.html'"
       >
         <img
-          src="/images/${alt.image}"
+          src="/images/${alt.imageUrls[0].split("/").pop()}"
           alt="${alt.name}"
           class="alternative-image"
         />
-        <h3>${alt.name}</h3>
-        <p class="alternative-description">${alt.description}</p>
+        <p>${alt.name}</p>
+
       </div>`;
+    // console.log(alt);
   });
 
   html = html.replace("{{ALTERNATIVE_PRODUCTS}}", alternativesHtml);
