@@ -2,12 +2,13 @@
 
 let cart = JSON.parse(localStorage.getItem("cart")) || {};
 
-function addToCart(item, price) {
+function addToCart(item, price, productCode) {
   if (cart[item]) {
     cart[item].quantity += 1;
   } else {
     cart[item] = {
       price: price,
+      productCode: productCode,
       quantity: 1,
     };
   }
