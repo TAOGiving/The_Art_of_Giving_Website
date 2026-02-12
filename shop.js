@@ -1,11 +1,20 @@
 //Update cart with object
 
-const cart = {};
+let cart = JSON.parse(localStorage.getItem("cart")) || {};
 
 function addToCart(item, price) {
   if (cart[item]) {
     cart[item].quantity += 1;
-  } else cart[item] = { price: price, quantity: 1 };
+  } else {
+    cart[item] = {
+      price: price,
+      quantity: 1,
+    };
+  }
+
+  // Save the updated cart to localStorage
+  localStorage.setItem("cart", JSON.stringify(cart));
+
   updateCart();
 }
 
@@ -19,6 +28,7 @@ function removeFromCart(item) {
     if (cart[item].quantity <= 0) {
       delete cart[item];
     }
+    localStorage.setItem("cart", JSON.stringify(cart));
     updateCart();
   }
 }
@@ -30,6 +40,7 @@ function clearCart() {
     totalItemsDiv.className = "cart-item";
     totalItemsDiv.innerHTML = `<span class="badge bg-primary rounded-pill" id="totalQuantity"
     >Total Items: 0</span`;
+    localStorage.clear();
   }
   updateCart();
 }
@@ -75,9 +86,7 @@ function updateCart() {
   const totalDiv = document.createElement("div");
   const cartBtn = document.getElementById("cartBtn");
   totalDiv.className = "cart-item";
-  totalDiv.innerHTML = `<h4><strong class="badge bg-success rounded-pill mt-3">Total: £${total.toFixed(
-    2,
-  )}</strong></h4>`;
+  totalDiv.innerHTML = `<h4><strong class="badge bg-success rounded-pill mt-3">Total: £${total.toFixed(2)}</strong></h4>`;
   cartBtn.innerHTML = `<button
   class="btn btn-success d-inline-flex justify-content-center align-items-center p-1"
   type="button"
@@ -103,37 +112,68 @@ function updateCart() {
   cartDiv.appendChild(totalDiv);
 }
 
+//*********************************************/
+// Update Basket on all pages from Local Storage
+//*********************************************/
+
+// document.addEventListener("DOMContentLoaded", function () {
+//   if (window.location.pathname !== "/Structure/checkout.html") {
+//     const localBasket = JSON.parse(localStorage.getItem("cart")) || [];
+
+//     function updateBasket() {
+//       localBasket.forEach((itemDetails) => {
+//         if (!itemDetails) return;
+
+//         const { product, price, image, productCode } = itemDetails;
+
+//         addToCart(product, productCode, price, image);
+//       });
+
+//       console.log("Basket Updated");
+//     }
+
+//     updateBasket();
+//   }
+// });
+
+document.addEventListener("DOMContentLoaded", function () {
+  if (Object.keys(cart).length > 0) {
+    updateCart();
+  }
+  console.log("Cart loaded:", cart);
+});
+
 // Paint Product size updater when clicked the price and buttons update
-const buyNowBtn = document.getElementById("buyNowBtn");
-const addToBasketBtn = document.getElementById("addToBasketBtn");
-const price = document.getElementById("productPrice");
+// const buyNowBtn = document.getElementById("buyNowBtn");
+// const addToBasketBtn = document.getElementById("addToBasketBtn");
+// const price = document.getElementById("productPrice");
 
-let basketDescription = "";
-function productA4Update() {
-  buyNowBtn.textContent = "Buy A4 Now";
-  addToBasketBtn.textContent = "Add A4 To Basket";
-  basketDescription = "A4 Giclee Printed";
-  price.textContent = "£54.95";
-}
-function productA3Update() {
-  buyNowBtn.textContent = "Buy A3 Now";
-  addToBasketBtn.textContent = "Add A3 To Basket";
-  basketDescription = "A3 Giclee Printed";
-  price.textContent = "£64.95";
-}
-function productA2Update() {
-  buyNowBtn.textContent = "Buy A2 Now";
-  addToBasketBtn.textContent = "Add A2 To Basket";
-  basketDescription = "A2 Giclee Printed";
-  price.textContent = "£74.95";
-}
-function productA1Update() {
-  buyNowBtn.textContent = "Buy A1 Now";
-  addToBasketBtn.textContent = "Add A1 To Basket";
-  basketDescription = "A1 Giclee Printed";
+// let basketDescription = "";
+// function productA4Update() {
+//   buyNowBtn.textContent = "Buy A4 Now";
+//   addToBasketBtn.textContent = "Add A4 To Basket";
+//   basketDescription = "A4 Giclee Printed";
+//   price.textContent = "£54.95";
+// }
+// function productA3Update() {
+//   buyNowBtn.textContent = "Buy A3 Now";
+//   addToBasketBtn.textContent = "Add A3 To Basket";
+//   basketDescription = "A3 Giclee Printed";
+//   price.textContent = "£64.95";
+// }
+// function productA2Update() {
+//   buyNowBtn.textContent = "Buy A2 Now";
+//   addToBasketBtn.textContent = "Add A2 To Basket";
+//   basketDescription = "A2 Giclee Printed";
+//   price.textContent = "£74.95";
+// }
+// function productA1Update() {
+//   buyNowBtn.textContent = "Buy A1 Now";
+//   addToBasketBtn.textContent = "Add A1 To Basket";
+//   basketDescription = "A1 Giclee Printed";
 
-  price.textContent = "£94.95";
-}
+//   price.textContent = "£94.95";
+// }
 
 // function product960mlUpdate() {
 //   buyNowBtn.textContent = "Buy 960ml Now";
@@ -185,10 +225,10 @@ class Product {
     longDescription,
     imageUrls,
   ) {
-    this.slug = slug;
     this.name = name;
     this.ProductCode = productCode;
     this.price = price;
+    this.slug = slug;
     this.description = description;
     this.longDescription = longDescription;
     this.imageUrls = imageUrls; //Array of image URLS
@@ -252,12 +292,6 @@ class Product {
     bnButton.classList.add("mx-2");
     bnButton.classList.add("handlee-regular");
     bnButton.textContent = "More Info";
-    bnButton.onclick = () => {
-      openProductPage(`dist/products/${this.slug}`);
-    };
-    function openProductPage(slug) {
-      window.location.href = `${slug}.html`;
-    }
     card.appendChild(bnButton);
 
     // Event listener for opening the modal
