@@ -296,23 +296,23 @@ class Product {
     card.appendChild(bnButton);
 
     // Event listener for opening the modal
-    // img.addEventListener("click", () => {
-    //   this.openModal();
-    // });
+    img.addEventListener("click", () => {
+      this.openModal();
+    });
 
-    // title.addEventListener("click", () => {
-    //   this.openModal();
-    // });
+    title.addEventListener("click", () => {
+      this.openModal();
+    });
 
-    // desc.addEventListener("click", () => {
-    //   this.openModal();
-    // });
-    // price.addEventListener("click", () => {
-    //   this.openModal();
-    // });
-    // bnButton.addEventListener("click", () => {
-    //   this.openModal();
-    // });
+    desc.addEventListener("click", () => {
+      this.openModal();
+    });
+    price.addEventListener("click", () => {
+      this.openModal();
+    });
+    bnButton.addEventListener("click", () => {
+      this.openModal();
+    });
 
     return card;
   }
