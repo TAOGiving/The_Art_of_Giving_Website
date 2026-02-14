@@ -41,7 +41,7 @@ const products = [
     `Beautiful A3 Giclee Print of Maximus`,
     "P1004A23",
     64.95,
-    "A3 Giclee Print of Maximus, printed on high-quality paper with vibrant colors. Perfect for framing and displaying in your home or office.",
+    "A3 Giclee Print of Maximus, printed on high-quality paper with vibrant colors. Perfect for framing and displaying in your home or office. Testing, Testing, Testing, Testing, Testing, Testing, Testing, Testing, Testing, Testing, Testing, Testing, Testing, Testing, Testing, Testing, Testing, Testing, Testing, Testing, Testing, Testing, Testing, Testing, Testing, Testing",
     `This is the long description`,
     [
       "/images/Black and White.jpg",
