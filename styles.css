@@ -1340,10 +1340,11 @@ video {
   margin: 5% auto;
   /* padding: 20px; */
   /* border: 1px solid #888; */
-  width: 85dvw;
+  width: 85vw;
   /* max-width: fit-content; */
   /* max-height: fit-content; */
-  height: 85dvh;
+  height: auto;
+  max-height: 85vh;
   border-radius: 10px;
   text-align: start;
   overflow: hidden;
