@@ -22,7 +22,11 @@ products.forEach((product) => {
     .replace(/{{DESCRIPTION}}/g, product.description)
     .replace(/{{LONG_DESCRIPTION}}/g, product.longDescription)
     .replace(/{{IMAGE_URL}}/g, product.imageUrls[0])
-    .replace(/{{PRODUCT_CODE}}/g, product.ProductCode);
+    .replace(/{{PRODUCT_CODE}}/g, product.ProductCode)
+    .replace(/{{IMAGE_URL_2}}/g, product.imageUrls[1])
+    .replace(/{{IMAGE_URL_3}}/g, product.imageUrls[2])
+    .replace(/{{IMAGE_URL_4}}/g, product.imageUrls[3])
+    .replace(/{{IMAGE_URL_5}}/g, product.imageUrls[4]);
 
   const alternatives = products
     .filter((p) => p.slug !== product.slug)
