@@ -572,3 +572,18 @@ document.addEventListener("DOMContentLoaded", function () {
     observer.observe(card);
   });
 });
+
+//Main image updater for Large Product Image
+
+function updateMainImage(imageSrc) {
+  const displayedImage = document.getElementById("main_product_image");
+
+  // Add the hidden class to fade out the image
+  displayedImage.classList.add("hiddenfade");
+
+  // Use a timeout to wait for the fade-out transition to finish
+  setTimeout(() => {
+    displayedImage.src = imageSrc; // Change the image source
+    displayedImage.classList.remove("hiddenfade"); // Fade it in again
+  }, 500); // This should match the transition duration in CSS
+}
