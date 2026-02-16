@@ -23,11 +23,11 @@ class Product {
 const products = [
   new Product(
     "MaximusA4GicleePrints",
-    `Beautiful A4 Giclee Print of Maximus`,
+    "Beautiful A4 Giclee Print of Maximus",
     "P1004A24",
     54.95,
     "A4 Giclee Print of Maximus, printed on high-quality paper with vibrant colors. Perfect for framing and displaying in your home or office.",
-    `This is the long description`,
+    "This is a long Description",
     [
       "/images/Black and White.jpg",
       "/images/Black and White.jpg",
@@ -36,21 +36,7 @@ const products = [
       "/images/Black and White.jpg",
     ],
   ),
-  new Product(
-    "MaximusA3GicleePrints",
-    `Beautiful A3 Giclee Print of Maximus`,
-    "P1004A23",
-    64.95,
-    "A3 Giclee Print of Maximus, printed on high-quality paper with vibrant colors. Perfect for framing and displaying in your home or office. Testing, Testing, Testing, Testing, Testing, Testing, Testing, Testing, Testing, Testing, Testing, Testing, Testing, Testing, Testing, Testing, Testing, Testing, Testing, Testing, Testing, Testing, Testing, Testing, Testing, Testing",
-    `This is the long description`,
-    [
-      "/images/barn owl.jpg",
-      "/images/cheetah.jpg",
-      "/images/Fox.jpg",
-      "/images/Parrot.jpg",
-      "/images/Black and White.jpg",
-    ],
-  ),
+
   new Product(
     "MaximusA2GicleePrints",
     `Beautiful A2 Giclee Print of Maximus`,
