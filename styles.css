@@ -1589,7 +1589,7 @@ div.dropdown-shop > div.dropdown-col {
 #main_product_image {
   border-radius: 20px !important;
   width: auto;
-  height: 400px;
+  height: 50%;
   object-fit: cover;
   cursor: pointer;
 }
