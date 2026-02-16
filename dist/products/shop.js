@@ -587,3 +587,23 @@ function updateMainImage(imageSrc) {
     displayedImage.classList.remove("hiddenfade"); // Fade it in again
   }, 500); // This should match the transition duration in CSS
 }
+
+/* -------- Modal -------- */
+function openModal(event) {
+  // Get the clicked image
+  const clickedImage = event.target;
+
+  // Get the modal image element
+  const modalImg = document.getElementById("lightboxImage");
+
+  // Update the modal image source
+  modalImg.src = clickedImage.src;
+
+  // Show modal
+  bootstrapModal.show();
+  modalOpen = true;
+}
+
+document
+  .getElementById("main_product_image")
+  .addEventListener("click", openModal);

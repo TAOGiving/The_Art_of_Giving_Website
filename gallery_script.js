@@ -132,7 +132,7 @@ function animate() {
 
     // apply transform
     const transform = `perspective(1200px) rotateX(${cur.rx.toFixed(
-      3
+      3,
     )}deg) rotateY(${cur.ry.toFixed(3)}deg) scale(${cur.s.toFixed(4)})`;
     w.style.transform = transform;
 
@@ -170,7 +170,7 @@ if (!isTouch) {
 
 /* -------- Modal / Lightbox logic (prev/next/keyboard) -------- */
 const allImages = Array.from(
-  document.querySelectorAll(".tilt-wrapper .img-inner")
+  document.querySelectorAll(".tilt-wrapper .img-inner"),
 );
 
 allImages.forEach((img, idx) => {
