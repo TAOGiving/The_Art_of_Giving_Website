@@ -1594,6 +1594,16 @@ div.dropdown-shop > div.dropdown-col {
   cursor: pointer;
 }
 
+@media (max-width: 512px) {
+  #main_product_image {
+    border-radius: 20px !important;
+    width: auto;
+    height: 40vh;
+    object-fit: cover;
+    cursor: pointer;
+  }
+}
+
 #img-thumbnail {
   height: 15vh !important;
   width: 7.5vw !important;
