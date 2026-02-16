@@ -1607,7 +1607,7 @@ div.dropdown-shop > div.dropdown-col {
 #img-thumbnail {
   height: 15vh !important;
   width: 7.5vw !important;
-  cursor: pointer;
+  cursor: progress;
   border-radius: 15%;
   object-fit: cover;
   padding: 0;
