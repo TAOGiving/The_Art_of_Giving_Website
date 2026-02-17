@@ -600,8 +600,8 @@ function openModal(event) {
   modalImg.src = clickedImage.src;
 
   // Show modal
-  bootstrapModal.show();
-  modalOpen = true;
+  // bootstrapModal.show();
+  //   modalOpen = true;
 }
 
 document

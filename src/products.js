@@ -38,6 +38,22 @@ const products = [
   ),
 
   new Product(
+    "MaximusA3GicleePrints",
+    "Beautiful A3 Giclee Print of Maximus",
+    "P1004A29",
+    64.95,
+    "A3 Giclee Print of Maximus, printed on high-quality paper with vibrant colors. Perfect for framing and displaying in your home or office. TSTSTSTSTSTSTSTSTS tststststst tststs tststs tstst ststs stststststst",
+    "This is a long Description",
+    [
+      "/images/barn owl.jpg",
+      "/images/Black and White.jpg",
+      "/images/cheetah.jpg",
+      "/images/Fox.jpg",
+      "/images/Parrot.jpg",
+    ],
+  ),
+
+  new Product(
     "MaximusA2GicleePrints",
     `Beautiful A2 Giclee Print of Maximus`,
     "P1004A22",
