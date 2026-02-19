@@ -26,7 +26,8 @@ products.forEach((product) => {
     .replace(/{{IMAGE_URL_2}}/g, product.imageUrls[1])
     .replace(/{{IMAGE_URL_3}}/g, product.imageUrls[2])
     .replace(/{{IMAGE_URL_4}}/g, product.imageUrls[3])
-    .replace(/{{IMAGE_URL_5}}/g, product.imageUrls[4]);
+    .replace(/{{IMAGE_URL_5}}/g, product.imageUrls[4])
+    .replace(/{{PRODUCT_URL}}/g, product.productURL);
 
   const alternatives = products
     .filter((p) => p.slug !== product.slug)

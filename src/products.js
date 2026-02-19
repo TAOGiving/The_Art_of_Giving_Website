@@ -8,6 +8,7 @@ class Product {
     longDescription,
     imageUrls,
     // altProducts,
+    productURL,
   ) {
     this.slug = slug;
     this.name = name;
@@ -17,6 +18,7 @@ class Product {
     this.longDescription = longDescription;
     this.imageUrls = imageUrls; //Array of image URLS
     // this.altProducts = altProducts; //Array of alternative products
+    this.productURL = productURL;
   }
 }
 
@@ -35,6 +37,7 @@ const products = [
       "/images/Black and White.jpg",
       "/images/Black and White.jpg",
     ],
+    "https://square.link/u/DMuQ7K3Q",
   ),
 
   new Product(
@@ -51,6 +54,7 @@ const products = [
       "/images/Fox.jpg",
       "/images/Parrot.jpg",
     ],
+    "https://square.link/u/DMuQ7K3Q",
   ),
 
   new Product(
@@ -67,6 +71,7 @@ const products = [
       "/images/Black and White.jpg",
       "/images/Black and White.jpg",
     ],
+    "https://square.link/u/DMuQ7K3Q",
   ),
   new Product(
     "MaximusA1GicleePrints",
@@ -82,6 +87,7 @@ const products = [
       "/images/Black and White.jpg",
       "/images/Black and White.jpg",
     ],
+    "https://square.link/u/DMuQ7K3Q",
   ),
 ];
 
