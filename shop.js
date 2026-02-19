@@ -225,6 +225,7 @@ class Product {
     description,
     longDescription,
     imageUrls,
+    productURL,
   ) {
     this.name = name;
     this.ProductCode = productCode;
@@ -235,6 +236,7 @@ class Product {
     this.imageUrls = imageUrls; //Array of image URLS
     // this.baseImage = "Images/Heart logo.png";
     // this.charLimits = charLimits;
+    this.productURL = productURL;
   }
 
   renderCard() {
@@ -272,20 +274,21 @@ class Product {
     price.textContent = `£${this.price}`;
     card.appendChild(price);
 
-    const atbButton = document.createElement("button");
+    const atbButton = document.createElement("a");
     atbButton.classList.add("btn");
     atbButton.classList.add("primary_accent_btn");
     atbButton.classList.add("btn-sm");
     atbButton.classList.add("mb-2");
     atbButton.classList.add("mx-2");
     atbButton.classList.add("handlee-regular");
-    atbButton.textContent = "Add to Basket";
-    atbButton.onclick = () => {
-      addToCart(this.name, this.price, this.imageUrls[0]);
-    };
+    atbButton.textContent = "Buy Now";
+    // atbButton.onclick = () => {
+    //   addToCart(this.name, this.price, this.imageUrls[0]);
+    // };
+    atbButton.href = `${this.productURL}`;
     card.appendChild(atbButton);
 
-    const bnButton = document.createElement("button");
+    const bnButton = document.createElement("a");
     bnButton.classList.add("btn");
     bnButton.classList.add("btn-outline-secondary");
     bnButton.classList.add("btn-sm");
@@ -293,26 +296,27 @@ class Product {
     bnButton.classList.add("mx-2");
     bnButton.classList.add("handlee-regular");
     bnButton.textContent = "More Info";
+    bnButton.href = `dist/products/${this.slug}.html`; // dynamic URL
     card.appendChild(bnButton);
 
     // Event listener for opening the modal
-    img.addEventListener("click", () => {
-      this.openModal();
-    });
+    // img.addEventListener("click", () => {
+    //   this.openModal();
+    // });
 
-    title.addEventListener("click", () => {
-      this.openModal();
-    });
+    // title.addEventListener("click", () => {
+    //   this.openModal();
+    // });
 
-    desc.addEventListener("click", () => {
-      this.openModal();
-    });
-    price.addEventListener("click", () => {
-      this.openModal();
-    });
-    bnButton.addEventListener("click", () => {
-      this.openModal();
-    });
+    // desc.addEventListener("click", () => {
+    //   this.openModal();
+    // });
+    // price.addEventListener("click", () => {
+    //   this.openModal();
+    // });
+    // bnButton.addEventListener("click", () => {
+    //   this.openModal();
+    // });
 
     return card;
   }
@@ -527,7 +531,7 @@ class Product {
 
 const products = [
   new Product(
-    "MaximusGicleePrints",
+    "MaximusA3GicleePrints",
     `Beautiful<strong> A4 </strong>Giclee Print of Maximus<span class="d-none">Search Option</span>`,
     "P1004A24",
     54.95,
@@ -541,6 +545,7 @@ const products = [
       "images/Black and White.jpg",
       "images/Black and White.jpg",
     ],
+    "https://square.link/u/DMuQ7K3Q",
   ),
 ];
 
