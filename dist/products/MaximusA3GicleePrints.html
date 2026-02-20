@@ -169,14 +169,15 @@
               <li class="nav-item">
                 <a
                   class="nav-link link-body-emphasis px-2 nav_link_forward"
-                  aria-current="page"
+                  href="/index.html"
                   data-full="Why not make your home a little special"
+                  style="cursor: pointer"
                   >Home</a
                 >
               </li>
               <li class="nav-item">
                 <a
-                  href="about.html"
+                  href="/about.html"
                   class="nav-link link-body-emphasis px-2 short_text nav_link_forward"
                   data-full="Who are you...... I'm Battman (don't sue me pls)"
                   >Who</a
@@ -184,7 +185,7 @@
               </li>
               <li class="nav-item">
                 <a
-                  href="gallery.html"
+                  href="/gallery.html"
                   class="nav-link link-body-emphasis px-2 nav_link_forward"
                   data-full="See the work below being created"
                   >What</a
@@ -192,7 +193,7 @@
               </li>
               <li class="nav-item">
                 <a
-                  href="contact.html"
+                  href="/contact.html"
                   class="nav-link link-body-emphasis px-2 nav_link_forward"
                   data-full="Where all my art takes place"
                   >Where</a
@@ -200,7 +201,7 @@
               </li>
               <li class="nav-item">
                 <a
-                  href="charity.html"
+                  href="/charity.html"
                   class="nav-link link-body-emphasis px-2 nav_link_forward"
                   data-full="Your purchases help make a kinder world"
                   >Why</a
@@ -208,7 +209,7 @@
               </li>
               <li class="nav-item">
                 <a
-                  href="process.html"
+                  href="/process.html"
                   class="nav-link link-body-emphasis px-2 nav_link_forward"
                   data-full="I am more than happy to paint for you"
                   >How</a
@@ -216,7 +217,7 @@
               </li>
               <li class="nav-item">
                 <a
-                  href="DonationsPage.html"
+                  href="/DonationsPage.html"
                   class="nav-link link-body-emphasis px-2 nav_link_forward"
                   data-full="Thank you for all your support"
                   >Support</a
@@ -224,13 +225,20 @@
               </li>
               <li class="nav-item">
                 <a
-                  href="DonationsPage.html"
-                  class="nav-link link-body-emphasis px-2 nav_link_forward nav-link_active active"
-                  data-full="Thank you for all your support"
-                  style="cursor: not-allowed"
+                  href="/ShopPage.html"
+                  class="nav-link link-body-emphasis px-2 nav_link_forward"
+                  data-full="Back to all products"
                   >Shop</a
                 >
               </li>
+              <!-- <li class="nav-item">
+                <a
+                  class="nav-link link-body-emphasis px-2 nav_link_forward nav-link_active active"
+                  data-full="Your here so you might as well stay"
+                  style="cursor: not-allowed"
+                  >Current Product - MaximusA3GicleePrints</a
+                >
+              </li> -->
               <!-- <li class="nav-item">
               <a
                 href="calendar.html"
@@ -397,7 +405,12 @@
               Beautiful A3 Giclee Print of Maximus
             </h2>
 
-            <p class="text_accent mx-2">A3 Giclee Print of Maximus, printed on high-quality paper with vibrant colors. Perfect for framing and displaying in your home or office. TSTSTSTSTSTSTSTSTS tststststst tststs tststs tstst ststs stststststst</p>
+            <p class="text_accent mx-2">
+              A3 Giclee Print of Maximus, printed on high-quality paper with
+              vibrant colors. Perfect for framing and displaying in your home or
+              office. TSTSTSTSTSTSTSTSTS tststststst tststs tststs tstst ststs
+              stststststst
+            </p>
             <!-- <p>This is a long Description</p> -->
 
             <h4 class="text-success">£64.95</h4>
@@ -429,55 +442,50 @@
             <section class="alternatives mt-2">
               <!-- <h6>You may also like</h6> -->
               <div class="row alternatives-grid">
-                
-      <div
-        class="alternative-card"
-        onclick="goToProduct('MaximusA4GicleePrints')"
-      >
-        <img
-          src="/images/Black and White.jpg"
-          alt="Beautiful A4 Giclee Print of Maximus"
-          class="alternative-image"
-        />
-        <p>Beautiful A4 Giclee Print of Maximus</p>
-
-      </div>
-      <div
-        class="alternative-card"
-        onclick="goToProduct('MaximusA2GicleePrints')"
-      >
-        <img
-          src="/images/Black and White.jpg"
-          alt="Beautiful A2 Giclee Print of Maximus"
-          class="alternative-image"
-        />
-        <p>Beautiful A2 Giclee Print of Maximus</p>
-
-      </div>
-      <div
-        class="alternative-card"
-        onclick="goToProduct('MaximusA1GicleePrints')"
-      >
-        <img
-          src="/images/Black and White.jpg"
-          alt="Beautiful A1 Giclee Print of Maximus"
-          class="alternative-image"
-        />
-        <p>Beautiful A1 Giclee Print of Maximus</p>
-
-      </div>
-      <div
-        class="alternative-card"
-        onclick="goToProduct('MaximusA5GicleePrints')"
-      >
-        <img
-          src="/images/Black and White.jpg"
-          alt="Beautiful A5 Giclee Print of Maximus"
-          class="alternative-image"
-        />
-        <p>Beautiful A5 Giclee Print of Maximus</p>
-
-      </div>
+                <div
+                  class="alternative-card"
+                  onclick="goToProduct('MaximusA4GicleePrints')"
+                >
+                  <img
+                    src="/images/Black and White.jpg"
+                    alt="Beautiful A4 Giclee Print of Maximus"
+                    class="alternative-image"
+                  />
+                  <p>Beautiful A4 Giclee Print of Maximus</p>
+                </div>
+                <div
+                  class="alternative-card"
+                  onclick="goToProduct('MaximusA2GicleePrints')"
+                >
+                  <img
+                    src="/images/Black and White.jpg"
+                    alt="Beautiful A2 Giclee Print of Maximus"
+                    class="alternative-image"
+                  />
+                  <p>Beautiful A2 Giclee Print of Maximus</p>
+                </div>
+                <div
+                  class="alternative-card"
+                  onclick="goToProduct('MaximusA1GicleePrints')"
+                >
+                  <img
+                    src="/images/Black and White.jpg"
+                    alt="Beautiful A1 Giclee Print of Maximus"
+                    class="alternative-image"
+                  />
+                  <p>Beautiful A1 Giclee Print of Maximus</p>
+                </div>
+                <div
+                  class="alternative-card"
+                  onclick="goToProduct('MaximusA5GicleePrints')"
+                >
+                  <img
+                    src="/images/Black and White.jpg"
+                    alt="Beautiful A5 Giclee Print of Maximus"
+                    class="alternative-image"
+                  />
+                  <p>Beautiful A5 Giclee Print of Maximus</p>
+                </div>
                 <!-- <img
                 src="{{ALT_PRODUCT_URL_1}}"
                 alt="Beautiful A3 Giclee Print of Maximus"

@@ -23,6 +23,7 @@ products.forEach((product) => {
     .replace(/{{LONG_DESCRIPTION}}/g, product.longDescription)
     .replace(/{{IMAGE_URL}}/g, product.imageUrls[0])
     .replace(/{{PRODUCT_CODE}}/g, product.ProductCode)
+    .replace(/{{SLUG}}/g, product.slug)
     .replace(/{{IMAGE_URL_2}}/g, product.imageUrls[1])
     .replace(/{{IMAGE_URL_3}}/g, product.imageUrls[2])
     .replace(/{{IMAGE_URL_4}}/g, product.imageUrls[3])
