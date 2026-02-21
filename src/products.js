@@ -9,6 +9,7 @@ class Product {
     imageUrls,
     // altProducts,
     productURL,
+    category,
   ) {
     this.slug = slug;
     this.name = name;
@@ -19,13 +20,14 @@ class Product {
     this.imageUrls = imageUrls; //Array of image URLS
     // this.altProducts = altProducts; //Array of alternative products
     this.productURL = productURL;
+    this.category = category;
   }
 }
 
 const products = [
   new Product(
     "MaximusA4GicleePrints",
-    "Beautiful A4 Giclee Print of Maximus",
+    "Dalmation A4 Giclee Print of Maximus",
     "P1004A24",
     54.95,
     "A4 Giclee Print of Maximus, printed on high-quality paper with vibrant colors. Perfect for framing and displaying in your home or office.",
@@ -38,11 +40,12 @@ const products = [
       "/images/Black and White.jpg",
     ],
     "https://square.link/u/DMuQ7K3Q",
+    "Dalmation",
   ),
 
   new Product(
     "MaximusA3GicleePrints",
-    "Beautiful A3 Giclee Print of Maximus",
+    "Dalmation A3 Giclee Print of Maximus",
     "P1004A29",
     64.95,
     "A3 Giclee Print of Maximus, printed on high-quality paper with vibrant colors. Perfect for framing and displaying in your home or office. TSTSTSTSTSTSTSTSTS tststststst tststs tststs tstst ststs stststststst",
@@ -55,11 +58,12 @@ const products = [
       "/images/Parrot.jpg",
     ],
     "https://square.link/u/DMuQ7K3Q",
+    "Dalmation",
   ),
 
   new Product(
     "MaximusA2GicleePrints",
-    `Beautiful A2 Giclee Print of Maximus`,
+    `Dalmation A2 Giclee Print of Maximus`,
     "P1004A22",
     74.95,
     "A2 Giclee Print of Maximus, printed on high-quality paper with vibrant colors. Perfect for framing and displaying in your home or office.",
@@ -72,10 +76,11 @@ const products = [
       "/images/Black and White.jpg",
     ],
     "https://square.link/u/DMuQ7K3Q",
+    "Dalmation",
   ),
   new Product(
     "MaximusA1GicleePrints",
-    `Beautiful A1 Giclee Print of Maximus`,
+    `Dalmation A1 Giclee Print of Maximus`,
     "P1004A21",
     84.95,
     "A1 Giclee Print of Maximus, printed on high-quality paper with vibrant colors. Perfect for framing and displaying in your home or office.",
@@ -88,12 +93,13 @@ const products = [
       "/images/Black and White.jpg",
     ],
     "https://square.link/u/DMuQ7K3Q",
+    "Dalmation",
   ),
 
   //From here down is all duplicated of above
   new Product(
     "MaximusA5GicleePrints",
-    "Beautiful A5 Giclee Print of Maximus",
+    "Poodle A5 Giclee Print of Maximus",
     "P1004A24",
     54.95,
     "A4 Giclee Print of Maximus, printed on high-quality paper with vibrant colors. Perfect for framing and displaying in your home or office.",
@@ -106,11 +112,12 @@ const products = [
       "/images/Black and White.jpg",
     ],
     "https://square.link/u/DMuQ7K3Q",
+    "Poodle",
   ),
 
   new Product(
     "MaximusA6GicleePrints",
-    "Beautiful A6 Giclee Print of Maximus",
+    "Poodle A6 Giclee Print of Maximus",
     "P1004A29",
     64.95,
     "A3 Giclee Print of Maximus, printed on high-quality paper with vibrant colors. Perfect for framing and displaying in your home or office. TSTSTSTSTSTSTSTSTS tststststst tststs tststs tstst ststs stststststst",
@@ -123,11 +130,12 @@ const products = [
       "/images/Parrot.jpg",
     ],
     "https://square.link/u/DMuQ7K3Q",
+    "Poodle",
   ),
 
   new Product(
     "MaximusA7GicleePrints",
-    `Beautiful A7 Giclee Print of Maximus`,
+    `Poodle A7 Giclee Print of Maximus`,
     "P1004A22",
     74.95,
     "A2 Giclee Print of Maximus, printed on high-quality paper with vibrant colors. Perfect for framing and displaying in your home or office.",
@@ -140,10 +148,11 @@ const products = [
       "/images/Black and White.jpg",
     ],
     "https://square.link/u/DMuQ7K3Q",
+    "Poodle",
   ),
   new Product(
     "MaximusA8GicleePrints",
-    `Beautiful A8 Giclee Print of Maximus`,
+    `Poodle A8 Giclee Print of Maximus`,
     "P1004A21",
     84.95,
     "A1 Giclee Print of Maximus, printed on high-quality paper with vibrant colors. Perfect for framing and displaying in your home or office.",
@@ -156,6 +165,7 @@ const products = [
       "/images/Black and White.jpg",
     ],
     "https://square.link/u/DMuQ7K3Q",
+    "Poodle",
   ),
   new Product(
     "MaximusA9GicleePrints",

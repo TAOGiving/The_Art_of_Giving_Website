@@ -30,9 +30,22 @@ products.forEach((product) => {
     .replace(/{{IMAGE_URL_5}}/g, product.imageUrls[4])
     .replace(/{{PRODUCT_URL}}/g, product.productURL);
 
-  const alternatives = products
-    .filter((p) => p.slug !== product.slug)
-    .slice(0, 4);
+  // First: find same-category products
+  let alternatives = products.filter(
+    (p) => p.category === product.category && p.slug !== product.slug,
+  );
+
+  // If fewer than 4 found, fill with others
+  if (alternatives.length < 4) {
+    const others = products.filter(
+      (p) => p.category !== product.category && p.slug !== product.slug,
+    );
+
+    alternatives = alternatives.concat(others);
+  }
+
+  // Limit to 4
+  alternatives = alternatives.slice(0, 4);
 
   let alternativesHtml = "";
 
