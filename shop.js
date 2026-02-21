@@ -189,7 +189,7 @@ const search = () => {
   const searchBox = document.getElementById("search-item").value.toUpperCase();
   const shopItems = document.getElementById("product-list");
   const product = document.querySelectorAll(".product");
-  const pname = shopItems.getElementsByTagName("h5");
+  const pname = shopItems.getElementsByTagName("h2");
 
   console.log("Search Box", searchBox);
   console.log("shopItems", shopItems);
@@ -197,7 +197,7 @@ const search = () => {
   console.log("pname", pname);
 
   for (let i = 0; i < pname.length; i++) {
-    let match = product[i].getElementsByTagName("h5")[0];
+    let match = product[i].getElementsByTagName("h2")[0];
 
     if (match) {
       let textValue = match.textContent || match.innerHTML;
