@@ -1211,7 +1211,7 @@ video {
   margin: 20px;
   text-align: center;
   background-color: #fff;
-  cursor: pointer;
+  cursor: default;
   transition:
     transform 0.3s ease,
     box-shadow 0.3s ease;
@@ -1224,6 +1224,7 @@ video {
   .product-card {
     margin: 5px;
     font-size: small;
+    cursor: default;
   }
 }
 
@@ -1231,6 +1232,8 @@ video {
   /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
   .product-card {
     font-size: small;
+
+    cursor: default;
   }
 }
 
@@ -1260,6 +1263,7 @@ video {
     height: 364px;
     font-size: small;
     position: relative;
+    cursor: default;
   }
   /* .product-card .btn-warning {
     position: absolute;
@@ -1278,13 +1282,14 @@ video {
     rgba(0, 0, 0, 0.12) 0px 4px 6px,
     rgba(0, 0, 0, 0.17) 0px 12px 13px,
     rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  cursor: default;
 }
 
 /* Image styling */
 .product-card img {
   width: 100%;
   display: block;
-  cursor: pointer;
+  cursor: default;
 }
 
 /* Product name */
@@ -1293,7 +1298,7 @@ video {
   margin: 16px 0;
   color: #333;
   font-weight: bold;
-  cursor: pointer;
+  cursor: default;
 }
 
 /* Product description */
@@ -1302,7 +1307,7 @@ video {
   color: #666;
   padding: 0 15px;
   margin-bottom: 16px;
-  cursor: pointer;
+  cursor: default;
 }
 
 /* Price styling */
@@ -1312,7 +1317,7 @@ video {
   font-weight: bold;
   margin-bottom: 20px;
   display: block;
-  cursor: pointer;
+  cursor: default;
 }
 
 /*****************/

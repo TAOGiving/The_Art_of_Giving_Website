@@ -246,6 +246,7 @@ class Product {
     card.classList.add("col-sm-3");
     card.classList.add("col-6");
     // card.classList.add("m-3");
+    card.href = `dist/products/${this.slug}.html`; // dynamic URL
 
     const img = document.createElement("img");
     // img.src = this.baseImage;
@@ -253,7 +254,10 @@ class Product {
     img.alt = this.name;
     img.id = "product-image";
     img.dataset.src = this.imageUrls[0]; //Display the first image in the card
+
     // img.classList.add("lazy-img");
+    img.href = `dist/products/${this.slug}.html`; // dynamic URL
+
     card.appendChild(img);
     console.log(img.dataset.src);
 
@@ -261,6 +265,8 @@ class Product {
     title.innerHTML = this.name;
     title.classList.add("primary_accent");
     title.classList.add("font_family");
+    title.href = `dist/products/${this.slug}.html`; // dynamic URL
+
     card.appendChild(title);
 
     const desc = document.createElement("p");
@@ -272,6 +278,8 @@ class Product {
     price.classList.add("price");
     price.classList.add("handlee-regular");
     price.textContent = `£${this.price}`;
+    price.href = `dist/products/${this.slug}.html`; // dynamic URL
+
     card.appendChild(price);
 
     const atbButton = document.createElement("a");

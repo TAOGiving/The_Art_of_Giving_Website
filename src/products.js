@@ -134,12 +134,12 @@ const products = [
   ),
 
   new Product(
-    "MaximusA7GicleePrints",
-    `Poodle A7 Giclee Print of Maximus`,
-    "P1004A22",
-    74.95,
-    "A2 Giclee Print of Maximus, printed on high-quality paper with vibrant colors. Perfect for framing and displaying in your home or office.",
-    `This is the long description`,
+    "MaximusA4GicleePrints",
+    "Beautiful A4 Giclee Print of Maximus",
+    "P1004A24",
+    54.95,
+    "A4 Giclee Print of Maximus, printed on high-quality paper with vibrant colors. Perfect for framing and displaying in your home or office.",
+    "This is a long Description",
     [
       "/images/Black and White.jpg",
       "/images/Black and White.jpg",
@@ -148,8 +148,9 @@ const products = [
       "/images/Black and White.jpg",
     ],
     "https://square.link/u/DMuQ7K3Q",
-    "Poodle",
+    "Dalmation",
   ),
+
   new Product(
     "MaximusA8GicleePrints",
     `Poodle A8 Giclee Print of Maximus`,
