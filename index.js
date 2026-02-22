@@ -7422,35 +7422,3 @@ function scrollToFree() {
 }
 
 /* -------- Modal -------- */
-
-document.addEventListener("DOMContentLoaded", function () {
-  document
-    .getElementById("displayed-image")
-    .addEventListener("click", openModal);
-});
-function openModal(event) {
-  const clickedImage = event.target;
-  const modalImg = document.getElementById("lightboxImage");
-
-  modalImg.src = clickedImage.src;
-
-  const modal = new bootstrap.Modal(document.getElementById("lightboxModal"));
-  modal.show();
-}
-
-function openModal(event) {
-  console.log("Function running");
-
-  const clickedImage = event.target;
-  console.log("Clicked image:", clickedImage.src);
-
-  const modalImg = document.getElementById("lightboxImage");
-  console.log("Modal image element:", modalImg);
-
-  if (!modalImg) {
-    console.error("lightboxImage not found!");
-    return;
-  }
-
-  modalImg.src = clickedImage.src;
-}

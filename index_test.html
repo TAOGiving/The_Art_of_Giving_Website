@@ -118,6 +118,10 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
 
     <link
       rel="stylesheet"
@@ -486,7 +490,7 @@
         </div>
         <div class="thumbnails d-flex py-4">
           <div
-            class="thumbnail"
+            class="thumbnail gallery-image img-thumbnail"
             onmouseover="updateMainImage('images/Golden Lab front image.jpg')"
             onfocus="updateMainImage('images/Golden Lab front image.jpg')"
             data-image="images/Golden Lab front image.jpg"
@@ -497,7 +501,7 @@
             />
           </div>
           <div
-            class="thumbnail"
+            class="thumbnail gallery-image img-thumbnail"
             onmouseover="updateMainImage('images/barn owl.jpg')"
             onfocus="updateMainImage('images/barn owl.jpg')"
             data-image="images/Golden Lab front image.jpg"
@@ -505,7 +509,7 @@
             <img src="images/barn owl.jpg" alt="Majestic Owl on a post" />
           </div>
           <div
-            class="thumbnail"
+            class="thumbnail gallery-image img-thumbnail"
             onmouseover="updateMainImage('images/cheetah.jpg')"
             onfocus="updateMainImage('images/cheetah.jpg')"
             data-image="images/Golden Lab front image.jpg"
@@ -513,7 +517,7 @@
             <img src="images/cheetah.jpg" alt="Cheetah relaxing on a branch" />
           </div>
           <div
-            class="thumbnail"
+            class="thumbnail gallery-image img-thumbnail"
             onmouseover="updateMainImage('images/Eagle.jpg')"
             onfocus="updateMainImage('images/Eagle.jpg')"
             data-image="images/Golden Lab front image.jpg"
@@ -521,7 +525,7 @@
             <img src="images/Eagle.jpg" alt="Side view of an Eagle" />
           </div>
           <div
-            class="thumbnail"
+            class="thumbnail gallery-image img-thumbnail"
             onmouseover="updateMainImage('images/Fox.jpg')"
             onfocus="updateMainImage('images/Fox.jpg')"
             data-image="images/Golden Lab front image.jpg"
@@ -529,7 +533,7 @@
             <img src="images/Fox.jpg" alt="Fox in snow" />
           </div>
           <div
-            class="thumbnail"
+            class="thumbnail gallery-image img-thumbnail"
             onmouseover="updateMainImage('images/Kingfisher.jpg')"
             onfocus="updateMainImage('images/Kingfisher.jpg')"
             data-image="images/Golden Lab front image.jpg"
@@ -537,7 +541,7 @@
             <img src="images/Kingfisher.jpg" alt="Kingfisher on a branch" />
           </div>
           <div
-            class="thumbnail"
+            class="thumbnail gallery-image img-thumbnail"
             onmouseover="updateMainImage('images/lioness.jpg')"
             onfocus="updateMainImage('images/lioness.jpg')"
             data-image="images/Golden Lab front image.jpg"
@@ -545,7 +549,7 @@
             <img src="images/lioness.jpg" alt="Lioness in a field" />
           </div>
           <div
-            class="thumbnail"
+            class="thumbnail gallery-image img-thumbnail"
             onmouseover="updateMainImage('images/Owl.jpg')"
             onfocus="updateMainImage('images/Owl.jpg')"
             data-image="images/Golden Lab front image.jpg"
@@ -554,12 +558,17 @@
           </div>
           <!-- Add more thumbnails as needed -->
         </div>
-        <div class="modal fade" id="lightboxModal" tabindex="-1">
-          <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-              <div class="modal-body text-center">
-                <img id="lightboxImage" class="img-fluid" />
-              </div>
+      </div>
+
+      <div class="modal fade" id="imageModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content bg-dark">
+            <div class="modal-body text-center p-0">
+              <img id="modalImage" src="" alt="" class="img-fluid w-100" />
+            </div>
+
+            <div class="modal-footer bg-dark border-0 justify-content-center">
+              <p id="modalCaption" class="text-white m-0"></p>
             </div>
           </div>
         </div>
@@ -1317,6 +1326,7 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script>
       const popoverTriggerList = document.querySelectorAll(
         '[data-bs-toggle="popover"]',
