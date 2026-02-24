@@ -1288,6 +1288,7 @@ video {
 /* Image styling */
 .product-card img {
   width: 100%;
+  height: 50%;
   display: block;
   cursor: default;
 }
