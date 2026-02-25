@@ -814,7 +814,7 @@ iframe {
   object-fit: cover;
   border: 2px solid #ccc;
   border-radius: 5px;
-  cursor: pointer;
+  cursor: not-allowed;
 }
 
 .fade-img {
