@@ -244,7 +244,7 @@ class Product {
     card.classList.add("product-card");
     card.classList.add("product");
     card.classList.add("col-sm-3");
-    card.classList.add("col-6");
+    card.classList.add("col-5");
     // card.classList.add("m-3");
     card.href = `dist/products/${this.slug}.html`; // dynamic URL
 
@@ -265,6 +265,8 @@ class Product {
     title.innerHTML = this.name;
     title.classList.add("primary_accent");
     title.classList.add("font_family");
+    title.classList.add("mb-1");
+    title.classList.add("mb-sm-3");
     title.href = `dist/products/${this.slug}.html`; // dynamic URL
 
     card.appendChild(title);
@@ -277,6 +279,8 @@ class Product {
     const price = document.createElement("span");
     price.classList.add("price");
     price.classList.add("handlee-regular");
+    price.classList.add("mb-1");
+    price.classList.add("mb-sm-3");
     price.textContent = `£${this.price}`;
     price.href = `dist/products/${this.slug}.html`; // dynamic URL
 
@@ -286,8 +290,10 @@ class Product {
     atbButton.classList.add("btn");
     atbButton.classList.add("primary_accent_btn");
     atbButton.classList.add("btn-sm");
+    atbButton.classList.add("col-4");
     atbButton.classList.add("mb-2");
     atbButton.classList.add("mx-2");
+    atbButton.classList.add("buy-now-btn");
     atbButton.classList.add("handlee-regular");
     atbButton.textContent = "Buy Now";
     // atbButton.onclick = () => {
@@ -300,8 +306,10 @@ class Product {
     bnButton.classList.add("btn");
     bnButton.classList.add("btn-outline-secondary");
     bnButton.classList.add("btn-sm");
+    bnButton.classList.add("col-4");
     bnButton.classList.add("mb-2");
     bnButton.classList.add("mx-2");
+    bnButton.classList.add("more-info-btn");
     bnButton.classList.add("handlee-regular");
     bnButton.textContent = "More Info";
     bnButton.href = `dist/products/${this.slug}.html`; // dynamic URL

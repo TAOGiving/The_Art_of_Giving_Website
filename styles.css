@@ -1226,6 +1226,19 @@ video {
     font-size: small;
     cursor: default;
   }
+  /* Product name */
+  .product-card h2 {
+    font-size: 0.8em !important;
+    margin: 16px 0;
+    color: #333;
+    font-weight: bold;
+    cursor: default;
+  }
+  /* Buttons */
+  .product-card a {
+    font-size: 0.45em !important;
+    cursor: pointer;
+  }
 }
 
 @media (max-width: 961px) {
