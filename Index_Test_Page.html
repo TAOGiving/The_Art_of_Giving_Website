@@ -124,6 +124,7 @@
       href="styles.css
   "
     />
+    <script src="live_stream.js"></script>
   </head>
   <body>
     <!-- Loader screen -->
@@ -266,8 +267,17 @@
                 />£150.00 Raised so far!</a
               >
             </span>
-            <div id="live-indicator" style="display: none">
-              🔴 I am LIVE on YouTube!
+            <div class="text-center my-4">
+              <a
+                id="liveContainer"
+                target="_blank"
+                class="text-decoration-none"
+                style="display: none"
+              >
+                <span class="badge bg-danger px-4 py-2 fs-6 rounded-pill">
+                  🔴 LIVE NOW
+                </span>
+              </a>
             </div>
 
             <!-- <svg
