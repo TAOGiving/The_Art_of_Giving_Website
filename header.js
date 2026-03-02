@@ -1,3 +1,4 @@
+
 //Main image updater for gallery and home page
 
 function updateMainImage(imageSrc) {

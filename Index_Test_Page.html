@@ -124,7 +124,6 @@
       href="styles.css
   "
     />
-    <script src="live_stream.js"></script>
   </head>
   <body>
     <!-- Loader screen -->
@@ -267,18 +266,18 @@
                 />£150.00 Raised so far!</a
               >
             </span>
-            <div class="text-center my-4">
-              <a
-                id="liveContainer"
-                target="_blank"
-                class="text-decoration-none"
-                style="display: none"
+            <a
+              id="liveContainer"
+              href="#"
+              target="_blank"
+              class="text-decoration-none"
+              style="display: none"
+            >
+              <span
+                class="badge bg-danger px-4 py-2 fs-6 rounded-pill live-badge"
               >
-                <span class="badge bg-danger px-4 py-2 fs-6 rounded-pill">
-                  🔴 LIVE NOW
-                </span>
-              </a>
-            </div>
+                <span class="live-dot"></span></span
+            ></a>
 
             <!-- <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -1329,15 +1328,16 @@
         style="background-color: black"
       ></div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <script type="module" src="test.js"></script>
+    <!-- <script type="module" src="test.js"></script> -->
+    <!-- <script type="module" src="live_stream.js"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
 
     <script src="index.js"></script>
 
-    <script src="header.js"></script>
-
-    <script src="live_stream.js"></script>
+    <script type="module" src="header.js"></script>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
@@ -1351,6 +1351,6 @@
       const popoverList = [...popoverTriggerList].map(
         (popoverTriggerEl) => new bootstrap.Popover(popoverTriggerEl),
       );
-    </script>
+    </script> -->
   </body>
 </html>
