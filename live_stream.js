@@ -1,5 +1,4 @@
 async function checkLiveStatus() {
-  const apiKey = "REMOVED";
   const channelId = "UCy3pUVDkt495v8gv5vB0jUw";
 
   const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=${channelId}&eventType=live&type=video&key=${apiKey}`;
