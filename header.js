@@ -1,4 +1,3 @@
-
 //Main image updater for gallery and home page
 
 function updateMainImage(imageSrc) {
@@ -21,6 +20,69 @@ function updateMainImage(imageSrc) {
 function updateMainImage2(imageSrc) {
   document.getElementById("displayed-image-2").src = imageSrc;
 }
+
+// Lightbox functionality
+const modal = document.getElementById("front-image-modal");
+const modalImg = document.getElementById("front-modal-image");
+const mainImg = document.getElementById("displayed-image");
+const closeBtn = document.querySelector(".front-close");
+const nextBtn = document.querySelector(".front-next");
+const prevBtn = document.querySelector(".front-prev");
+const thumbnails = document.querySelectorAll(".thumbnail img");
+
+let currentIndex = 0;
+
+// Create image array from thumbnails
+const imageList = Array.from(thumbnails).map((img) => img.src);
+
+// Open modal
+mainImg.addEventListener("click", function () {
+  currentIndex = imageList.indexOf(this.src);
+  openModal();
+});
+
+function openModal() {
+  modal.classList.add("show");
+  modalImg.src = imageList[currentIndex];
+}
+
+// Close modal
+function closeModal() {
+  modal.classList.remove("show");
+}
+
+// Next image
+function showNext() {
+  currentIndex = (currentIndex + 1) % imageList.length;
+  modalImg.src = imageList[currentIndex];
+  mainImg.src = imageList[currentIndex];
+}
+
+// Previous image
+function showPrev() {
+  currentIndex = (currentIndex - 1 + imageList.length) % imageList.length;
+  modalImg.src = imageList[currentIndex];
+  mainImg.src = imageList[currentIndex];
+}
+
+// Event Listeners
+closeBtn.addEventListener("click", closeModal);
+nextBtn.addEventListener("click", showNext);
+prevBtn.addEventListener("click", showPrev);
+
+// Click outside image closes
+modal.addEventListener("click", function (e) {
+  if (e.target === modal) closeModal();
+});
+
+// Keyboard Support
+document.addEventListener("keydown", function (e) {
+  if (!modal.classList.contains("show")) return;
+
+  if (e.key === "Escape") closeModal();
+  if (e.key === "ArrowRight") showNext();
+  if (e.key === "ArrowLeft") showPrev();
+});
 
 //Animation for Nav Links
 
