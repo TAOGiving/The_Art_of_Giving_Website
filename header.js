@@ -23,7 +23,7 @@ function updateMainImage2(imageSrc) {
 
 // Lightbox functionality
 const modal = document.getElementById("front-image-modal");
-const modalImg = document.getElementById("front-modal-image");
+const frontModalImg = document.getElementById("front-modal-image");
 const mainImg = document.getElementById("displayed-image");
 const closeBtn = document.querySelector(".front-close");
 const nextBtn = document.querySelector(".front-next");
@@ -43,7 +43,7 @@ mainImg.addEventListener("click", function () {
 
 function openModal() {
   modal.classList.add("show");
-  modalImg.src = imageList[currentIndex];
+  frontModalImg.src = imageList[currentIndex];
 }
 
 // Close modal
@@ -54,14 +54,14 @@ function closeModal() {
 // Next image
 function showNext() {
   currentIndex = (currentIndex + 1) % imageList.length;
-  modalImg.src = imageList[currentIndex];
+  frontModalImg.src = imageList[currentIndex];
   mainImg.src = imageList[currentIndex];
 }
 
 // Previous image
 function showPrev() {
   currentIndex = (currentIndex - 1 + imageList.length) % imageList.length;
-  modalImg.src = imageList[currentIndex];
+  frontModalImg.src = imageList[currentIndex];
   mainImg.src = imageList[currentIndex];
 }
 
