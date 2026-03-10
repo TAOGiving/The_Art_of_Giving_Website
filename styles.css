@@ -1805,3 +1805,7 @@ div.dropdown-shop > div.dropdown-col {
 .front-close:hover {
   color: #ccc;
 }
+
+.text-success-dark {
+  color: #198653 !important;
+}
