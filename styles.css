@@ -1327,7 +1327,7 @@ video {
 /* Price styling */
 .product-card .price {
   font-size: 1.2em;
-  color: #27ae60;
+  color: #198653 !important;
   font-weight: bold;
   margin-bottom: 20px;
   display: block;
@@ -1466,7 +1466,7 @@ ul {
 
 .modal-right .price {
   font-size: 1.2em;
-  color: #27ae60;
+  color: #198653 !important;
   font-weight: bold;
   margin-bottom: 20px;
   display: block;
