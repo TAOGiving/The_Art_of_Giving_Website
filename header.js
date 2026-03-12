@@ -19,6 +19,39 @@ document.querySelectorAll(".nav-link").forEach((item) => {
   item.appendChild(span);
 });
 
+//kindness counter on Home page
+document.addEventListener("DOMContentLoaded", () => {
+  const counter = { value: 0 };
+
+  gsap
+    .timeline()
+    .from(".kindness-counter", {
+      y: 20,
+      opacity: 0,
+      duration: 1,
+    })
+    .to(counter, {
+      value: 0,
+      duration: 2,
+      delay: 2,
+      ease: "power2.out",
+
+      onUpdate: () => {
+        document.getElementById("kindnessCount").textContent = Math.floor(
+          counter.value,
+        ).toLocaleString();
+      },
+
+      onComplete: () => {
+        gsap.fromTo(
+          ".kindness-counter",
+          { scale: 1 },
+          { scale: 1.05, duration: 0.5, yoyo: true, repeat: 1 },
+        );
+      },
+    });
+});
+
 //Main image updater for gallery and home page
 
 function updateMainImage(imageSrc) {
