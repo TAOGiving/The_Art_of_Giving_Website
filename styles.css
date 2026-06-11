@@ -72,6 +72,12 @@ nav {
   }
 }
 
+.indie-flower-regular {
+  font-family: "Indie Flower", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
 .nav-link {
   font-family: "Montserrat", serif;
   color: var(--dark_sage_green) !important;
