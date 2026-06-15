@@ -222,13 +222,13 @@ body.fade-out {
 }
 
 .loader-logo {
-  width: 120px;
+  width: 25%;
   margin-bottom: 20px;
   animation: pulse 1.5s infinite ease-in-out;
 }
 
 .logo {
-  width: 40px;
+  width: 15%;
   height: auto;
   /* display: inline-block; */
 }
@@ -620,7 +620,7 @@ body.fade-out {
 
 .hero-section {
   width: 100%;
-  min-height: 80vh;
+  height: 80vh;
   /* background-image: url("images/Cherry\ Blossom\ Hero\ Background.jpg"); */
   background:
     linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0)),
