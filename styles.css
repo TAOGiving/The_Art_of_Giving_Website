@@ -1237,6 +1237,19 @@ video {
   color: white;
   text-align: center;
 }
+@media (max-width: 991px) {
+  .rosaheader {
+    height: 50vh;
+    background:
+      linear-gradient(to left, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0)),
+      url("images/Rosa_the_Labrador.jpg");
+    background-size: cover;
+    background-position: left;
+    color: white;
+    text-align: center;
+  }
+}
+
 /*..............*/
 /* Product card */
 /*..............*/
