@@ -1933,3 +1933,10 @@ div.dropdown-shop > div.dropdown-col {
 .img-overlay.active img {
   transform: scale(1);
 }
+
+#product-image {
+  max-height: 10%; /* Restrict height */
+  width: auto; /* Adjust width automatically */
+  height: auto; /* Prevent distortion */
+  display: block; /* Optional: remove inline spacing */
+}
