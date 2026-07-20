@@ -305,17 +305,29 @@
           </form>
         </div>
       </header> -->
-      <header
-        class="rosaheader my-4 text-end align-content-center d-flex flex-column justify-content-center pe-4"
-      >
-        <h1 class="mb-5 fw-bold">Rosa - The Labrador</h1>
-        <h4>
-          <ul class="indie-flower-regular">
-            <li>16 Months Old</li>
-            <li>Labrador</li>
-            <li>Lovable, Goofy and Beautiful</li>
-          </ul>
-        </h4>
+      <header class="rosaheader my-4 pe-4 col-12">
+        <div class="row">
+          <div class="col-1"></div>
+          <div class="col-4 ms-5">
+            <img
+              src="images/Rosa_Labrador/Full_Painting.jpg"
+              alt="Painting of Rosa the Labrador"
+              class="Rosa_Image rounded-5 normal_shadow"
+            />
+          </div>
+          <div
+            class="col-5 text-end align-content-center d-flex flex-column justify-content-center"
+          >
+            <h1 class="mb-5 fw-bold">Rosa - The Labrador</h1>
+            <h4>
+              <ul class="indie-flower-regular">
+                <li>16 Months Old</li>
+                <li>Labrador</li>
+                <li>Lovable, Goofy and Beautiful</li>
+              </ul>
+            </h4>
+          </div>
+        </div>
       </header>
 
       <section aria-labelledby="video-title" class="raksection col-8 mx-auto">
@@ -347,6 +359,48 @@
           ></iframe>
         </div>
       </section>
+
+      <section>
+        <div class="container text-center mx-auto">
+          <h3 class="mt-5 mb-3 text-center">Close-up Images</h3>
+
+          <div class="row g-3">
+            <div class="col-lg-3 col-md-4 col-sm-5 g-3">
+              <img
+                src="images/Rosa_Labrador/Close_Up_Face.jpg"
+                class="thumb-img"
+                onclick="expandImage(this)"
+              />
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-5 g-3">
+              <img
+                src="images/Rosa_Labrador/Close_Up_Chest.jpg"
+                class="thumb-img"
+                onclick="expandImage(this)"
+              />
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-5 g-3">
+              <img
+                src="images/Rosa_Labrador/Close_Up_Belly.jpg"
+                class="thumb-img"
+                onclick="expandImage(this)"
+              />
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-5 g-3">
+              <img
+                src="images/Rosa_Labrador/Full_Painting.jpg"
+                class="thumb-img"
+                onclick="expandImage(this)"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Fullscreen overlay -->
+      <div id="overlay" class="img-overlay" onclick="closeImage()">
+        <img id="overlayImg" src="" />
+      </div>
 
       <section
         aria-labelledby="story-title"
@@ -442,7 +496,7 @@
         </div>
       </section>
 
-      <section class="raksection col-8 mx-auto mt-5">
+      <!-- <section class="raksection col-8 mx-auto mt-5">
         <h2>Why Kindness Toward Dog Owners Matters</h2>
         <p>
           Dog owners often juggle responsibility, care, and unexpected
@@ -454,7 +508,7 @@
           <li>Create a positive example for others</li>
           <li>Improve the wellbeing of both humans and dogs</li>
         </ul>
-      </section>
+      </section> -->
 
       <div class="row" id="rowSpacer">
         <div class="row normal_shadow" id="rowSpacer3"></div>

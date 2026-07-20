@@ -1,3 +1,16 @@
+function expandImage(img) {
+  const overlay = document.getElementById("overlay");
+  const overlayImg = document.getElementById("overlayImg");
+
+  overlayImg.src = img.src;
+  overlay.classList.add("active");
+}
+
+function closeImage() {
+  const overlay = document.getElementById("overlay");
+  overlay.classList.remove("active");
+}
+
 //***********************************************/
 //**************** GSAP Animations  *************/
 //***********************************************/

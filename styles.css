@@ -723,7 +723,8 @@ iframe {
 /***********************************/
 
 .gallery {
-  max-width: 80%;
+  max-height: 95vh;
+  max-width: 95vw;
   margin: 20px auto;
 }
 
@@ -1227,7 +1228,7 @@ video {
 /* Rosa the Labrador */
 /*********************/
 
-.rosaheader {
+/* .rosaheader {
   height: 80vh;
   background:
     linear-gradient(to left, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0)),
@@ -1248,6 +1249,13 @@ video {
     color: white;
     text-align: center;
   }
+} */
+
+.Rosa_Image {
+  width: 100%;
+  height: auto;
+  max-height: 80vh;
+  object-fit: cover;
 }
 
 /*..............*/
@@ -1863,4 +1871,65 @@ div.dropdown-shop > div.dropdown-col {
 
 .text-success-dark {
   color: #198653 !important;
+}
+
+/* ***************************** */
+/* **** Customer Gallery ******* */
+/* ***************************** */
+
+.thumb-img {
+  width: auto;
+  height: 40vh;
+  object-fit: cover;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+@media (min-width: 1206px) {
+  .thumb-img {
+    width: auto;
+    height: 50vh;
+    object-fit: cover;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.thumb-img:hover {
+  transform: scale(1.05);
+}
+
+/* Fullscreen overlay */
+.img-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 9999;
+}
+
+.img-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.img-overlay img {
+  max-height: 95vh;
+  max-width: 95vw;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+  transform: scale(0.8);
+}
+
+.img-overlay.active img {
+  transform: scale(1);
 }
