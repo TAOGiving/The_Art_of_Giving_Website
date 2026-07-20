@@ -26,6 +26,38 @@ class Product {
 
 const products = [
   new Product(
+    "RosaTheLabrador4inchx6inch(4R)Print",
+    "Rosa The Labrador 4 inch x 6 inch (4R) Print",
+    "Rosa_Lab_4X6-PRINT",
+    14.99,
+    "A 4 inch by 6 inch Giclee Print of Rosa The Labrador, printed on high-quality paper with vibrant colours. Perfect for framing and displaying in your home or office.",
+    "This is a long Description",
+    [
+      "/images/Rosa_Labrador/Full_Painting.jpg",
+      "/images/Rosa_Labrador/Close_Up_Belly.jpg",
+      "/images/Rosa_Labrador/Close_Up_Chest.jpg",
+      "/images/Rosa_Labrador/Close_Up_Face.jpg",
+      "/images/Rosa_Labrador/Rosa the Labrador QR Code.jpg",
+    ],
+    "https://square.link/u/DMuQ7K3Q",
+  ),
+  new Product(
+    "RosaTheLabrador5inchx7inchPrint",
+    "Rosa The Labrador 5 inch x 7 inch Print",
+    "Rosa_Lab_5X7-PRINT",
+    17.99,
+    "A 5 inch by 7 inch Giclee Print of Rosa The Labrador, printed on high-quality paper with vibrant colours. Perfect for framing and displaying in your home or office.",
+    "This is a long Description",
+    [
+      "/images/Rosa_Labrador/Full_Painting.jpg",
+      "/images/Rosa_Labrador/Close_Up_Belly.jpg",
+      "/images/Rosa_Labrador/Close_Up_Chest.jpg",
+      "/images/Rosa_Labrador/Close_Up_Face.jpg",
+      "/images/Rosa_Labrador/Rosa the Labrador QR Code.jpg",
+    ],
+    "https://square.link/u/4yzuxH2u",
+  ),
+  new Product(
     "RosaTheLabrador10inchx8inch(A4)Print",
     "Rosa The Labrador 10 inch x 8 inch (A4) Print",
     "Rosa_Lab_0A4-PRINT",
