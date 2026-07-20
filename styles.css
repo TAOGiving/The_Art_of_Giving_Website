@@ -1935,8 +1935,9 @@ div.dropdown-shop > div.dropdown-col {
 }
 
 #product-image {
-  max-height: 10%; /* Restrict height */
-  width: auto; /* Adjust width automatically */
-  height: auto; /* Prevent distortion */
-  display: block; /* Optional: remove inline spacing */
+  height: auto;
+  width: 15vw;
+  object-fit: cover;
+  margin: auto;
+  border-radius: 12px;
 }
