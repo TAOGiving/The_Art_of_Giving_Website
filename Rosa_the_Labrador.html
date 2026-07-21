@@ -308,13 +308,24 @@
       <header class="rosaheader my-4 pe-4 col-12">
         <div class="row">
           <div class="col-1"></div>
-          <div class="col-4 ms-5">
-            <img
-              src="images/Rosa_Labrador/Full_Painting.jpg"
-              alt="Painting of Rosa the Labrador"
-              class="Rosa_Image rounded-5 normal_shadow"
-            />
+          <div class="container col-4 my-5">
+            <div id="reveal-container" class="position-relative rounded-5">
+              <!-- Original Photo -->
+              <img
+                src="images/Rosa_Labrador/Original_Image.jpg"
+                class="img-fluid"
+                id="photo-img"
+              />
+
+              <!-- Painting Overlay -->
+              <img
+                src="images/Rosa_Labrador/Full_Painting.jpg"
+                class="img-fluid position-absolute top-0 start-0"
+                id="painting-img"
+              />
+            </div>
           </div>
+
           <div
             class="col-5 text-end align-content-center d-flex flex-column justify-content-center"
           >
@@ -1009,6 +1020,7 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
     <script src="header.js"></script>
     <script src="index.js"></script>
+    <script src="RevealImg.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"

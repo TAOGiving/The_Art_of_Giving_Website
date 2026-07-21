@@ -7433,5 +7433,3 @@ function scrollToFree() {
 
   scrollToFree.scrollIntoView();
 }
-
-/* -------- Modal -------- */

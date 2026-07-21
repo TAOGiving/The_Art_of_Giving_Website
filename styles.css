@@ -1941,3 +1941,20 @@ div.dropdown-shop > div.dropdown-col {
   margin: auto;
   border-radius: 12px;
 }
+
+/* Reveal image on mouse move */
+#reveal-container {
+  width: 100%;
+  max-width: 800px; /* adjust as needed */
+  overflow: hidden;
+}
+
+#reveal-container img {
+  display: block;
+}
+
+#painting-img {
+  pointer-events: none;
+  clip-path: inset(0 100% 0 0); /* fully hidden initially */
+  transition: clip-path 0.1s linear;
+}
