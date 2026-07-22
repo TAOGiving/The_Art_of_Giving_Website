@@ -1264,7 +1264,7 @@ video {
 
 /* Style for the product card container */
 .product-card {
-  max-height: 70dvh;
+  max-height: 80dvh;
   /* height: 50vh !important; */
   padding: 10px;
   border: 1px solid #ddd;
@@ -1957,4 +1957,8 @@ div.dropdown-shop > div.dropdown-col {
   pointer-events: none;
   clip-path: inset(0 100% 0 0); /* fully hidden initially */
   transition: clip-path 0.1s linear;
+}
+
+#Large_Image {
+  cursor: pointer;
 }
