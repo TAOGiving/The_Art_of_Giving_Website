@@ -1879,6 +1879,7 @@ div.dropdown-shop > div.dropdown-col {
 
 .thumb-img {
   width: auto;
+  max-width: 94vw;
   height: 40vh;
   object-fit: cover;
   border-radius: 12px;
