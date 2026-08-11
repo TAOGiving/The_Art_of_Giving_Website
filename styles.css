@@ -227,6 +227,10 @@ body.fade-out {
   animation: pulse 1.5s infinite ease-in-out;
 }
 
+.pulse-animation {
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
 .logo {
   width: 225px;
   height: auto;
