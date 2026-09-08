@@ -510,8 +510,8 @@ body.fade-out {
 
 .trans_background {
   background-color: rgba(0, 0, 0, 0.4) !important;
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -1035,6 +1035,9 @@ video {
   #colourChangeFormMobile {
     display: none;
   }
+  #focusChangeFormMobile {
+    display: none;
+  }
   #backgroundChangeFormMobile {
     display: none;
   }
@@ -1057,6 +1060,9 @@ video {
     display: none;
   }
   #colourChangeFormDesktop {
+    display: none;
+  }
+  #focusChangeFormDesktop {
     display: none;
   }
   #backgroundChangeFormDesktop {

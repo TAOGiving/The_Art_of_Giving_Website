@@ -331,7 +331,7 @@
             />
           </svg>
           <h2 class="display-5 fw-bold text-body-emphasis primary_accent mt-3">
-            1 of 5 - Choose your Width and Height
+            1 of 6 - Choose your Width and Height
           </h2>
           <div class="col-10 align-items-center mx-auto">
             <p class="fs-5 fw-lighter mb-2 mb-sm-4">
@@ -486,7 +486,7 @@
           </svg>
           <!-- Custom Art Choice Cards -->
           <h3 class="main-header-text fs-1 mb-3 primary_accent mt-3">
-            2 of 5 - Choose how many subject?
+            2 of 6 - Choose how many subject?
           </h3>
           <p class="lead mb-4">
             How many animals or subjects do you want? If you want more than 3
@@ -613,7 +613,7 @@
               />
             </svg>
             <h3 class="main-header-text fs-1 mb-4 primary_accent">
-              3 of 5 - Choose black and white or colour
+              3 of 6 - Choose black and white or colour
             </h3>
             <div
               class="row row-cols-1 row-cols-md-2 g-4 justify-content-center align-items-center mb-4"
@@ -639,7 +639,7 @@
                 <a
                   class="btn primary_accent_btn mt-3 px-5"
                   id="black_white"
-                  onclick="(blackWhite(), totalPrice(), unhideBackground())"
+                  onclick="(blackWhite(), totalPrice(), unhideFocus())"
                   >Monochrome please</a
                 >
               </div>
@@ -672,7 +672,7 @@
                 <a
                   class="btn primary_accent_btn mt-3 px-5"
                   id="colour"
-                  onclick="(colour(), totalPrice(), unhideBackground())"
+                  onclick="(colour(), totalPrice(), unhideFocus())"
                   >Colour, colour, colour!</a
                 >
               </div>
@@ -683,6 +683,105 @@
             data-bs-placement="bottom"
             data-bs-trigger="focus hover"
             onclick="unhideBackground()"
+            >Next</a
+          > -->
+          </div>
+        </div>
+      </section>
+
+      <section class="hidden" id="focus_hidden">
+        <div class="row" id="rowSpacer">
+          <div class="row normal_shadow" id="rowSpacer3"></div>
+          <div class="row card_shadow align-self-end" id="rowSpacer2"></div>
+        </div>
+        <div class="px-4 py-0 py-md-5 my-0 my-md-5 text-center">
+          <div id="scrollToFocus">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="50"
+              height="50"
+              fill="var(--burnt_terracotta)"
+              class="bi bi-images mt-5"
+              viewBox="0 0 16 16"
+            >
+              <path d="M4.502 9a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3" />
+              <path
+                d="M14.002 13a2 2 0 0 1-2 2h-10a2 2 0 0 1-2-2V5A2 2 0 0 1 2 3a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v8a2 2 0 0 1-1.998 2M14 2H4a1 1 0 0 0-1 1h9.002a2 2 0 0 1 2 2v7A1 1 0 0 0 15 11V3a1 1 0 0 0-1-1M2.002 4a1 1 0 0 0-1 1v8l2.646-2.354a.5.5 0 0 1 .63-.062l2.66 1.773 3.71-3.71a.5.5 0 0 1 .577-.094l1.777 1.947V5a1 1 0 0 0-1-1z"
+              />
+            </svg>
+            <h3 class="main-header-text fs-1 mb-4 primary_accent">
+              4 of 6 - Head and Shoulder or Full Body?
+            </h3>
+            <div
+              class="row row-cols-1 row-cols-md-2 g-4 justify-content-center align-items-center mb-4"
+            >
+              <div class="col-md-4 card_height">
+                <div
+                  class="card card-cover overflow-hidden rounded-4 shadow-lg"
+                  style="
+                    background-image: url(&quot;images/Chester_Cocker_Spaniel/Head_Shoulders_Square.jpg&quot;);
+                  "
+                >
+                  <div class="card-header trans_background">
+                    <h4 class="title text-light" id="sm-card-text">
+                      Cost Effective Choice
+                    </h4>
+                  </div>
+
+                  <h2 class="title pt-5 my-5 text-light">Head & Shoulders</h2>
+                  <p class="text mb-5 pb-5 text-light">
+                    Just their beautiful face in focus<br />
+                    Head and Shoulders, perfect for any size portrait.
+                  </p>
+                </div>
+                <a
+                  class="btn primary_accent_btn mt-3 px-5"
+                  id="focusHead"
+                  onclick="(focus_Head(), unhideBackground())"
+                  >Head & Shoulders</a
+                >
+              </div>
+              <div class="col-md-4 card_height">
+                <div
+                  class="card card-cover overflow-hidden rounded-4 shadow-lg"
+                  style="
+                    background-image: url(&quot;images/Chester_Cocker_Spaniel/Full_Body_Square.jpg&quot;);
+                  "
+                >
+                  <!-- <a class="btn secondary_accent_label">Premium Choice</a> -->
+                  <div class="card-header trans_background">
+                    <h4 class="title text-light" id="sm-card-text">
+                      Premium Choice
+                    </h4>
+                  </div>
+
+                  <h2 class="title pt-5 my-5 text-light">Full Body Painting</h2>
+                  <p class="text mb-5 pb-5 text-light">
+                    If you want a full body portrait <br />Just click the button
+                    below.
+                  </p>
+
+                  <!-- <a
+                    class="btn btn-primary mobile"
+                    id="oneSubject"
+                    onclick="oneSubjects(),totalPrice()"
+                    >1 subject</a
+                  > -->
+                </div>
+                <a
+                  class="btn primary_accent_btn mt-3 px-5"
+                  id="focusFullBody"
+                  onclick="(focus_FullBody(), unhideBackground())"
+                  >Full Body Painting</a
+                >
+              </div>
+            </div>
+            <!-- <a
+            class="btn col-md-2 col-4 p-1 m-2 px-sm-2 secondary_accent_btn"
+            data-bs-toggle="popover"
+            data-bs-placement="bottom"
+            data-bs-trigger="focus hover"
+            onclick="unhideFinish()"
             >Next</a
           > -->
           </div>
@@ -710,7 +809,7 @@
               />
             </svg>
             <h3 class="main-header-text fs-1 mb-4 primary_accent">
-              4 of 5 - Do you want a background?
+              4 of 6 - Do you want a background?
             </h3>
             <div
               class="row row-cols-1 row-cols-md-2 g-4 justify-content-center align-items-center mb-4"
@@ -812,7 +911,7 @@
               />
             </svg>
             <h3 class="main-header-text fs-1 mb-3 primary_accent mt-3">
-              5 of 5 - Choose the finish
+              6 of 6 - Choose the finish
             </h3>
             <div class="Container text-center">
               <div class="row align-items-center justify-content-center">
@@ -1295,6 +1394,92 @@
                             </div>
                           </form>
                           <form
+                            class="row g-3 needs-validation text-start mb-0 mb-md-3"
+                            novalidate
+                            id="focusChangeFormDesktop"
+                          >
+                            <div class="col text-center p-0">
+                              <label class="form-label fw-bold">FOCUS</label>
+                              <input
+                                type="text"
+                                class="form-control disabled"
+                                id="FocusTotal"
+                                required=""
+                                placeholder="Focus not Selected"
+                                disabled
+                                onchange="totalPrice()"
+                              />
+                            </div>
+                          </form>
+                          <form
+                            class="row needs-validation mb-0 mb-md-2 mb-md-4 mt-md-1 mt-lg-4 p-0"
+                            novalidate
+                            onsubmit="return false;"
+                            id="focusChangeFormMobile"
+                          >
+                            <div class="col text-center p-0">
+                              <label for="FocusTotal" class="form-label fw-bold"
+                                >FOCUS</label
+                              >
+                              <input
+                                type="text"
+                                class="form-control disabled"
+                                id="FocusTotal"
+                                required=""
+                                placeholder="Focus not selected"
+                                disabled
+                                onchange="totalPrice()"
+                              />
+                            </div>
+                            <div class="mt-2">
+                              <div
+                                class="form-check form-check-inline text-start ms-0"
+                              >
+                                <input
+                                  class="form-check-input"
+                                  type="radio"
+                                  name="inlineRadioOptions"
+                                  id="RadioFocusHead"
+                                  value="Head and Shoulders"
+                                  onchange="
+                                    (focus_Head(),
+                                      totalPrice(),
+                                      unhideBackground())
+                                  "
+                                />
+                                <label
+                                  class="form-check-label"
+                                  for="RadioFocusHead"
+                                  >Head and Shoulders</label
+                                >
+                              </div>
+                              <div
+                                class="form-check form-check-inline text-start ms-2"
+                              >
+                                <input
+                                  class="form-check-input"
+                                  type="radio"
+                                  name="inlineRadioOptions"
+                                  id="RadioFocusFullBody"
+                                  value="Full Body"
+                                  onchange="
+                                    (focus_FullBody(),
+                                      totalPrice(),
+                                      unhideBackground())
+                                  "
+                                />
+                                <label
+                                  class="form-check-label"
+                                  for="RadioFocusFullBody"
+                                  >Full Body Painting</label
+                                >
+                              </div>
+                              <div
+                                class="form-check form-check-inline text-start ms-2"
+                              ></div>
+                            </div>
+                          </form>
+                          <form
                             class="row g-3 needs-validation text-start ms-md-0 p-0 mb-2 mb-md-5"
                             novalidate
                           >
@@ -1549,10 +1734,10 @@
                             class="row needs-validation mb-5 p-0"
                             novalidate
                             onsubmit="return false;"
-                            id="backgroundChangeFormDesktop"
+                            id="focusChangeFormDesktop"
                           >
                             <label class="form-label fw-bold"
-                              >Change Background Here</label
+                              >Change Focus Here</label
                             >
                             <div class="mt-2">
                               <div
@@ -1562,16 +1747,14 @@
                                   class="form-check-input"
                                   type="radio"
                                   name="inlineRadioOptions"
-                                  id="inlineRadioMinimal"
-                                  value="Minimal"
-                                  onchange="
-                                    (minimal_Background(), totalPrice())
-                                  "
+                                  id="inlineRadioHead"
+                                  value="head and shoulders"
+                                  onchange="(focus_Head(), totalPrice())"
                                 />
                                 <label
                                   class="form-check-label"
-                                  for="inlineRadioMinimal"
-                                  >Minimal</label
+                                  for="inlineRadioHead"
+                                  >Head and Shoulders</label
                                 >
                               </div>
                               <div
@@ -1581,16 +1764,14 @@
                                   class="form-check-input"
                                   type="radio"
                                   name="inlineRadioOptions"
-                                  id="RadioComplex"
-                                  value="Complex"
-                                  onchange="
-                                    (complex_Background(), totalPrice())
-                                  "
+                                  id="RadioFullBody"
+                                  value="Full Body"
+                                  onchange="(focus_FullBody(), totalPrice())"
                                 />
                                 <label
                                   class="form-check-label"
-                                  for="RadioComplex"
-                                  >Complex</label
+                                  for="RadioFullBody"
+                                  >Full Body</label
                                 >
                               </div>
                               <!-- <div
@@ -1599,9 +1780,125 @@
                             </div>
                           </form>
                           <form
+                            class="row needs-validation mb-3 p-0"
+                            novalidate
+                            onsubmit="return false;"
+                          >
+                            <label class="form-label fw-bold"
+                              >Change Background Here</label
+                            >
+                            <div class="mt-2">
+                              <div
+                                class="form-check form-check-inline text-start"
+                              >
+                                <input
+                                  class="form-check-input"
+                                  type="radio"
+                                  name="inlineRadioOptions"
+                                  id="RadioMinimal"
+                                  value="Minimal"
+                                  onchange="
+                                    (minimal_Background(), totalPrice())
+                                  "
+                                />
+                                <label
+                                  class="form-check-label"
+                                  for="RadioMinimal"
+                                  >Minimal</label
+                                >
+                              </div>
+                              <div
+                                class="form-check form-check-inline text-start ms-sm-2 ms-5"
+                              >
+                                <input
+                                  class="form-check-input"
+                                  type="radio"
+                                  name="inlineRadioOptions"
+                                  id="inlineRadioComplex"
+                                  value="Complex"
+                                  onchange="
+                                    (complex_Background(), totalPrice())
+                                  "
+                                />
+                                <label
+                                  class="form-check-label"
+                                  for="inlineRadioComplex"
+                                  >Complex</label
+                                >
+                              </div>
+                              <div
+                                class="form-check form-check-inline text-start ms-2"
+                              ></div>
+                            </div>
+                          </form>
+                          <form
                             class="row needs-validation mt-0 mt-lg-1 p-0"
                             novalidate
                             onsubmit="return false;"
+                            id="focusChangeFormDesktop"
+                          >
+                            <label class="form-label fw-bold"
+                              >Change Finish Here</label
+                            >
+                            <div class="mt-2 ms-3 ms-md-0">
+                              <div
+                                class="form-check form-check-inline text-start ms-2"
+                              >
+                                <input
+                                  class="form-check-input"
+                                  type="radio"
+                                  name="inlineRadioOptions"
+                                  id="inlineRadioNF"
+                                  value="No Finish"
+                                  onchange="(noFinish(), totalPrice())"
+                                />
+                                <label
+                                  class="form-check-label"
+                                  for="inlineRadioNF"
+                                  >None</label
+                                >
+                              </div>
+                              <div
+                                class="form-check form-check-inline text-start ms-2"
+                              >
+                                <input
+                                  class="form-check-input"
+                                  type="radio"
+                                  name="inlineRadioOptions"
+                                  id="inlineRadioGF"
+                                  value="Gloss Finish"
+                                  onchange="(glossFinish(), totalPrice())"
+                                />
+                                <label
+                                  class="form-check-label"
+                                  for="inlineRadioGF"
+                                  >Gloss Finish</label
+                                >
+                              </div>
+                              <div
+                                class="form-check form-check-inline text-start ms-2"
+                              >
+                                <input
+                                  class="form-check-input"
+                                  type="radio"
+                                  name="inlineRadioOptions"
+                                  id="inlineRadioMF"
+                                  value="Matte Finish"
+                                  onchange="(matteFinish(), totalPrice())"
+                                />
+                                <label
+                                  class="form-check-label"
+                                  for="inlineRadioMF"
+                                  >Matte Finish</label
+                                >
+                              </div>
+                            </div>
+                          </form>
+                          <form
+                            class="row needs-validation mt-0 mt-lg-1 p-0"
+                            novalidate
+                            onsubmit="return false;"
+                            id="focusChangeFormMobile"
                           >
                             <label class="form-label fw-bold"
                               >Change Finish Here</label
@@ -1770,6 +2067,7 @@
                 <input type="hidden" name="Height" id="formHeight" />
                 <input type="hidden" name="Subject" id="formSubject" />
                 <input type="hidden" name="Colour" id="formColour" />
+                <input type="hidden" name="Focus" id="formFocus" />
                 <input type="hidden" name="Finish" id="formFinish" />
                 <input type="hidden" name="Background" id="formBackground" />
                 <input type="hidden" name="Quote Total" id="formQuoteTotal" />

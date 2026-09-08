@@ -218,6 +218,7 @@ let widthOutput = document.getElementById("WidthTotal");
 let heightOutput = document.getElementById("HeightTotal");
 let subjectOutput = document.getElementById("SubjectTotal");
 let colourOutput = document.getElementById("ColourTotal");
+let focusOutput = document.getElementById("FocusTotal");
 let finishOutput = document.getElementById("FinishTotal");
 let backgroundOutput = document.getElementById("backgroundTotal");
 let quoteTotal = document.getElementById("QuoteTotal");
@@ -227,6 +228,8 @@ let twoSubject = document.getElementById("twoSubjects");
 let threeSubject = document.getElementById("threeSubjects");
 let blackAndWhite = document.getElementById("black_white");
 let colourElement = document.getElementById("colour");
+let focusHead = document.getElementById("focusHead");
+let focusFullBody = document.getElementById("focusFullBody");
 let minimalBackground = document.getElementById("minimal_background");
 let complexBackground = document.getElementById("complex_background");
 let a4Element = document.getElementById("a4Input");
@@ -248,6 +251,7 @@ let totalValue = localStorage.getItem("total");
 let formWidth = document.getElementById("formWidth");
 let formHeight = document.getElementById("formHeight");
 let formSubject = document.getElementById("formSubject");
+let formFocus = document.getElementById("formFocus");
 let formColour = document.getElementById("formColour");
 let formFinish = document.getElementById("formFinish");
 let formBackground = document.getElementById("formBackground");
@@ -442,16 +446,57 @@ function colour() {
   colourElement.textContent = "Selected";
 }
 
-function unhideBackground() {
+function unhideFocus() {
   if (
     blackAndWhite.textContent === "Selected" ||
     colourElement.textContent === "Selected"
+  ) {
+    const focusDiv = document.getElementById("focus_hidden");
+    const scrollToFocus = document.getElementById("scrollToFocus");
+    focusDiv.classList.remove("hidden");
+    scrollToFocus.scrollIntoView();
+  }
+}
+
+function focus_Head() {
+  focusOutput.value = "Head";
+  localStorage.setItem("focus", "Head");
+  focusFullBody.style.backgroundColor = "";
+  focusFullBody.textContent = "Full Body Painting";
+  focusHead.style.backgroundColor = "var(--burnt_terracotta) !important";
+  focusHead.textContent = "Selected";
+}
+
+function focus_FullBody() {
+  focusOutput.value = "Full Body";
+  localStorage.setItem("focus", "Full Body");
+  focusFullBody.style.backgroundColor = "var(--burnt_terracotta) !important";
+  focusFullBody.textContent = "Selected";
+  focusHead.style.backgroundColor = "";
+  focusHead.textContent = "Selected";
+  focusHead.textContent = "Head & Shoulders";
+}
+
+function unhideBackground() {
+  if (
+    focusHead.textContent === "Selected" ||
+    focusFullBody.textContent === "Selected"
   ) {
     const backgroundDiv = document.getElementById("background_hidden");
     const scrollToBackground = document.getElementById("scrollToBackground");
     backgroundDiv.classList.remove("hidden");
     scrollToBackground.scrollIntoView();
   }
+}
+
+function complex_Background() {
+  backgroundOutput.value = "Complex Background";
+  localStorage.setItem("background", "Complex Background");
+  complexBackground.style.backgroundColor =
+    "var(--burnt_terracotta) !important";
+  complexBackground.textContent = "Selected";
+  minimalBackground.style.backgroundColor = "";
+  minimalBackground.textContent = "Minimal";
 }
 
 function minimal_Background() {
@@ -550,6 +595,9 @@ function updater() {
   if (localStorage.getItem("colour") !== colourOutput) {
     colourOutput.value = localStorage.getItem("colour");
   }
+  if (localStorage.getItem("focus") !== focusOutput) {
+    focusOutput.value = localStorage.getItem("focus");
+  }
   if (localStorage.getItem("finish") !== finishOutput) {
     finishOutput.value = localStorage.getItem("finish");
   }
@@ -577,12 +625,34 @@ let finishGloss = 1.1;
 let finishMatte = 1.25;
 let monochrome = 0.5;
 let complexBG = 1.5;
+let focusHed = 0.75;
 
 let total = 0;
 
 //take the area calculation and compare this with the areas pricing band.
 // if area lands within a set value it brings back a price.
+
 function totalPrice() {
+  // Calculate Area of artwork
+
+  let prices = [
+    300, 350, 400, 450, 500, 600, 700, 800, 900, 1000, 1100, 1200, 1300, 1400,
+    1500, 1600, 1700, 1900, 2400, 2900, 3750,
+  ];
+
+  let subject1 = 1;
+  let subjects2 = 1.25;
+  let subjects3 = 1.4;
+  let finishGloss = 1.1;
+  let finishMatte = 1.25;
+  let monochrome = 0.5;
+  let complexBG = 1.5;
+  let focusHed = 0.75;
+
+  let total = 0;
+
+  //take the area calculation and compare this with the areas pricing band.
+  // if area lands within a set value it brings back a price.
   let calcArea = widthOutput.value * heightOutput.value;
   if (
     widthOutput.value !== "" &&
@@ -7409,12 +7479,14 @@ function totalPrice() {
   console.log(subjectOutput.value);
   console.log(colourOutput.value);
   console.log(finishOutput.value);
+  console.log(focusOutput.value);
   console.log(backgroundOutput.value);
   console.log(calcArea);
 
   formWidth.value = widthOutput.value;
   formHeight.value = heightOutput.value;
   formSubject.value = subjectOutput.value;
+  formFocus.value = focusOutput.value;
   formColour.value = colourOutput.value;
   formFinish.value = finishOutput.value;
   formBackground.value = backgroundOutput.value;
@@ -7422,6 +7494,10 @@ function totalPrice() {
 
   //if you want to have a discount on all values:
   // quoteTotal.value = quoteTotal.value / 2;
+  if (focusOutput.value === "Head") {
+    quoteTotal.value = (quoteTotal.value * focusHed).toFixed(2);
+  }
+  console.log("Quote Total: " + quoteTotal.value);
   quoteTotal.textContent = `£ ${quoteTotal.value}`;
   quoteTotalLG.textContent = `£ ${quoteTotal.value}`;
 }
