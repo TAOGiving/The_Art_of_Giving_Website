@@ -330,8 +330,13 @@
               d="M7.646.146a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1-.708.708L8.5 1.707V5.5a.5.5 0 0 1-1 0V1.707L6.354 2.854a.5.5 0 1 1-.708-.708zM8 10a.5.5 0 0 1 .5.5v3.793l1.146-1.147a.5.5 0 0 1 .708.708l-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 0 1 .708-.708L7.5 14.293V10.5A.5.5 0 0 1 8 10M.146 8.354a.5.5 0 0 1 0-.708l2-2a.5.5 0 1 1 .708.708L1.707 7.5H5.5a.5.5 0 0 1 0 1H1.707l1.147 1.146a.5.5 0 0 1-.708.708zM10 8a.5.5 0 0 1 .5-.5h3.793l-1.147-1.146a.5.5 0 0 1 .708-.708l2 2a.5.5 0 0 1 0 .708l-2 2a.5.5 0 0 1-.708-.708L14.293 8.5H10.5A.5.5 0 0 1 10 8"
             />
           </svg>
+          <h1 class="text-body-emphasis secondary_accent mt-3">
+            All artworks come <strong>framed</strong>, matte finished multiple
+            layers of <strong>protection</strong> <br />and a certificate of
+            authenticity.
+          </h1>
           <h2 class="display-5 fw-bold text-body-emphasis primary_accent mt-3">
-            1 of 6 - Choose your Width and Height
+            1 of 5 - Choose your Width and Height
           </h2>
           <div class="col-10 align-items-center mx-auto">
             <p class="fs-5 fw-lighter mb-2 mb-sm-4">
@@ -486,7 +491,7 @@
           </svg>
           <!-- Custom Art Choice Cards -->
           <h3 class="main-header-text fs-1 mb-3 primary_accent mt-3">
-            2 of 6 - Choose how many subject?
+            2 of 5 - Choose how many subject?
           </h3>
           <p class="lead mb-4">
             How many animals or subjects do you want? If you want more than 3
@@ -613,7 +618,7 @@
               />
             </svg>
             <h3 class="main-header-text fs-1 mb-4 primary_accent">
-              3 of 6 - Choose black and white or colour
+              3 of 5 - Choose black and white or colour
             </h3>
             <div
               class="row row-cols-1 row-cols-md-2 g-4 justify-content-center align-items-center mb-4"
@@ -710,7 +715,7 @@
               />
             </svg>
             <h3 class="main-header-text fs-1 mb-4 primary_accent">
-              4 of 6 - Head and Shoulder or Full Body?
+              4 of 5 - Head and Shoulder or Full Body?
             </h3>
             <div
               class="row row-cols-1 row-cols-md-2 g-4 justify-content-center align-items-center mb-4"
@@ -809,7 +814,7 @@
               />
             </svg>
             <h3 class="main-header-text fs-1 mb-4 primary_accent">
-              4 of 6 - Do you want a background?
+              5 of 5 - Do you want a background?
             </h3>
             <div
               class="row row-cols-1 row-cols-md-2 g-4 justify-content-center align-items-center mb-4"
@@ -836,7 +841,12 @@
                 <a
                   class="btn primary_accent_btn mt-3 px-5"
                   id="minimal_background"
-                  onclick="(minimal_Background(), totalPrice(), unhideFinish())"
+                  onclick="
+                    (minimal_Background(),
+                      matteFinish(),
+                      totalPrice(),
+                      unhideQuote())
+                  "
                   >Minimal</a
                 >
               </div>
@@ -870,7 +880,12 @@
                 <a
                   class="btn primary_accent_btn mt-3 px-5"
                   id="complex_background"
-                  onclick="(complex_Background(), totalPrice(), unhideFinish())"
+                  onclick="
+                    (complex_Background(),
+                      totalPrice(),
+                      matteFinish(),
+                      unhideQuote())
+                  "
                   >Full Detailed Background</a
                 >
               </div>
@@ -1067,17 +1082,23 @@
                         <li>- Original artwork signed by the artist</li>
                         <li>- Certificate of authenticity</li>
                         <li>
+                          -
+                          <strong
+                            >Free frame so your art is ready to hang</strong
+                          >
+                        </li>
+                        <li>
                           - Dedicated webpage for your artwork and the Act of
                           Kindness your artwork supports
                         </li>
 
                         <li>- Timelapse video of the creation process</li>
-                        <li>- Products featuring your artwork</li>
-                        <li>
+                        <!-- <li>- Products featuring your artwork</li> -->
+                        <!-- <li>
                           - The <strong>Amazing Feeling</strong> knowing your
                           artwork is making a positive difference to someones
                           life
-                        </li>
+                        </li> -->
                       </h5>
                     </ul>
 
@@ -1798,7 +1819,9 @@
                                   id="RadioMinimal"
                                   value="Minimal"
                                   onchange="
-                                    (minimal_Background(), totalPrice())
+                                    (minimal_Background(),
+                                      matteFinish(),
+                                      totalPrice())
                                   "
                                 />
                                 <label
@@ -1817,7 +1840,9 @@
                                   id="inlineRadioComplex"
                                   value="Complex"
                                   onchange="
-                                    (complex_Background(), totalPrice())
+                                    (complex_Background(),
+                                      matteFinish(),
+                                      totalPrice())
                                   "
                                 />
                                 <label
@@ -1831,7 +1856,7 @@
                               ></div>
                             </div>
                           </form>
-                          <form
+                          <!-- <form
                             class="row needs-validation mt-0 mt-lg-1 p-0"
                             novalidate
                             onsubmit="return false;"
@@ -1893,8 +1918,8 @@
                                 >
                               </div>
                             </div>
-                          </form>
-                          <form
+                          </form> -->
+                          <!-- <form
                             class="row needs-validation mt-0 mt-lg-1 p-0"
                             novalidate
                             onsubmit="return false;"
@@ -1956,7 +1981,7 @@
                                 >
                               </div>
                             </div>
-                          </form>
+                          </form> -->
                         </div>
                       </div>
 

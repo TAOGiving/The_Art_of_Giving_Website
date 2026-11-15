@@ -531,30 +531,30 @@ function unhideFinish() {
   }
 }
 
-function noFinish() {
-  finishOutput.value = "No Finish";
-  localStorage.setItem("finish", "No Finish");
-  noFinishElement.style.backgroundColor = "var(--burnt_terracotta) !important";
-  noFinishElement.textContent = "Selected";
-  noFinishElement.style.color = "white";
-  glossFinishElement.style.backgroundColor = "";
-  glossFinishElement.textContent = "Glass Like Finish";
-  matteFinishElement.style.backgroundColor = "";
-  matteFinishElement.textContent = "Premium Finish";
-}
+// function noFinish() {
+//   finishOutput.value = "No Finish";
+//   localStorage.setItem("finish", "No Finish");
+//   noFinishElement.style.backgroundColor = "var(--burnt_terracotta) !important";
+//   noFinishElement.textContent = "Selected";
+//   noFinishElement.style.color = "white";
+//   glossFinishElement.style.backgroundColor = "";
+//   glossFinishElement.textContent = "Glass Like Finish";
+//   matteFinishElement.style.backgroundColor = "";
+//   matteFinishElement.textContent = "Premium Finish";
+// }
 
-function glossFinish() {
-  finishOutput.value = "Gloss Finish";
-  localStorage.setItem("finish", "Gloss Finish");
-  noFinishElement.style.backgroundColor = "";
-  noFinishElement.textContent = "No Finish";
-  noFinishElement.style.color = "";
-  glossFinishElement.style.backgroundColor =
-    "var(--burnt_terracotta) !important";
-  glossFinishElement.textContent = "Selected";
-  matteFinishElement.style.backgroundColor = "";
-  matteFinishElement.textContent = "Premium Finish";
-}
+// function glossFinish() {
+//   finishOutput.value = "Gloss Finish";
+//   localStorage.setItem("finish", "Gloss Finish");
+//   noFinishElement.style.backgroundColor = "";
+//   noFinishElement.textContent = "No Finish";
+//   noFinishElement.style.color = "";
+//   glossFinishElement.style.backgroundColor =
+//     "var(--burnt_terracotta) !important";
+//   glossFinishElement.textContent = "Selected";
+//   matteFinishElement.style.backgroundColor = "";
+//   matteFinishElement.textContent = "Premium Finish";
+// }
 
 function matteFinish() {
   finishOutput.value = "Matte Finish";
@@ -571,9 +571,11 @@ function matteFinish() {
 
 function unhideQuote() {
   if (
-    noFinishElement.textContent === "Selected" ||
-    glossFinishElement.textContent === "Selected" ||
-    matteFinishElement.textContent === "Selected"
+    // noFinishElement.textContent === "Selected" ||
+    // glossFinishElement.textContent === "Selected" ||
+    // matteFinishElement.textContent === "Selected"
+    minimalBackground.textContent === "Selected" ||
+    complexBackground.textContent === "Selected"
   ) {
     const QuoteDiv = document.getElementById("quote_hidden");
     const scrollToQuote = document.getElementById("scrollToQuote");
@@ -622,7 +624,7 @@ let subject1 = 1;
 let subjects2 = 1.25;
 let subjects3 = 1.4;
 let finishGloss = 1.1;
-let finishMatte = 1.25;
+let finishMatte = 1;
 let monochrome = 0.5;
 let complexBG = 1.5;
 let focusHed = 0.75;
@@ -644,7 +646,7 @@ function totalPrice() {
   let subjects2 = 1.25;
   let subjects3 = 1.4;
   let finishGloss = 1.1;
-  let finishMatte = 1.25;
+  let finishMatte = 1;
   let monochrome = 0.5;
   let complexBG = 1.5;
   let focusHed = 0.75;
@@ -7497,6 +7499,7 @@ function totalPrice() {
   if (focusOutput.value === "Head") {
     quoteTotal.value = (quoteTotal.value * focusHed).toFixed(2);
   }
+  quoteTotal.value = (parseFloat(quoteTotal.value) + 50).toFixed(2); //this is to compensate for the Matte Finish.
   console.log("Quote Total: " + quoteTotal.value);
   quoteTotal.textContent = `£ ${quoteTotal.value}`;
   quoteTotalLG.textContent = `£ ${quoteTotal.value}`;
