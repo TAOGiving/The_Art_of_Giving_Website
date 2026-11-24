@@ -34,11 +34,11 @@
   --neutral_charcoal: #3d3d3d; /* Text */
 
   /* Pallet 3 Sophisticated and Artistic */
-  --soft_beige: #eae8dc; /* Background */
-  --sage_green: #68a18b; /* Primary Accent */
-  --dark_sage_green: #335246; /* Accent Text*/
-  --burnt_terracotta: #9a533e; /* Secondary Accent */
-  --deep_gray: rgb(46, 46, 46); /* Text */
+  --soft_beige: #cbdde9; /* Background was eae8dc*/
+  --sage_green: #2872a1; /* Primary Accent was 68a18b*/
+  --dark_sage_green: #233746; /* Accent Text was 335246*/
+  --burnt_terracotta: #1d587e; /* Secondary Accent was 9a533e*/
+  --deep_gray: rgb(46, 46, 46); /* Text was rgb(46, 46, 46) */
 
   /* Pallet 4 Playful Yet professional */
   --white: #ffffff; /* Background */
